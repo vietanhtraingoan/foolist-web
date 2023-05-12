@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import foolistLogo from "../../../public/images/foolistLogo.png";
+import foolistLogo from "../../../public/images/icon/foolistLogo.png";
 
 export default function Footer() {
   return (

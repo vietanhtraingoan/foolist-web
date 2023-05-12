@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { PrivateRoutes } from "../../../routers";
 
-import foolistLogo from "../../../public/images/foolistLogo.png";
+import foolistLogo from "../../../public/images/icon/foolistLogo.png";
 import menu from "../../../public/images/menu.png";
 
 import type { GetStaticProps, InferGetStaticPropsType } from "next";
