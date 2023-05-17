@@ -4,7 +4,7 @@
  * can be found here: https://github.com/garmeeh/next-seo#default-seo-configuration
  */
 import { DefaultSeo } from "next-seo";
-import 'animate.css';
+import "animate.css";
 
 import SEO from "../next-seo.config";
 // import LeftMenu from "./components/menu/LeftMenu";
@@ -13,7 +13,9 @@ import Footer from "./components/Footer";
 import { useRouter } from "next/router";
 
 import "./components/menu/styles.scss";
-import "./components/Footer/styles.scss"
+import "./components/Footer/styles.scss";
+
+import "../pages/home/styles.scss";
 
 import "./globalStyle.scss";
 import { useEffect, useLayoutEffect, useState } from "react";
@@ -26,6 +28,7 @@ import { appWithTranslation } from "next-i18next";
 import nextI18NextConfig from "../next-i18next.config.js";
 import "antd/dist/reset.css";
 import { DEFAULT_LANG, KEY_LANGUAGE } from "../utils/constants";
+import bg from "../public/images/bg.png";
 
 function MyApp({ Component, ...rest }) {
   const { store, props } = wrapper.useWrappedStore(rest);
@@ -64,7 +67,10 @@ function MyApp({ Component, ...rest }) {
       <DefaultSeo {...SEO} />
       <Provider store={store}>
         {isPrivateMenu && <TopMenu />}
-        <div className="layout">
+        <div
+          className="layout"
+          style={{ backgroundImage: `url(${bg})` }}
+        >
           <Component {...pageProps} />
         </div>
         {isPrivateMenu && <Footer />}

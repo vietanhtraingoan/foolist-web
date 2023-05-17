@@ -92,20 +92,6 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
           </div>
         </div>
       </div>
-      <div className="third">
-        <div className="content">
-          <div className="left-menu">
-            <Image src={menu} className="menu" alt="menu" />
-          </div>
-          <div className="right-menu">
-            <Input
-              placeholder="Basic usage"
-              className="search-box"
-              suffix={<SearchOutlined />}
-            />
-          </div>
-        </div>
-      </div>
     </div>
   );
 };

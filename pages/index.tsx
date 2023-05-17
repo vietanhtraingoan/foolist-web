@@ -7,6 +7,7 @@ import { DEFAULT_LANG } from "../utils/constants";
 // import nextI18NextConfig from "../next-i18next.config.js";
 import { Button } from "antd";
 import Footer from "./components/Footer";
+import HomePage from "./home";
 
 type Props = {
   // Add custom props here
@@ -42,7 +43,7 @@ const Home = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
           ],
         }}
       />
-      <div>Home page</div>
+      <div><HomePage /></div>
       <div className="content-home"></div>
     </div>
   );

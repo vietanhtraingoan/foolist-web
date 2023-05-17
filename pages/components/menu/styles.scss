@@ -151,35 +151,4 @@
       }
     }
   }
-  .third {
-    // max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 60px;
-    background: #fffdfc;
-    .content {
-      max-width: 1440px;
-      padding-left: 120px;
-      padding-right: 120px;
-      display: flex;
-      justify-content: space-between;
-      margin: auto;
-      height: 60px;
-      .left-menu {
-        .menu {
-          cursor: pointer;
-        }
-      }
-      .right-menu {
-        .search-box {
-          margin-top: 10px;
-          border: none;
-          background: transparent;
-          border-radius: 0;
-          border-bottom: 1px solid lightgray;
-          box-shadow: none;
-        }
-      }
-    }
-  }
 }
