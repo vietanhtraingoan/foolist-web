@@ -6,7 +6,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { DEFAULT_LANG } from "../utils/constants";
 // import nextI18NextConfig from "../next-i18next.config.js";
 import { Button } from "antd";
-import Footer from "./components/menu/Footer";
+import Footer from "./components/Footer";
 
 type Props = {
   // Add custom props here

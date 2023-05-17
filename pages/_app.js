@@ -4,14 +4,17 @@
  * can be found here: https://github.com/garmeeh/next-seo#default-seo-configuration
  */
 import { DefaultSeo } from "next-seo";
+import 'animate.css';
 
 import SEO from "../next-seo.config";
 // import LeftMenu from "./components/menu/LeftMenu";
 import TopMenu from "./components/menu/TopMenu";
-import Footer from "./components/menu/Footer";
+import Footer from "./components/Footer";
 import { useRouter } from "next/router";
 
 import "./components/menu/styles.scss";
+import "./components/Footer/styles.scss"
+
 import "./globalStyle.scss";
 import { useEffect, useLayoutEffect, useState } from "react";
 import { PrivateRoutes } from "../routers";
