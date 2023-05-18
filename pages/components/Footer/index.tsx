@@ -58,6 +58,8 @@ export default function Footer() {
       title: "Contact us",
     },
   ];
+
+  console.log(link)
   return (
     <div className="footer">
       <div className="footer-second">
