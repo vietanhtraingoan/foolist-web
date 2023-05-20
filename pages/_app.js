@@ -71,7 +71,6 @@ function MyApp({ Component, ...rest }) {
         {isPrivateMenu && <TopMenu />}
         <div
           className="layout"
-          style={{ backgroundImage: `url(${bg})` }}
         >
           <Component {...pageProps} />
         </div>

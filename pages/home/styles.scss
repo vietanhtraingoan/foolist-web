@@ -1,14 +1,9 @@
 .home-page {
   width: 100%;
-  max-height: 700px;
-  overflow-y: scroll;
 
-  padding-top: 100px;
+  padding: 100px 120px;
 
-  &::-webkit-scrollbar {
-    display: none;
-  }
-
+  transition: ease-in-out 0.8s;
   &__first-container {
     display: flex;
     flex-direction: row;

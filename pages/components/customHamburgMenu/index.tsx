@@ -2,12 +2,13 @@ import React, { useCallback, useState } from "react";
 
 interface ICustomHamburgMenuProps {
   isMenuClick?: boolean;
+  spanBgColor?: string;
   handleMenuClick?: () => void;
   handleCloseMenu?: () => void;
 }
 
 const CustomHamburgMenu: React.FC<ICustomHamburgMenuProps> = (props) => {
-  const { isMenuClick, handleMenuClick, handleCloseMenu } = props;
+  const { isMenuClick, spanBgColor, handleMenuClick, handleCloseMenu } = props;
 
   console.log(isMenuClick);
 
@@ -17,12 +18,24 @@ const CustomHamburgMenu: React.FC<ICustomHamburgMenuProps> = (props) => {
       className={`${isMenuClick ? "open" : ""}`}
       onClick={isMenuClick === false ? handleMenuClick : handleCloseMenu}
     >
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
+      <span
+        style={{ background: isMenuClick ? "#ffffff" : spanBgColor }}
+      ></span>
+      <span
+        style={{ background: isMenuClick ? "#ffffff" : spanBgColor }}
+      ></span>
+      <span
+        style={{ background: isMenuClick ? "#ffffff" : spanBgColor }}
+      ></span>
+      <span
+        style={{ background: isMenuClick ? "#ffffff" : spanBgColor }}
+      ></span>
+      <span
+        style={{ background: isMenuClick ? "#ffffff" : spanBgColor }}
+      ></span>
+      <span
+        style={{ background: isMenuClick ? "#ffffff" : spanBgColor }}
+      ></span>
     </div>
   );
 };

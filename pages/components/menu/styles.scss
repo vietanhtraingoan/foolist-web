@@ -57,9 +57,11 @@
 
         .left-menu-text {
           margin-right: 30px;
+
           font-weight: 600;
           font-size: 18px;
-          color: #ffffff;
+
+          transition: ease-in-out 0.6s;
         }
       }
     }

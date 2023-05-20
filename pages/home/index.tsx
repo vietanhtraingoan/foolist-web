@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 import sphere from "../../public/images/Sphere.png";
@@ -10,12 +10,18 @@ import dot2 from "../../public/images/dot-pink.png";
 const classNamePrefix = "home-page";
 
 const HomePage = () => {
+  const [bgColor, setBgColor] = useState("#000000");
+
   const myLoader = ({ src, width, quality }) => {
     if (src) {
       return src;
     } else {
       return "";
     }
+  };
+
+  const listenScrollEvent = () => {
+    window.scrollY > 700 ? setBgColor("#f6a5c1") : setBgColor("#000000");
   };
 
   const handleClickScroll = () => {
@@ -26,8 +32,12 @@ const HomePage = () => {
     }
   };
 
+  useEffect(() => {
+    window.addEventListener("scroll", listenScrollEvent);
+  });
+
   return (
-    <div className={classNamePrefix}>
+    <div className={classNamePrefix} style={{ background: bgColor }}>
       <section
         id="first-section"
         className={`${classNamePrefix}__first-container`}
@@ -95,7 +105,9 @@ const HomePage = () => {
 
       <section className={`${classNamePrefix}__final-section`}>
         <div className={`${classNamePrefix}__final-section-text`}>
-          <div className={`${classNamePrefix}__final-section-text-wrapper`}>Bắt đầu dịch vụ với doanh nghiệp của bạn</div>
+          <div className={`${classNamePrefix}__final-section-text-wrapper`}>
+            Bắt đầu dịch vụ với doanh nghiệp của bạn
+          </div>
 
           <div className={`${classNamePrefix}__contact-button`}>
             <span>Liên hệ</span>

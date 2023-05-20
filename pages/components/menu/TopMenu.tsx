@@ -39,7 +39,13 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
   const [showMenuItem, setShowMenuItem] = useState<boolean>(false);
 
+  const [color, setColor] = useState("#ffffff");
+
   const [activeMenu, setactiveMenu] = useState(null);
+
+  const listenScrollEvent = () => {
+    window.scrollY > 700 ? setColor("#000000") : setColor("#ffffff");
+  };
 
   const handleMenuClick = () => {
     setIsMenuClick(true);
@@ -51,13 +57,13 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   };
 
   const handleCloseMenu = () => {
-    setShowMenuItem(false)
+    setShowMenuItem(false);
 
     setTimeout(() => {
-      setShowMenu(false)
-    },800)
-    setIsMenuClick(false)
-  }
+      setShowMenu(false);
+    }, 800);
+    setIsMenuClick(false);
+  };
 
   const changeTo = router.locale === "en" ? "ko" : "en";
 
@@ -67,6 +73,10 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
     const { pathname, asPath, query } = router;
     router.push({ pathname, query }, asPath, { locale: newLocale });
   };
+
+  useEffect(() => {
+    window.addEventListener("scroll", listenScrollEvent);
+  });
 
   return (
     <div
@@ -86,11 +96,17 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
           </div>
 
           <div className="left-menu">
-            <div className="left-menu-text">Get in Touch</div>
+            <div
+              className="left-menu-text"
+              style={{ color: isMenuClick ? "#ffffff" : color }}
+            >
+              Get in Touch
+            </div>
             <CustomHamburgMenu
               isMenuClick={isMenuClick}
               handleMenuClick={handleMenuClick}
               handleCloseMenu={handleCloseMenu}
+              spanBgColor={color}
             />
           </div>
         </div>
@@ -111,7 +127,11 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
                   }}
                   className={`item ${
                     activeMenu === menuItem.index ? "active" : ""
-                  } ${showMenuItem ? "animate__animated animate__slideInDown" : "animate__animated animate__animate__fadeOut"}  `}
+                  } ${
+                    showMenuItem
+                      ? "animate__animated animate__slideInDown"
+                      : "animate__animated animate__animate__fadeOut"
+                  }  `}
                 >
                   {menuItem.name}
                 </div>
