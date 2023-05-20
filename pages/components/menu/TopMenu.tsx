@@ -16,6 +16,8 @@ import { SearchOutlined } from "@ant-design/icons";
 
 // import nextI18NextConfig from "../../../next-i18next.config.js";
 import { Input } from "antd";
+import CustomHamburgMenu from "../customHamburgMenu";
+import SocialGroup from "../socialGroup";
 const Search = Input.Search;
 
 type Props = {
@@ -30,22 +32,32 @@ export interface MenuObj {
 }
 
 const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const [activeMenu, setactiveMenu] = useState(null);
   const router = useRouter();
-
   const { t } = useTranslation("common");
 
-  useEffect(() => {
-    if (!activeMenu) {
-      let targetMenu = PrivateRoutes.find(
-        (it: MenuObj) => it.path == router.pathname
-      );
+  const [isMenuClick, setIsMenuClick] = useState<boolean>(false);
+  const [showMenu, setShowMenu] = useState<boolean>(false);
+  const [showMenuItem, setShowMenuItem] = useState<boolean>(false);
 
-      setactiveMenu(targetMenu?.index || 0);
-    }
+  const [activeMenu, setactiveMenu] = useState(null);
 
-    return () => {};
-  }, []);
+  const handleMenuClick = () => {
+    setIsMenuClick(true);
+    setShowMenu(true);
+
+    setTimeout(() => {
+      setShowMenuItem(true);
+    }, 900);
+  };
+
+  const handleCloseMenu = () => {
+    setShowMenuItem(false)
+
+    setTimeout(() => {
+      setShowMenu(false)
+    },800)
+    setIsMenuClick(false)
+  }
 
   const changeTo = router.locale === "en" ? "ko" : "en";
 
@@ -57,7 +69,10 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   };
 
   return (
-    <div className="top-menu">
+    <div
+      className="top-menu"
+      style={{ background: showMenu ? "rgba(0, 0, 0, 0.9)" : "none" }}
+    >
       <div className="second">
         <div className="content">
           <div className="logo-group">
@@ -68,11 +83,24 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
               width={40}
               height={40}
             />
-
-            <div>Foolist Creative</div>
           </div>
 
-          <div className="secont-middle-menu">
+          <div className="left-menu">
+            <div className="left-menu-text">Get in Touch</div>
+            <CustomHamburgMenu
+              isMenuClick={isMenuClick}
+              handleMenuClick={handleMenuClick}
+              handleCloseMenu={handleCloseMenu}
+            />
+          </div>
+        </div>
+      </div>
+
+      {showMenu ? (
+        <div className="navigation-menu-wrapper animate__animated animate__fadeIn">
+          <div
+            className={`${showMenuItem ? "item-wrapper-show" : "item-wrapper"}`}
+          >
             {PrivateRoutes.map((menuItem, key) => {
               return (
                 <div
@@ -83,15 +111,18 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
                   }}
                   className={`item ${
                     activeMenu === menuItem.index ? "active" : ""
-                  }`}
+                  } ${showMenuItem ? "animate__animated animate__slideInDown" : "animate__animated animate__animate__fadeOut"}  `}
                 >
                   {menuItem.name}
                 </div>
               );
             })}
+            <SocialGroup />
           </div>
         </div>
-      </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 };

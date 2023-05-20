@@ -14,6 +14,8 @@ import { useRouter } from "next/router";
 
 import "./components/menu/styles.scss";
 import "./components/Footer/styles.scss";
+import "./components/customHamburgMenu/styles.scss"
+import "./components/socialGroup/styles.scss"
 
 import "../pages/home/styles.scss";
 

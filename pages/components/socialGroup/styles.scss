@@ -1,0 +1,23 @@
+.social-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 110px;
+  height: 38px;
+
+  .social-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 38px;
+    height: 38px;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}

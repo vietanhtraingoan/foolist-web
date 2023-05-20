@@ -44,7 +44,6 @@ const Home = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
         }}
       />
       <div><HomePage /></div>
-      <div className="content-home"></div>
     </div>
   );
 };
