@@ -8,10 +8,10 @@
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: 0.5s ease-in-out;
-  -moz-transition: 0.5s ease-in-out;
-  -o-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
   cursor: pointer;
 
   span {
@@ -58,52 +58,50 @@
   span:nth-child(6) {
     top: 16px;
   }
-
-  
 }
 
-.open span:nth-child(1),
-  .open span:nth-child(6) {
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
+#hamburg-menu.open span:nth-child(1),
+#hamburg-menu.open span:nth-child(6) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
 
-  .open span:nth-child(2),
-  .open span:nth-child(5) {
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-  }
+#hamburg-menu.open span:nth-child(2),
+#hamburg-menu.open span:nth-child(5) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
 
-  .open span:nth-child(1) {
-    left: 5px;
-    top: 7px;
-  }
+#hamburg-menu.open span:nth-child(1) {
+  left: 1px;
+  top: 5px;
+}
 
-  .open span:nth-child(2) {
-    left: calc(50% - 5px);
-    top: 7px;
-  }
+#hamburg-menu.open span:nth-child(2) {
+  left: calc(50% - 5px);
+  top: 5px;
+}
 
-  .open span:nth-child(3) {
-    left: -50%;
-    opacity: 0;
-  }
+#hamburg-menu.open span:nth-child(3) {
+  left: -50%;
+  opacity: 0;
+}
 
-  .open span:nth-child(4) {
-    left: 100%;
-    opacity: 0;
-  }
+#hamburg-menu.open span:nth-child(4) {
+  left: 100%;
+  opacity: 0;
+}
 
-  .open span:nth-child(5) {
-    left: 5px;
-    top: 29px;
-  }
+#hamburg-menu.open span:nth-child(5) {
+  left: 0;
+  top: 16px;
+}
 
-  .open span:nth-child(6) {
-    left: calc(50% - 5px);
-    top: 29px;
-  }
+#hamburg-menu.open span:nth-child(6) {
+  left: calc(50% - 5px);
+  top: 16px;
+}
