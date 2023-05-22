@@ -59,7 +59,6 @@ export default function Footer() {
     },
   ];
 
-  console.log(link)
   return (
     <div className="footer">
       <div className="footer-second">

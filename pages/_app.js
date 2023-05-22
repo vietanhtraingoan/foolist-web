@@ -18,6 +18,7 @@ import "./components/customHamburgMenu/styles.scss"
 import "./components/socialGroup/styles.scss"
 
 import "../pages/home/styles.scss";
+import "../pages/contact/styles.scss"
 
 import "./globalStyle.scss";
 import { useEffect, useLayoutEffect, useState } from "react";

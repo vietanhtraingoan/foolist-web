@@ -7,6 +7,8 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.2",
+    "@sendgrid/mail": "^7.7.0",
+    "@superfaceai/one-sdk": "^2.4.2",
     "animate.css": "^4.1.1",
     "antd": "^5.2.1",
     "i18next": "^22.4.9",

@@ -1,4 +1,4 @@
-export const API_LINK = "http://localhost/api/"; //
+export const API_LINK = "http://localhost/"; //
 export const ACCESS_TOKEN = "access_token"; //
 
 //language

@@ -124,6 +124,7 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
                   onClick={() => {
                     router.push(menuItem.path);
                     setactiveMenu(menuItem.index);
+                    handleCloseMenu()
                   }}
                   className={`item ${
                     activeMenu === menuItem.index ? "active" : ""

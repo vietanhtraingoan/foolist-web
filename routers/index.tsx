@@ -2,6 +2,7 @@ import About from "../pages/about";
 import Login from "../pages/auth/login";
 import Register from "../pages/auth/register";
 import Home from "../pages";
+import ContactPage from "../pages/contact";
 
 export const PrivateRoutes = [
   {
@@ -36,7 +37,7 @@ export const PrivateRoutes = [
   },
   {
     path: "/contact",
-    element: <About />,
+    element: <ContactPage />,
     name: "Contact Us",
     index: 1,
   },
