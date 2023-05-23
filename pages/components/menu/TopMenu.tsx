@@ -44,7 +44,7 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const [activeMenu, setactiveMenu] = useState(null);
 
   const listenScrollEvent = () => {
-    window.scrollY > 700 ? setColor("#000000") : setColor("#ffffff");
+    window.scrollY > 2000 ? setColor("#000000") : setColor("#ffffff");
   };
 
   const handleMenuClick = () => {
@@ -65,7 +65,7 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
     setIsMenuClick(false);
   };
 
-  const changeTo = router.locale === "en" ? "ko" : "en";
+  const changeTo = router.locale === "en" ? "vn" : "en";
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const onToggleLanguageClick = (newLocale: string) => {

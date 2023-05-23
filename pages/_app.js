@@ -16,6 +16,7 @@ import "./components/menu/styles.scss";
 import "./components/Footer/styles.scss";
 import "./components/customHamburgMenu/styles.scss"
 import "./components/socialGroup/styles.scss"
+import "./components/languageChange/styles.scss"
 
 import "../pages/home/styles.scss";
 import "../pages/contact/styles.scss"
@@ -31,7 +32,6 @@ import { appWithTranslation } from "next-i18next";
 import nextI18NextConfig from "../next-i18next.config.js";
 import "antd/dist/reset.css";
 import { DEFAULT_LANG, KEY_LANGUAGE } from "../utils/constants";
-import bg from "../public/images/bg.png";
 
 function MyApp({ Component, ...rest }) {
   const { store, props } = wrapper.useWrappedStore(rest);

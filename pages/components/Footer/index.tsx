@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import foolistLogo from "../../../public/images/foolistLogo.png";
+import LanguageChange from "../languageChange";
 
 const classNamePrefix = "footer";
 
@@ -121,6 +122,8 @@ export default function Footer() {
               </a>
             </div>
           </div>
+
+          <LanguageChange />
         </div>
       </div>
     </div>

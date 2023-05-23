@@ -6,28 +6,36 @@ import serviceImage1 from "../../public/images/service-1.png";
 import serviceImage2 from "../../public/images/service-2.png";
 import dot1 from "../../public/images/dot-white.png";
 import dot2 from "../../public/images/dot-pink.png";
+import { GetStaticProps, InferGetStaticPropsType } from "next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { DEFAULT_LANG } from "../../utils/constants";
+import { useTranslation } from "next-i18next";
 
 const classNamePrefix = "home-page";
 
-const HomePage = () => {
+type Props = {};
+
+const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const { t } = useTranslation("common");
+
   const [bgColor, setBgColor] = useState("#000000");
 
-  const myLoader = ({ src, width, quality }) => {
-    if (src) {
-      return src;
-    } else {
-      return "";
-    }
-  };
-
   const listenScrollEvent = () => {
-    window.scrollY > 700 ? setBgColor("#f6a5c1") : setBgColor("#000000");
+    const scroll = window.pageYOffset;
+    if (scroll < 1200) {
+      setBgColor("#000000");
+    } else if (scroll >= 1200 && scroll < 1700) {
+      setBgColor("#63424d");
+    } else if (window.scrollY >= 1700 && scroll < 2100) {
+      setBgColor("#f8a5c2");
+    } else if (window.scrollY >= 2100 && scroll < 3000) {
+      setBgColor("#f6a5c1");
+    }
   };
 
   const handleClickScroll = () => {
     const element = document.getElementById("section-1");
     if (element) {
-      // 👇 Will scroll smoothly to the top of the next section
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
@@ -70,7 +78,7 @@ const HomePage = () => {
             </div>
 
             <div className={`${classNamePrefix}__main-content-button`}>
-              <span>XEM THÊM +</span>
+              <span>{t("view-more")} +</span>
             </div>
           </div>
         </div>
@@ -129,8 +137,20 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
+      <section className={`${classNamePrefix}__section-wrapper`}>
+        <div className={`${classNamePrefix}__final-section-text-wrapper`}>
+          Bắt đầu dịch vụ với doanh nghiệp của bạn
+        </div>
+      </section>
     </div>
   );
 };
+
+export const getStaticProps: GetStaticProps<Props> = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale ?? DEFAULT_LANG, ["common"])),
+  },
+});
 
 export default HomePage;

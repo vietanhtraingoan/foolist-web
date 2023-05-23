@@ -7,6 +7,9 @@
   &__first-container {
     display: flex;
     flex-direction: row;
+
+    width: 100%;
+    min-height: 700px;
   }
 
   &__image-container {
@@ -115,8 +118,7 @@
     align-items: center;
 
     width: 100%;
-
-    margin: 51.22px 0 212px 0;
+    min-height: 700px;
   }
 
   &__service-content-wrapper {
@@ -181,8 +183,7 @@
     align-items: flex-start;
 
     width: 100%;
-
-    margin: 115px 0 350px 0;
+    min-height: 700px;
   }
 
   &__final-section-text {
@@ -258,5 +259,10 @@
     position: absolute;
     bottom: -72px;
     right: 93.6px;
+  }
+
+  &__section-wrapper {
+    width: 100%;
+    min-height: 700px;
   }
 }

@@ -1,5 +1,11 @@
 {
-  "home": "Home",
-  "about": "About",
+  "Home": "Home",
+  "About us": "About us",
+  "Products": "Products",
+  "Services": "Services",
+  "Words": "Words",
+  "Blogs": "Blogs",
+  "Contact us": "Contact us",
+  "view-more": "VIEW MORE",
   "change-locale": "Language: {{changeTo}}"
 }
