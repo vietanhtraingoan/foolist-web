@@ -1,24 +1,18 @@
-import React, { useEffect, useLayoutEffect, useState } from "react";
-import Link from "next/link";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { PrivateRoutes } from "../../../routers";
 
 import foolistLogo from "../../../public/images/foolistLogo.png";
-import menu from "../../../public/images/menu.png";
 
 import type { GetStaticProps, InferGetStaticPropsType } from "next";
-import { useTranslation, Trans } from "next-i18next";
+import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { DEFAULT_LANG, KEY_LANGUAGE } from "../../../utils/constants";
 import Image from "next/image";
 
-import { SearchOutlined } from "@ant-design/icons";
-
-// import nextI18NextConfig from "../../../next-i18next.config.js";
 import { Input } from "antd";
 import CustomHamburgMenu from "../customHamburgMenu";
 import SocialGroup from "../socialGroup";
-const Search = Input.Search;
 
 type Props = {
   // Add custom props here
@@ -65,18 +59,10 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
     setIsMenuClick(false);
   };
 
-  const changeTo = router.locale === "en" ? "vn" : "en";
-
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const onToggleLanguageClick = (newLocale: string) => {
-    localStorage.setItem(KEY_LANGUAGE, newLocale);
-    const { pathname, asPath, query } = router;
-    router.push({ pathname, query }, asPath, { locale: newLocale });
-  };
-
   useEffect(() => {
     window.addEventListener("scroll", listenScrollEvent);
   });
+
 
   return (
     <div
@@ -124,7 +110,7 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
                   onClick={() => {
                     router.push(menuItem.path);
                     setactiveMenu(menuItem.index);
-                    handleCloseMenu()
+                    handleCloseMenu();
                   }}
                   className={`item ${
                     activeMenu === menuItem.index ? "active" : ""
