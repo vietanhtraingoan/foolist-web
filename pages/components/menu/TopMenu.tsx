@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { PrivateRoutes } from "../../../routers";
 
-import foolistLogo from "../../../public/images/foolistLogo.png";
+import foolistLogo from "../../../public/static/foolistLogo.png";
 
 import type { GetStaticProps, InferGetStaticPropsType } from "next";
 import { useTranslation } from "next-i18next";
