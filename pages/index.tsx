@@ -18,7 +18,7 @@ const Home = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <div>
       <NextSeo
-        title="Page Meta Title"
+        title="Foolist Creative"
         description="This will be the page meta description"
         canonical="https://www.canonicalurl.ie/"
         openGraph={{

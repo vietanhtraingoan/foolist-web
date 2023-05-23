@@ -33,13 +33,6 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
     }
   };
 
-  const handleClickScroll = () => {
-    const element = document.getElementById("section-1");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   useEffect(() => {
     window.addEventListener("scroll", listenScrollEvent);
   });
