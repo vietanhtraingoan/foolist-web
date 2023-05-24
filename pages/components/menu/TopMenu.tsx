@@ -10,7 +10,6 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { DEFAULT_LANG, KEY_LANGUAGE } from "../../../utils/constants";
 import Image from "next/image";
 
-import { Input } from "antd";
 import CustomHamburgMenu from "../customHamburgMenu";
 import SocialGroup from "../socialGroup";
 
@@ -76,8 +75,8 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
               src={foolistLogo}
               className="logo"
               alt="logo"
-              width={40}
-              height={40}
+              width={55}
+              height={55}
             />
           </div>
 

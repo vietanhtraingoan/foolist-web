@@ -1,19 +1,27 @@
 import React, { useState } from "react";
 import vnFlag from "../../../public/images/vnFlag.png";
 import Image from "next/image";
-import { KEY_LANGUAGE, LANG_EN } from "../../../utils/constants";
+import {
+  DEFAULT_LANG,
+  KEY_LANGUAGE,
+  LANG_EN,
+  LANG_VN,
+} from "../../../utils/constants";
 import { useRouter } from "next/router";
 
 const classNamePrefix = "language-change";
 
 const LanguageChange = () => {
-  const router = useRouter();
-
   const [languageChange, setLanguageChange] = useState<boolean>(false);
 
   const handleLanguageChange = () => {
+    const language = localStorage.getItem(KEY_LANGUAGE);
     setLanguageChange(!languageChange);
-    localStorage.setItem(KEY_LANGUAGE, LANG_EN);
+
+    if (language === LANG_VN) {
+      localStorage.setItem(KEY_LANGUAGE, LANG_EN);
+    }
+    localStorage.setItem(KEY_LANGUAGE, DEFAULT_LANG);
   };
 
   return (

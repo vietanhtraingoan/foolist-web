@@ -5,6 +5,7 @@
  */
 import { DefaultSeo } from "next-seo";
 import "animate.css";
+import "animate.css/animate.min.css";
 
 import SEO from "../next-seo.config";
 // import LeftMenu from "./components/menu/LeftMenu";
@@ -14,12 +15,16 @@ import { useRouter } from "next/router";
 
 import "./components/menu/styles.scss";
 import "./components/Footer/styles.scss";
-import "./components/customHamburgMenu/styles.scss"
-import "./components/socialGroup/styles.scss"
-import "./components/languageChange/styles.scss"
+import "./components/customHamburgMenu/styles.scss";
+import "./components/socialGroup/styles.scss";
+import "./components/languageChange/styles.scss";
+import "./components/productSider/styles.scss";
+import "./components/projectCarousel/styles.scss";
+import "./components/clientItem/styles.scss"
+import "./components/circleProjectSlider/styles.scss"
 
 import "../pages/home/styles.scss";
-import "../pages/contact/styles.scss"
+import "../pages/contact/styles.scss";
 
 import "./globalStyle.scss";
 import { useEffect, useLayoutEffect, useState } from "react";
@@ -70,12 +75,10 @@ function MyApp({ Component, ...rest }) {
       <DefaultSeo {...SEO} />
       <Provider store={store}>
         {isPrivateMenu && <TopMenu />}
-        <div
-          className="layout"
-        >
+        <div className="layout">
           <Component {...pageProps} />
         </div>
-        {isPrivateMenu && <Footer />}
+        {/* {isPrivateMenu && <Footer />} */}
       </Provider>
     </>
   );

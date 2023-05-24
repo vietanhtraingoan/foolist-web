@@ -1,15 +1,20 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-
-import sphere from "../../public/images/Sphere.png";
-import serviceImage1 from "../../public/images/service-1.png";
-import serviceImage2 from "../../public/images/service-2.png";
-import dot1 from "../../public/images/dot-white.png";
-import dot2 from "../../public/images/dot-pink.png";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { DEFAULT_LANG } from "../../utils/constants";
 import { useTranslation } from "next-i18next";
+import Marquee from "react-fast-marquee";
+import ScrollAnimation from "react-animate-on-scroll";
+
+import sphere from "../../public/images/Sphere.png";
+import { DEFAULT_LANG } from "../../utils/constants";
+import ProjectCarousel from "../components/projectCarousel";
+import { ClientMocks } from "../../mocks/clientMocks";
+import ClientItem from "../components/clientItem";
+import CircleProjectSlider from "../components/circleProjectSlider";
+import { infoMocks } from "../../mocks/infoMocks";
+import introductionBG from "../../public/static/project3.png";
+import LanguageChange from "../components/languageChange";
 
 const classNamePrefix = "home-page";
 
@@ -19,121 +24,110 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation("common");
 
   const [bgColor, setBgColor] = useState("#000000");
+  const [animateClientTitile, setAnimateClientTitle] = useState(0);
 
-  const listenScrollEvent = () => {
-    const scroll = window.pageYOffset;
-    if (scroll < 1200) {
-      setBgColor("#000000");
-    } else if (scroll >= 1200 && scroll < 1700) {
-      setBgColor("#63424d");
-    } else if (window.scrollY >= 1700 && scroll < 2100) {
-      setBgColor("#f8a5c2");
-    } else if (window.scrollY >= 2100 && scroll < 3000) {
-      setBgColor("#f6a5c1");
-    }
-  };
+  // const listenScrollEvent = () => {
+  //   const scroll = window.pageYOffset;
+  //   if (scroll < 1200) {
+  //     setBgColor("#000000");
+  //   } else if (scroll >= 1200 && scroll < 1700) {
+  //     setBgColor("#63424d");
+  //   } else if (window.scrollY >= 1700 && scroll < 2100) {
+  //     setBgColor("#f8a5c2");
+  //   } else if (window.scrollY >= 2100 && scroll < 3000) {
+  //     setBgColor("#f6a5c1");
+  //   }
+  // };
 
-  useEffect(() => {
-    window.addEventListener("scroll", listenScrollEvent);
-  });
+  // useEffect(() => {
+  //   window.addEventListener("scroll", listenScrollEvent);
+  // });
 
   return (
-    <div className={classNamePrefix} style={{ background: bgColor }}>
+    <div className={classNamePrefix} id="scrolly-div">
+      <div className={`${classNamePrefix}__float-item`}>
+        <LanguageChange />
+      </div>
+
       <section
         id="first-section"
-        className={`${classNamePrefix}__first-container`}
+        className={`${classNamePrefix}__introduction-container`}
       >
-        <div className={`${classNamePrefix}__image-container`}>
+        <div className={`${classNamePrefix}__introduction-title`}>
+          <span>Foolist</span>
+          <span>Creative</span>
+        </div>
+
+        <div className={`${classNamePrefix}__introduction-image-container`}>
           <Image
-            src={sphere}
-            className="home-page-sphere"
-            width={900}
-            height={700}
+            src={introductionBG}
+            className={`${classNamePrefix}__introduction-image`}
             alt=""
           />
         </div>
+      </section>
 
-        <div className={`${classNamePrefix}__content-wrapper`}>
-          <div className={`${classNamePrefix}__content-title`}>
+      <section className={`${classNamePrefix}__project-carousel-container`}>
+        <div className={`${classNamePrefix}__section-title`}>
+          <span>SẢN PHẨM</span>
+        </div>
+
+        <ProjectCarousel />
+      </section>
+
+      <section className={`${classNamePrefix}__project-circle-container`}>
+        <div className={`${classNamePrefix}__project-info`}>Info</div>
+
+        <div className={`${classNamePrefix}__project-slider`}>
+          <CircleProjectSlider />
+        </div>
+      </section>
+
+      <section className={`${classNamePrefix}__client-container`}>
+        <ScrollAnimation
+          animateIn="fadeIn"
+          animateOut="fadeOut"
+          scrollableParentSelector="#scrolly-div"
+        >
+          <h1 style={{ color: "#ffffff" }}>OUR CLIENTS</h1>
+        </ScrollAnimation>
+
+        <div style={{ width: 1800, marginTop: 100 }}>
+          <Marquee pauseOnHover>
+            {ClientMocks.map((c) => (
+              <ClientItem key={c.id} data={c} />
+            ))}
+          </Marquee>
+        </div>
+      </section>
+
+      <section className={`${classNamePrefix}__divider-container`}></section>
+
+      <section className={`${classNamePrefix}__footer-container`}>
+        <div className={`${classNamePrefix}__footer-left`}>
+          <div className={`${classNamePrefix}__footer-left-title`}>
             <span>“LET ART</span>
-            <div className={`${classNamePrefix}__content-title-highlight`}>
+            <div className={`${classNamePrefix}__footer-left-title-highlight`}>
               UNLOCK
             </div>
             <span> YOUR BUSINESS “</span>
           </div>
-
-          <div className={`${classNamePrefix}__main-content-wrapper`}>
-            <div className={`${classNamePrefix}__main-content-text`}>
-              Chào mừng đến với Foolist Creative - chúng tôi cung cấp các giải
-              pháp sáng tạo và đột phá cho doanh nghiệp của bạn. Chúng tôi là
-              một đội ngũ chuyên gia với nhiều năm kinh nghiệm trong lĩnh vực
-              thiết kế đồ họa, truyền thông và phát triển website.
-            </div>
-
-            <div className={`${classNamePrefix}__main-content-button`}>
-              <span>{t("view-more")} +</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section
-        id="second-section"
-        className={`${classNamePrefix}__section-container`}
-      >
-        <div className={`${classNamePrefix}__section-title`}>
-          DỊCH VỤ CỦA CHÚNG TÔI
         </div>
 
-        <div className={`${classNamePrefix}__service-content-wrapper`}>
-          <div className={`${classNamePrefix}__service-content`}>
-            <span className={`${classNamePrefix}__service-content-text`}>
-              TECHNOLOGY
-            </span>
+        <div className={`${classNamePrefix}__footer-right`}>
+          <div className={`${classNamePrefix}__footer-info-group-title`}>
+            Foolist Creative
           </div>
 
-          <div className={`${classNamePrefix}__service-content`}>
-            <span className={`${classNamePrefix}__service-content-text`}>
-              MEDIA
-            </span>
-          </div>
-        </div>
-      </section>
+          <span className={`${classNamePrefix}__footer-info-group-text`}>
+            Foolist.vn
+          </span>
 
-      <section className={`${classNamePrefix}__section-container`}>
-        <div className={`${classNamePrefix}__section-title`}>SẢN PHẨM</div>
-      </section>
-
-      <section className={`${classNamePrefix}__final-section`}>
-        <div className={`${classNamePrefix}__final-section-text`}>
-          <div className={`${classNamePrefix}__final-section-text-wrapper`}>
-            Bắt đầu dịch vụ với doanh nghiệp của bạn
+          <div className={`${classNamePrefix}__footer-info-group`}>
+            {infoMocks.map((i) => (
+              <span key={i.id}>{i.text}</span>
+            ))}
           </div>
-
-          <div className={`${classNamePrefix}__contact-button`}>
-            <span>Liên hệ</span>
-          </div>
-        </div>
-
-        <div className={`${classNamePrefix}__image-group`}>
-          <div className={`${classNamePrefix}__image-1`}>
-            <Image src={serviceImage2} alt="" width={325} height={288} />
-          </div>
-          <div className={`${classNamePrefix}__image-2`}>
-            <Image src={serviceImage1} alt="" width={325} height={288} />
-          </div>
-          <div className={`${classNamePrefix}__image-3`}>
-            <Image src={dot1} alt="" width={103.73} height={75.68} />
-          </div>
-          <div className={`${classNamePrefix}__image-4`}>
-            <Image src={dot2} alt="" width={210.21} height={70.93} />
-          </div>
-        </div>
-      </section>
-
-      <section className={`${classNamePrefix}__section-wrapper`}>
-        <div className={`${classNamePrefix}__final-section-text-wrapper`}>
-          Bắt đầu dịch vụ với doanh nghiệp của bạn
         </div>
       </section>
     </div>

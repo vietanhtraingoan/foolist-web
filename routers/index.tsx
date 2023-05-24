@@ -1,6 +1,3 @@
-import About from "../pages/about";
-import Login from "../pages/auth/login";
-import Register from "../pages/auth/register";
 import Home from "../pages";
 import ContactPage from "../pages/contact";
 
@@ -13,25 +10,25 @@ export const PrivateRoutes = [
   },
   {
     path: "/about",
-    element: <About />,
+    element: <ContactPage />,
     name: "About us",
     index: 1,
   },
   {
     path: "/services",
-    element: <About />,
+    element: <ContactPage />,
     name: "Services",
     index: 1,
   },
   {
     path: "/words",
-    element: <About />,
+    element: <ContactPage />,
     name: "Words",
     index: 1,
   },
   {
     path: "/blog",
-    element: <About />,
+    element: <ContactPage />,
     name: "Blogs",
     index: 1,
   },
@@ -46,12 +43,12 @@ export const PrivateRoutes = [
 export const PublicRoutes = [
   {
     path: "/auth/login",
-    element: <Login />,
+    element: <ContactPage />,
     name: "Login",
   },
   {
     path: "/auth/register",
-    element: <Register />,
+    element: <ContactPage />,
     name: "Register",
   },
 ];
