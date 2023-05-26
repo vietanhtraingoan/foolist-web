@@ -74,34 +74,6 @@
 
     border: 1px solid #000000;
   }
-
-  .scroller {
-    height: 70px;
-    line-height: 70px;
-    position: relative;
-    overflow: hidden;
-    width: 30em;
-  }
-  .scroller > span {
-    position: absolute;
-    top: 0;
-    animation: slide 5s infinite;
-    font-weight: bold;
-    font-size: 67px;
-  }
 }
 
-@keyframes slide {
-  0% {
-    top: 0;
-  }
-  25% {
-    top: -1.2em;
-  }
-  50% {
-    top: -2.4em;
-  }
-  75% {
-    top: -3.6em;
-  }
-}
+

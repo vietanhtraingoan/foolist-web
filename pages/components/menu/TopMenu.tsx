@@ -62,7 +62,6 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
     window.addEventListener("scroll", listenScrollEvent);
   });
 
-
   return (
     <div
       className="top-menu"

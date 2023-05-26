@@ -1,5 +1,7 @@
 import Home from "../pages";
+import AboutPage from "../pages/about";
 import ContactPage from "../pages/contact";
+import ProjectPage from "../pages/project";
 
 export const PrivateRoutes = [
   {
@@ -10,33 +12,39 @@ export const PrivateRoutes = [
   },
   {
     path: "/about",
-    element: <ContactPage />,
+    element: <AboutPage />,
     name: "About us",
     index: 1,
+  },
+  {
+    path: "/project",
+    element: <ProjectPage />,
+    name: "Projects",
+    index: 2,
   },
   {
     path: "/services",
     element: <ContactPage />,
     name: "Services",
-    index: 1,
+    index: 3,
   },
   {
     path: "/words",
     element: <ContactPage />,
     name: "Words",
-    index: 1,
+    index: 4,
   },
   {
     path: "/blog",
     element: <ContactPage />,
     name: "Blogs",
-    index: 1,
+    index: 5,
   },
   {
     path: "/contact",
     element: <ContactPage />,
     name: "Contact Us",
-    index: 1,
+    index: 6,
   },
 ];
 

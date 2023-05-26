@@ -290,7 +290,7 @@
     "@syncfusion/ej2-buttons" "~21.2.6"
     "@syncfusion/ej2-data" "~21.2.6"
 
-"@syncfusion/ej2-navigations@^21.2.6":
+"@syncfusion/ej2-navigations@21.2.6", "@syncfusion/ej2-navigations@^21.2.6":
   version "21.2.6"
   resolved "https://registry.yarnpkg.com/@syncfusion/ej2-navigations/-/ej2-navigations-21.2.6.tgz#6078b1f32905e791f8e50b00f612e304b06cb19d"
   integrity sha512-IF6SaKhrIzAyC5D+oj5zPvh6d1V28TK95edPfw3nViSSvN6aS6cEetNhqdNlf3pgNRwGhYsAyi7ZYPUJO5d3/A==
@@ -309,6 +309,22 @@
   dependencies:
     "@syncfusion/ej2-base" "~21.2.3"
     "@syncfusion/ej2-buttons" "~21.2.3"
+
+"@syncfusion/ej2-react-base@~21.2.6":
+  version "21.2.6"
+  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-react-base/-/ej2-react-base-21.2.6.tgz#6eec5a40a44875508fd9e0b85bed8aafa7d7becf"
+  integrity sha512-xKGuAmlWilYyrkyBQp1T18mTBYvG4TETxyTCXxXc6KOhN2LsxYF0OrTSIfGJ6et3Sqrix+cB8u2hDILnLzjrZw==
+  dependencies:
+    "@syncfusion/ej2-base" "~21.2.3"
+
+"@syncfusion/ej2-react-navigations@^21.2.6":
+  version "21.2.6"
+  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-react-navigations/-/ej2-react-navigations-21.2.6.tgz#0d0e5f2ddb798c708a05b7321b6ec8189a9fe36a"
+  integrity sha512-Gh9a34/oOIQ09ybuIPQrBupCOtBhAcfVQlWkzk6SP7IrTlz2oro8amy8fEMaI0tF/9WHMm5xjyrmCFUI9O07OQ==
+  dependencies:
+    "@syncfusion/ej2-base" "~21.2.3"
+    "@syncfusion/ej2-navigations" "21.2.6"
+    "@syncfusion/ej2-react-base" "~21.2.6"
 
 "@syncfusion/ej2-splitbuttons@~21.2.5":
   version "21.2.5"

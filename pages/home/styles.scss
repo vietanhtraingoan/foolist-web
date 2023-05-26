@@ -44,6 +44,33 @@
     }
   }
 
+  &__scroller {
+    position: relative;
+    overflow: hidden;
+
+    height: 140px;
+    width: 50em;
+
+    margin-top: 20px;
+
+    line-height: 140px;
+
+    span {
+      position: absolute;
+      top: 0;
+      animation: slide 8s infinite;
+
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 800;
+      font-size: 190px;
+      text-shadow: 2px 2px 0 #f6a5c1, 2px -2px 0 #f6a5c1, -2px 2px 0 #f6a5c1,
+        -2px -2px 0 #f6a5c1, 2px 0px 0 #f6a5c1, 0px 2px 0 #f6a5c1,
+        -2px 0px 0 #f6a5c1, 0px -2px 0 #f6a5c1,
+        0px 0px 3px rgba(246, 165, 193, 0);
+    }
+  }
+
   &__introduction-image-container {
     width: 100%;
   }
@@ -248,5 +275,20 @@
     line-height: 88px;
     font-style: italic;
     color: #ffffff;
+  }
+}
+
+@keyframes slide {
+  0% {
+    top: 0;
+  }
+  25% {
+    top: -0.88em;
+  }
+  50% {
+    top: -1.7em;
+  }
+  75% {
+    top: -2.53em;
   }
 }

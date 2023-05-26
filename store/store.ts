@@ -7,12 +7,14 @@ import {
 
 import { authApi } from "./auth/authApi";
 import authReducer, { userLogout } from "./auth/authSlice";
+import projectReducer from "./project/projectSlice";
 
 import { createWrapper } from "next-redux-wrapper";
 
 const rootReducer = {
   auth: authReducer,
   [authApi.reducerPath]: authApi.reducer,
+  project: projectReducer,
 };
 
 const rtkQueryErrorLogger: Middleware =

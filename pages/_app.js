@@ -20,11 +20,17 @@ import "./components/socialGroup/styles.scss";
 import "./components/languageChange/styles.scss";
 import "./components/productSider/styles.scss";
 import "./components/projectCarousel/styles.scss";
-import "./components/clientItem/styles.scss"
-import "./components/circleProjectSlider/styles.scss"
+import "./components/clientItem/styles.scss";
+import "./components/circleProjectSlider/styles.scss";
+import "./components/introductionCarousel/styles.scss";
+import "./components/projectDetail/styles.scss";
+import "./components/animatedNextButton/styles.scss";
+import "./components/animatedGraph/styles.scss"
 
 import "../pages/home/styles.scss";
 import "../pages/contact/styles.scss";
+import "../pages/project/styles.scss";
+import "../pages/about/styles.scss"
 
 import "./globalStyle.scss";
 import { useEffect, useLayoutEffect, useState } from "react";

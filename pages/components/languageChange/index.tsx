@@ -30,7 +30,7 @@ const LanguageChange = () => {
       onClick={handleLanguageChange}
       style={{
         background: languageChange ? "#ffffff" : "#000000",
-        borderColor: languageChange ? "#000000" : "#ffffff",
+        borderColor: languageChange ? "none" : "#ffffff",
       }}
     >
       <div

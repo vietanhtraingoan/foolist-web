@@ -50,15 +50,6 @@ const ContactPage = () => {
         <div>This is an introduction</div>
       </section>
 
-      <div className="scroller">
-        <span>
-          Cool<br/>
-          Art<br/>
-          Intruiging<br/>
-          Challenging
-        </span>
-      </div>
-
       <div className={`${classNamePrefix}__content-wrapper`}>
         <section className={`${classNamePrefix}__info-wrapper`}>
           <div>address</div>

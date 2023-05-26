@@ -20,7 +20,7 @@ const Home = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
         description="This will be the page meta description"
         canonical="https://www.canonicalurl.ie/"
         openGraph={{
-          url: "https://www.canonicalurl.ie/",
+          url: "www.foolist.vn",
           title: "Open Graph Title",
           description: "Open Graph Description",
           images: [

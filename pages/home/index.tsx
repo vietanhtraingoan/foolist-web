@@ -1,20 +1,18 @@
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import Marquee from "react-fast-marquee";
 import ScrollAnimation from "react-animate-on-scroll";
 
-import sphere from "../../public/images/Sphere.png";
 import { DEFAULT_LANG } from "../../utils/constants";
 import ProjectCarousel from "../components/projectCarousel";
 import { ClientMocks } from "../../mocks/clientMocks";
 import ClientItem from "../components/clientItem";
 import CircleProjectSlider from "../components/circleProjectSlider";
 import { infoMocks } from "../../mocks/infoMocks";
-import introductionBG from "../../public/static/project3.png";
 import LanguageChange from "../components/languageChange";
+import IntroductionCarousel from "../components/introductionCarousel";
 
 const classNamePrefix = "home-page";
 
@@ -48,25 +46,38 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
       <div className={`${classNamePrefix}__float-item`}>
         <LanguageChange />
       </div>
-
       <section
         id="first-section"
         className={`${classNamePrefix}__introduction-container`}
       >
         <div className={`${classNamePrefix}__introduction-title`}>
           <span>Foolist</span>
-          <span>Creative</span>
+
+          <div className={`${classNamePrefix}__scroller`}>
+            <span>
+              Creative
+              <br />
+              Tech
+              <br />
+              Media
+              <br />
+              ERP
+            </span>
+          </div>
         </div>
 
         <div className={`${classNamePrefix}__introduction-image-container`}>
+          <IntroductionCarousel />
+        </div>
+
+        {/* <div className={`${classNamePrefix}__introduction-image-container`}>
           <Image
             src={introductionBG}
             className={`${classNamePrefix}__introduction-image`}
             alt=""
           />
-        </div>
+        </div> */}
       </section>
-
       <section className={`${classNamePrefix}__project-carousel-container`}>
         <div className={`${classNamePrefix}__section-title`}>
           <span>SẢN PHẨM</span>
@@ -74,7 +85,6 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
 
         <ProjectCarousel />
       </section>
-
       <section className={`${classNamePrefix}__project-circle-container`}>
         <div className={`${classNamePrefix}__project-info`}>Info</div>
 
@@ -82,7 +92,6 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
           <CircleProjectSlider />
         </div>
       </section>
-
       <section className={`${classNamePrefix}__client-container`}>
         <ScrollAnimation
           animateIn="fadeIn"
@@ -100,9 +109,7 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
           </Marquee>
         </div>
       </section>
-
       <section className={`${classNamePrefix}__divider-container`}></section>
-
       <section className={`${classNamePrefix}__footer-container`}>
         <div className={`${classNamePrefix}__footer-left`}>
           <div className={`${classNamePrefix}__footer-left-title`}>
@@ -130,6 +137,13 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
           </div>
         </div>
       </section>
+      <iframe
+        src="https://res.cloudinary.com/dufh7rv0n/video/upload/v1685001735/video_qcuflk?autoplay=1.webm"
+        height="700"
+        width="1200"
+        title="Iframe Example"
+        allow="autoplay"
+      ></iframe>{" "}
     </div>
   );
 };
