@@ -69,15 +69,8 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
         <div className={`${classNamePrefix}__introduction-image-container`}>
           <IntroductionCarousel />
         </div>
-
-        {/* <div className={`${classNamePrefix}__introduction-image-container`}>
-          <Image
-            src={introductionBG}
-            className={`${classNamePrefix}__introduction-image`}
-            alt=""
-          />
-        </div> */}
       </section>
+
       <section className={`${classNamePrefix}__project-carousel-container`}>
         <div className={`${classNamePrefix}__section-title`}>
           <span>SẢN PHẨM</span>
@@ -85,6 +78,7 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
 
         <ProjectCarousel />
       </section>
+
       <section className={`${classNamePrefix}__project-circle-container`}>
         <div className={`${classNamePrefix}__project-info`}>Info</div>
 
@@ -92,6 +86,7 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
           <CircleProjectSlider />
         </div>
       </section>
+
       <section className={`${classNamePrefix}__client-container`}>
         <ScrollAnimation
           animateIn="fadeIn"
@@ -109,7 +104,9 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
           </Marquee>
         </div>
       </section>
-      <section className={`${classNamePrefix}__divider-container`}></section>
+
+      <section className={`${classNamePrefix}__divider-container`} />
+
       <section className={`${classNamePrefix}__footer-container`}>
         <div className={`${classNamePrefix}__footer-left`}>
           <div className={`${classNamePrefix}__footer-left-title`}>
@@ -137,13 +134,13 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
           </div>
         </div>
       </section>
-      <iframe
+      {/* <iframe
         src="https://res.cloudinary.com/dufh7rv0n/video/upload/v1685001735/video_qcuflk?autoplay=1.webm"
         height="700"
         width="1200"
         title="Iframe Example"
         allow="autoplay"
-      ></iframe>{" "}
+      ></iframe>{" "} */}
     </div>
   );
 };

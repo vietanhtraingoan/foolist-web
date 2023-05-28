@@ -12,6 +12,8 @@ import { useRouter } from "next/router";
 const classNamePrefix = "language-change";
 
 const LanguageChange = () => {
+  const router = useRouter();
+
   const [languageChange, setLanguageChange] = useState<boolean>(false);
 
   const handleLanguageChange = () => {
@@ -24,10 +26,20 @@ const LanguageChange = () => {
     localStorage.setItem(KEY_LANGUAGE, DEFAULT_LANG);
   };
 
+  const changeTo = router.locale === "vn" ? "en" : "vn";
+
+  const onToggleLanguageClick = (newLocale: string) => {
+    setLanguageChange(!languageChange);
+
+    localStorage.setItem(KEY_LANGUAGE, newLocale);
+    const { pathname, asPath, query } = router;
+    router.push({ pathname, query }, asPath, { locale: newLocale });
+  };
+
   return (
     <div
       className={classNamePrefix}
-      onClick={handleLanguageChange}
+      onClick={() => onToggleLanguageClick(changeTo)}
       style={{
         background: languageChange ? "#ffffff" : "#000000",
         borderColor: languageChange ? "none" : "#ffffff",

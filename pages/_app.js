@@ -25,12 +25,17 @@ import "./components/circleProjectSlider/styles.scss";
 import "./components/introductionCarousel/styles.scss";
 import "./components/projectDetail/styles.scss";
 import "./components/animatedNextButton/styles.scss";
-import "./components/animatedGraph/styles.scss"
+import "./components/animatedGraph/styles.scss";
+import "./components/circleGroup/styles.scss";
+import "./components/normalCircleGroup/styles.scss";
+import "./components/textSlider/styles.scss";
+import "./components/employeeSlider/styles.scss";
+import "./components/connectSection/styles.scss";
 
 import "../pages/home/styles.scss";
 import "../pages/contact/styles.scss";
 import "../pages/project/styles.scss";
-import "../pages/about/styles.scss"
+import "../pages/about/styles.scss";
 
 import "./globalStyle.scss";
 import { useEffect, useLayoutEffect, useState } from "react";
@@ -84,7 +89,6 @@ function MyApp({ Component, ...rest }) {
         <div className="layout">
           <Component {...pageProps} />
         </div>
-        {/* {isPrivateMenu && <Footer />} */}
       </Provider>
     </>
   );

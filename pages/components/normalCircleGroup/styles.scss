@@ -1,0 +1,46 @@
+.normal-circle-group {
+  position: relative;
+  width: 300px;
+  height: 300px;
+
+  &__item {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border: 1px solid #ffffff;
+    border-radius: 999px;
+
+    transition: ease-in-out 10s;
+  }
+
+  .circle-1 {
+    top: 0;
+    left: 0;
+  }
+
+  .circle-2 {
+    top: 150px;
+    left: -85px;
+  }
+
+  .circle-3 {
+    top: 150px;
+    right: -85px;
+  }
+
+  &__circle-wrapper-2 {
+    position: absolute;
+    top: 105px;
+    left: -65px;
+  }
+
+  &__circle-wrapper-3 {
+    position: absolute;
+    top: 105px;
+    right: -65px;
+  }
+}

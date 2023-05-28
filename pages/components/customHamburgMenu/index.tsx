@@ -10,8 +10,6 @@ interface ICustomHamburgMenuProps {
 const CustomHamburgMenu: React.FC<ICustomHamburgMenuProps> = (props) => {
   const { isMenuClick, spanBgColor, handleMenuClick, handleCloseMenu } = props;
 
-  console.log(isMenuClick);
-
   return (
     <div
       id="hamburg-menu"
