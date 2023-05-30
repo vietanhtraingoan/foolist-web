@@ -73,7 +73,7 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
 
       <section className={`${classNamePrefix}__project-carousel-container`}>
         <div className={`${classNamePrefix}__section-title`}>
-          <span>SẢN PHẨM</span>
+          <span>{t("Section_label.product")}</span>
         </div>
 
         <ProjectCarousel />
@@ -93,7 +93,7 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
           animateOut="fadeOut"
           scrollableParentSelector="#scrolly-div"
         >
-          <h1 style={{ color: "#ffffff" }}>OUR CLIENTS</h1>
+          <h1 style={{ color: "#ffffff" }}>{t("Section_label.client")}</h1>
         </ScrollAnimation>
 
         <div style={{ width: 1800, marginTop: 100 }}>

@@ -1,7 +1,10 @@
 import Home from "../pages";
 import AboutPage from "../pages/about";
 import ContactPage from "../pages/contact";
+import PostPage from "../pages/posts";
 import ProjectPage from "../pages/project";
+import ServicesPage from "../pages/services";
+import WordsPage from "../pages/words";
 
 export const PrivateRoutes = [
   {
@@ -24,19 +27,19 @@ export const PrivateRoutes = [
   },
   {
     path: "/services",
-    element: <ContactPage />,
+    element: <ServicesPage />,
     name: "Services",
     index: 3,
   },
   {
     path: "/words",
-    element: <ContactPage />,
+    element: <WordsPage />,
     name: "Words",
     index: 4,
   },
   {
-    path: "/blog",
-    element: <ContactPage />,
+    path: "/posts",
+    element: <PostPage />,
     name: "Blogs",
     index: 5,
   },

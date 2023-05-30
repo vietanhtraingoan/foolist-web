@@ -36,6 +36,9 @@ import "../pages/home/styles.scss";
 import "../pages/contact/styles.scss";
 import "../pages/project/styles.scss";
 import "../pages/about/styles.scss";
+import "../pages/posts/styles.scss";
+import "../pages/services/styles.scss";
+import "../pages/words/styles.scss";
 
 import "./globalStyle.scss";
 import { useEffect, useLayoutEffect, useState } from "react";

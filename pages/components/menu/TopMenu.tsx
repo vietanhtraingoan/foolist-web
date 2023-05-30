@@ -33,11 +33,20 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const [showMenuItem, setShowMenuItem] = useState<boolean>(false);
 
   const [color, setColor] = useState("#ffffff");
+  const [menuBg, setMenuBg] = useState("none");
 
   const [activeMenu, setactiveMenu] = useState(null);
 
-  const listenScrollEvent = () => {
-    window.scrollY > 2000 ? setColor("#000000") : setColor("#ffffff");
+  const filterPrivateRoutes = PrivateRoutes.filter(
+    (route) => route.path !== "/"
+  );
+
+  const scrollListener = () => {
+    const scroll = window.scrollY;
+
+    if (scroll > 105) {
+      setMenuBg(" rgba(100, 100, 100, 0.55)");
+    } else setMenuBg("");
   };
 
   const handleMenuClick = () => {
@@ -59,17 +68,17 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", listenScrollEvent);
-  });
+    document.addEventListener("scroll", scrollListener);
+  }, []);
 
   return (
     <div
       className="top-menu"
       style={{ background: showMenu ? "rgba(0, 0, 0, 0.9)" : "none" }}
     >
-      <div className="second">
+      <div className="second" style={{ background: menuBg }}>
         <div className="content">
-          <div className="logo-group">
+          <div className="logo-group" onClick={() => router.push("/")}>
             <Image
               src={foolistLogo}
               className="logo"
@@ -80,18 +89,34 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
           </div>
 
           <div className="left-menu">
-            <div
-              className="left-menu-text"
-              style={{ color: isMenuClick ? "#ffffff" : color }}
-            >
-              Get in Touch
-            </div>
-            <CustomHamburgMenu
-              isMenuClick={isMenuClick}
-              handleMenuClick={handleMenuClick}
-              handleCloseMenu={handleCloseMenu}
-              spanBgColor={color}
-            />
+            {router.pathname !== "/" ? (
+              <div className="menu-grid-wrapper">
+                {filterPrivateRoutes.map((menuItem, key) => {
+                  return (
+                    <div
+                      key={key}
+                      onClick={() => {
+                        router.push(menuItem.path);
+                      }}
+                      className={`menu-grid-item ${
+                        router.pathname === menuItem.path
+                          ? "menu-grid-item-active"
+                          : ""
+                      }`}
+                    >
+                      <span> {t(`${menuItem.name}`)}</span>
+                    </div>
+                  );
+                })}
+              </div>
+            ) : (
+              <CustomHamburgMenu
+                isMenuClick={isMenuClick}
+                handleMenuClick={handleMenuClick}
+                handleCloseMenu={handleCloseMenu}
+                spanBgColor={color}
+              />
+            )}
           </div>
         </div>
       </div>
@@ -118,7 +143,7 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
                       : "animate__animated animate__animate__fadeOut"
                   }  `}
                 >
-                  {menuItem.name}
+                  {t(`${menuItem.name}`)}
                 </div>
               );
             })}

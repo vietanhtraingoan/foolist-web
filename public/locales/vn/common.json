@@ -1,12 +1,18 @@
 {
-    "Home": "Trang chủ",
-    "About us": "Năng lực",
-    "Products": "Đối tác",
-    "Services": "Dịch vụ",
-    "Words": "Thuật ngữ",
-    "Blogs": "Góc nhìn",
-    "Contact us": "Liên hệ",
-    "view-more": "XEM THÊM",
-    "change-locale": "Language: {{changeTo}}"
-  }
-  
+  "Home": "Trang chủ",
+  "About us": "Năng lực",
+  "Projects": "Dự án",
+  "Products": "Đối tác",
+  "Services": "Dịch vụ",
+  "Words": "Thuật ngữ",
+  "Blogs": "Góc nhìn",
+  "Contact Us": "Liên hệ",
+  "view-more": "XEM THÊM",
+  "change-locale": "Language: {{changeTo}}",
+  "Section_label": {
+    "product": "SẢN PHẨM",
+    "project": "DỰ ÁN",
+    "client": "ĐỐI TÁC"
+  },
+  "product": "SẢN PHẨM"
+}

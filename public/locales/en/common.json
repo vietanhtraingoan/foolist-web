@@ -1,11 +1,18 @@
 {
   "Home": "Home",
   "About us": "About us",
+  "Projects": "Projects",
   "Products": "Products",
   "Services": "Services",
   "Words": "Words",
   "Blogs": "Blogs",
-  "Contact us": "Contact us",
+  "Contact Us": "Contact us",
   "view-more": "VIEW MORE",
-  "change-locale": "Language: {{changeTo}}"
+  "change-locale": "Language: {{changeTo}}",
+  "Section_label": {
+    "product": "OUR PRODUCTS",
+    "project": "PROJETCS",
+    "client": "OUR CLIENTS"
+  },
+  "product": "OUR PRODUCTS"
 }
