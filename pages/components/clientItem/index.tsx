@@ -3,7 +3,7 @@ import React from "react";
 import { IClient } from "../../../utils/types/clientTypes";
 
 interface IClientItem {
-  data?: IClient;
+  data: IClient;
 }
 
 const classNamePrefix = "client-item";
