@@ -79,7 +79,7 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
 
         <div style={{ width: 1800, marginTop: 100 }}>
           <Marquee pauseOnHover>
-            {ClientMocks.map((c: IClient) => (
+            {ClientMocks.map((c) => (
               <ClientItem key={c.id} data={c} />
             ))}
           </Marquee>
