@@ -13,6 +13,7 @@ import CircleProjectSlider from "../components/circleProjectSlider";
 import { infoMocks } from "../../mocks/infoMocks";
 import LanguageChange from "../components/languageChange";
 import IntroductionCarousel from "../components/introductionCarousel";
+import { IClient } from "../../utils/types/clientTypes";
 
 const classNamePrefix = "home-page";
 
@@ -25,7 +26,7 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const [animateClientTitile, setAnimateClientTitle] = useState(0);
 
   return (
-    <div className={classNamePrefix} id="scrolly-div"> 
+    <div className={classNamePrefix} id="scrolly-div">
       <section
         id="first-section"
         className={`${classNamePrefix}__introduction-container`}
@@ -78,7 +79,7 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
 
         <div style={{ width: 1800, marginTop: 100 }}>
           <Marquee pauseOnHover>
-            {ClientMocks.map((c) => (
+            {ClientMocks.map((c: IClient) => (
               <ClientItem key={c.id} data={c} />
             ))}
           </Marquee>
