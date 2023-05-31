@@ -1,8 +1,9 @@
 import Image from "next/image";
 import React from "react";
+import { IClient } from "../../../utils/types/clientTypes";
 
 interface IClientItem {
-  data?: any;
+  data?: IClient;
 }
 
 const classNamePrefix = "client-item";
