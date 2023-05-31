@@ -13,12 +13,14 @@ const ClientItem: React.FC<IClientItem> = (props) => {
 
   return (
     <div className={`${classNamePrefix}__item-wrapper`}>
-      <Image
-        src={data.imgUrl ? data.imgUrl.src : ""}
-        alt=""
-        width={190}
-        height={80}
-      />
+      {data && (
+        <Image
+          src={data.imgUrl ? data.imgUrl.src : ""}
+          alt=""
+          width={190}
+          height={80}
+        />
+      )}
     </div>
   );
 };

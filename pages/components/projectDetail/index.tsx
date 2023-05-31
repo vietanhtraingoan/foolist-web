@@ -44,16 +44,19 @@ const ProjectDetail: React.FC<IProjectDetailProps> = (props) => {
                 marginLeft: animation ? 0 : 161,
               }}
             >
-              <div
-                className={`${classNamePrefix}__content-main-image`}
-                style={{
-                  backgroundImage: projectSelected.imgUrl
-                    ? `url(${projectSelected.imgUrl.src})`
-                    : "",
-                  width: "100%",
-                  height: "100%",
-                }}
-              ></div>
+              {projectSelected && (
+                <div
+                  className={`${classNamePrefix}__content-main-image`}
+                  style={{
+                    backgroundImage: projectSelected.imgUrl
+                      ? `url(${projectSelected.imgUrl.src})`
+                      : "",
+                    width: "100%",
+                    height: "100%",
+                  }}
+                ></div>
+              )}
+
               <div
                 className={`${classNamePrefix}__content-main-image-layer`}
               ></div>
