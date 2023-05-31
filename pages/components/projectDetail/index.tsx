@@ -3,6 +3,7 @@ import AnimatedNextButton from "../animatedNextButton";
 import { useSelector } from "react-redux";
 import { getProjectId } from "../../../store/selector/rootSelector";
 import { projectMocks } from "../../../mocks/projectMocks";
+import project1 from "../../../public/static/project2.png"
 
 interface IProjectDetailProps {
   projectSelect?: boolean;
@@ -44,13 +45,12 @@ const ProjectDetail: React.FC<IProjectDetailProps> = (props) => {
                 marginLeft: animation ? 0 : 161,
               }}
             >
-              {projectSelected && (
+              {projectSelected.imgUrl && (
                 <div
                   className={`${classNamePrefix}__content-main-image`}
                   style={{
-                    backgroundImage: projectSelected.imgUrl
-                      ? `url(${projectSelected.imgUrl.src})`
-                      : "",
+                    backgroundImage: `url(${project1.src})`
+                      ,
                     width: "100%",
                     height: "100%",
                   }}

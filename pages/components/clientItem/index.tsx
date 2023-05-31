@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { IClient } from "../../../utils/types/clientTypes";
+import project1 from "../../../public/static/project2.png"
 
 interface IClientItem {
   data: IClient;
@@ -13,9 +14,9 @@ const ClientItem: React.FC<IClientItem> = (props) => {
 
   return (
     <div className={`${classNamePrefix}__item-wrapper`}>
-      {data && (
+      {data.imgUrl && (
         <Image
-          src={data.imgUrl ? data.imgUrl.src : ""}
+          src={project1.src}
           alt=""
           width={190}
           height={80}
