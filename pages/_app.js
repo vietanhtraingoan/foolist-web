@@ -32,6 +32,7 @@ import "./components/textSlider/styles.scss";
 import "./components/employeeSlider/styles.scss";
 import "./components/connectSection/styles.scss";
 import "./components/mansoryItemCard/styles.scss";
+import "./components/customNavigationButton/styles.scss";
 
 import "../pages/home/styles.scss";
 import "../pages/contact/styles.scss";

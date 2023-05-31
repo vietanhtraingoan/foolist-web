@@ -343,9 +343,44 @@
       color: #ffffff;
     }
   }
-  
-  &__final-section{
+
+  &__final-section {
     width: 100%;
     min-height: 700px;
+
+    margin-top: 200px;
+  }
+
+  &__employee-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    width: 100%;
+
+    padding-left: 100px;
+  }
+
+  &__employee-group-title {
+    display: flex;
+    align-items: center;
+    width: 280px;
+    height: 100px;
+
+    span {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 60px;
+      line-height: 99px;
+      color: #ffffff;
+    }
+  }
+
+  &__employee-group-line{
+    flex: 1;
+
+    height: 2px;
+    background: #ffffff;
   }
 }

@@ -193,7 +193,7 @@ const AboutPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
 
       <ConnectSection />
 
-      <AnimatedGraph />
+      {/* <AnimatedGraph /> */}
     </div>
   );
 };

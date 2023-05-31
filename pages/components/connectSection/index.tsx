@@ -1,44 +1,62 @@
-import RightOutlined from "@ant-design/icons";
 import React from "react";
-import LanguageChange from "../languageChange";
+import CustomNavigationButton from "../customNavigationButton";
+import SocialGroup from "../socialGroup";
+import { useRouter } from "next/router";
+import { GetStaticProps, InferGetStaticPropsType } from "next/types";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
 
 const classNamePrefix = "connect-section";
 
-const ConnectSection = () => {
+type Props = {
+  // Add custom props here
+};
+
+const ConnectSection = (
+  _props: InferGetStaticPropsType<typeof getStaticProps>
+) => {
+  const { t } = useTranslation("common");
+  const router = useRouter();
+
   return (
     <div className={classNamePrefix}>
-      <div>
-        <div>
-          KẾT NỐI VỚI <span>FOOLIST </span> ĐỂ TẠO NÊN BẢN SẮC CỦA RIÊNG BẠN
+      <div className={`${classNamePrefix}__top`}>
+        <div className={`${classNamePrefix}__top-text`}>
+          {t("connect-with")} <span>FOOLIST </span>
         </div>
 
-        <div>
-          <div></div>
-          <div>
-            <RightOutlined />
-          </div>
+        <div className={`${classNamePrefix}__top-button`}>
+          <CustomNavigationButton
+            size="large"
+            onClick={() => router.push("/contact")}
+          />
         </div>
       </div>
 
-      <div>
-        <div>
-          <div>
-            <span>Đăng kí nhận thông tin</span>
-            <input type="text" id="" />
-          </div>
-
-          <div>
-            <span>Khám phá</span>
-            <div>
-              <div></div>
+      <div className={`${classNamePrefix}__bottom`}>
+        <div className={`${classNamePrefix}__bottom-left`}>
+          <div className={`${classNamePrefix}__bottom-left-item`}>
+            <span>{t("register-to-receive-info")}</span>
+            <div className={`${classNamePrefix}__bottom-left-input`}>
+              <input type="text" id="" placeholder={t("input-placeholder")} />
+              <div className={`${classNamePrefix}__bottom-left-input-button`}>
+                <CustomNavigationButton size="small" />
+              </div>
             </div>
           </div>
 
-          <LanguageChange />
+          <div className={`${classNamePrefix}__bottom-left-item`}>
+            <span>{t("explore")}</span>
+            <div>
+              <div>
+                <SocialGroup />
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div>
-          <span>Dịch vụ</span>
+        <div className={`${classNamePrefix}__bottom-right`}>
+          <span>{t("Services")}</span>
 
           <div></div>
         </div>
@@ -46,5 +64,11 @@ const ConnectSection = () => {
     </div>
   );
 };
+
+export const getStaticProps: GetStaticProps<Props> = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ["common"])),
+  },
+});
 
 export default ConnectSection;
