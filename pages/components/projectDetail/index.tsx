@@ -47,7 +47,9 @@ const ProjectDetail: React.FC<IProjectDetailProps> = (props) => {
               <div
                 className={`${classNamePrefix}__content-main-image`}
                 style={{
-                  backgroundImage: `url(${projectSelected.imgUrl.src})`,
+                  backgroundImage:
+                    projectSelected.imgUrl &&
+                    `url(${projectSelected.imgUrl.src})`,
                   width: "100%",
                   height: "100%",
                 }}
