@@ -31,6 +31,7 @@ import "./components/normalCircleGroup/styles.scss";
 import "./components/textSlider/styles.scss";
 import "./components/employeeSlider/styles.scss";
 import "./components/connectSection/styles.scss";
+import "./components/mansoryItemCard/styles.scss";
 
 import "../pages/home/styles.scss";
 import "../pages/contact/styles.scss";
@@ -51,6 +52,7 @@ import { appWithTranslation } from "next-i18next";
 import nextI18NextConfig from "../next-i18next.config.js";
 import "antd/dist/reset.css";
 import { DEFAULT_LANG, KEY_LANGUAGE } from "../utils/constants";
+import LanguageChange from "./components/languageChange";
 
 function MyApp({ Component, ...rest }) {
   const { store, props } = wrapper.useWrappedStore(rest);
@@ -91,6 +93,9 @@ function MyApp({ Component, ...rest }) {
         {isPrivateMenu && <TopMenu />}
         <div className="layout">
           <Component {...pageProps} />
+          <div className="floated-language-change">
+            <LanguageChange />
+          </div>
         </div>
       </Provider>
     </>

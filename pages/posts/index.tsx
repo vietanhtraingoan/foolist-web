@@ -2,12 +2,17 @@ import React, { useEffect, useState } from "react";
 import { getDocs, collection } from "firebase/firestore";
 import db from "../../firebase/clientApp";
 import { AppstoreOutlined, CopyOutlined } from "@ant-design/icons";
-import projectImage from "../../public/static/project1.png";
-import Image from "next/image";
+import projectImage from "../../public/static/project3.png";
+import { GetStaticProps, InferGetStaticPropsType } from "next/types";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const classNamePrefix = "post-page";
 
-const PostPage = () => {
+type Props = {
+  // Add custom props here
+};
+
+const PostPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const [post, setPost] = useState([]);
   const [postContainerStyle, setPostContainerStyle] =
     useState<string>("slider");
@@ -74,13 +79,27 @@ const PostPage = () => {
               style={{
                 position:
                   postContainerStyle === "slider" ? "absolute" : "relative",
+                padding: postContainerStyle === "slider" ? 15 : 0,
+                width: postContainerStyle === "slider" ? 800 : 200,
+                height: postContainerStyle === "slider" ? 500 : 300,
               }}
               key={p.id}
             >
               <div
                 className={`${classNamePrefix}__item-image`}
-                style={{ backgroundImage: `url(${projectImage.src})` }}
+                style={{
+                  backgroundImage: `url(${projectImage.src})`,
+                  width: postContainerStyle === "grid" ? "100%" : "97%",
+                  height: postContainerStyle === "grid" ? 400 : "100%",
+                }}
               >
+                {postContainerStyle === "grid" && (
+                  <div className="item-image-layer">
+                    <div className="item-image-layer-content">
+                      <div>{p.title}</div>
+                    </div>
+                  </div>
+                )}
               </div>
 
               {postContainerStyle === "slider" && (
@@ -96,5 +115,11 @@ const PostPage = () => {
     </div>
   );
 };
+
+export const getStaticProps: GetStaticProps<Props> = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ["common"])),
+  },
+});
 
 export default PostPage;

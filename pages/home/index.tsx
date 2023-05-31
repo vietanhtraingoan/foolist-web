@@ -24,28 +24,8 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const [bgColor, setBgColor] = useState("#000000");
   const [animateClientTitile, setAnimateClientTitle] = useState(0);
 
-  // const listenScrollEvent = () => {
-  //   const scroll = window.pageYOffset;
-  //   if (scroll < 1200) {
-  //     setBgColor("#000000");
-  //   } else if (scroll >= 1200 && scroll < 1700) {
-  //     setBgColor("#63424d");
-  //   } else if (window.scrollY >= 1700 && scroll < 2100) {
-  //     setBgColor("#f8a5c2");
-  //   } else if (window.scrollY >= 2100 && scroll < 3000) {
-  //     setBgColor("#f6a5c1");
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   window.addEventListener("scroll", listenScrollEvent);
-  // });
-
   return (
-    <div className={classNamePrefix} id="scrolly-div">
-      <div className={`${classNamePrefix}__float-item`}>
-        <LanguageChange />
-      </div>
+    <div className={classNamePrefix} id="scrolly-div"> 
       <section
         id="first-section"
         className={`${classNamePrefix}__introduction-container`}
@@ -79,13 +59,13 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
         <ProjectCarousel />
       </section>
 
-      <section className={`${classNamePrefix}__project-circle-container`}>
+      {/* <section className={`${classNamePrefix}__project-circle-container`}>
         <div className={`${classNamePrefix}__project-info`}>Info</div>
 
         <div className={`${classNamePrefix}__project-slider`}>
           <CircleProjectSlider />
         </div>
-      </section>
+      </section> */}
 
       <section className={`${classNamePrefix}__client-container`}>
         <ScrollAnimation
@@ -134,13 +114,6 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
           </div>
         </div>
       </section>
-      {/* <iframe
-        src="https://res.cloudinary.com/dufh7rv0n/video/upload/v1685001735/video_qcuflk?autoplay=1.webm"
-        height="700"
-        width="1200"
-        title="Iframe Example"
-        allow="autoplay"
-      ></iframe>{" "} */}
     </div>
   );
 };

@@ -12,6 +12,7 @@ import Image from "next/image";
 
 import CustomHamburgMenu from "../customHamburgMenu";
 import SocialGroup from "../socialGroup";
+import LanguageChange from "../languageChange";
 
 type Props = {
   // Add custom props here
@@ -104,7 +105,7 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
                           : ""
                       }`}
                     >
-                      <span> {t(`${menuItem.name}`)}</span>
+                      <span>{t(`${menuItem.name}`)}</span>
                     </div>
                   );
                 })}

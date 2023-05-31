@@ -10,10 +10,20 @@ import NormalCircleGroup from "../components/normalCircleGroup";
 import bg from "../../public/static/pageBg.png";
 import TextSlider from "../components/textSlider";
 import ConnectSection from "../components/connectSection";
+import { GetStaticProps, InferGetStaticPropsType } from "next/types";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { DEFAULT_LANG } from "../../utils/constants";
+import { useTranslation } from "next-i18next";
 
 const classNamePrefix = "about-page";
 
-const AboutPage = () => {
+type Props = {
+  // Add custom props here
+};
+
+const AboutPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const { t } = useTranslation("common");
+
   const [showDivider, setShowDivider] = useState<boolean>(false);
 
   const listenScrollEvent = () => {
@@ -32,25 +42,19 @@ const AboutPage = () => {
   });
 
   return (
-    <div
-      className={classNamePrefix}
-      // style={{ backgroundImage: `url(${bg.src})` }}
-    >
+    <div className={classNamePrefix}>
       <section className={`${classNamePrefix}__first-section`}>
         <div className={`${classNamePrefix}__first-section-slogan`}>
-          Tạo ra ấn tượng bằng
+          {t("About_content.title")}
         </div>
 
         <div className={`${classNamePrefix}__first-section-title`}>
           <div className={`${classNamePrefix}__first-section-title-outline`}>
-            <span>Mũi Đinh Ba</span>
+            <span>{t("About_content.three-points")}</span>
           </div>
 
           <div className={`${classNamePrefix}__first-section-subtitle`}>
-            <span>
-              Tư duy sáng tạo độc nhất, Góc nhìn nghệ thuật thị giác Ngôn từ
-              mang bản sắc thương hiệu.
-            </span>
+            <span>{t("About_content.three-points-content")}</span>
           </div>
         </div>
       </section>
@@ -64,11 +68,7 @@ const AboutPage = () => {
 
       <section className={`${classNamePrefix}__second-section`}>
         <div className={`${classNamePrefix}__second-section-top`}>
-          <span>
-            Foolist hoạt động trong lĩnh vực Sáng tạo và Công nghệ, cung cấp các
-            giải pháp sáng tạo và nghệ thuật cho nhu cầu về thiết kế đồ họa,
-            phát triển truyền thông, hay tạo dựng website.
-          </span>
+          <span>{t("About_content.paragraph-1")}</span>
         </div>
 
         <div className={`${classNamePrefix}__second-section-bottom`}>
@@ -77,11 +77,7 @@ const AboutPage = () => {
           </div>
 
           <div className={`${classNamePrefix}__second-section-bottom-text`}>
-            <span>
-              Chúng tôi sử dụng mũi đinh ba để tạo ấn tượng với khách hàng và
-              đối tác của mình: tư duy sáng tạo độc nhất, góc nhìn nghệ thuật
-              thị giác, và ngôn từ mang bản sắc thương hiệu.
-            </span>
+            <span>{t("About_content.paragraph-2")}</span>
           </div>
         </div>
       </section>
@@ -94,8 +90,8 @@ const AboutPage = () => {
       <section className={`${classNamePrefix}__third-section`}>
         <div className={`${classNamePrefix}__third-section-top`}>
           <div className={`${classNamePrefix}__third-section-top-title`}>
-            <div>Tư duy sáng tạo </div>
-            <span>độc nhất</span>
+            <div>{t("About_content.creative-thinking")}</div>
+            <span>{t("About_content.unique")}</span>
           </div>
         </div>
 
@@ -107,13 +103,7 @@ const AboutPage = () => {
         </div>
 
         <div className={`${classNamePrefix}__third-section-middle`}>
-          <span>
-            Chúng tôi tin rằng sáng tạo không phải là một tài năng, mà là một kỹ
-            năng có thể được học hỏi và phát triển. Chúng tôi sử dụng các phương
-            pháp và công cụ khác nhau để kích thích tư duy sáng tạo .Chúng tôi
-            cũng thách thức bản thân ra khỏi khuôn khổ và khám phá những khả
-            năng và quan điểm mới.
-          </span>
+          <span>{t("About_content.paragraph-3")}</span>
         </div>
 
         <div className={`${classNamePrefix}__third-section-bottom`}>
@@ -123,13 +113,10 @@ const AboutPage = () => {
 
           <div className={`${classNamePrefix}__third-section-bottom-text`}>
             <span>
-              Tư duy sáng tạo được áp dụng vào mọi dự án. Foolist luôn cố gắng
-              tìm ra những giải pháp độc đáo và hiệu quả phù hợp với nhu cầu và
-              mong đợi của khách hàng.
+              {t("About_content.paragraph-4")}
               <br></br>
-              <br></br>Ý kiến của khách hàng và đối tác luôn được lắng nghe, vì
-              chúng tôi tin rằng sáng tạo được nuôi dưỡng bởi sự đa dạng và trao
-              đổi ý tưởng.
+              <br></br>
+              {t("About_content.paragraph-5")}
             </span>
           </div>
         </div>
@@ -138,7 +125,7 @@ const AboutPage = () => {
       <section className={`${classNamePrefix}__fourth-section`}>
         <div className={`${classNamePrefix}__fourth-section-title`}>
           <div className={`${classNamePrefix}__fourth-section-title-text`}>
-            <span>Góc nhìn nghệ thuật thị giác</span>
+            <span> {t("About_content.visual")}</span>
           </div>
 
           <div
@@ -154,14 +141,10 @@ const AboutPage = () => {
           <div className={`${classNamePrefix}__fourth-section-content-item`}>
             <div className={`${classNamePrefix}__fourth-section-item-text`}>
               <span>
-                Tại Foolist, sức mạnh của giao tiếp thị giác luôn được chú
-                trọng. Chúng tôi tin rằng một bức ảnh có giá trị bằng ngàn lời
-                nói, và một thiết kế thị giác được làm tốt có thể truyền đạt
-                thông điệp một cách rõ ràng và thuyết phục.
+                {t("About_content.paragraph-6")}
                 <br></br>
                 <br></br>
-                Vì vậy, chúng tôi chú ý đến từng chi tiết của thiết kế thị giác
-                của mình, như màu sắc, hình dạng, bố cục, kiểu chữ, và hình ảnh.
+                {t("About_content.paragraph-7")}
               </span>
             </div>
 
@@ -176,19 +159,13 @@ const AboutPage = () => {
             </div>
 
             <div className={`${classNamePrefix}__fourth-section-item-text`}>
-              <span>
-                Các sản phẩm của Foolist lấy cảm hứng từ các hình thức nghệ
-                thuật khác nhau, như hội họa, nhiếp ảnh, điêu khắc, và hoạt
-                hình. Nghệ thuật được sử dụng làm phương tiện để biểu lộ cảm
-                xúc, ý kiến, và câu chuyện của mỗi sản phẩm, và trên hết, để kết
-                nối với khán giả và gợi lên cảm xúc và phản ứng của họ.
-              </span>
+              <span>{t("About_content.paragraph-8")}</span>
             </div>
           </div>
         </div>
       </section>
 
-      <TextSlider text="Ngôn từ mang bản sắc thương hiệu" />
+      <TextSlider text={t("Brand-identity-language")} />
 
       <section className={`${classNamePrefix}__fifth-section`}>
         <div className={`${classNamePrefix}__fifth-section-graph`}>
@@ -196,30 +173,16 @@ const AboutPage = () => {
         </div>
 
         <div className={`${classNamePrefix}__fifth-section-text`}>
-          <div>
-            Tại Foolist, chúng tôi hiểu được ý nghĩa của ngôn ngữ trong việc xây
-            dựng bản sắc thương hiệu mạnh mẽ. Ngôn ngữ không chỉ là một phương
-            tiện giao tiếp, mà còn là một phản ánh của giá trị, tính cách, và
-            văn hóa của chúng ta. Đó là lý do vì sao chúng tôi luôn cẩn thận
-            chọn lọc ngôn ngữ để phù hợp với hình ảnh và giọng điệu của thương
-            hiệu.
-          </div>
+          <div>{t("About_content.paragraph-9")}</div>
 
-          <div>
-            Chúng tôi sử dụng ngôn ngữ làm phương tiện để truyền đạt sứ mệnh,
-            tầm nhìn, và giá trị của chúng ta cho khách hàng và đối tác. Ngôn
-            ngữ được dùng làm phương tiện để thể hiện chuyên môn, chuyên nghiệp,
-            và uy tính của chúng ta. Chúng ta sử dụng ngôn ngữ làm phương tiện
-            để thiết lập quan hệ với khách hàng và xây dựng lòng tin và trung
-            thành
-          </div>
+          <div>{t("About_content.paragraph-10")}</div>
         </div>
       </section>
 
       <section className={`${classNamePrefix}__final-section`}>
         <div className={`${classNamePrefix}__employee-group`}>
           <div className={`${classNamePrefix}__employee-group-title`}>
-            <span>Đội ngũ nhân sự</span>
+            <span>{t("Staff")}</span>
           </div>
 
           <div className={`${classNamePrefix}__employee-group-line`}></div>
@@ -234,5 +197,11 @@ const AboutPage = () => {
     </div>
   );
 };
+
+export const getStaticProps: GetStaticProps<Props> = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ["common"])),
+  },
+});
 
 export default AboutPage;

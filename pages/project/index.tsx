@@ -5,10 +5,18 @@ import { projectMocks } from "../../mocks/projectMocks";
 import Image from "next/image";
 import { useDispatch } from "react-redux";
 import { setProjectId } from "../../store/project/projectSlice";
+import { GetStaticProps, InferGetStaticPropsType } from "next/types";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const classNamePrefix = "project-page";
 
-const ProjectPage = () => {
+type Props = {
+  // Add custom props here
+};
+
+const ProjectPage = (
+  _props: InferGetStaticPropsType<typeof getStaticProps>
+) => {
   const dispatch = useDispatch();
 
   const [projectSelect, setProjectSelect] = useState<Boolean>(false);
@@ -95,5 +103,11 @@ const ProjectPage = () => {
     </div>
   );
 };
+
+export const getStaticProps: GetStaticProps<Props> = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ["common"])),
+  },
+});
 
 export default ProjectPage;

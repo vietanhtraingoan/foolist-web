@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 import { projectMocks } from "../../../mocks/projectMocks";
 import Image from "next/image";
 import { useIdle } from "../../../utils/commonFunstions";
+import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 
 const classNamePrefix = "project-carousel";
 
@@ -25,15 +26,8 @@ const ProjectCarousel = () => {
     }
   }, []);
 
-  // const finishScrolling = useCallback(() => {
-  //   setTargetSlide(visibleSlide);
-  //   scrollToTargetSlide();
-  // }, [visibleSlide, scrollToTargetSlide]);
-
-  // const touchScroll = useIdle({ timeout: 500, onIdle: finishScrolling });
-
   const moveLeft = useCallback(
-    (targetSlide) => Math.max(0, targetSlide-1),
+    (targetSlide) => Math.max(0, targetSlide - 1),
     []
   );
 
@@ -47,7 +41,6 @@ const ProjectCarousel = () => {
     let { scrollLeft } = wrapperRef.current;
 
     setVisibleSlide(Math.round(scrollLeft / width));
-    // touchScroll();
   }, []);
 
   useEffect(scrollToTargetSlide, [targetSlide, scrollToTargetSlide]);
@@ -55,7 +48,7 @@ const ProjectCarousel = () => {
   useEffect(() => {
     wrapperRef.current.addEventListener("scroll", handleScroll);
 
-    () => wrapperRef.current.removeEventListener("scroll", handleScroll)
+    () => wrapperRef.current.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -82,12 +75,16 @@ const ProjectCarousel = () => {
       </div>
 
       <div className={`${classNamePrefix}__carousel-button-group`}>
-        <button onClick={() => setTargetSlide(moveLeft)}>PREV</button>
-        <button onClick={() => setTargetSlide(moveRight)}>NEXT</button>
+        <button onClick={() => setTargetSlide(moveLeft)}>
+          <LeftOutlined rev />
+        </button>
+        <button onClick={() => setTargetSlide(moveRight)}>
+          <RightOutlined rev />{" "}
+        </button>
       </div>
 
       <div className="dots">
-        {projectMocks.slice(0,3).map((photo, index) => (
+        {projectMocks.slice(0, 3).map((photo, index) => (
           <span
             key={photo.id}
             className={

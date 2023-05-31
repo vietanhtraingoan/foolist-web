@@ -16,6 +16,7 @@
     "antd": "^5.2.1",
     "firebase": "^9.22.1",
     "i18next": "^22.4.9",
+    "masonic": "^3.7.0",
     "next": "latest",
     "next-i18next": "^13.1.5",
     "next-redux-wrapper": "^8.1.0",
@@ -27,6 +28,7 @@
     "react-firebaseui": "^6.0.0",
     "react-i18next": "^12.1.5",
     "react-redux": "^8.0.5",
+    "react-responsive-masonry": "^2.1.7",
     "sass": "^1.58.1"
   },
   "devDependencies": {
