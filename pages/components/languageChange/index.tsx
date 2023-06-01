@@ -39,20 +39,22 @@ const LanguageChange = () => {
       <div
         className={`${classNamePrefix}__button`}
         style={{
-          right: languageChange ? 95 : 10,
+          right: languageChange ? 57 : 10,
         }}
       >
         <Image
           src={languageChange ? usaFlag : vnFlag}
           alt=""
-          width={23}
-          height={23}
+          width={22}
+          height={22}
         />
       </div>
 
       <span
+        className={`${classNamePrefix}__title`}
         style={{
           color: languageChange ? "#000000" : "#ffffff",
+          left: languageChange ? 47 : 15  ,
         }}
       >
         {languageChange ? "ENG" : "VNI"}

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Image from "next/image";
 
-import { projectMocks } from "../../../mocks/projectMocks";
+import { projectMocks } from "../../mocks/projectMocks";
 
 const classNamePrefix = "circle-project-slider";
 

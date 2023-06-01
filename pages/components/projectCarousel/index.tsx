@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import { projectMocks } from "../../../mocks/projectMocks";
+import { projectMocks } from "../../mocks/projectMocks";
 import Image from "next/image";
 import { useIdle } from "../../../utils/commonFunstions";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
@@ -76,10 +76,10 @@ const ProjectCarousel = () => {
 
       <div className={`${classNamePrefix}__carousel-button-group`}>
         <button onClick={() => setTargetSlide(moveLeft)}>
-          <LeftOutlined rev />
+          <LeftOutlined rev={true} />
         </button>
         <button onClick={() => setTargetSlide(moveRight)}>
-          <RightOutlined rev />{" "}
+          <RightOutlined rev={true} />{" "}
         </button>
       </div>
 
