@@ -52,6 +52,20 @@
         justify-content: center;
         align-items: center;
 
+        .left-menu-responsive-button {
+          display: none;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+
+          width: 60px;
+          height: 60px;
+
+          border-radius: 999px;
+
+          background: #f6a5c1;
+        }
+
         .left-menu-text {
           margin-right: 30px;
 
@@ -195,6 +209,24 @@
       .animate__animated.animate__slideInDown {
         --animate-delay: 1.5s;
         --animation-duration: 2s;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .top-menu {
+    .second {
+      .content {
+        .left-menu {
+          .left-menu-responsive-button {
+            display: flex;
+          }
+
+          .left-menu-responsive-grid {
+            display: none;
+          }
+        }
       }
     }
   }

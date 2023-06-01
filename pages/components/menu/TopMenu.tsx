@@ -90,34 +90,45 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
           </div>
 
           <div className="left-menu">
-            {router.pathname !== "/" ? (
-              <div className="menu-grid-wrapper">
-                {filterPrivateRoutes.map((menuItem, key) => {
-                  return (
-                    <div
-                      key={key}
-                      onClick={() => {
-                        router.push(menuItem.path);
-                      }}
-                      className={`menu-grid-item ${
-                        router.pathname === menuItem.path
-                          ? "menu-grid-item-active"
-                          : ""
-                      }`}
-                    >
-                      <span>{t(`${menuItem.name}`)}</span>
-                    </div>
-                  );
-                })}
-              </div>
-            ) : (
+            <div className="left-menu-responsive-button">
               <CustomHamburgMenu
                 isMenuClick={isMenuClick}
                 handleMenuClick={handleMenuClick}
                 handleCloseMenu={handleCloseMenu}
                 spanBgColor={color}
               />
-            )}
+            </div>
+
+            <div className="left-menu-responsive-grid">
+              {router.pathname !== "/" ? (
+                <div className="menu-grid-wrapper">
+                  {filterPrivateRoutes.map((menuItem, key) => {
+                    return (
+                      <div
+                        key={key}
+                        onClick={() => {
+                          router.push(menuItem.path);
+                        }}
+                        className={`menu-grid-item ${
+                          router.pathname === menuItem.path
+                            ? "menu-grid-item-active"
+                            : ""
+                        }`}
+                      >
+                        <span>{t(`${menuItem.name}`)}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+              ) : (
+                <CustomHamburgMenu
+                  isMenuClick={isMenuClick}
+                  handleMenuClick={handleMenuClick}
+                  handleCloseMenu={handleCloseMenu}
+                  spanBgColor={color}
+                />
+              )}
+            </div>
           </div>
         </div>
       </div>

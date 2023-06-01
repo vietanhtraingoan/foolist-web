@@ -14,7 +14,7 @@ type Props = {
 const Home = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation("common");
   return (
-    <div>
+    <div style={{height: "100%"}}>
       <NextSeo
         title="Foolist Creative"
         description="This will be the page meta description"
@@ -41,7 +41,7 @@ const Home = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
           ],
         }}
       />
-      <div><HomePage /></div>
+      <HomePage />
     </div>
   );
 };

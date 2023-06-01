@@ -1,0 +1,49 @@
+.grid-project {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  min-height: 700px;
+
+  padding: 0 40px;
+
+  background: #000000;
+
+  &__title {
+    margin-bottom: 50px;
+
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 78px;
+    color: #ffffff;
+  }
+
+  &__show-more-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    width: 100%;
+
+    margin: 40px 0;
+  }
+
+  &__show-more-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 120px;
+    height: 40px;
+
+    border: 1px solid #f8a5c2;
+    border-radius: 40px;
+
+    span {
+      color: #ffffff;
+    }
+  }
+}

@@ -14,6 +14,8 @@ import { infoMocks } from "../../mocks/infoMocks";
 import LanguageChange from "../components/languageChange";
 import IntroductionCarousel from "../components/introductionCarousel";
 import { IClient } from "../../utils/types/clientTypes";
+import ConnectSection from "../components/connectSection";
+import GridProject from "../components/gridProject";
 
 const classNamePrefix = "home-page";
 
@@ -50,6 +52,10 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
         <div className={`${classNamePrefix}__introduction-image-container`}>
           <IntroductionCarousel />
         </div>
+      </section>
+
+      <section className={`${classNamePrefix}__grid-project`}>
+        <GridProject />
       </section>
 
       <section className={`${classNamePrefix}__project-carousel-container`}>
@@ -91,6 +97,10 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
       </section>
 
       <section className={`${classNamePrefix}__divider-container`} />
+
+      <section className={`${classNamePrefix}__connection-container`}>
+        <ConnectSection />
+      </section>
 
       <section className={`${classNamePrefix}__footer-container`}>
         <div className={`${classNamePrefix}__footer-left`}>
