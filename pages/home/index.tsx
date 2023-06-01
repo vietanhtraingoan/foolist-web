@@ -77,13 +77,17 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
           <h1 style={{ color: "#ffffff" }}>{t("Section_label.client")}</h1>
         </ScrollAnimation>
 
-        <div style={{ width: 1800, marginTop: 100 }}>
-          <Marquee pauseOnHover>
-            {ClientMocks.map((c: IClient) => (
-              <ClientItem key={c.id} data={c} />
-            ))}
-          </Marquee>
-        </div>
+        {ClientMocks ? (
+          <div style={{ width: 1800, marginTop: 100 }}>
+            <Marquee pauseOnHover>
+              {ClientMocks.map((c: IClient) => (
+                <ClientItem key={c.id} data={c} />
+              ))}
+            </Marquee>
+          </div>
+        ) : (
+          ""
+        )}
       </section>
 
       <section className={`${classNamePrefix}__divider-container`} />
