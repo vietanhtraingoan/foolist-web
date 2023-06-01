@@ -76,10 +76,10 @@ const ProjectCarousel = () => {
 
       <div className={`${classNamePrefix}__carousel-button-group`}>
         <button onClick={() => setTargetSlide(moveLeft)}>
-          <LeftOutlined rev={true} />
+          <LeftOutlined rev />
         </button>
         <button onClick={() => setTargetSlide(moveRight)}>
-          <RightOutlined rev={true} />{" "}
+          <RightOutlined rev />{" "}
         </button>
       </div>
 
