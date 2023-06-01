@@ -38,5 +38,12 @@
   "connect-with": "Kết nối với",
   "register-to-receive-info": "Đăng kí nhận thông tin",
   "explore": "Khám phá",
-  "input-placeholder": "Điền email của bạn"
+  "input-placeholder": "Điền email của bạn",
+  "create-story": "Tạo nên câu chuyện của bạn",
+  "user-info": "Thông tin khách hàng",
+  "your-name": "Điền tên của bạn*",
+  "your-email": "Điền email của bạn*",
+  "your-phone": "Điền số điện thoại của bạn*",
+  "your-message": "Nội dung bạn muốn trao đổi.....",
+  "submit-button": "Gửi"
 }

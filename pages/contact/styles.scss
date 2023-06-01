@@ -7,16 +7,33 @@
 
   width: 100%;
 
+  background: #000000;
+
+  &__introduction-wrapper {
+    width: 100%;
+
+    margin-top: 80px;
+
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 59.1685px;
+    line-height: 104px;
+    color: #ffffff;
+  }
+
+  &__introduction-wrapper-text {
+    span {
+      color: #f6a5c1;
+    }
+  }
+
   &__content-wrapper {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
 
     width: 100%;
-    height: 500px;
-
-    margin: 80px 0;
   }
 
   &__info-wrapper {
@@ -40,14 +57,31 @@
     background: red;
   }
 
+  &__form-title {
+    margin-bottom: 20px;
+
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 33.1453px;
+    line-height: 58px;
+    text-decoration-line: underline;
+    color: #ffffff;
+  }
+
   &__form-wrapper {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
 
-    width: 40%;
-    height: 100%;
+    width: 100%;
+
+    padding: 40px;
+    margin-top: 70px;
+
+    border: 2.22769px solid #f8a5c2;
+    border-radius: 22.2769px;
   }
 
   &__form-item {
@@ -56,8 +90,99 @@
 
     margin-bottom: 12px;
 
+    width: 100%;
+
     span {
       margin-bottom: 12px;
+    }
+
+    input {
+      outline: none;
+
+      height: 52px;
+
+      margin: 10px 0;
+      padding-left: 15px;
+
+      border: none;
+
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      color: #ffffff;
+
+      background: rgba(217, 217, 217, 0.2);
+      border-radius: 10px;
+    }
+
+    textarea {
+      outline: none;
+
+      height: 100px;
+
+      margin: 10px 0;
+      padding: 15px;
+
+      border: none;
+
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      color: #ffffff;
+
+      background: rgba(217, 217, 217, 0.2);
+      border-radius: 10px;
+    }
+  }
+
+  &__form-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    width: 100%;
+
+    margin-top: 20px;
+  }
+
+  &__service-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    height: 100px;
+
+    .ant-checkbox-wrapper {
+      display: flex;
+      align-items: center;
+
+      margin-inline-start: 0;
+      span {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 22px;
+        color: #ffffff;
+      }
+      .ant-checkbox {
+        top: 0;
+      }
+      .ant-checkbox-checked {
+        .ant-checkbox {
+          border-color: #f6a5c1;
+        }
+        .ant-checkbox-inner {
+          background: #f6a5c1;
+        }
+
+        &:hover .ant-checkbox-inner {
+          background: none;
+        }
+      }
     }
   }
 
@@ -73,7 +198,79 @@
     cursor: pointer;
 
     border: 1px solid #000000;
+    border-radius: 10px;
+  }
+
+  &__map-wrapper {
+    width: 100%;
+  }
+
+  &__map {
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+    height: 350px;
+
+    margin-top: 60px;
+    cursor: pointer;
+
+    border-radius: 22.2769px;
+
+    &:hover .map-layer {
+      display: none;
+    }
+  }
+
+  .map-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgb(162, 162, 162, 0.7);
+  }
+
+  &__map-title {
+    margin-top: 50px;
+
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    color: #ffffff;
+  }
+
+  &__confirm-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 153px;
+    height: 45px;
+
+    cursor: pointer;
+
+    span {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 17px;
+      line-height: 75px;
+      color: #ffffff;
+    }
+  }
+
+  .button-active {
+    background: #f8a5c2;
+  }
+
+  .button-inactive {
+    background: #a2a2a2;
   }
 }
-
-

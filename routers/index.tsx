@@ -26,28 +26,22 @@ export const PrivateRoutes = [
     index: 2,
   },
   {
-    path: "/services",
-    element: <ServicesPage />,
-    name: "Services",
-    index: 3,
-  },
-  {
     path: "/words",
     element: <WordsPage />,
     name: "Words",
-    index: 4,
+    index: 3,
   },
   {
     path: "/posts",
     element: <PostPage />,
     name: "Blogs",
-    index: 5,
+    index: 4,
   },
   {
     path: "/contact",
     element: <ContactPage />,
     name: "Contact Us",
-    index: 6,
+    index: 5,
   },
 ];
 

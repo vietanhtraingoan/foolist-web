@@ -38,5 +38,12 @@
   "connect-with": "Connect with",
   "register-to-receive-info": "Register to receive infomation",
   "explore": "Explore",
-  "input-placeholder": "Enter your email"
+  "input-placeholder": "Enter your email",
+  "create-story": "Create your own story",
+  "user-info": "Your information",
+  "your-name": "Enter your name*",
+  "your-email": "Enter your email*",
+  "your-phone": "Enter your phone number*",
+  "your-message": "Your topic want to discussed.....",
+  "submit-button": "Submit"
 }
