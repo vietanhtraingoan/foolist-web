@@ -1,6 +1,6 @@
-import razerLogo from "../../public/static/razerlogo.png";
-import riotLogo from "../../public/static/riotLogo.png";
-import tencentLogo from "../../public/static/tencentLogo.png";
+import razerLogo from "../public/static/razerlogo.png";
+import riotLogo from "../public/static/riotLogo.png";
+import tencentLogo from "../public/static/tencentLogo.png";
 
 export const ClientMocks = [
   {

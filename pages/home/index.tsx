@@ -7,10 +7,10 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 import { DEFAULT_LANG } from "../../utils/constants";
 import ProjectCarousel from "../components/projectCarousel";
-import { ClientMocks } from "../mocks/clientMocks";
+import { ClientMocks } from "../../mocks/clientMocks";
 import ClientItem from "../components/clientItem";
 import CircleProjectSlider from "../components/circleProjectSlider";
-import { infoMocks } from "../mocks/infoMocks";
+import { infoMocks } from "../../mocks/infoMocks";
 import LanguageChange from "../components/languageChange";
 import IntroductionCarousel from "../components/introductionCarousel";
 import { IClient } from "../../utils/types/clientTypes";

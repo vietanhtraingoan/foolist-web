@@ -1,7 +1,7 @@
 import React from "react";
 import { Carousel } from "antd";
 
-import { introductionMocks } from "../../mocks/introductionMocks";
+import { introductionMocks } from "../../../mocks/introductionMocks";
 import Image from "next/image";
 
 const classNamePrefix = "introduction-carousel";

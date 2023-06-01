@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ProjectDetail from "../components/projectDetail";
 import AnimatedNextButton from "../components/animatedNextButton";
-import { projectMocks } from "../mocks/projectMocks";
+import { projectMocks } from "../../mocks/projectMocks";
 import Image from "next/image";
 import { useDispatch } from "react-redux";
 import { setProjectId } from "../../store/project/projectSlice";
