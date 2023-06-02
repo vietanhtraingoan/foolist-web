@@ -50,12 +50,12 @@
     position: relative;
     overflow: hidden;
 
-    height: 140px;
+    height: 160px;
     width: 50em;
 
     margin-top: 20px;
 
-    line-height: 140px;
+    line-height: 160px;
 
     span {
       position: absolute;
@@ -65,7 +65,7 @@
       font-family: "Montserrat";
       font-style: normal;
       font-weight: 800;
-      font-size: 190px;
+      font-size: 160px;
       text-shadow: 2px 2px 0 #f6a5c1, 2px -2px 0 #f6a5c1, -2px 2px 0 #f6a5c1,
         -2px -2px 0 #f6a5c1, 2px 0px 0 #f6a5c1, 0px 2px 0 #f6a5c1,
         -2px 0px 0 #f6a5c1, 0px -2px 0 #f6a5c1,
@@ -90,7 +90,7 @@
     height: 100%;
   }
 
-  &__grid-project{
+  &__grid-project {
     display: none;
   }
 
@@ -292,37 +292,36 @@
     top: -0.88em;
   }
   50% {
-    top: -1.7em;
+    top: -1.9em;
   }
   75% {
-    top: -2.53em;
+    top: -2.9em;
   }
 }
 
 @media screen and (max-width: 992px) {
- 
 }
 
 @media screen and (max-width: 438px) {
-  .home-page{
-    &__introduction-image-container{
+  .home-page {
+    &__introduction-image-container {
       display: none;
     }
 
-    &__project-carousel-container{
+    &__project-carousel-container {
       display: none;
     }
 
-    &__grid-project{
+    &__grid-project {
       display: block;
     }
 
-    &__client-container{
+    &__client-container {
       display: none;
     }
 
-    &__divider-container{
+    &__divider-container {
       display: none;
     }
-  } 
+  }
 }
