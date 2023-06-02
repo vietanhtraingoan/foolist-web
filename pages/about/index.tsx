@@ -14,6 +14,7 @@ import { GetStaticProps, InferGetStaticPropsType } from "next/types";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { DEFAULT_LANG } from "../../utils/constants";
 import { useTranslation } from "next-i18next";
+import MiniFooter from "../components/miniFooter";
 
 const classNamePrefix = "about-page";
 
@@ -192,6 +193,8 @@ const AboutPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
       <TextSlider text="- FOOLIST - CREATIVE - MEDIA - TECHNOLOGY" />
 
       <ConnectSection />
+
+      <MiniFooter />
 
       {/* <AnimatedGraph /> */}
     </div>

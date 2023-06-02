@@ -8,6 +8,7 @@ import {
 import { authApi } from "./auth/authApi";
 import authReducer, { userLogout } from "./auth/authSlice";
 import projectReducer from "./project/projectSlice";
+import dialogReducer from "../store/customDialog/dialogSlice";
 
 import { createWrapper } from "next-redux-wrapper";
 
@@ -15,6 +16,7 @@ const rootReducer = {
   auth: authReducer,
   [authApi.reducerPath]: authApi.reducer,
   project: projectReducer,
+  dialog: dialogReducer,
 };
 
 const rtkQueryErrorLogger: Middleware =

@@ -1,14 +1,11 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { projectMocks } from "../../../mocks/projectMocks";
 import Image from "next/image";
-import { useIdle } from "../../../utils/commonFunstions";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 
 const classNamePrefix = "project-carousel";
 
 const ProjectCarousel = () => {
-  // const [currentIndex, setCurrentIndex] = useState<number>(0);
-
   const [visibleSlide, setVisibleSlide] = useState(3);
   const [targetSlide, setTargetSlide] = useState(3);
   const wrapperRef = useRef(null);

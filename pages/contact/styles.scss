@@ -161,6 +161,7 @@
       align-items: center;
 
       margin-inline-start: 0;
+
       span {
         font-family: "Montserrat";
         font-style: normal;
@@ -168,6 +169,14 @@
         font-size: 22px;
         color: #ffffff;
       }
+
+      &:hover .ant-checkbox-checked .ant-checkbox-inner {
+        background: #f6a5c1;
+        input {
+          background: #f6a5c1;
+        }
+      }
+
       .ant-checkbox {
         top: 0;
       }
@@ -256,6 +265,8 @@
 
     cursor: pointer;
 
+    background: #f8a5c2;
+
     span {
       font-family: "Montserrat";
       font-style: normal;
@@ -264,13 +275,5 @@
       line-height: 75px;
       color: #ffffff;
     }
-  }
-
-  .button-active {
-    background: #f8a5c2;
-  }
-
-  .button-inactive {
-    background: #a2a2a2;
   }
 }

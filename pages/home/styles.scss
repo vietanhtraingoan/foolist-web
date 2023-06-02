@@ -193,6 +193,10 @@
     background-size: cover;
   }
 
+  &__connection-container{
+    display: none;
+  }
+
   &__footer-container {
     display: flex;
     flex-direction: row;

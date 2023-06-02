@@ -1,8 +1,3 @@
-/**
- * Using a custom _app.js with next-seo you can set default SEO
- * that will apply to every page. Full info on how the default works
- * can be found here: https://github.com/garmeeh/next-seo#default-seo-configuration
- */
 import { DefaultSeo } from "next-seo";
 import "animate.css";
 import "animate.css/animate.min.css";
@@ -12,6 +7,7 @@ import SEO from "../next-seo.config";
 import TopMenu from "./components/menu/TopMenu";
 import Footer from "./components/Footer";
 import { useRouter } from "next/router";
+import CustomDialog from "./components/customDialog";
 
 import "./components/menu/styles.scss";
 import "./components/Footer/styles.scss";
@@ -36,6 +32,8 @@ import "./components/customNavigationButton/styles.scss";
 import "./components/gridProject/styles.scss";
 import "./components/gridCustomer/styles.scss";
 import "./components/gridProject/projectList/styles.scss";
+import "./components/customDialog/styles.scss";
+import "./components/miniFooter/styles.scss";
 
 import "../pages/home/styles.scss";
 import "../pages/contact/styles.scss";
@@ -100,6 +98,7 @@ function MyApp({ Component, ...rest }) {
           <div className="floated-language-change">
             <LanguageChange />
           </div>
+          <CustomDialog />
         </div>
       </Provider>
     </>

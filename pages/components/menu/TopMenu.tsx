@@ -84,8 +84,8 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
               src={foolistLogo}
               className="logo"
               alt="logo"
-              width={55}
-              height={55}
+              width={43}
+              height={43}
             />
           </div>
 

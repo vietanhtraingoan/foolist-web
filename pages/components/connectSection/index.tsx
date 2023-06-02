@@ -48,9 +48,7 @@ const ConnectSection = (
           <div className={`${classNamePrefix}__bottom-left-item`}>
             <span>{t("explore")}</span>
             <div>
-              <div>
-                <SocialGroup />
-              </div>
+              <SocialGroup />
             </div>
           </div>
         </div>

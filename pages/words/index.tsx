@@ -4,6 +4,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { GetStaticProps, InferGetStaticPropsType } from "next/types";
 import React, { useState } from "react";
 import CustomNavigationButton from "../components/customNavigationButton";
+import MiniFooter from "../components/miniFooter";
 
 const classNamePrefix = "words-page";
 
@@ -91,6 +92,8 @@ const WordsPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
           </div>
         </div>
       </Modal>
+
+      <MiniFooter />
     </div>
   );
 };

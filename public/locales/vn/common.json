@@ -45,5 +45,6 @@
   "your-email": "Điền email của bạn*",
   "your-phone": "Điền số điện thoại của bạn*",
   "your-message": "Nội dung bạn muốn trao đổi.....",
-  "submit-button": "Gửi"
+  "submit-button": "Gửi",
+  "field-required": "Oops, bạn chưa điền đủ thông tin !!"
 }

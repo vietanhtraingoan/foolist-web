@@ -45,5 +45,6 @@
   "your-email": "Enter your email*",
   "your-phone": "Enter your phone number*",
   "your-message": "Your topic want to discussed.....",
-  "submit-button": "Submit"
+  "submit-button": "Submit",
+  "field-required": "Oops, some fields are missing !!"
 }

@@ -1,8 +1,10 @@
 import Checkbox, { CheckboxChangeEvent } from "antd/lib/checkbox";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { GetStaticProps, InferGetStaticPropsType } from "next/types";
+import { GetStaticProps, InferGetStaticPropsType } from "next";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useDispatch } from "react-redux";
+import { openDialog } from "../../store/customDialog/dialogSlice";
 
 const classNamePrefix = "contact-page";
 
@@ -12,6 +14,7 @@ const ContactPage = (
   _props: InferGetStaticPropsType<typeof getStaticProps>
 ) => {
   const { t } = useTranslation("common");
+  const dispatch = useDispatch();
 
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -21,25 +24,33 @@ const ContactPage = (
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await fetch("./api/sendgrid", {
-      body: JSON.stringify({
-        email: email,
-        fullname: name,
-        phone: phone,
-        message: message,
-      }),
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${process.env.NEXT_PUBLIC_MAIL_API_KEY}`,
-      },
-      method: "POST",
-      mode: "no-cors",
-    });
+    if (email && phone && name && message) {
+      const res = await fetch("./api/sendgrid", {
+        body: JSON.stringify({
+          email: email,
+          fullname: name,
+          phone: phone,
+          message: message,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${process.env.NEXT_PUBLIC_MAIL_API_KEY}`,
+        },
+        method: "POST",
+        mode: "no-cors",
+      });
 
-    const { error } = await res.json();
-    if (error) {
-      console.log(error);
-      return;
+      const { error } = await res.json();
+      if (error) {
+        console.log(error);
+        return;
+      }
+    } else {
+      dispatch(
+        openDialog({
+          content: t("field-required"),
+        })
+      );
     }
   };
 
@@ -111,10 +122,8 @@ const ContactPage = (
             </div>
 
             <div
-              className={`${classNamePrefix}__confirm-button ${
-                name && email && phone ? "button-active" : "button-inactive"
-              }`}
-              onClick={name && email && phone ? handleSubmit : () => {}}
+              className={`${classNamePrefix}__confirm-button`}
+              onClick={handleSubmit}
             >
               <span>{t("submit-button")}</span>
             </div>

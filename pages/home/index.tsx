@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
@@ -9,9 +9,7 @@ import { DEFAULT_LANG } from "../../utils/constants";
 import ProjectCarousel from "../components/projectCarousel";
 import { ClientMocks } from "../../mocks/clientMocks";
 import ClientItem from "../components/clientItem";
-import CircleProjectSlider from "../components/circleProjectSlider";
 import { infoMocks } from "../../mocks/infoMocks";
-import LanguageChange from "../components/languageChange";
 import IntroductionCarousel from "../components/introductionCarousel";
 import { IClient } from "../../utils/types/clientTypes";
 import ConnectSection from "../components/connectSection";
@@ -23,9 +21,6 @@ type Props = {};
 
 const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation("common");
-
-  const [bgColor, setBgColor] = useState("#000000");
-  const [animateClientTitile, setAnimateClientTitle] = useState(0);
 
   return (
     <div className={classNamePrefix} id="scrolly-div">
