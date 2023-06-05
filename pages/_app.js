@@ -42,6 +42,7 @@ import "../pages/about/styles.scss";
 import "../pages/posts/styles.scss";
 import "../pages/services/styles.scss";
 import "../pages/words/styles.scss";
+import "./wordDetail/styles.scss";
 
 import "./globalStyle.scss";
 import { useEffect, useLayoutEffect, useState } from "react";

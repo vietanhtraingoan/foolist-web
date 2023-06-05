@@ -1,41 +1,137 @@
-import { CloseOutlined } from "@ant-design/icons";
+import { CloseOutlined, SearchOutlined } from "@ant-design/icons";
 import { Modal } from "antd";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { GetStaticProps, InferGetStaticPropsType } from "next/types";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import CustomNavigationButton from "../components/customNavigationButton";
 import MiniFooter from "../components/miniFooter";
+import { useRouter } from "next/router";
+import { WordsMock } from "../../mocks/wordsMock";
 
 const classNamePrefix = "words-page";
 
 type Props = {};
 
 const WordsPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const router = useRouter();
+
+  const container = useRef(null);
+
   const [openModal, setOpenModal] = useState<boolean>(false);
+  const [searchTerm, setSearchTerm] = useState<string>("");
+  const [collapse, setCollapse] = useState<boolean>(false);
+  const [itemClickId, setItemClickId] = useState<number>(null);
 
-  const items = Array.from(Array(40), () => {
-    let i = 0;
+  const alphabet = "abcdefghijklmnopqrstuvwxyz"
+    .split("")
+    .map((c, index) => ({ id: index + 1, label: c.toUpperCase() }));
 
-    return {
-      id: i++,
-      title: `A-${i}`,
-      subtitle: "Words",
-    };
-  });
+  const renderFilterWordArray = (character: string): Array<any> => {
+    const filterArray = WordsMock.filter(
+      (item) => item.label.charAt(0) === character
+    );
+
+    return filterArray;
+  };
+
+  const handleItemClick = (id: number) => {
+    setCollapse(!collapse);
+
+    setItemClickId(id);
+  };
+
+  const handleClickOutside = (event) => {
+    if (container.current && container.current.contains(event.target)) {
+      setCollapse(false);
+    }
+  };
+
+  const handleSearchWord = () => {
+    const searchItemId = WordsMock.find((item) => item.label.toLowerCase() === searchTerm.toLowerCase())
+
+    if(searchItemId) {
+      router.push(`/wordDetail?id=${searchItemId.id}`)
+    } else {
+      console.log("word not found")
+    }
+  }
+
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      handleSearchWord()
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("click", handleClickOutside);
+  }, []);
 
   return (
-    <div className={classNamePrefix}>
+    <div className={classNamePrefix} ref={container}>
+      <div className={`${classNamePrefix}__top-container`}>
+        <div className={`${classNamePrefix}__top-title`}>
+          <span>Words</span>
+        </div>
+
+        <div className={`${classNamePrefix}__search-container`} onKeyDown={handleKeyDown}>
+          <input
+            type="text"
+            value={searchTerm}
+            placeholder="Search"
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+
+          <SearchOutlined
+            onClick={handleSearchWord}
+            className={`${classNamePrefix}__search-icon`}
+            rev="true"
+          />
+        </div>
+      </div>
       <div className={`${classNamePrefix}__content-wrapper`}>
-        {items
-          ? items.map((item) => (
-              <div
-                className={`${classNamePrefix}__item`}
-                key={item.id}
-                onClick={() => setOpenModal(true)}
-              >
-                <div className={`${classNamePrefix}__content`}>
-                  <div>{item.title}</div>
-                  <span>{item.subtitle}</span>
+        {alphabet
+          ? alphabet.map((item) => (
+              <div className={`${classNamePrefix}__item-wrapper`}>
+                <div className={`${classNamePrefix}__item`} key={item.id}>
+                  <div
+                    className={`${classNamePrefix}__content`}
+                    style={{
+                      background:
+                        itemClickId === item.id
+                          ? "#F8A5C2"
+                          : "rgba(255, 255, 255, 0.2)",
+                    }}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleItemClick(item.id);
+                    }}
+                  >
+                    <div>{item.label}</div>
+                  </div>
+                </div>
+
+                <div
+                  className={`${classNamePrefix}__collapse`}
+                  style={{
+                    display:
+                      collapse && itemClickId === item.id ? "block" : "none",
+                  }}
+                >
+                  {renderFilterWordArray(item.label) &&
+                  renderFilterWordArray(item.label).length > 0 ? (
+                    renderFilterWordArray(item.label).map((c) => (
+                      <div
+                        className={`${classNamePrefix}__collapse-item`}
+                        onClick={() => router.push(`/wordDetail?id=${c.id}`)}
+                      >
+                        <span>{c.label}</span>
+                      </div>
+                    ))
+                  ) : (
+                    <div className={`${classNamePrefix}__no-data`}>
+                      <span> Updating.....</span>
+                    </div>
+                  )}
                 </div>
               </div>
             ))
