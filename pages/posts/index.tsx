@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getDocs, collection } from "firebase/firestore";
 import db from "../../firebase/clientApp";
 import { AppstoreOutlined, CopyOutlined } from "@ant-design/icons";
-import projectImage from "../../public/static/project3.png";
+import projectImage from "../../public/static/project3.jpg";
 import { GetStaticProps, InferGetStaticPropsType } from "next/types";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 

@@ -3,7 +3,7 @@ import AnimatedNextButton from "../animatedNextButton";
 import { useSelector } from "react-redux";
 import { getProjectId } from "../../../store/selector/rootSelector";
 import { projectMocks } from "../../../mocks/projectMocks";
-import project1 from "../../../public/static/project2.png";
+import project1 from "../../../public/static/project1.jpg";
 
 interface IProjectDetailProps {
   projectSelect?: boolean;
