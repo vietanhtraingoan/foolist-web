@@ -1,6 +1,10 @@
-import project1 from "../public/static/project1.png";
-import project2 from "../public/static/project2.png";
-import project3 from "../public/static/project3.png";
+import project1 from "../public/static/project1.jpg";
+import project2 from "../public/static/project2.jpg";
+import project3 from "../public/static/project3.jpg";
+import project4 from "../public/static/project4.jpg";
+import project5 from "../public/static/project5.png";
+import project6 from "../public/static/project6.jpg";
+import project7 from "../public/static/project7.jpg";
 
 export const projectMocks = [
   {
@@ -35,7 +39,7 @@ export const projectMocks = [
   },
   {
     id: 4,
-    imgUrl: project1,
+    imgUrl: project4,
     position: 4,
     name: "Project Name 4",
     content:
@@ -45,7 +49,7 @@ export const projectMocks = [
   },
   {
     id: 5,
-    imgUrl: project3,
+    imgUrl: project5,
     position: 5,
     name: "Project Name 5",
     content:
@@ -55,7 +59,7 @@ export const projectMocks = [
   },
   {
     id: 6,
-    imgUrl: project1,
+    imgUrl: project6,
     position: 6,
     name: "Project Name 6",
     content:
@@ -65,7 +69,7 @@ export const projectMocks = [
   },
   {
     id: 7,
-    imgUrl: project3,
+    imgUrl: project7,
     position: 7,
     name: "Project Name 7",
     content:
