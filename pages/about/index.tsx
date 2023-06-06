@@ -1,20 +1,18 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
-import AnimatedGraph from "../components/animatedGraph";
 import eyeGif from "../../public/static/eyeGif.gif";
 import eyeOpen from "../../public/static/eyeOpen.png";
 import dividerBG from "../../public/static/dividerBg1.png";
 import CircleGroup from "../components/circleGroup";
 import NormalCircleGroup from "../components/normalCircleGroup";
-import bg from "../../public/static/pageBg.png";
 import TextSlider from "../components/textSlider";
 import ConnectSection from "../components/connectSection";
 import { GetStaticProps, InferGetStaticPropsType } from "next/types";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { DEFAULT_LANG } from "../../utils/constants";
 import { useTranslation } from "next-i18next";
 import MiniFooter from "../components/miniFooter";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 const classNamePrefix = "about-page";
 
@@ -45,16 +43,22 @@ const AboutPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <div className={classNamePrefix}>
       <section className={`${classNamePrefix}__first-section`}>
-        <div className={`${classNamePrefix}__first-section-slogan`}>
+        <div
+          className={`${classNamePrefix}__first-section-slogan animate__animated animate__fadeInUp`}
+        >
           {t("About_content.title")}
         </div>
 
         <div className={`${classNamePrefix}__first-section-title`}>
-          <div className={`${classNamePrefix}__first-section-title-outline`}>
+          <div
+            className={`${classNamePrefix}__first-section-title-outline  animate__animated animate__fadeInUp`}
+          >
             <span>{t("About_content.three-points")}</span>
           </div>
 
-          <div className={`${classNamePrefix}__first-section-subtitle`}>
+          <div
+            className={`${classNamePrefix}__first-section-subtitle  animate__animated animate__fadeInUp`}
+          >
             <span>{t("About_content.three-points-content")}</span>
           </div>
         </div>
@@ -68,18 +72,24 @@ const AboutPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
       </div>
 
       <section className={`${classNamePrefix}__second-section`}>
-        <div className={`${classNamePrefix}__second-section-top`}>
+        <div
+          className={`${classNamePrefix}__second-section-top animate__animated animate__fadeInUp`}
+        >
           <span>{t("About_content.paragraph-1")}</span>
         </div>
 
         <div className={`${classNamePrefix}__second-section-bottom`}>
-          <div className={`${classNamePrefix}__second-section-bottom-image`}>
-            <Image src={eyeGif} alt="" width={150} />
-          </div>
+          <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}>
+            <div className={`${classNamePrefix}__second-section-bottom-image`}>
+              <Image src={eyeGif} alt="" width={150} />
+            </div>
+          </AnimationOnScroll>
 
-          <div className={`${classNamePrefix}__second-section-bottom-text`}>
-            <span>{t("About_content.paragraph-2")}</span>
-          </div>
+          <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}>
+            <div className={`${classNamePrefix}__second-section-bottom-text`}>
+              <span>{t("About_content.paragraph-2")}</span>
+            </div>
+          </AnimationOnScroll>
         </div>
       </section>
 
@@ -91,8 +101,19 @@ const AboutPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
       <section className={`${classNamePrefix}__third-section`}>
         <div className={`${classNamePrefix}__third-section-top`}>
           <div className={`${classNamePrefix}__third-section-top-title`}>
-            <div>{t("About_content.creative-thinking")}</div>
-            <span>{t("About_content.unique")}</span>
+            <AnimationOnScroll
+              animateIn="animate__slideInUp"
+              animateOnce={true}
+            >
+              <div>{t("About_content.creative-thinking")}</div>
+            </AnimationOnScroll>
+
+            <AnimationOnScroll
+              animateIn="animate__slideInUp"
+              animateOnce={true}
+            >
+              <span>{t("About_content.unique")}</span>
+            </AnimationOnScroll>
           </div>
         </div>
 
@@ -103,64 +124,104 @@ const AboutPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
           <div className={`${classNamePrefix}__divider-content`}></div>
         </div>
 
-        <div className={`${classNamePrefix}__third-section-middle`}>
-          <span>{t("About_content.paragraph-3")}</span>
-        </div>
+        <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}>
+          <div className={`${classNamePrefix}__third-section-middle`}>
+            <span>{t("About_content.paragraph-3")}</span>
+          </div>
+        </AnimationOnScroll>
 
         <div className={`${classNamePrefix}__third-section-bottom`}>
-          <div style={{ marginLeft: 400 }}>
-            <CircleGroup />
-          </div>
+          <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}>
+            <div className={`${classNamePrefix}__third-section-graph`}>
+              {/* <CircleGroup /> */}
+              <NormalCircleGroup contentType="1" />
+            </div>
+          </AnimationOnScroll>
 
           <div className={`${classNamePrefix}__third-section-bottom-text`}>
             <span>
-              {t("About_content.paragraph-4")}
+              <AnimationOnScroll
+                animateIn="animate__slideInUp"
+                animateOnce={true}
+              >
+                {t("About_content.paragraph-4")}
+              </AnimationOnScroll>
+
               <br></br>
               <br></br>
-              {t("About_content.paragraph-5")}
+              <AnimationOnScroll
+                animateIn="animate__slideInUp"
+                animateOnce={true}
+              >
+                {t("About_content.paragraph-5")}
+              </AnimationOnScroll>
             </span>
           </div>
         </div>
       </section>
 
       <section className={`${classNamePrefix}__fourth-section`}>
-        <div className={`${classNamePrefix}__fourth-section-title`}>
-          <div className={`${classNamePrefix}__fourth-section-title-text`}>
-            <span> {t("About_content.visual")}</span>
-          </div>
+        <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}>
+          <div className={`${classNamePrefix}__fourth-section-title`}>
+            <div className={`${classNamePrefix}__fourth-section-title-text`}>
+              <span> {t("About_content.visual")}</span>
+            </div>
 
-          <div
-            className={`${classNamePrefix}__fourth-section-title-divider`}
-          ></div>
+            <div
+              className={`${classNamePrefix}__fourth-section-title-divider`}
+            ></div>
 
-          <div className={`${classNamePrefix}__fourth-section-title-image`}>
-            <Image src={eyeOpen} alt="" width={150} />
+            <div className={`${classNamePrefix}__fourth-section-title-image`}>
+              <Image src={eyeOpen} alt="" width={150} />
+            </div>
           </div>
-        </div>
+        </AnimationOnScroll>
 
         <div className={`${classNamePrefix}__fourth-section-content`}>
           <div className={`${classNamePrefix}__fourth-section-content-item`}>
             <div className={`${classNamePrefix}__fourth-section-item-text`}>
               <span>
-                {t("About_content.paragraph-6")}
+                <AnimationOnScroll
+                  animateIn="animate__slideInUp"
+                  animateOnce={true}
+                >
+                  {t("About_content.paragraph-6")}
+                </AnimationOnScroll>
                 <br></br>
                 <br></br>
-                {t("About_content.paragraph-7")}
+                <AnimationOnScroll
+                  animateIn="animate__slideInUp"
+                  animateOnce={true}
+                >
+                  {t("About_content.paragraph-7")}
+                </AnimationOnScroll>
               </span>
             </div>
 
             <div className={`${classNamePrefix}__fourth-section-graph`}>
-              <NormalCircleGroup />
+              <NormalCircleGroup contentType="2" />
             </div>
           </div>
 
           <div className={`${classNamePrefix}__fourth-section-content-item`}>
-            <div className={`${classNamePrefix}__second-section-bottom-image`}>
-              <Image src={eyeGif} alt="" width={150} />
-            </div>
+            <AnimationOnScroll
+              animateIn="animate__slideInUp"
+              animateOnce={true}
+            >
+              <div
+                className={`${classNamePrefix}__second-section-bottom-image`}
+              >
+                <Image src={eyeGif} alt="" width={150} />
+              </div>
+            </AnimationOnScroll>
 
             <div className={`${classNamePrefix}__fourth-section-item-text`}>
-              <span>{t("About_content.paragraph-8")}</span>
+              <AnimationOnScroll
+                animateIn="animate__slideInUp"
+                animateOnce={true}
+              >
+                <span>{t("About_content.paragraph-8")}</span>
+              </AnimationOnScroll>
             </div>
           </div>
         </div>
@@ -170,24 +231,30 @@ const AboutPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
 
       <section className={`${classNamePrefix}__fifth-section`}>
         <div className={`${classNamePrefix}__fifth-section-graph`}>
-          <NormalCircleGroup />
+          <NormalCircleGroup contentType="3" />
         </div>
 
         <div className={`${classNamePrefix}__fifth-section-text`}>
-          <div>{t("About_content.paragraph-9")}</div>
+          <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}>
+            <div>{t("About_content.paragraph-9")}</div>
+          </AnimationOnScroll>
 
-          <div>{t("About_content.paragraph-10")}</div>
+          <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}>
+            <div>{t("About_content.paragraph-10")}</div>
+          </AnimationOnScroll>
         </div>
       </section>
 
       <section className={`${classNamePrefix}__final-section`}>
-        <div className={`${classNamePrefix}__employee-group`}>
-          <div className={`${classNamePrefix}__employee-group-title`}>
-            <span>{t("Staff")}</span>
-          </div>
+        <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}>
+          <div className={`${classNamePrefix}__employee-group`}>
+            <div className={`${classNamePrefix}__employee-group-title`}>
+              <span>{t("Staff")}</span>
+            </div>
 
-          <div className={`${classNamePrefix}__employee-group-line`}></div>
-        </div>
+            <div className={`${classNamePrefix}__employee-group-line`}></div>
+          </div>
+        </AnimationOnScroll>
       </section>
 
       <TextSlider text="- FOOLIST - CREATIVE - MEDIA - TECHNOLOGY" />

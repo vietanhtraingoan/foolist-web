@@ -24,6 +24,10 @@
     color: #ffffff;
   }
 
+  .animate__animated.animate__bounce {
+    --animate-duration: 1s;
+  }
+
   &__first-section-title {
     display: flex;
     flex-direction: column;
@@ -216,7 +220,6 @@
 
   &__third-section-bottom-text {
     width: 426px;
-    height: 223px;
 
     margin-left: 250px;
 
@@ -245,7 +248,7 @@
   }
 
   &__fourth-section-title-text {
-    width: 400px;
+    width: 600px;
     height: 300px;
 
     span {
@@ -378,10 +381,72 @@
     }
   }
 
-  &__employee-group-line{
+  &__employee-group-line {
     flex: 1;
 
     height: 2px;
     background: #ffffff;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-page {
+    &__second-section-bottom-image {
+      display: none;
+    }
+
+    &__third-section-bottom{
+      flex-direction: column-reverse;
+    }
+
+    &__third-section-graph{
+      margin: 160px 0;
+    }
+
+    &__fourth-section-title {
+      padding: 0 40px;
+    }
+
+    &__fourth-section-content {
+      padding: 151px 40px;
+    }
+
+    &__fourth-section-content-item {
+      flex-direction: column;
+    }
+
+    &__fourth-section-graph {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      width: 100%;
+
+      margin: 70px 0 0 0;
+    }
+
+    &__fourth-section-item-text {
+      width: 100%;
+
+      span {
+        font-size: 38px;
+        text-align: justify;
+        line-height: 44px;
+      }
+    }
+
+    &__fifth-section-text {
+      padding: 0 40px;
+
+      width: 100%;
+
+      div:nth-child(1) {
+        font-size: 38px;
+        text-align: justify;
+        line-height: 44px;
+        font-weight: 700;
+      }
+    }
   }
 }
