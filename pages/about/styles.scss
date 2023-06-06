@@ -430,9 +430,10 @@
       width: 100%;
 
       span {
-        font-size: 38px;
+        font-size: 65px;
         text-align: justify;
-        line-height: 44px;
+        line-height: 80px;
+        font-style: italic;
       }
     }
 
@@ -442,9 +443,9 @@
       width: 100%;
 
       div:nth-child(1) {
-        font-size: 38px;
+        font-size: 60px;
         text-align: justify;
-        line-height: 44px;
+        line-height: 60px;
         font-weight: 700;
       }
     }
