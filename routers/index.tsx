@@ -19,24 +19,24 @@ export const PrivateRoutes = [
     name: "About us",
     index: 1,
   },
-  {
-    path: "/project",
-    element: <ProjectPage />,
-    name: "Projects",
-    index: 2,
-  },
-  {
-    path: "/words",
-    element: <WordsPage />,
-    name: "Words",
-    index: 3,
-  },
-  {
-    path: "/posts",
-    element: <PostPage />,
-    name: "Blogs",
-    index: 4,
-  },
+  // {
+  //   path: "/project",
+  //   element: <ProjectPage />,
+  //   name: "Projects",
+  //   index: 2,
+  // },
+  // {
+  //   path: "/words",
+  //   element: <WordsPage />,
+  //   name: "Words",
+  //   index: 3,
+  // },
+  // {
+  //   path: "/posts",
+  //   element: <PostPage />,
+  //   name: "Blogs",
+  //   index: 4,
+  // },
   {
     path: "/contact",
     element: <ContactPage />,

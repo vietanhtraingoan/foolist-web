@@ -19,7 +19,7 @@
       align-items: center;
       justify-content: space-between;
 
-      height: 70px;
+      height: 80px;
       width: 100%;
 
       padding: 0 52.07px;
@@ -40,6 +40,9 @@
         transform: rotate(45deg);
 
         .logo {
+          width: 43px;
+          height: 43px;
+
           transform: rotate(-45deg);
         }
       }
@@ -61,7 +64,7 @@
 
           border-radius: 999px;
 
-          background: #f6a5c1;
+          transition: ease-in-out 0.8s;
         }
 
         .left-menu-text {
@@ -216,6 +219,7 @@
   .top-menu {
     .second {
       .content {
+        height: 120px;
         .left-menu {
           .left-menu-responsive-button {
             display: flex;
@@ -225,6 +229,20 @@
             display: none;
           }
         }
+
+        .logo-group{
+          .logo{
+            width: 63px;
+            height: 63px;
+          }
+        }
+      }
+    }
+
+    .navigation-menu-wrapper{
+      .item{
+        width: 150px;
+        font-size: 30px;
       }
     }
   }

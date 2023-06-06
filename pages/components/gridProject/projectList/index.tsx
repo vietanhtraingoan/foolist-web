@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 interface IProjectList {
   data: any;
@@ -14,15 +15,22 @@ const ProjectList: React.FC<IProjectList> = (props) => {
     <div className={classNamePrefix}>
       {data
         ? data.map((item) => (
-            <div key={item.id} className={`${classNamePrefix}__item`}>
-              <div className={`${classNamePrefix}__image-wrapper`}>
-                <Image
-                  className={`${classNamePrefix}__image`}
-                  src={item.imgUrl}
-                  alt=""
-                />
+            <AnimationOnScroll
+              key={item.id}
+              animateIn="animate__fadeInUp"
+              initiallyVisible={true}
+              animateOnce={true}
+            >
+              <div className={`${classNamePrefix}__item`}>
+                <div className={`${classNamePrefix}__image-wrapper`}>
+                  <Image
+                    className={`${classNamePrefix}__image`}
+                    src={item.imgUrl}
+                    alt=""
+                  />
+                </div>
               </div>
-            </div>
+            </AnimationOnScroll>
           ))
         : ""}
     </div>

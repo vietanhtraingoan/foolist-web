@@ -2027,6 +2027,13 @@ react-animate-on-scroll@^2.1.7:
     lodash.throttle "^4.1.1"
     prop-types "^15.5.9"
 
+react-animation-on-scroll@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/react-animation-on-scroll/-/react-animation-on-scroll-5.1.0.tgz#4b69419d187bb5fdf2c4a01208d4a654ac8d883f"
+  integrity sha512-UBhlXUig+AGwDpRoqFC6qFh1mCIperwy1Pk7dJTb0XgpDzERF4f6fhoqFY2+on9Bf1n4OfUrRw4xsnKfQt6U7w==
+  dependencies:
+    lodash.throttle "^4.1.1"
+
 react-dom@^18.2.0:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-18.2.0.tgz#22aaf38708db2674ed9ada224ca4aa708d821e3d"

@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import { GetStaticProps, InferGetStaticPropsType } from "next/types";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 const classNamePrefix = "connect-section";
 
@@ -20,45 +21,49 @@ const ConnectSection = (
 
   return (
     <div className={classNamePrefix}>
-      <div className={`${classNamePrefix}__top`}>
-        <div className={`${classNamePrefix}__top-text`}>
-          {t("connect-with")} <span>FOOLIST </span>
-        </div>
+      <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true}>
+        <div className={`${classNamePrefix}__top`}>
+          <div className={`${classNamePrefix}__top-text`}>
+            {t("connect-with")} <span>FOOLIST </span>
+          </div>
 
-        <div className={`${classNamePrefix}__top-button`}>
-          <CustomNavigationButton
-            size="large"
-            onClick={() => router.push("/contact")}
-          />
+          <div className={`${classNamePrefix}__top-button`}>
+            <CustomNavigationButton
+              size="large"
+              onClick={() => router.push("/contact")}
+            />
+          </div>
         </div>
-      </div>
+      </AnimationOnScroll>
 
-      <div className={`${classNamePrefix}__bottom`}>
-        <div className={`${classNamePrefix}__bottom-left`}>
-          <div className={`${classNamePrefix}__bottom-left-item`}>
-            <span>{t("register-to-receive-info")}</span>
-            <div className={`${classNamePrefix}__bottom-left-input`}>
-              <input type="text" id="" placeholder={t("input-placeholder")} />
-              <div className={`${classNamePrefix}__bottom-left-input-button`}>
-                <CustomNavigationButton size="small" />
+      <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}>
+        <div className={`${classNamePrefix}__bottom`}>
+          <div className={`${classNamePrefix}__bottom-left`}>
+            <div className={`${classNamePrefix}__bottom-left-item`}>
+              <span>{t("register-to-receive-info")}</span>
+              <div className={`${classNamePrefix}__bottom-left-input`}>
+                <input type="text" id="" placeholder={t("input-placeholder")} />
+                <div className={`${classNamePrefix}__bottom-left-input-button`}>
+                  <CustomNavigationButton size="small" />
+                </div>
+              </div>
+            </div>
+
+            <div className={`${classNamePrefix}__bottom-left-item`}>
+              <span>{t("explore")}</span>
+              <div>
+                <SocialGroup />
               </div>
             </div>
           </div>
 
-          <div className={`${classNamePrefix}__bottom-left-item`}>
-            <span>{t("explore")}</span>
-            <div>
-              <SocialGroup />
-            </div>
+          <div className={`${classNamePrefix}__bottom-right`}>
+            <span>{t("Services")}</span>
+
+            <div></div>
           </div>
         </div>
-
-        <div className={`${classNamePrefix}__bottom-right`}>
-          <span>{t("Services")}</span>
-
-          <div></div>
-        </div>
-      </div>
+      </AnimationOnScroll>
     </div>
   );
 };

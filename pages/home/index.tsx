@@ -14,6 +14,8 @@ import IntroductionCarousel from "../components/introductionCarousel";
 import { IClient } from "../../utils/types/clientTypes";
 import ConnectSection from "../components/connectSection";
 import GridProject from "../components/gridProject";
+import ResponsiveClient from "../components/responsiveClient";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 const classNamePrefix = "home-page";
 
@@ -29,9 +31,11 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
         className={`${classNamePrefix}__introduction-container`}
       >
         <div className={`${classNamePrefix}__introduction-title`}>
-          <span>Foolist</span>
+          <span className="animate__animated animate__fadeInUp">Foolist</span>
 
-          <div className={`${classNamePrefix}__scroller`}>
+          <div
+            className={`${classNamePrefix}__scroller animate__animated animate__fadeInUp`}
+          >
             <span>
               Creative
               <br />
@@ -40,6 +44,18 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
               Media
               <br />
               ERP
+            </span>
+          </div>
+        </div>
+
+        <div className={`${classNamePrefix}__introduction-text`}>
+          <div className={`${classNamePrefix}__introduction-text-group`}>
+            <span className="animate__animated animate__slideInUp">
+              {t("About_content.paragraph-1")}
+            </span>
+            <div />
+            <span className="animate__animated animate__slideInUp">
+              {t("About_content.paragraph-2")}
             </span>
           </div>
         </div>
@@ -61,22 +77,14 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
         <ProjectCarousel />
       </section>
 
-      {/* <section className={`${classNamePrefix}__project-circle-container`}>
-        <div className={`${classNamePrefix}__project-info`}>Info</div>
-
-        <div className={`${classNamePrefix}__project-slider`}>
-          <CircleProjectSlider />
-        </div>
-      </section> */}
+      <section className={`${classNamePrefix}__responsive-client-container`}>
+        <ResponsiveClient />
+      </section>
 
       <section className={`${classNamePrefix}__client-container`}>
-        <ScrollAnimation
-          animateIn="fadeIn"
-          animateOut="fadeOut"
-          scrollableParentSelector="#scrolly-div"
-        >
-          <h1 style={{ color: "#ffffff" }}>{t("Section_label.client")}</h1>
-        </ScrollAnimation>
+        <div className={`${classNamePrefix}__section-title`}>
+          <span> {t("Section_label.client")}</span>
+        </div>
 
         {ClientMocks ? (
           <div style={{ width: 1800, marginTop: 100 }}>
@@ -98,30 +106,36 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
       </section>
 
       <section className={`${classNamePrefix}__footer-container`}>
-        <div className={`${classNamePrefix}__footer-left`}>
-          <div className={`${classNamePrefix}__footer-left-title`}>
-            <span>“LET ART</span>
-            <div className={`${classNamePrefix}__footer-left-title-highlight`}>
-              UNLOCK
+        <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}>
+          <div className={`${classNamePrefix}__footer-left`}>
+            <div className={`${classNamePrefix}__footer-left-title`}>
+              <span>“LET ART</span>
+              <div
+                className={`${classNamePrefix}__footer-left-title-highlight`}
+              >
+                UNLOCK
+              </div>
+              <span> YOUR BUSINESS “</span>
             </div>
-            <span> YOUR BUSINESS “</span>
           </div>
-        </div>
+        </AnimationOnScroll>
 
         <div className={`${classNamePrefix}__footer-right`}>
-          <div className={`${classNamePrefix}__footer-info-group-title`}>
-            Foolist Creative
-          </div>
+          <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}>
+            <div className={`${classNamePrefix}__footer-info-group-title`}>
+              Foolist Creative
+            </div>
 
-          <span className={`${classNamePrefix}__footer-info-group-text`}>
-            Foolist.vn
-          </span>
+            <span className={`${classNamePrefix}__footer-info-group-text`}>
+              Foolist.vn
+            </span>
 
-          <div className={`${classNamePrefix}__footer-info-group`}>
-            {infoMocks.map((i) => (
-              <span key={i.id}>{i.text}</span>
-            ))}
-          </div>
+            <div className={`${classNamePrefix}__footer-info-group`}>
+              {infoMocks.map((i) => (
+                <span key={i.id}>{i.text}</span>
+              ))}
+            </div>
+          </AnimationOnScroll>
         </div>
       </section>
     </div>

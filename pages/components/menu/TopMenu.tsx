@@ -35,6 +35,7 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
 
   const [color, setColor] = useState("#ffffff");
   const [menuBg, setMenuBg] = useState("none");
+  const [menuButtonBg, setMenuNButtonBg] = useState("none");
 
   const [activeMenu, setactiveMenu] = useState(null);
 
@@ -47,7 +48,11 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
 
     if (scroll > 105) {
       setMenuBg(" rgba(100, 100, 100, 0.55)");
-    } else setMenuBg("");
+      setMenuNButtonBg("#f6a5c1");
+    } else {
+      setMenuBg("");
+      setMenuNButtonBg("none");
+    }
   };
 
   const handleMenuClick = () => {
@@ -80,17 +85,14 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
       <div className="second" style={{ background: menuBg }}>
         <div className="content">
           <div className="logo-group" onClick={() => router.push("/")}>
-            <Image
-              src={foolistLogo}
-              className="logo"
-              alt="logo"
-              width={43}
-              height={43}
-            />
+            <Image src={foolistLogo} className="logo" alt="logo" />
           </div>
 
           <div className="left-menu">
-            <div className="left-menu-responsive-button">
+            <div
+              className="left-menu-responsive-button"
+              style={{ background: menuButtonBg }}
+            >
               <CustomHamburgMenu
                 isMenuClick={isMenuClick}
                 handleMenuClick={handleMenuClick}
