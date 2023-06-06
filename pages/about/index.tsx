@@ -64,10 +64,7 @@ const AboutPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
         </div>
       </section>
 
-      <div
-        className={`${classNamePrefix}__divider`}
-        style={{ width: showDivider ? "100%" : 0 }}
-      >
+      <div className={`${classNamePrefix}__divider`} style={{ width: "100%" }}>
         <div className={`${classNamePrefix}__divider-content`}></div>
       </div>
 
@@ -112,14 +109,16 @@ const AboutPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
               animateIn="animate__slideInUp"
               animateOnce={true}
             >
-              <span>{t("About_content.unique")}</span>
+              <div className={`${classNamePrefix}__third-section-top-outline`}>
+                <span>{t("About_content.unique")}</span>
+              </div>
             </AnimationOnScroll>
           </div>
         </div>
 
         <div
           className={`${classNamePrefix}__divider`}
-          style={{ width: showDivider ? "100%" : 0 }}
+          style={{ width: "100%" }}
         >
           <div className={`${classNamePrefix}__divider-content`}></div>
         </div>

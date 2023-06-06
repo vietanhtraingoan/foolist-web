@@ -184,8 +184,15 @@
     div {
       color: #ffffff;
     }
+  }
 
+  &__third-section-top-outline {
     span {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 73px;
+      line-height: 99px;
       text-shadow: 0.4px 0.4px 0 #ffffff, 0.4px -0.4px 0 #ffffff,
         -0.4px 0.4px 0 #ffffff, -0.4px -0.4px 0 #ffffff, 0.4px 0px 0 #ffffff,
         0px 0.4px 0 #ffffff, -0.4px 0px 0 #ffffff, 0px -0.4px 0 #ffffff;
@@ -391,24 +398,90 @@
 
 @media screen and (max-width: 768px) {
   .about-page {
+    &__first-section-title-outline {
+      span {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 120px;
+        line-height: 156px;
+        text-shadow: 2px 2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff,
+          -2px -2px 0 #ffffff, 2px 0px 0 #ffffff, 0px 2px 0 #ffffff,
+          -2px 0px 0 #ffffff, 0px -2px 0 #ffffff;
+      }
+    }
+
+    &__third-section-top-outline {
+      text-shadow: 2px 2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff,
+        -2px -2px 0 #ffffff, 2px 0px 0 #ffffff, 0px 2px 0 #ffffff,
+        -2px 0px 0 #ffffff, 0px -2px 0 #ffffff;
+    }
+
     &__second-section-bottom-image {
       display: none;
     }
 
-    &__third-section-bottom{
+    &__second-section {
+      padding: 117px 60px;
+    }
+
+    &__second-section-top {
+      width: 80%;
+
+      span {
+        font-size: 60px;
+        line-height: 70px;
+        text-align: justify;
+      }
+    }
+
+    &__second-section-bottom-text {
+      width: 80%;
+
+      margin-left: 250px;
+
+      span {
+        font-size: 60px;
+        line-height: 70px;
+        text-align: justify;
+      }
+    }
+
+    &__third-section-bottom {
       flex-direction: column-reverse;
     }
 
-    &__third-section-graph{
+    &__third-section-graph {
       margin: 160px 0;
     }
 
+    &__third-section-middle {
+      width: 80%;
+
+      margin: 106px 0 0 60px;
+
+      span {
+        font-size: 60px;
+        line-height: 70px;
+        text-align: justify;
+      }
+    }
+
+    &__third-section-bottom-text {
+      width: 75%;
+      span {
+        font-size: 55px;
+        line-height: 65px;
+        text-align: justify;
+      }
+    }
+
     &__fourth-section-title {
-      padding: 0 40px;
+      padding: 0 60px;
     }
 
     &__fourth-section-content {
-      padding: 151px 40px;
+      padding: 151px 60px;
     }
 
     &__fourth-section-content-item {
@@ -438,16 +511,23 @@
     }
 
     &__fifth-section-text {
-      padding: 0 40px;
+      padding: 0 60px;
 
       width: 100%;
 
       div:nth-child(1) {
         font-size: 60px;
         text-align: justify;
-        line-height: 60px;
-        font-weight: 700;
+        line-height: 70px;
       }
+    }
+
+    &__image-divider {
+      background-attachment: unset;
+    }
+
+    &__divider-content {
+      width: 800px;
     }
   }
 }

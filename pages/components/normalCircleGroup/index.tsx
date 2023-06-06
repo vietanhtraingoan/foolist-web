@@ -1,5 +1,7 @@
 import React from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
+import logo from "../../../public/static/foolistLogo.png";
+import Image from "next/image";
 
 type IContentCircleType = "1" | "2" | "3";
 
@@ -42,7 +44,7 @@ const NormalCircleGroup: React.FC<INormalCircleProps> = (props) => {
                 <span>Thị giác</span>
               </div>
               <div className={`${classNamePrefix}__text-item text-2`}>
-                <span>ikigai</span>
+                <Image src={logo} alt="" width={60} height={60} />
               </div>
               <div className={`${classNamePrefix}__text-item text-6`}>
                 <span>Độc nhất</span>
@@ -61,7 +63,7 @@ const NormalCircleGroup: React.FC<INormalCircleProps> = (props) => {
                 <span>Sáng tạo</span>
               </div>
               <div className={`${classNamePrefix}__text-item text-2`}>
-                <span>ikigai</span>
+                <Image src={logo} alt="" width={60} height={60} />
               </div>
               <div className={`${classNamePrefix}__text-item text-3`}>
                 <span>Tư duy</span>
@@ -77,13 +79,13 @@ const NormalCircleGroup: React.FC<INormalCircleProps> = (props) => {
       {contentType === "2" && (
         <div className={`${classNamePrefix}__text-wrapper`}>
           <div
-            className={`${classNamePrefix}__text animate__animated animate__zoomIn animate__delay-2s`}
+            className={`${classNamePrefix}__text animate__animated animate__zoomIn animate__delay-1s`}
           >
             <div className={`${classNamePrefix}__text-item text-5`}>
               <span>Thị giác</span>
             </div>
             <div className={`${classNamePrefix}__text-item text-2`}>
-              <span>ikigai</span>
+              <Image src={logo} alt="" width={60} height={60} />
             </div>
             <div className={`${classNamePrefix}__text-item text-6`}>
               <span>Độc nhất</span>
@@ -98,13 +100,13 @@ const NormalCircleGroup: React.FC<INormalCircleProps> = (props) => {
       {contentType === "1" && (
         <div className={`${classNamePrefix}__text-wrapper`}>
           <div
-            className={`${classNamePrefix}__text animate__animated animate__zoomIn animate__delay-2s`}
+            className={`${classNamePrefix}__text animate__animated animate__zoomIn animate__delay-1s`}
           >
             <div className={`${classNamePrefix}__text-item text-1`}>
               <span>Sáng tạo</span>
             </div>
             <div className={`${classNamePrefix}__text-item text-2`}>
-              <span>ikigai</span>
+              <Image src={logo} alt="" width={60} height={60} />
             </div>
             <div className={`${classNamePrefix}__text-item text-3`}>
               <span>Tư duy</span>
