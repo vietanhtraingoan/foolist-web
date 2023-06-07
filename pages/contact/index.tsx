@@ -93,158 +93,155 @@ const ContactPage = (
         <div>{t("create-story")}</div>
       </section>
 
-      <section className={`${classNamePrefix}__form-wrapper`}>
-        <form onSubmit={handleSubmit}>
-          <div className={`${classNamePrefix}__form-title`}>
-            {t("user-info")}
-          </div>
+      <form
+        onSubmit={handleSubmit}
+        className={`${classNamePrefix}__form-wrapper`}
+      >
+        <div className={`${classNamePrefix}__form-title`}>{t("user-info")}</div>
 
-          <div className={`${classNamePrefix}__form-item`}>
-            <input
-              name="name"
-              value={name}
-              onChange={(e) => {
-                setShowNameError(false);
-                setName(e.target.value);
-              }}
-              placeholder={t("your-name")}
-              style={{
-                border: errorMessage !== "" && !name ? "1px solid red" : "none",
-              }}
-              onBlur={(e) => setShowNameError(true)}
-            />
+        <div className={`${classNamePrefix}__form-item`}>
+          <input
+            name="name"
+            value={name}
+            onChange={(e) => {
+              setShowNameError(false);
+              setName(e.target.value);
+            }}
+            placeholder={t("your-name")}
+            style={{
+              border: errorMessage !== "" && !name ? "1px solid red" : "none",
+            }}
+            onBlur={(e) => setShowNameError(true)}
+          />
 
-            {errorMessage !== "" && !name ? (
-              <div className={`${classNamePrefix}__form-error`}>
-                <InfoCircleOutlined
-                  className={`${classNamePrefix}__form-error-icon`}
-                  rev="true"
-                />
-                <span>{errorMessage}</span>
-              </div>
-            ) : (
-              ""
-            )}
+          {errorMessage !== "" && !name ? (
+            <div className={`${classNamePrefix}__form-error`}>
+              <InfoCircleOutlined
+                className={`${classNamePrefix}__form-error-icon`}
+                rev="true"
+              />
+              <span>{errorMessage}</span>
+            </div>
+          ) : (
+            ""
+          )}
 
-            {name && name.length < 3 && showNameError ? (
-              <div className={`${classNamePrefix}__form-error`}>
-                <InfoCircleOutlined
-                  className={`${classNamePrefix}__form-error-icon`}
-                  rev="true"
-                />
-                <span>{t("name-format")}</span>
-              </div>
-            ) : (
-              ""
-            )}
-          </div>
+          {name && name.length < 3 && showNameError ? (
+            <div className={`${classNamePrefix}__form-error`}>
+              <InfoCircleOutlined
+                className={`${classNamePrefix}__form-error-icon`}
+                rev="true"
+              />
+              <span>{t("name-format")}</span>
+            </div>
+          ) : (
+            ""
+          )}
+        </div>
 
-          <div className={`${classNamePrefix}__form-item`}>
-            <input
-              name="email"
-              type="email"
-              value={email}
-              onChange={(e) => {
-                setShowEmailError(false);
-                setEmail(e.target.value);
-              }}
-              placeholder={t("your-email")}
-              style={{
-                border:
-                  errorMessage !== "" && !email ? "1px solid red" : "none",
-              }}
-              onBlur={(e) => setShowEmailError(true)}
-            />
-            {errorMessage !== "" && !email ? (
-              <div className={`${classNamePrefix}__form-error`}>
-                <InfoCircleOutlined
-                  className={`${classNamePrefix}__form-error-icon`}
-                  rev="true"
-                />
-                <span>{errorMessage}</span>
-              </div>
-            ) : (
-              ""
-            )}
+        <div className={`${classNamePrefix}__form-item`}>
+          <input
+            name="email"
+            type="email"
+            value={email}
+            onChange={(e) => {
+              setShowEmailError(false);
+              setEmail(e.target.value);
+            }}
+            placeholder={t("your-email")}
+            style={{
+              border: errorMessage !== "" && !email ? "1px solid red" : "none",
+            }}
+            onBlur={(e) => setShowEmailError(true)}
+          />
+          {errorMessage !== "" && !email ? (
+            <div className={`${classNamePrefix}__form-error`}>
+              <InfoCircleOutlined
+                className={`${classNamePrefix}__form-error-icon`}
+                rev="true"
+              />
+              <span>{errorMessage}</span>
+            </div>
+          ) : (
+            ""
+          )}
 
-            {email && !isValidEmail.test(email) && showNameError ? (
-              <div className={`${classNamePrefix}__form-error`}>
-                <InfoCircleOutlined
-                  className={`${classNamePrefix}__form-error-icon`}
-                  rev="true"
-                />
-                <span>{t("email-format")}</span>
-              </div>
-            ) : (
-              ""
-            )}
-          </div>
+          {email && !isValidEmail.test(email) && showNameError ? (
+            <div className={`${classNamePrefix}__form-error`}>
+              <InfoCircleOutlined
+                className={`${classNamePrefix}__form-error-icon`}
+                rev="true"
+              />
+              <span>{t("email-format")}</span>
+            </div>
+          ) : (
+            ""
+          )}
+        </div>
 
-          <div className={`${classNamePrefix}__form-item`}>
-            <input
-              type="number"
-              value={phone}
-              maxLength={10}
-              name="phone"
-              onChange={(e) => setPhone(e.target.value)}
-              placeholder={t("your-phone")}
-              style={{
-                border:
-                  errorMessage !== "" && !phone ? "1px solid red" : "none",
-              }}
-            />
-            {errorMessage !== "" && !phone ? (
-              <div className={`${classNamePrefix}__form-error`}>
-                <InfoCircleOutlined
-                  className={`${classNamePrefix}__form-error-icon`}
-                  rev="true"
-                />
-                <span>{errorMessage}</span>
-              </div>
-            ) : (
-              ""
-            )}
-          </div>
+        <div className={`${classNamePrefix}__form-item`}>
+          <input
+            type="number"
+            value={phone}
+            maxLength={10}
+            name="phone"
+            onChange={(e) => setPhone(e.target.value)}
+            placeholder={t("your-phone")}
+            style={{
+              border: errorMessage !== "" && !phone ? "1px solid red" : "none",
+            }}
+          />
+          {errorMessage !== "" && !phone ? (
+            <div className={`${classNamePrefix}__form-error`}>
+              <InfoCircleOutlined
+                className={`${classNamePrefix}__form-error-icon`}
+                rev="true"
+              />
+              <span>{errorMessage}</span>
+            </div>
+          ) : (
+            ""
+          )}
+        </div>
 
-          <div className={`${classNamePrefix}__form-item`}>
-            <textarea
-              name="message"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              placeholder={t("your-message")}
-            />
-          </div>
+        <div className={`${classNamePrefix}__form-item`}>
+          <textarea
+            name="message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            placeholder={t("your-message")}
+          />
+        </div>
 
-          <div className={`${classNamePrefix}__form-bottom`}>
-            <div className={`${classNamePrefix}__service-wrapper`}>
-              <div className={`${classNamePrefix}__service-item`}>
-                <CustomCheckbox
-                  checked={firstCheck}
-                  onChange={(e) => setFirstCheck(e.target.value)}
-                />
-                <div onClick={() => setFirstCheck(!firstCheck)}>
-                  Website design & Development
-                </div>
-              </div>
-
-              <div className={`${classNamePrefix}__service-item`}>
-                <CustomCheckbox
-                  checked={secondCheck}
-                  onChange={(e) => setSecondCheck(e.target.value)}
-                />
-                <div onClick={() => setSecondCheck(!secondCheck)}>Media</div>
+        <div className={`${classNamePrefix}__form-bottom`}>
+          <div className={`${classNamePrefix}__service-wrapper`}>
+            <div className={`${classNamePrefix}__service-item`}>
+              <CustomCheckbox
+                checked={firstCheck}
+                onChange={(e) => setFirstCheck(e.target.value)}
+              />
+              <div onClick={() => setFirstCheck(!firstCheck)}>
+                Website design & Development
               </div>
             </div>
 
-            <button
-              className={`${classNamePrefix}__confirm-button`}
-              type="submit"
-            >
-              <span>{t("submit-button")}</span>
-            </button>
+            <div className={`${classNamePrefix}__service-item`}>
+              <CustomCheckbox
+                checked={secondCheck}
+                onChange={(e) => setSecondCheck(e.target.value)}
+              />
+              <div onClick={() => setSecondCheck(!secondCheck)}>Media</div>
+            </div>
           </div>
-        </form>
-      </section>
+
+          <button
+            className={`${classNamePrefix}__confirm-button`}
+            type="submit"
+          >
+            <span>{t("submit-button")}</span>
+          </button>
+        </div>
+      </form>
 
       <section className={`${classNamePrefix}__map-wrapper`}>
         <div className={`${classNamePrefix}__map`}>
