@@ -2,16 +2,17 @@ import React from "react";
 
 interface ICustomCheckboxProps {
   checked?: boolean;
+  onChange?: () => void;
 }
 
-const classNamePrefix = "custom-checkbox"
+const classNamePrefix = "custom-checkbox";
 
 const CustomCheckbox: React.FC<ICustomCheckboxProps> = (props) => {
-  const { checked } = props;
+  const { checked, onChange } = props;
 
   return (
     <div className={classNamePrefix}>
-      <input type="checkbox" checked={checked} />
+      <input type="checkbox" checked={checked} onChange={onChange} />
       <div className="checkmark"></div>
     </div>
   );

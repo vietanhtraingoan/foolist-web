@@ -4,7 +4,6 @@ import Image from "next/image";
 import eyeGif from "../../public/static/eyeGif.gif";
 import eyeOpen from "../../public/static/eyeOpen.png";
 import dividerBG from "../../public/static/dividerBg1.png";
-import CircleGroup from "../components/circleGroup";
 import NormalCircleGroup from "../components/normalCircleGroup";
 import TextSlider from "../components/textSlider";
 import ConnectSection from "../components/connectSection";

@@ -52,6 +52,8 @@ const ContactPage = (
         mode: "no-cors",
       });
 
+      console.log(res)
+
       const { error } = await res.json();
       if (error) {
         console.log(error);
@@ -107,18 +109,18 @@ const ContactPage = (
 
           <div className={`${classNamePrefix}__form-item`}>
             <input
-              name="phone"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
+              name="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder={t("your-email")}
             />
           </div>
 
           <div className={`${classNamePrefix}__form-item`}>
             <input
-              value={email}
-              name="email"
-              onChange={(e) => setEmail(e.target.value)}
+              value={phone}
+              name="phone"
+              onChange={(e) => setPhone(e.target.value)}
               placeholder={t("your-phone")}
             />
           </div>
