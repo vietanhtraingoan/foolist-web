@@ -13,6 +13,7 @@ import Image from "next/image";
 import CustomHamburgMenu from "../customHamburgMenu";
 import SocialGroup from "../socialGroup";
 import LanguageChange from "../languageChange";
+import MenuContactSection from "../menuContactSection";
 
 type Props = {
   // Add custom props here
@@ -85,7 +86,12 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
       <div className="second" style={{ background: menuBg }}>
         <div className="content">
           <div className="logo-group" onClick={() => router.push("/")}>
-            <Image src={foolistLogo} className="logo" alt="logo" priority={false}/>
+            <Image
+              src={foolistLogo}
+              className="logo"
+              alt="logo"
+              priority={false}
+            />
           </div>
 
           <div className="left-menu">
@@ -140,34 +146,72 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
       </div>
 
       {showMenu ? (
-        <div className="navigation-menu-wrapper animate__animated animate__fadeIn">
-          <div
-            className={`${showMenuItem ? "item-wrapper-show" : "item-wrapper"}`}
-          >
-            {PrivateRoutes.map((menuItem, key) => {
-              return (
-                <div
-                  key={key}
-                  onClick={() => {
-                    router.push(menuItem.path);
-                    setactiveMenu(menuItem.index);
-                    handleCloseMenu();
-                  }}
-                  className={`item ${
-                    activeMenu === menuItem.index ? "active" : ""
-                  } ${
-                    showMenuItem
-                      ? "animate__animated animate__slideInDown"
-                      : "animate__animated animate__animate__fadeOut"
-                  }  `}
-                >
-                  {t(`${menuItem.name}`)}
-                </div>
-              );
-            })}
-            <SocialGroup />
+        <>
+          <div className="responsive-navigation-menu-wrapper animate__animated animate__slideInRight">
+            <div className="navigation-group-container">
+              {PrivateRoutes.map((menuItem, key) => {
+                return (
+                  <div
+                    key={key}
+                    onClick={() => {
+                      router.push(menuItem.path);
+                      setactiveMenu(menuItem.index);
+                      handleCloseMenu();
+                    }}
+                    className="item animate__animated animate__slideInRight"
+                  >
+                    <span>{t(`${menuItem.name}`)}</span>
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className="social-group-container">
+              <div className="social-group-container-title">
+                <span>Social media</span>
+              </div>
+
+              <div className="social-group-wrapper">
+                <SocialGroup />
+              </div>
+            </div>
+
+            <div className="menu-contact-section">
+              <MenuContactSection />
+            </div>
           </div>
-        </div>
+
+          <div className="navigation-menu-wrapper animate__animated animate__slideInDown">
+            <div
+              className={`${
+                showMenuItem ? "item-wrapper-show" : "item-wrapper"
+              }`}
+            >
+              {PrivateRoutes.map((menuItem, key) => {
+                return (
+                  <div
+                    key={key}
+                    onClick={() => {
+                      router.push(menuItem.path);
+                      setactiveMenu(menuItem.index);
+                      handleCloseMenu();
+                    }}
+                    className={`item ${
+                      activeMenu === menuItem.index ? "active" : ""
+                    } ${
+                      showMenuItem
+                        ? "animate__animated animate__slideInDown"
+                        : "animate__animated animate__animate__fadeOut"
+                    }  `}
+                  >
+                    {t(`${menuItem.name}`)}
+                  </div>
+                );
+              })}
+              <SocialGroup />
+            </div>
+          </div>
+        </>
       ) : (
         ""
       )}

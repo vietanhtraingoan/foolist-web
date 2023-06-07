@@ -33,6 +33,7 @@ import "./components/miniFooter/styles.scss";
 import "./components/responsiveClient/styles.scss";
 import "./components/serviceSection/styles.scss";
 import "./components/customCheckbox/styles.scss";
+import "./components/menuContactSection/styles.scss"
 
 import "../pages/home/styles.scss";
 import "../pages/contact/styles.scss";
