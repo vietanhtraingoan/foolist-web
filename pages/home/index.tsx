@@ -16,6 +16,7 @@ import ConnectSection from "../components/connectSection";
 import GridProject from "../components/gridProject";
 import ResponsiveClient from "../components/responsiveClient";
 import { AnimationOnScroll } from "react-animation-on-scroll";
+import ServiceSection from "../components/serviceSection";
 
 const classNamePrefix = "home-page";
 
@@ -79,6 +80,10 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
 
       <section className={`${classNamePrefix}__responsive-client-container`}>
         <ResponsiveClient />
+      </section>
+
+      <section className={`${classNamePrefix}__service-section`}>
+        <ServiceSection />
       </section>
 
       <section className={`${classNamePrefix}__client-container`}>

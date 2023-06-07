@@ -34,6 +34,7 @@ import "./components/gridProject/projectList/styles.scss";
 import "./components/customDialog/styles.scss";
 import "./components/miniFooter/styles.scss";
 import "./components/responsiveClient/styles.scss";
+import "./components/serviceSection/styles.scss";
 
 import "../pages/home/styles.scss";
 import "../pages/contact/styles.scss";
