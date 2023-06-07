@@ -3,7 +3,6 @@ import { GetStaticProps, InferGetStaticPropsType } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import Marquee from "react-fast-marquee";
-import ScrollAnimation from "react-animate-on-scroll";
 
 import { DEFAULT_LANG } from "../../utils/constants";
 import ProjectCarousel from "../components/projectCarousel";

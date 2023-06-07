@@ -1,8 +1,7 @@
-import { CheckboxChangeEvent } from "antd/lib/checkbox";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 import { useDispatch } from "react-redux";
 import { openDialog } from "../../store/customDialog/dialogSlice";
 import MiniFooter from "../components/miniFooter";
@@ -103,7 +102,7 @@ const ContactPage = (
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder={t("your-name")}
-                style={{ borderColor: errorMessage !== "" ? "red" : "" }}
+                style={{ border: errorMessage !== "" && !name  ? "1px solid red" : "none" }}
               />
 
               {errorMessage !== "" && !name ? (
@@ -123,7 +122,7 @@ const ContactPage = (
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder={t("your-email")}
-                style={{ borderColor: errorMessage !== "" ? "red" : "" }}
+                style={{ border: errorMessage !== ""  && !email  ? "1px solid red" : "none" }}
               />
               {errorMessage !== "" && !email ? (
                 <div className={`${classNamePrefix}__form-error`}>
@@ -143,7 +142,7 @@ const ContactPage = (
                 name="phone"
                 onChange={(e) => setPhone(e.target.value)}
                 placeholder={t("your-phone")}
-                style={{ borderColor: errorMessage !== "" ? "red" : "" }}
+                style={{ border: errorMessage !== "" && !phone ? "1px solid red" : "none" }}
               />
               {errorMessage !== "" && !phone ? (
                 <div className={`${classNamePrefix}__form-error`}>
