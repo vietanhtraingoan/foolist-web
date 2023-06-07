@@ -85,10 +85,14 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
       <div className="second" style={{ background: menuBg }}>
         <div className="content">
           <div className="logo-group" onClick={() => router.push("/")}>
-            <Image src={foolistLogo} className="logo" alt="logo" />
+            <Image src={foolistLogo} className="logo" alt="logo" priority={false}/>
           </div>
 
           <div className="left-menu">
+            <div className="responsive-floated-language-change">
+              <LanguageChange />
+            </div>
+
             <div
               className="left-menu-responsive-button"
               style={{ background: menuButtonBg }}

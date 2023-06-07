@@ -67,6 +67,12 @@
           transition: ease-in-out 0.8s;
         }
 
+        .responsive-floated-language-change{
+          display: none;
+
+          margin-right: 40px;
+        }
+
         .left-menu-text {
           margin-right: 30px;
 
@@ -226,6 +232,10 @@
 
             width: 120px;
             height: 120px;
+          }
+
+          .responsive-floated-language-change{
+            display: block;
           }
 
           .left-menu-responsive-grid {

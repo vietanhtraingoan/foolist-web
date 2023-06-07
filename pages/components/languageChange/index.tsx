@@ -37,24 +37,24 @@ const LanguageChange = () => {
       }}
     >
       <div
-        className={`${classNamePrefix}__button`}
-        style={{
-          right: languageChange ? 57 : 10,
-        }}
+        className={`${classNamePrefix}__button ${
+          languageChange ? "button-move-left" : "button-move-right"
+        }`}
       >
         <Image
+          className={`${classNamePrefix}__icon`}
           src={languageChange ? usaFlag : vnFlag}
           alt=""
-          width={22}
-          height={22}
         />
       </div>
 
       <span
-        className={`${classNamePrefix}__title`}
+        className={`${classNamePrefix}__title  ${
+          languageChange ? "title-move-right" : "title-move-left"
+        }`}
         style={{
           color: languageChange ? "#000000" : "#ffffff",
-          left: languageChange ? 47 : 15  ,
+          // left: languageChange ? 47 : 15,
         }}
       >
         {languageChange ? "ENG" : "VNI"}

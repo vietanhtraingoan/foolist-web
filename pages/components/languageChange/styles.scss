@@ -29,11 +29,64 @@
     transition: ease-in-out 0.9s;
   }
 
+  &__icon {
+    width: 22px;
+    height: 22px;
+  }
+
   &__button {
     position: absolute;
     top: 50;
     z-index: 20;
 
     transition: ease-in-out 0.9s;
+  }
+
+  .button-move-left {
+    right: 57px;
+  }
+
+  .button-move-right {
+    right: 10px;
+  }
+
+  .title-move-right {
+    left: 47px;
+  }
+
+  .title-move-left {
+    left: 15px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .language-change {
+    width: 160px;
+    height: 78px;
+
+    &__title {
+      font-size: 28px;
+    }
+
+    &__icon {
+      width: 42px;
+      height: 42px;
+    }
+
+    .button-move-left {
+      right: 105px;
+    }
+
+    .button-move-right {
+      right: 10px;
+    }
+
+    .title-move-right {
+      left: 80px;
+    }
+  
+    .title-move-left {
+      left: 15px;
+    }
   }
 }
