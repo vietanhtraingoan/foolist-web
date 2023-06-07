@@ -7,6 +7,7 @@ import { useDispatch } from "react-redux";
 import { openDialog } from "../../store/customDialog/dialogSlice";
 import MiniFooter from "../components/miniFooter";
 import CustomCheckbox from "../components/customCheckbox";
+import { InfoCircleOutlined } from "@ant-design/icons";
 
 const classNamePrefix = "contact-page";
 
@@ -26,11 +27,19 @@ const ContactPage = (
   const [firstCheck, setFirstCheck] = useState<boolean>(false);
   const [secondCheck, setSecondCheck] = useState<boolean>(false);
 
+  const [errorMessage, setErrorMessage] = useState<string>("");
+
   const resetInput = () => {
     setName("");
     setEmail("");
     setPhone("");
     setMessage("");
+  };
+
+  const validateEmptyField = () => {
+    if (!name || !email || !phone) {
+      setErrorMessage(t("empty-field"));
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -52,11 +61,7 @@ const ContactPage = (
         mode: "no-cors",
       });
 
-      console.log(res);
-
-      const { error } = await res.json();
       if (res.status !== 200) {
-        console.log(error);
         return;
       } else {
         resetInput();
@@ -70,17 +75,10 @@ const ContactPage = (
       dispatch(
         openDialog({
           content: t("field-required"),
+          actionConfirm: validateEmptyField(),
         })
       );
     }
-  };
-
-  const onChangeCheckbox1 = (e: CheckboxChangeEvent) => {
-    console.log(`checked = ${e.target.checked}`);
-  };
-
-  const onChangeCheckbox2 = (e: CheckboxChangeEvent) => {
-    console.log(`checked = ${e.target.checked}`);
   };
 
   return (
@@ -105,25 +103,56 @@ const ContactPage = (
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder={t("your-name")}
+                style={{ borderColor: errorMessage !== "" ? "red" : "" }}
               />
+
+              {errorMessage !== "" && !name ? (
+                <div className={`${classNamePrefix}__form-error`}>
+                  <InfoCircleOutlined className={`${classNamePrefix}__form-error-icon`} rev="true" />
+                  <span>{errorMessage}</span>
+                </div>
+              ) : (
+                ""
+              )}
             </div>
 
             <div className={`${classNamePrefix}__form-item`}>
               <input
                 name="email"
+                type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder={t("your-email")}
+                style={{ borderColor: errorMessage !== "" ? "red" : "" }}
               />
+              {errorMessage !== "" && !email ? (
+                <div className={`${classNamePrefix}__form-error`}>
+                  <InfoCircleOutlined className={`${classNamePrefix}__form-error-icon`} rev="true" />
+                  <span>{errorMessage}</span>
+                </div>
+              ) : (
+                ""
+              )}
             </div>
 
             <div className={`${classNamePrefix}__form-item`}>
               <input
+                type="number"
                 value={phone}
+                maxLength={10}
                 name="phone"
                 onChange={(e) => setPhone(e.target.value)}
                 placeholder={t("your-phone")}
+                style={{ borderColor: errorMessage !== "" ? "red" : "" }}
               />
+              {errorMessage !== "" && !phone ? (
+                <div className={`${classNamePrefix}__form-error`}>
+                  <InfoCircleOutlined className={`${classNamePrefix}__form-error-icon`} rev="true" />
+                  <span>{errorMessage}</span>
+                </div>
+              ) : (
+                ""
+              )}
             </div>
 
             <div className={`${classNamePrefix}__form-item`}>
@@ -138,14 +167,20 @@ const ContactPage = (
             <div className={`${classNamePrefix}__form-bottom`}>
               <div className={`${classNamePrefix}__service-wrapper`}>
                 <div className={`${classNamePrefix}__service-item`}>
-                  <CustomCheckbox checked={firstCheck} onChange={e => setFirstCheck(e.target.value)}/>
+                  <CustomCheckbox
+                    checked={firstCheck}
+                    onChange={(e) => setFirstCheck(e.target.value)}
+                  />
                   <div onClick={() => setFirstCheck(!firstCheck)}>
                     Website design & Development
                   </div>
                 </div>
 
                 <div className={`${classNamePrefix}__service-item`}>
-                  <CustomCheckbox checked={secondCheck} onChange={e => setSecondCheck(e.target.value)}/>
+                  <CustomCheckbox
+                    checked={secondCheck}
+                    onChange={(e) => setSecondCheck(e.target.value)}
+                  />
                   <div onClick={() => setSecondCheck(!secondCheck)}>Media</div>
                 </div>
               </div>

@@ -48,5 +48,6 @@
   "your-message": "Your topic want to discussed.....",
   "submit-button": "Submit",
   "field-required": "Oops, some fields are missing !!",
-  "send-success" : "Chúng tôi sẽ liên hệ lại bạn sau"
+  "send-success" : "Chúng tôi sẽ liên hệ lại bạn sau",
+  "empty-field" : "Thông tin này không được để trống !!"
 }

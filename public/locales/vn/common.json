@@ -48,5 +48,6 @@
   "your-message": "Nội dung bạn muốn trao đổi.....",
   "submit-button": "Gửi",
   "field-required": "Oops, bạn chưa điền đủ thông tin !!",
-  "send-success": "We will come back to you later"
+  "send-success": "We will come back to you later",
+  "empty-field" : "Field is required !!"
 }

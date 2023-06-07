@@ -1,6 +1,6 @@
 .contact-page {
   position: relative;
-  
+
   padding-top: 150px;
 
   width: 100%;
@@ -82,6 +82,10 @@
 
     border: 2.22769px solid #f8a5c2;
     border-radius: 22.2769px;
+
+    form {
+      width: 100%;
+    }
   }
 
   &__form-item {
@@ -114,6 +118,11 @@
 
       background: rgba(217, 217, 217, 0.2);
       border-radius: 10px;
+
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
     }
 
     textarea {
@@ -135,6 +144,24 @@
       background: rgba(217, 217, 217, 0.2);
       border-radius: 10px;
     }
+  }
+
+  &__form-error {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    span {
+      font-family: "Montserrat";
+      color: red;
+    }
+  }
+
+  &__form-error-icon{
+    margin-right: 8px;
+
+    font-size: 18px;
+    color: red;
   }
 
   &__form-bottom {
