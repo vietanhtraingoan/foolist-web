@@ -3,14 +3,11 @@ import "animate.css";
 import "animate.css/animate.min.css";
 
 import SEO from "../next-seo.config";
-// import LeftMenu from "./components/menu/LeftMenu";
 import TopMenu from "./components/menu/TopMenu";
-import Footer from "./components/Footer";
 import { useRouter } from "next/router";
 import CustomDialog from "./components/customDialog";
 
 import "./components/menu/styles.scss";
-import "./components/Footer/styles.scss";
 import "./components/customHamburgMenu/styles.scss";
 import "./components/socialGroup/styles.scss";
 import "./components/languageChange/styles.scss";

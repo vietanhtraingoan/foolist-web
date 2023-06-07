@@ -14,6 +14,7 @@
 
     padding-top: 80px;
     margin-bottom: 20px;
+    padding-left: 60px ;
 
     border-top: 1px solid #f8a5c2;
 
@@ -45,5 +46,11 @@
     height: 300px;
 
     margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .responsive-client{
+    padding: 0;
   }
 }

@@ -126,12 +126,32 @@
   }
 
   #hamburg-menu.open span:nth-child(1) {
-    left: 1px;
-    top: -5px;
+    left: 5px;
+    top: 5px;
   }
 
   #hamburg-menu.open span:nth-child(2) {
     left: calc(50% - 5px);
-    top: -5px;
+    top: 5px;
+  }
+
+  #hamburg-menu.open span:nth-child(3) {
+    left: -50%;
+    opacity: 0;
+  }
+  
+  #hamburg-menu.open span:nth-child(4) {
+    left: 100%;
+    opacity: 0;
+  }
+  
+  #hamburg-menu.open span:nth-child(5) {
+    left: 5px;
+    top: 30px;
+  }
+  
+  #hamburg-menu.open span:nth-child(6) {
+    left: calc(50% - 1px);
+    top: 30px;
   }
 }
