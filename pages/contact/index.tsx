@@ -52,7 +52,7 @@ const ContactPage = (
         mode: "no-cors",
       });
 
-      console.log(res)
+      console.log(res);
 
       const { error } = await res.json();
       if (error) {
@@ -94,68 +94,70 @@ const ContactPage = (
 
       <div className={`${classNamePrefix}__content-wrapper`}>
         <section className={`${classNamePrefix}__form-wrapper`}>
-          <div className={`${classNamePrefix}__form-title`}>
-            {t("user-info")}
-          </div>
+          <form onSubmit={handleSubmit}>
+            <div className={`${classNamePrefix}__form-title`}>
+              {t("user-info")}
+            </div>
 
-          <div className={`${classNamePrefix}__form-item`}>
-            <input
-              name="name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              placeholder={t("your-name")}
-            />
-          </div>
+            <div className={`${classNamePrefix}__form-item`}>
+              <input
+                name="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder={t("your-name")}
+              />
+            </div>
 
-          <div className={`${classNamePrefix}__form-item`}>
-            <input
-              name="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder={t("your-email")}
-            />
-          </div>
+            <div className={`${classNamePrefix}__form-item`}>
+              <input
+                name="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder={t("your-email")}
+              />
+            </div>
 
-          <div className={`${classNamePrefix}__form-item`}>
-            <input
-              value={phone}
-              name="phone"
-              onChange={(e) => setPhone(e.target.value)}
-              placeholder={t("your-phone")}
-            />
-          </div>
+            <div className={`${classNamePrefix}__form-item`}>
+              <input
+                value={phone}
+                name="phone"
+                onChange={(e) => setPhone(e.target.value)}
+                placeholder={t("your-phone")}
+              />
+            </div>
 
-          <div className={`${classNamePrefix}__form-item`}>
-            <textarea
-              name="message"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              placeholder={t("your-message")}
-            />
-          </div>
+            <div className={`${classNamePrefix}__form-item`}>
+              <textarea
+                name="message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                placeholder={t("your-message")}
+              />
+            </div>
 
-          <div className={`${classNamePrefix}__form-bottom`}>
-            <div className={`${classNamePrefix}__service-wrapper`}>
-              <div className={`${classNamePrefix}__service-item`}>
-                <CustomCheckbox checked={firstCheck} />
-                <div onClick={() => setFirstCheck(!firstCheck)}>
-                  Website design & Development
+            <div className={`${classNamePrefix}__form-bottom`}>
+              <div className={`${classNamePrefix}__service-wrapper`}>
+                <div className={`${classNamePrefix}__service-item`}>
+                  <CustomCheckbox checked={firstCheck} />
+                  <div onClick={() => setFirstCheck(!firstCheck)}>
+                    Website design & Development
+                  </div>
+                </div>
+
+                <div className={`${classNamePrefix}__service-item`}>
+                  <CustomCheckbox checked={secondCheck} />
+                  <div onClick={() => setSecondCheck(!secondCheck)}>Media</div>
                 </div>
               </div>
 
-              <div className={`${classNamePrefix}__service-item`}>
-                <CustomCheckbox checked={secondCheck} />
-                <div onClick={() => setSecondCheck(!secondCheck)}>Media</div>
-              </div>
+              <button
+                className={`${classNamePrefix}__confirm-button`}
+                type="submit"
+              >
+                <span>{t("submit-button")}</span>
+              </button>
             </div>
-
-            <div
-              className={`${classNamePrefix}__confirm-button`}
-              onClick={handleSubmit}
-            >
-              <span>{t("submit-button")}</span>
-            </div>
-          </div>
+          </form>
         </section>
       </div>
 
