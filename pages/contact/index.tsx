@@ -5,6 +5,8 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import { openDialog } from "../../store/customDialog/dialogSlice";
+import MiniFooter from "../components/miniFooter";
+import CustomCheckbox from "../components/customCheckbox";
 
 const classNamePrefix = "contact-page";
 
@@ -21,12 +23,15 @@ const ContactPage = (
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
+  const [firstCheck, setFirstCheck] = useState<boolean>(false);
+  const [secondCheck, setSecondCheck] = useState<boolean>(false);
+
   const resetInput = () => {
-    setName("")
-    setEmail("")
-    setPhone("")
-    setMessage("")
-  }
+    setName("");
+    setEmail("");
+    setPhone("");
+    setMessage("");
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -52,10 +57,12 @@ const ContactPage = (
         console.log(error);
         return;
       } else {
-        resetInput()
-        dispatch(openDialog({
-          content: t("send-success")
-        }))
+        resetInput();
+        dispatch(
+          openDialog({
+            content: t("send-success"),
+          })
+        );
       }
     } else {
       dispatch(
@@ -127,10 +134,17 @@ const ContactPage = (
 
           <div className={`${classNamePrefix}__form-bottom`}>
             <div className={`${classNamePrefix}__service-wrapper`}>
-              <Checkbox onChange={onChangeCheckbox1}>
-                Website design & Development
-              </Checkbox>
-              <Checkbox onChange={onChangeCheckbox2}>Media</Checkbox>
+              <div className={`${classNamePrefix}__service-item`}>
+                <CustomCheckbox checked={firstCheck} />
+                <div onClick={() => setFirstCheck(!firstCheck)}>
+                  Website design & Development
+                </div>
+              </div>
+
+              <div className={`${classNamePrefix}__service-item`}>
+                <CustomCheckbox checked={secondCheck} />
+                <div onClick={() => setSecondCheck(!secondCheck)}>Media</div>
+              </div>
             </div>
 
             <div
@@ -162,6 +176,10 @@ const ContactPage = (
           <div>TAN DINH WARD</div>
           <div>DISTRICT 1 - TP.HCM CITY</div>
         </div>
+      </section>
+
+      <section className={`${classNamePrefix}__footer`}>
+        <MiniFooter />
       </section>
     </div>
   );
