@@ -21,6 +21,13 @@ const ContactPage = (
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
+  const resetInput = () => {
+    setName("")
+    setEmail("")
+    setPhone("")
+    setMessage("")
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -44,6 +51,11 @@ const ContactPage = (
       if (error) {
         console.log(error);
         return;
+      } else {
+        resetInput()
+        dispatch(openDialog({
+          content: t("send-success")
+        }))
       }
     } else {
       dispatch(

@@ -47,5 +47,6 @@
   "your-phone": "Enter your phone number*",
   "your-message": "Your topic want to discussed.....",
   "submit-button": "Submit",
-  "field-required": "Oops, some fields are missing !!"
+  "field-required": "Oops, some fields are missing !!",
+  "send-success" : "Chúng tôi sẽ liên hệ lại bạn sau"
 }
