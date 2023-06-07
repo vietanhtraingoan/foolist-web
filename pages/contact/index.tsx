@@ -138,14 +138,14 @@ const ContactPage = (
             <div className={`${classNamePrefix}__form-bottom`}>
               <div className={`${classNamePrefix}__service-wrapper`}>
                 <div className={`${classNamePrefix}__service-item`}>
-                  <CustomCheckbox checked={firstCheck} />
+                  <CustomCheckbox checked={firstCheck} onChange={e => setFirstCheck(e.target.value)}/>
                   <div onClick={() => setFirstCheck(!firstCheck)}>
                     Website design & Development
                   </div>
                 </div>
 
                 <div className={`${classNamePrefix}__service-item`}>
-                  <CustomCheckbox checked={secondCheck} />
+                  <CustomCheckbox checked={secondCheck} onChange={e => setSecondCheck(e.target.value)}/>
                   <div onClick={() => setSecondCheck(!secondCheck)}>Media</div>
                 </div>
               </div>
