@@ -12,7 +12,7 @@ const CustomCheckbox: React.FC<ICustomCheckboxProps> = (props) => {
 
   return (
     <div className={classNamePrefix}>
-      <input type="checkbox" checked={checked} onChange={onChange} />
+      <input type="checkbox" defaultChecked={checked} onChange={onChange} />
       <div className="checkmark"></div>
     </div>
   );

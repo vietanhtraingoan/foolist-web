@@ -1,4 +1,4 @@
-import Checkbox, { CheckboxChangeEvent } from "antd/lib/checkbox";
+import { CheckboxChangeEvent } from "antd/lib/checkbox";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import React, { useState } from "react";
@@ -55,7 +55,7 @@ const ContactPage = (
       console.log(res);
 
       const { error } = await res.json();
-      if (error) {
+      if (res.status !== 200) {
         console.log(error);
         return;
       } else {

@@ -1,6 +1,7 @@
 import { DefaultSeo } from "next-seo";
 import "animate.css";
 import "animate.css/animate.min.css";
+import Head from "next/head";
 
 import SEO from "../next-seo.config";
 import TopMenu from "./components/menu/TopMenu";
@@ -33,7 +34,7 @@ import "./components/miniFooter/styles.scss";
 import "./components/responsiveClient/styles.scss";
 import "./components/serviceSection/styles.scss";
 import "./components/customCheckbox/styles.scss";
-import "./components/menuContactSection/styles.scss"
+import "./components/menuContactSection/styles.scss";
 
 import "../pages/home/styles.scss";
 import "../pages/contact/styles.scss";
@@ -45,7 +46,7 @@ import "../pages/words/styles.scss";
 import "./wordDetail/styles.scss";
 
 import "./globalStyle.scss";
-import { useEffect,  useState } from "react";
+import { useEffect, useState } from "react";
 import { PrivateRoutes } from "../routers";
 
 import { Provider } from "react-redux";
@@ -92,6 +93,9 @@ function MyApp({ Component, ...rest }) {
   return (
     <>
       <DefaultSeo {...SEO} />
+      <Head>
+        <link rel="shortcut icon" href="/public/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />      </Head>
       <Provider store={store}>
         {isPrivateMenu && <TopMenu />}
         <div className="layout">

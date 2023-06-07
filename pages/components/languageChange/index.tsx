@@ -45,6 +45,7 @@ const LanguageChange = () => {
           className={`${classNamePrefix}__icon`}
           src={languageChange ? usaFlag : vnFlag}
           alt=""
+          priority={true}
         />
       </div>
 
@@ -54,7 +55,6 @@ const LanguageChange = () => {
         }`}
         style={{
           color: languageChange ? "#000000" : "#ffffff",
-          // left: languageChange ? 47 : 15,
         }}
       >
         {languageChange ? "ENG" : "VNI"}
