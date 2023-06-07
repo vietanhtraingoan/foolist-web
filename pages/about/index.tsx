@@ -101,7 +101,7 @@ const AboutPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
               animateIn="animate__slideInUp"
               animateOnce={true}
             >
-              <div>{t("About_content.creative-thinking")}</div>
+              <div style={{color: "#ffffff"}}>{t("About_content.creative-thinking")}</div>
             </AnimationOnScroll>
 
             <AnimationOnScroll
@@ -259,9 +259,9 @@ const AboutPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
 
       <ConnectSection />
 
-      <MiniFooter />
-
-      {/* <AnimatedGraph /> */}
+      <div className={`${classNamePrefix}__footer`}>
+        <MiniFooter />
+      </div>
     </div>
   );
 };

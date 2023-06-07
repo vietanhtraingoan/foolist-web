@@ -180,10 +180,6 @@
     font-weight: 700;
     font-size: 73px;
     line-height: 99px;
-
-    div {
-      color: #ffffff;
-    }
   }
 
   &__third-section-top-outline {
@@ -400,10 +396,7 @@
   .about-page {
     &__first-section-title-outline {
       span {
-        font-family: "Montserrat";
-        font-style: normal;
-        font-weight: 800;
-        font-size: 120px;
+        font-size: 110px;
         line-height: 156px;
         text-shadow: 2px 2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff,
           -2px -2px 0 #ffffff, 2px 0px 0 #ffffff, 0px 2px 0 #ffffff,
@@ -412,9 +405,9 @@
     }
 
     &__third-section-top-outline {
-      text-shadow: 2px 2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff,
-        -2px -2px 0 #ffffff, 2px 0px 0 #ffffff, 0px 2px 0 #ffffff,
-        -2px 0px 0 #ffffff, 0px -2px 0 #ffffff;
+      text-shadow: 4px 4px 0 #ffffff, 4px -4px 0 #ffffff, -4px 4px 0 #ffffff,
+        -4px -4px 0 #ffffff, 4px 0px 0 #ffffff, 0px 4px 0 #ffffff,
+        -4px 0px 0 #ffffff, 0px -4px 0 #ffffff;
     }
 
     &__second-section-bottom-image {
@@ -528,6 +521,10 @@
 
     &__divider-content {
       width: 800px;
+    }
+
+    &__footer {
+      display: none;
     }
   }
 }
