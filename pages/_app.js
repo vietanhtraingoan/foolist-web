@@ -44,7 +44,7 @@ import "../pages/words/styles.scss";
 import "./wordDetail/styles.scss";
 
 import "./globalStyle.scss";
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useEffect,  useState } from "react";
 import { PrivateRoutes } from "../routers";
 
 import { Provider } from "react-redux";

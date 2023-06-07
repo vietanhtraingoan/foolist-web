@@ -15,8 +15,8 @@
     position: relative;
     top: 0;
     left: 0;
-    height: 1.3em;
-    width: 1.3em;
+    height: 1em;
+    width: 1em;
     background-color: #ccc;
     border-radius: 5px;
 
@@ -64,6 +64,19 @@
     &:checked ~ .checkmark:after {
       opacity: 1;
       transition: all 0.2s;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .custom-checkbox {
+    .checkmark {
+      height: 1.3em;
+      width: 1.3em;
+    }
+    .checkmark:after {
+      width: 0.5em;
+      height: 0.75em;
     }
   }
 }

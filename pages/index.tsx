@@ -1,7 +1,7 @@
 import { NextSeo } from "next-seo";
+import Head from "next/head";
 
 import type { GetStaticProps, InferGetStaticPropsType } from "next";
-import { useTranslation, Trans } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { DEFAULT_LANG } from "../utils/constants";
 
@@ -12,9 +12,8 @@ type Props = {
 };
 
 const Home = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const { t } = useTranslation("common");
   return (
-    <div style={{height: "100%"}}>
+    <div style={{ height: "100%" }}>
       <NextSeo
         title="Foolist Creative"
         description="This will be the page meta description"
@@ -41,6 +40,9 @@ const Home = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
           ],
         }}
       />
+      <Head>
+        <link rel="icon" href="/public/favicon.ico" />
+      </Head>
       <HomePage />
     </div>
   );
