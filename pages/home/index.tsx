@@ -49,14 +49,12 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
         </div>
 
         <div className={`${classNamePrefix}__introduction-text`}>
-          <div className={`${classNamePrefix}__introduction-text-group`}>
-            <span className="animate__animated animate__slideInUp">
-              {t("About_content.paragraph-1")}
-            </span>
+          <div
+            className={`${classNamePrefix}__introduction-text-group animate__animated animate__slideInUp animate__slow`}
+          >
+            <span>{t("About_content.paragraph-1")}</span>
             <div />
-            <span className="animate__animated animate__slideInUp">
-              {t("About_content.paragraph-2")}
-            </span>
+            <span>{t("About_content.paragraph-2")}</span>
           </div>
         </div>
 

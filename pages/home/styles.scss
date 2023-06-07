@@ -97,17 +97,9 @@
       font-family: "Montserrat";
       font-style: italic;
       font-weight: 500;
-      font-size: 40px;
+      font-size: 30px;
       line-height: 50px;
       color: #ffffff;
-    }
-
-    .animate__animated.animate__slideInUp {
-      --animate-duration: 2s;
-    }
-
-    .animate__animated.animate__slideInUp {
-      --animate-duration: 2s;
     }
   }
 
@@ -344,6 +336,14 @@
   .home-page {
     &__first-section{
       padding: 0;
+    }
+
+    &__introduction-text-group{
+      width: 75%;
+
+      span{
+        font-size: 35px;
+      }
     }
 
     &__introduction-image-container {

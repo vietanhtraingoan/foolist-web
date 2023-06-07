@@ -4,7 +4,7 @@ import ProjectList from "./projectList";
 import { GetStaticProps, InferGetStaticPropsType } from "next/types";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { DEFAULT_LANG } from "../../../utils/constants";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 
 type Props = {};

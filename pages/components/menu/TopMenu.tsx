@@ -7,7 +7,7 @@ import foolistLogo from "../../../public/static/foolistLogo.png";
 import type { GetStaticProps, InferGetStaticPropsType } from "next";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { DEFAULT_LANG, KEY_LANGUAGE } from "../../../utils/constants";
+import { DEFAULT_LANG } from "../../../utils/constants";
 import Image from "next/image";
 
 import CustomHamburgMenu from "../customHamburgMenu";
@@ -34,7 +34,6 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
   const [showMenuItem, setShowMenuItem] = useState<boolean>(false);
 
-  const [color, setColor] = useState("#ffffff");
   const [menuBg, setMenuBg] = useState("none");
   const [menuButtonBg, setMenuNButtonBg] = useState("none");
 
@@ -81,9 +80,12 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <div
       className="top-menu"
-      style={{ background: showMenu ? "rgba(0, 0, 0, 0.9)" : "none" }}
+      style={{ background: showMenu ? "rgba(0, 0, 0)" : "#000000" }}
     >
-      <div className="second" style={{ background: menuBg }}>
+      <div
+        className="second"
+        style={{ background: showMenu ? "#000000" : menuBg }}
+      >
         <div className="content">
           <div className="logo-group" onClick={() => router.push("/")}>
             <Image
@@ -107,7 +109,7 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
                 isMenuClick={isMenuClick}
                 handleMenuClick={handleMenuClick}
                 handleCloseMenu={handleCloseMenu}
-                spanBgColor={color}
+                spanBgColor="#ffffff"
               />
             </div>
 
@@ -137,7 +139,7 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
                   isMenuClick={isMenuClick}
                   handleMenuClick={handleMenuClick}
                   handleCloseMenu={handleCloseMenu}
-                  spanBgColor={color}
+                  spanBgColor="#ffffff"
                 />
               )}
             </div>
@@ -147,37 +149,41 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
 
       {showMenu ? (
         <>
-          <div className="responsive-navigation-menu-wrapper animate__animated animate__slideInRight">
-            <div className="navigation-group-container">
-              {PrivateRoutes.map((menuItem, key) => {
-                return (
-                  <div
-                    key={key}
-                    onClick={() => {
-                      router.push(menuItem.path);
-                      setactiveMenu(menuItem.index);
-                      handleCloseMenu();
-                    }}
-                    className="item animate__animated animate__slideInRight"
-                  >
-                    <span>{t(`${menuItem.name}`)}</span>
-                  </div>
-                );
-              })}
-            </div>
-
-            <div className="social-group-container">
-              <div className="social-group-container-title">
-                <span>Social media</span>
+          <div
+            className={`responsive-navigation-menu-wrapper animate__animated $animate__slideInRight`}
+          >
+            <div className="menu-dropdown-container">
+              <div className="navigation-group-container">
+                {PrivateRoutes.map((menuItem, key) => {
+                  return (
+                    <div
+                      key={key}
+                      onClick={() => {
+                        router.push(menuItem.path);
+                        setactiveMenu(menuItem.index);
+                        handleCloseMenu();
+                      }}
+                      className="item animate__animated animate__slideInRight"
+                    >
+                      <span>{t(`${menuItem.name}`)}</span>
+                    </div>
+                  );
+                })}
               </div>
 
-              <div className="social-group-wrapper">
-                <SocialGroup />
-              </div>
-            </div>
+              <div className="social-group-container">
+                <div className="social-group-container-title">
+                  <span>Social media</span>
+                </div>
 
-            <div className="menu-contact-section">
-              <MenuContactSection />
+                <div className="social-group-wrapper">
+                  <SocialGroup />
+                </div>
+              </div>
+
+              <div className="menu-contact-section">
+                <MenuContactSection />
+              </div>
             </div>
           </div>
 

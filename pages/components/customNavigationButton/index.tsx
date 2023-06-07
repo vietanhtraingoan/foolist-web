@@ -32,7 +32,7 @@ const CustomNavigationButton: React.FC<ICustomNavigationButtonProps> = (
       <Image
         src={arrow}
         alt=""
-        style={{ transform: type === "backward" ? "rotate(180deg)" : "" }}
+        style={{ transform: type === "backward" ? "rotate(180deg)" : "none" }}
         width={size === "large" ? 70 : 50}
         height={20}
       />
