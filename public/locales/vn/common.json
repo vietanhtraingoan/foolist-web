@@ -49,5 +49,7 @@
   "submit-button": "Gửi",
   "field-required": "Oops, bạn chưa điền đủ thông tin !!",
   "send-success": "We will come back to you later",
-  "empty-field" : "Field is required !!"
+  "empty-field" : "Field is required !!",
+  "name-format" : "Name must contain at least 3 characters !!",
+  "email-format": "Email format must follow abc@xyz.com..."
 }

@@ -48,6 +48,8 @@
   "your-message": "Your topic want to discussed.....",
   "submit-button": "Submit",
   "field-required": "Oops, some fields are missing !!",
-  "send-success" : "Chúng tôi sẽ liên hệ lại bạn sau",
-  "empty-field" : "Thông tin này không được để trống !!"
+  "send-success": "Chúng tôi sẽ liên hệ lại bạn sau",
+  "empty-field": "Thông tin này không được để trống !!",
+  "name-format": "Tên phải có ít nhất 3 ký tự !!",
+  "email-format": "Email phải đúng định dạng abc@xyz.com..."
 }
