@@ -21,13 +21,18 @@
   }
 
   &__carousel-item {
+    
     margin: 0 20px;
     cursor: pointer;
+
+  
   }
 
   &__carousel-item-img {
     width: 600px;
     height: 470px;
+
+    border-radius: 10px;
   }
 
   &__carousel-button-group {

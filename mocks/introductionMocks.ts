@@ -1,6 +1,6 @@
-import project1 from "../public/static/project1.jpg";
-import project2 from "../public/static/project2.jpg";
-import project3 from "../public/static/project3.jpg";
+import project1 from "../public/static/travel.jpg";
+import project2 from "../public/static/project5.png";
+import project3 from "../public/static/product comestic.jpg";
 
 export const introductionMocks = [
   {

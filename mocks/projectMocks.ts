@@ -1,10 +1,10 @@
 import project1 from "../public/static/project1.jpg";
 import project2 from "../public/static/project2.jpg";
 import project3 from "../public/static/project3.jpg";
-import project4 from "../public/static/project4.jpg";
-import project5 from "../public/static/project5.png";
+import project4 from "../public/static/page home.png";
+import project5 from "../public/static/product sp.png";
 import project6 from "../public/static/project6.jpg";
-import project7 from "../public/static/project7.jpg";
+import project7 from "../public/static/travel 1.png";
 
 export const projectMocks = [
   {
