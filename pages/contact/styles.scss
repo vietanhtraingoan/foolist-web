@@ -51,7 +51,7 @@
     padding: 40px 60px;
     margin-top: 70px;
 
-    border: 2.22769px solid #f8a5c2;
+    border: 1px solid #f8a5c2;
     border-radius: 22.2769px;
   }
 
@@ -253,8 +253,6 @@
 @media screen and (max-width: 768px) {
   .contact-page {
     &__introduction-wrapper {
-      padding-left: 60px;
-
       font-size: 55px;
       line-height: 104px;
     }
@@ -313,12 +311,12 @@
       }
     }
 
-    &__map-title{
+    &__map-title {
       font-size: 30px;
       line-height: 35px;
     }
 
-    &__footer{
+    &__footer {
       display: none;
     }
   }

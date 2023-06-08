@@ -78,70 +78,72 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   }, []);
 
   return (
-    <div
-      className="top-menu"
-      style={{ background: showMenu ? "rgba(0, 0, 0)" : "#000000" }}
-    >
+    <>
       <div
-        className="second"
-        style={{ background: showMenu ? "#000000" : menuBg }}
+        className="top-menu"
+        style={{ background: showMenu ? "rgba(0, 0, 0)" : "#000000" }}
       >
-        <div className="content">
-          <div className="logo-group" onClick={() => router.push("/")}>
-            <Image
-              src={foolistLogo}
-              className="logo"
-              alt="logo"
-              priority={false}
-            />
-          </div>
-
-          <div className="left-menu">
-            <div className="responsive-floated-language-change">
-              <LanguageChange />
-            </div>
-
-            <div
-              className="left-menu-responsive-button"
-              style={{ background: menuButtonBg }}
-            >
-              <CustomHamburgMenu
-                isMenuClick={isMenuClick}
-                handleMenuClick={handleMenuClick}
-                handleCloseMenu={handleCloseMenu}
-                spanBgColor="#ffffff"
+        <div
+          className="second"
+          style={{ background: showMenu ? "#000000" : menuBg }}
+        >
+          <div className="content">
+            <div className="logo-group" onClick={() => router.push("/")}>
+              <Image
+                src={foolistLogo}
+                className="logo"
+                alt="logo"
+                priority={false}
               />
             </div>
 
-            <div className="left-menu-responsive-grid">
-              {router.pathname !== "/" ? (
-                <div className="menu-grid-wrapper">
-                  {filterPrivateRoutes.map((menuItem, key) => {
-                    return (
-                      <div
-                        key={key}
-                        onClick={() => {
-                          router.push(menuItem.path);
-                        }}
-                        className={`menu-grid-item ${
-                          router.pathname === menuItem.path
-                            ? "menu-grid-item-active"
-                            : ""
-                        }`}
-                      >
-                        <span>{t(`${menuItem.name}`)}</span>
-                      </div>
-                    );
-                  })}
-                </div>
-              ) : (
+            <div className="left-menu">
+              <div className="responsive-floated-language-change">
+                <LanguageChange />
+              </div>
+
+              <div
+                className="left-menu-responsive-button"
+                style={{ background: menuButtonBg }}
+              >
                 <CustomHamburgMenu
                   isMenuClick={isMenuClick}
                   handleMenuClick={handleMenuClick}
                   handleCloseMenu={handleCloseMenu}
                   spanBgColor="#ffffff"
                 />
-              )}
+              </div>
+
+              <div className="left-menu-responsive-grid">
+                {router.pathname !== "/" ? (
+                  <div className="menu-grid-wrapper">
+                    {filterPrivateRoutes.map((menuItem, key) => {
+                      return (
+                        <div
+                          key={key}
+                          onClick={() => {
+                            router.push(menuItem.path);
+                          }}
+                          className={`menu-grid-item ${
+                            router.pathname === menuItem.path
+                              ? "menu-grid-item-active"
+                              : ""
+                          }`}
+                        >
+                          <span>{t(`${menuItem.name}`)}</span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                ) : (
+                  <CustomHamburgMenu
+                    isMenuClick={isMenuClick}
+                    handleMenuClick={handleMenuClick}
+                    handleCloseMenu={handleCloseMenu}
+                    spanBgColor="#ffffff"
+                  />
+                )}
+              </div>
             </div>
           </div>
         </div>
@@ -152,38 +154,36 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
           <div
             className={`responsive-navigation-menu-wrapper animate__animated $animate__slideInRight`}
           >
-            <div className="menu-dropdown-container">
-              <div className="navigation-group-container">
-                {PrivateRoutes.map((menuItem, key) => {
-                  return (
-                    <div
-                      key={key}
-                      onClick={() => {
-                        router.push(menuItem.path);
-                        setactiveMenu(menuItem.index);
-                        handleCloseMenu();
-                      }}
-                      className="item animate__animated animate__slideInRight"
-                    >
-                      <span>{t(`${menuItem.name}`)}</span>
-                    </div>
-                  );
-                })}
+            <div className="navigation-group-container">
+              {PrivateRoutes.map((menuItem, key) => {
+                return (
+                  <div
+                    key={key}
+                    onClick={() => {
+                      router.push(menuItem.path);
+                      setactiveMenu(menuItem.index);
+                      handleCloseMenu();
+                    }}
+                    className="item animate__animated animate__slideInRight"
+                  >
+                    <span>{t(`${menuItem.name}`)}</span>
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className="social-group-container">
+              <div className="social-group-container-title">
+                <span>Social media</span>
               </div>
 
-              <div className="social-group-container">
-                <div className="social-group-container-title">
-                  <span>Social media</span>
-                </div>
-
-                <div className="social-group-wrapper">
-                  <SocialGroup />
-                </div>
+              <div className="social-group-wrapper">
+                <SocialGroup />
               </div>
+            </div>
 
-              <div className="menu-contact-section">
-                <MenuContactSection />
-              </div>
+            <div className="menu-contact-section">
+              <MenuContactSection />
             </div>
           </div>
 
@@ -221,7 +221,7 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
       ) : (
         ""
       )}
-    </div>
+    </>
   );
 };
 

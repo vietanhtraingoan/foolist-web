@@ -13,7 +13,7 @@ type Props = {
 
 const Home = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
-    <div style={{ height: "100%" }}>
+    <div >
       <NextSeo
         title="Foolist Creative"
         description="This will be the page meta description"
@@ -40,9 +40,6 @@ const Home = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
           ],
         }}
       />
-      <Head>
-        <link rel="icon" href="/public/favicon.ico" />
-      </Head>
       <HomePage />
     </div>
   );
