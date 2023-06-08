@@ -131,7 +131,6 @@ const AboutPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
         <div className={`${classNamePrefix}__third-section-bottom`}>
           <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}>
             <div className={`${classNamePrefix}__third-section-graph`}>
-              {/* <CircleGroup /> */}
               <NormalCircleGroup contentType="1" />
             </div>
           </AnimationOnScroll>
