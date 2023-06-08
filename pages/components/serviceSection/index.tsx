@@ -18,16 +18,19 @@ const ServiceSection = (
 
   return (
     <div className={classNamePrefix}>
-      <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}>
-        <div className={`${classNamePrefix}__title-wrapper`}>
+      <div className={`${classNamePrefix}__title-wrapper`}>
+        <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}>
           <div className={`${classNamePrefix}__title`}>
             Dịch vụ của chúng tôi
           </div>
-          <div className={`${classNamePrefix}__title-button`}>
+        </AnimationOnScroll>
+
+        <div className={`${classNamePrefix}__title-button`}>
+          <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}>
             <CustomNavigationButton size="large" />
-          </div>
+          </AnimationOnScroll>
         </div>
-      </AnimationOnScroll>
+      </div>
 
       <div className={`${classNamePrefix}__content`}>
         <div className={`${classNamePrefix}__content-item`}>

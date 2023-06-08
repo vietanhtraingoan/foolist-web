@@ -9,7 +9,7 @@ const classNamePrefix = "introduction-carousel";
 const IntroductionCarousel = () => {
   return (
     <div className={classNamePrefix}>
-      <Carousel autoplay effect="fade">
+      <Carousel autoplay={true} effect="fade">
         {introductionMocks.map((i) => (
           <div className={`${classNamePrefix}__item`} key={i.id}>
             <Image className={`${classNamePrefix}__item-image`} src={i.imgUrl} alt="" />

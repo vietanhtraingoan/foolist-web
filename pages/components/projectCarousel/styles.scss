@@ -7,7 +7,7 @@
     position: relative;
 
     display: flex;
-    overflow-x: auto;
+    overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
 
@@ -21,11 +21,8 @@
   }
 
   &__carousel-item {
-    
     margin: 0 20px;
     cursor: pointer;
-
-  
   }
 
   &__carousel-item-img {
