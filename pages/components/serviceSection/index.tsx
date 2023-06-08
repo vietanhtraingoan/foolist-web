@@ -3,6 +3,7 @@ import { GetStaticProps, InferGetStaticPropsType } from "next/types";
 import React from "react";
 import CustomNavigationButton from "../customNavigationButton";
 import { useRouter } from "next/router";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 type Props = {
   // Add custom props here
@@ -13,41 +14,57 @@ const classNamePrefix = "service-section";
 const ServiceSection = (
   _props: InferGetStaticPropsType<typeof getStaticProps>
 ) => {
-  const router = useRouter()
+  const router = useRouter();
 
   return (
     <div className={classNamePrefix}>
-      <div className={`${classNamePrefix}__title-wrapper`}>
-        <div className={`${classNamePrefix}__title`}> Dịch vụ của chúng tôi</div>
-        <div className={`${classNamePrefix}__title-button`}> 
-          <CustomNavigationButton size="large" />
+      <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}>
+        <div className={`${classNamePrefix}__title-wrapper`}>
+          <div className={`${classNamePrefix}__title`}>
+            Dịch vụ của chúng tôi
+          </div>
+          <div className={`${classNamePrefix}__title-button`}>
+            <CustomNavigationButton size="large" />
+          </div>
         </div>
-      </div>
+      </AnimationOnScroll>
 
       <div className={`${classNamePrefix}__content`}>
         <div className={`${classNamePrefix}__content-item`}>
-          <div className={`${classNamePrefix}__content-item-title`}>Media Development</div>
+          <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}>
+            <div className={`${classNamePrefix}__content-item-title`}>
+              Media Development
+            </div>
+          </AnimationOnScroll>
 
-          <div className={`${classNamePrefix}__content-item-list`}>
-            <ul>
-              <li>TVC</li>
-              <li>Product Design</li>
-            </ul>
-          </div>
+          <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}>
+            <div className={`${classNamePrefix}__content-item-list`}>
+              <ul>
+                <li>TVC</li>
+                <li>Product Design</li>
+              </ul>
+            </div>
+          </AnimationOnScroll>
         </div>
 
-        <div className={`${classNamePrefix}__content-divider`}/>
+        <div className={`${classNamePrefix}__content-divider`} />
 
         <div className={`${classNamePrefix}__content-item`}>
-          <div className={`${classNamePrefix}__content-item-title`}>Information Technology</div>
+          <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}>
+            <div className={`${classNamePrefix}__content-item-title`}>
+              Information Technology
+            </div>
+          </AnimationOnScroll>
 
-          <div className={`${classNamePrefix}__content-item-list`}>
-            <ul>
-              <li>Website development</li>
-              <li>Mobile application</li>
-              <li>ẺP</li>
-            </ul>
-          </div>
+          <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}>
+            <div className={`${classNamePrefix}__content-item-list`}>
+              <ul>
+                <li>Website development</li>
+                <li>Mobile application</li>
+                <li>ẺP</li>
+              </ul>
+            </div>
+          </AnimationOnScroll>
         </div>
       </div>
     </div>
