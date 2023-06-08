@@ -172,17 +172,17 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
               })}
             </div>
 
-            <div className="social-group-container">
-              <div className="social-group-container-title">
-                <span>Social media</span>
-              </div>
-
-              <div className="social-group-wrapper">
-                <SocialGroup />
-              </div>
-            </div>
-
             <div className="menu-contact-section">
+              <div className="social-group-container">
+                <div className="social-group-container-title">
+                  <span>Social media</span>
+                </div>
+
+                <div className="social-group-wrapper">
+                  <SocialGroup />
+                </div>
+              </div>
+
               <MenuContactSection />
             </div>
           </div>
