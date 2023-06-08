@@ -217,7 +217,7 @@ const AboutPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
                 animateIn="animate__slideInUp"
                 animateOnce={true}
               >
-                <span>{t("About_content.paragraph-8")}</span>
+                <div>{t("About_content.paragraph-8")}</div>
               </AnimationOnScroll>
             </div>
           </div>
