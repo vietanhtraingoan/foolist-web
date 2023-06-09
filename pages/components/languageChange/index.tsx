@@ -29,10 +29,10 @@ const LanguageChange = () => {
     }))
   }; 
 
-  // useEffect(() => {
-  //   const localLanguage = localStorage.getItem(KEY_LANGUAGE);
-  //   if (localLanguage !== "vn") setLanguageChange(true);
-  // }, []);
+  useEffect(() => {
+    const localLanguage = localStorage.getItem(KEY_LANGUAGE);
+    if (localLanguage !== "vn") setLanguageChange(true);
+  }, []);
 
   return (
     <div
