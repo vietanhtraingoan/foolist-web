@@ -24,14 +24,20 @@ const LanguageChange = () => {
     const { pathname, asPath, query } = router;
     router.push({ pathname, query }, asPath, { locale: newLocale });
 
-    dispatch(setLanguage({
-      language: newLocale
-    }))
-  }; 
+    dispatch(
+      setLanguage({
+        language: newLocale,
+      })
+    );
+  };
 
   useEffect(() => {
     const localLanguage = localStorage.getItem(KEY_LANGUAGE);
-    if (localLanguage !== "vn") setLanguageChange(true);
+    if (localStorage && localLanguage !== "vn") {
+      setLanguageChange(true);
+    } else {
+      setLanguageChange(false);
+    }
   }, []);
 
   return (
