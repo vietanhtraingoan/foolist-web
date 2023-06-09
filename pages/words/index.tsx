@@ -7,6 +7,8 @@ import CustomNavigationButton from "../components/customNavigationButton";
 import MiniFooter from "../components/miniFooter";
 import { useRouter } from "next/router";
 import { WordsMock } from "../../mocks/wordsMock";
+import { useSelector } from "react-redux";
+import { getLanguage } from "../../store/selector/rootSelector";
 
 const classNamePrefix = "words-page";
 
@@ -16,6 +18,8 @@ const WordsPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const router = useRouter();
 
   const container = useRef(null);
+
+  const language = useSelector(getLanguage);
 
   const [openModal, setOpenModal] = useState<boolean>(false);
   const [searchTerm, setSearchTerm] = useState<string>("");
@@ -47,20 +51,22 @@ const WordsPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   };
 
   const handleSearchWord = () => {
-    const searchItemId = WordsMock.find((item) => item.label.toLowerCase() === searchTerm.toLowerCase())
+    const searchItemId = WordsMock.find(
+      (item) => item.label.toLowerCase() === searchTerm.toLowerCase()
+    );
 
-    if(searchItemId) {
-      router.push(`/wordDetail?id=${searchItemId.id}`)
+    if (searchItemId) {
+      router.push(`/wordDetail?id=${searchItemId.id}`);
     } else {
-      console.log("word not found")
+      console.log("word not found");
     }
-  }
+  };
 
   const handleKeyDown = (event) => {
-    if (event.key === 'Enter') {
-      handleSearchWord()
+    if (event.key === "Enter") {
+      handleSearchWord();
     }
-  }
+  };
 
   useEffect(() => {
     window.addEventListener("click", handleClickOutside);
@@ -73,7 +79,10 @@ const WordsPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
           <span>Words</span>
         </div>
 
-        <div className={`${classNamePrefix}__search-container`} onKeyDown={handleKeyDown}>
+        <div
+          className={`${classNamePrefix}__search-container`}
+          onKeyDown={handleKeyDown}
+        >
           <input
             type="text"
             value={searchTerm}
@@ -91,8 +100,8 @@ const WordsPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
       <div className={`${classNamePrefix}__content-wrapper`}>
         {alphabet
           ? alphabet.map((item) => (
-              <div className={`${classNamePrefix}__item-wrapper`}>
-                <div className={`${classNamePrefix}__item`} key={item.id}>
+              <div className={`${classNamePrefix}__item-wrapper`} key={item.id}>
+                <div className={`${classNamePrefix}__item`}>
                   <div
                     className={`${classNamePrefix}__content`}
                     style={{

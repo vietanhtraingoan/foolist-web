@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import ProjectDetail from "../components/projectDetail";
 import AnimatedNextButton from "../components/animatedNextButton";
 import { projectMocks } from "../../mocks/projectMocks";
-import Image from "next/image";
 import { useDispatch } from "react-redux";
 import { setProjectId } from "../../store/project/projectSlice";
 import { GetStaticProps, InferGetStaticPropsType } from "next/types";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { CloseCircleOutlined } from "@ant-design/icons";
 
 const classNamePrefix = "project-page";
 
@@ -40,6 +40,16 @@ const ProjectPage = (
     );
   };
 
+  useEffect(() => {
+    const close = (e) => {
+      if (e.key === "Escape") {
+        setProjectSelect(false);
+      }
+    };
+    window.addEventListener("keydown", close);
+    return () => window.removeEventListener("keydown", close);
+  }, []);
+
   return (
     <div
       className={classNamePrefix}
@@ -71,7 +81,10 @@ const ProjectPage = (
             className={`${classNamePrefix}__close-button`}
             onClick={() => setProjectSelect(false)}
           >
-            x
+            <CloseCircleOutlined
+              rev="true"
+              className={`${classNamePrefix}__close-button-icon`}
+            />
           </div>
         )}
       </div>
@@ -82,23 +95,20 @@ const ProjectPage = (
           zIndex: projectSelect ? -1 : 10,
         }}
       >
-        {projectMocks.map((p, index) => {
-          let offset = projectMocks.length + (projectIndex - index);
-
-          return (
-            <div
-              className={`${classNamePrefix}__project-item`}
-              style={{
-                backgroundImage: `url(${p.imgUrl.src})`,
-                width: "100%",
-                height: "100%",
-                offset: offset,
-                // direction: offset === 0 ? 0 : offset > 0 ? 1 : -1
-              }}
-              onClick={() => handleProjectSelect(p.id)}
-            ></div>
-          );
-        })}
+        <div className={`${classNamePrefix}__project-list-container`}>
+          {projectMocks
+            ? projectMocks.map((p, index) => (
+                <div
+                  className={`${classNamePrefix}__project-item animate__animated animate__fadeIn`}
+                  style={{
+                    backgroundImage: `url(${p.imgUrl.src})`,
+                  }}
+                  onClick={() => handleProjectSelect(p.id)}
+                >
+                </div>
+              ))
+            : ""}
+        </div>
       </div>
     </div>
   );

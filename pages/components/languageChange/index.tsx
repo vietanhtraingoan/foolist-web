@@ -4,11 +4,14 @@ import usaFlag from "../../../public/static/usaFlag.png";
 import Image from "next/image";
 import { KEY_LANGUAGE } from "../../../utils/constants";
 import { useRouter } from "next/router";
+import { useDispatch } from "react-redux";
+import { setLanguage } from "../../../store/language/languageSlice";
 
 const classNamePrefix = "language-change";
 
 const LanguageChange = () => {
   const router = useRouter();
+  const dispatch = useDispatch();
 
   const [languageChange, setLanguageChange] = useState<boolean>(false);
 
@@ -20,12 +23,16 @@ const LanguageChange = () => {
     localStorage.setItem(KEY_LANGUAGE, newLocale);
     const { pathname, asPath, query } = router;
     router.push({ pathname, query }, asPath, { locale: newLocale });
-  };
 
-  useEffect(() => {
-    const localLanguage = localStorage.getItem(KEY_LANGUAGE);
-    if (localLanguage !== "vn") setLanguageChange(true);
-  }, []);
+    dispatch(setLanguage({
+      language: newLocale
+    }))
+  }; 
+
+  // useEffect(() => {
+  //   const localLanguage = localStorage.getItem(KEY_LANGUAGE);
+  //   if (localLanguage !== "vn") setLanguageChange(true);
+  // }, []);
 
   return (
     <div

@@ -16,3 +16,6 @@ export const getActionCancel = (state: any) => state.dialog.actionCancel;
 export const getActionAfterClose = (state: any) =>
   state.dialog.actionAfterClose;
 export const getDialogType = (state: any) => state.dialog.type;
+
+// language
+export const getLanguage = (state: any) => state.language.language;

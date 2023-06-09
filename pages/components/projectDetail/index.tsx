@@ -49,7 +49,9 @@ const ProjectDetail: React.FC<IProjectDetailProps> = (props) => {
                 <div
                   className={`${classNamePrefix}__content-main-image`}
                   style={{
-                    backgroundImage: `url(${project1.src})`,
+                    backgroundImage: `url(${
+                      projectSelected.imgUrl ? projectSelected.imgUrl.src : ""
+                    })`,
                     width: "100%",
                     height: "100%",
                   }}
@@ -69,11 +71,15 @@ const ProjectDetail: React.FC<IProjectDetailProps> = (props) => {
               }}
             >
               <div className={`${classNamePrefix}__content-main-title`}>
-                <span>{projectSelected.name ? projectSelected.name : "No name"}</span>
+                <span>
+                  {projectSelected.name ? projectSelected.name : "No name"}
+                </span>
               </div>
 
               <div className={`${classNamePrefix}__content-main-text`}>
-                {projectSelected.content ? projectSelected.content : "No content"}
+                {projectSelected.content
+                  ? projectSelected.content
+                  : "No content"}
               </div>
             </div>
           </section>
@@ -81,11 +87,15 @@ const ProjectDetail: React.FC<IProjectDetailProps> = (props) => {
           <section className={`${classNamePrefix}__content-sub`}>
             <div className={`${classNamePrefix}__content-sub-text-wrapper`}>
               <div className={`${classNamePrefix}__content-main-title`}>
-                <span>{projectSelected.name ? projectSelected.name : "No name"}</span>
+                <span>
+                  {projectSelected.name ? projectSelected.name : "No name"}
+                </span>
               </div>
 
               <div className={`${classNamePrefix}__content-main-text`}>
-                {projectSelected.subContent ? projectSelected.subContent : "No content"}
+                {projectSelected.subContent
+                  ? projectSelected.subContent
+                  : "No content"}
               </div>
             </div>
           </section>

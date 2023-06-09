@@ -64,7 +64,7 @@ const ServiceSection = (
               <ul>
                 <li>Website development</li>
                 <li>Mobile application</li>
-                <li>ẺP</li>
+                <li>ERP</li>
               </ul>
             </div>
           </AnimationOnScroll>

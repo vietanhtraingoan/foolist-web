@@ -1,7 +1,7 @@
 .project-page {
   position: relative;
   overflow: hidden;
-  
+
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -26,13 +26,6 @@
     overflow: hidden;
   }
 
-  &__next-button {
-    position: absolute;
-    z-index: 12;
-    bottom: 0;
-    right: 30px;
-  }
-
   &__close-button {
     position: absolute;
     z-index: 12;
@@ -44,18 +37,18 @@
     font-size: 20px;
   }
 
-  &__project-list-wrapper{
-    position: absolute;
+  &__project-list-wrapper {
+  }
 
+  &__project-list-container {
     display: flex;
     flex-direction: row;
     align-items: center;
 
     width: 2000px;
-    height: 500px;
+    white-space: nowrap ;
 
     overflow-x: scroll;
-    white-space: nowrap;
 
     &::-webkit-scrollbar {
       display: none;
@@ -63,12 +56,14 @@
   }
 
   &__project-item {
+    content: "";
+
     width: 270px;
     height: 500px;
 
     cursor: pointer;
 
-    border-radius: 25px;
+    border-radius: 10px;
 
     margin: 0 10px;
 
@@ -76,10 +71,6 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    --x: calc(var(--px) - 0.5);
-    --y: calc(var(--py) - 0.5);
-    transform: translateZ(100px);
-    transition: 0.8s ease-in-out;
-    opacity: 1;
+    color: #ffffff;
   }
 }

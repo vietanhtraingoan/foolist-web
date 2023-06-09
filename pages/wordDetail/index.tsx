@@ -5,6 +5,8 @@ import MiniFooter from "../components/miniFooter";
 import { GetStaticProps, InferGetStaticPropsType } from "next/types";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { WordsMock } from "../../mocks/wordsMock";
+import { useSelector } from "react-redux";
+import { getLanguage } from "../../store/selector/rootSelector";
 
 type Props = {};
 
@@ -13,13 +15,19 @@ const classNamePrefix = "word-detail";
 const WordDetail = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const id = getUrlParams("id");
 
+  const language = useSelector(getLanguage);
+
+  console.log(language)
+
   const selectedWord = WordsMock.find((item) => item.id === id);
 
-  const relateWordList = selectedWord && WordsMock.filter(
-    (item) => item.label.charAt(0) === selectedWord.label.charAt(0)
-  );
+  const relateWordList =
+    selectedWord &&
+    WordsMock.filter(
+      (item) => item.label.charAt(0) === selectedWord.label.charAt(0)
+    );
 
-  return (
+  return (  
     <>
       <div className={classNamePrefix}>
         {selectedWord ? (
@@ -72,7 +80,9 @@ const WordDetail = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
             </div>
           </>
         ) : (
-          <div className={`${classNamePrefix}__no-data`}><span>Updating...</span></div>
+          <div className={`${classNamePrefix}__no-data`}>
+            <span>Updating...</span>
+          </div>
         )}
       </div>
       <MiniFooter />
