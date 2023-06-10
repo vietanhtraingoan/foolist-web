@@ -2,7 +2,7 @@
   "Home": "Home",
   "About us": "About us",
   "Projects": "Projects",
-  "feature-project": "Feature project",
+  "feature-project": "Our feature project",
   "Products": "Products",
   "Services": "Services",
   "Words": "Words",
@@ -57,6 +57,16 @@
     "info@foolist.vn": "info@foolist.vn",
     "floor3-vietphone-building": "Floor 3, Vietphone Building,",
     "64vothisau-tandinhward-district1": "64 Vo Thi Sau, Tan Dinh Ward, District 1,",
-    "hochiminhcity-vietnam" : "Ho Chi Minh City, Viet Nam"
+    "hochiminhcity-vietnam": "Ho Chi Minh City, Viet Nam"
+  },
+  "service": {
+    "title": "our services",
+    "media": "media production",
+    "tvc": "tvc",
+    "product-design": "product design",
+    "technology-development": "technology development",
+    "website-development": "websites development",
+    "mobile-app-development": "Mobile application development",
+    "erp": "erp"
   }
 }
