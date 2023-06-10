@@ -33,7 +33,6 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
     }, 1000);
   }, []);
 
-
   return (
     <>
       {loadingPage ? (
@@ -147,39 +146,31 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
                   </div>
                 </div>
               </AnimationOnScroll>
-              <div className={`${classNamePrefix}__footer-right`}>
-                <AnimationOnScroll
-                  animateIn="animate__slideInUp"
-                  animateOnce={true}
-                >
+
+              <AnimationOnScroll
+                animateIn="animate__slideInUp"
+                animateOnce={true}
+              >
+                <div className={`${classNamePrefix}__footer-right`}>
                   <div
                     className={`${classNamePrefix}__footer-info-group-title`}
                   >
                     Foolist Creative
                   </div>
-                </AnimationOnScroll>
 
-                <AnimationOnScroll
-                  animateIn="animate__slideInUp"
-                  animateOnce={true}
-                >
                   <span
                     className={`${classNamePrefix}__footer-info-group-text`}
                   >
                     Foolist.vn
                   </span>
-                </AnimationOnScroll>
-                <AnimationOnScroll
-                  animateIn="animate__slideInUp"
-                  animateOnce={true}
-                >
+
                   <div className={`${classNamePrefix}__footer-info-group`}>
                     {infoMocks.map((i) => (
                       <span key={i.id}>{t(i.text)}</span>
                     ))}
                   </div>
-                </AnimationOnScroll>
-              </div>
+                </div>
+              </AnimationOnScroll>
             </section>
           </div>
         </>

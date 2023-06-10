@@ -61,75 +61,74 @@ const ProjectPage = (
 
   return (
     <>
-    {loadingPage ? (
-      <LoadingView />
-    ) : (
-      <>
-         <div
-      className={classNamePrefix}
-      style={{ paddingTop: projectSelect ? 0 : 100 }}
-    >
-      <div
-        className={`${classNamePrefix}__layer`}
-        style={{
-          zIndex: projectSelect ? 10 : 1,
-          width: projectSelect ? "90vw" : 400,
-          height: projectSelect ? "85vh" : 400,
-          borderRadius: projectSelect ? 20 : 360,
-          background: projectSelect ? "#ffffff" : "rgba(255, 255, 255, 0.5)",
-          marginTop: projectSelect ? 90 : 0,
-        }}
-      >
-        {projectSelect && (
-          <ProjectDetail handleClose={() => setProjectSelect(false)} />
-        )}
-
-        {projectSelect && (
-          <div className={`${classNamePrefix}__next-button`}>
-            <AnimatedNextButton />
-          </div>
-        )}
-
-        {projectSelect && (
+      {loadingPage ? (
+        <LoadingView />
+      ) : (
+        <>
           <div
-            className={`${classNamePrefix}__close-button`}
-            onClick={() => setProjectSelect(false)}
+            className={classNamePrefix}
+            style={{ paddingTop: projectSelect ? 0 : 100 }}
           >
-            <CloseCircleOutlined
-              rev="true"
-              className={`${classNamePrefix}__close-button-icon`}
-            />
-          </div>
-        )}
-      </div>
+            <div
+              className={`${classNamePrefix}__layer`}
+              style={{
+                zIndex: projectSelect ? 10 : 1,
+                width: projectSelect ? "90vw" : 400,
+                height: projectSelect ? "85vh" : 400,
+                borderRadius: projectSelect ? 20 : 360,
+                background: projectSelect
+                  ? "#ffffff"
+                  : "rgba(255, 255, 255, 0.5)",
+                marginTop: projectSelect ? 90 : 0,
+              }}
+            >
+              {projectSelect && (
+                <ProjectDetail handleClose={() => setProjectSelect(false)} />
+              )}
 
-      <div
-        className={`${classNamePrefix}__project-list-wrapper`}
-        style={{
-          zIndex: projectSelect ? -1 : 10,
-        }}
-      >
-        <div className={`${classNamePrefix}__project-list-container`}>
-          {projectMocks
-            ? projectMocks.map((p, index) => (
-                <div
-                  className={`${classNamePrefix}__project-item animate__animated animate__fadeIn`}
-                  style={{
-                    backgroundImage: `url(${p.imgUrl.src})`,
-                  }}
-                  onClick={() => handleProjectSelect(p.id)}
-                >
+              {projectSelect && (
+                <div className={`${classNamePrefix}__next-button`}>
+                  <AnimatedNextButton />
                 </div>
-              ))
-            : ""}
-        </div>
-      </div>
-    </div>
-      </>
-    )}
-  </>
+              )}
 
-   
+              {projectSelect && (
+                <div
+                  className={`${classNamePrefix}__close-button`}
+                  onClick={() => setProjectSelect(false)}
+                >
+                  <CloseCircleOutlined
+                    rev="true"
+                    className={`${classNamePrefix}__close-button-icon`}
+                  />
+                </div>
+              )}
+            </div>
+
+            <div
+              className={`${classNamePrefix}__project-list-wrapper`}
+              style={{
+                zIndex: projectSelect ? -1 : 10,
+              }}
+            >
+              <div className={`${classNamePrefix}__project-list-container`}>
+                {projectMocks
+                  ? projectMocks.map((p) => (
+                      <div
+                        className={`${classNamePrefix}__project-item animate__animated animate__fadeIn`}
+                        style={{
+                          backgroundImage: `url(${p.imgUrl.src})`,
+                        }}
+                        onClick={() => handleProjectSelect(p.id)}
+                      ></div>
+                    ))
+                  : ""}
+              </div>
+            </div>
+          </div>
+        </>
+      )}
+    </>
   );
 };
 
