@@ -6,6 +6,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { DEFAULT_LANG } from "../utils/constants";
 
 import HomePage from "./home";
+import LoadingView from "./loadingView";
 
 type Props = {
   // Add custom props here

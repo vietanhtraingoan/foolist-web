@@ -40,7 +40,7 @@
   }
 
   span:nth-child(odd) {
-    left: 0px;
+    left: 1px;
     border-radius: 9px 0 0 9px;
   }
 
@@ -126,7 +126,7 @@
   }
 
   #hamburg-menu.open span:nth-child(1) {
-    left: 5px;
+    left: 6px;
     top: 5px;
   }
 
@@ -146,12 +146,12 @@
   }
   
   #hamburg-menu.open span:nth-child(5) {
-    left: 5px;
+    left: 6px;
     top: 30px;
   }
   
   #hamburg-menu.open span:nth-child(6) {
-    left: calc(50% - 1px);
+    left: calc(50% - 5px);
     top: 30px;
   }
 }

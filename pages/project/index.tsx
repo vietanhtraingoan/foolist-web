@@ -7,6 +7,7 @@ import { setProjectId } from "../../store/project/projectSlice";
 import { GetStaticProps, InferGetStaticPropsType } from "next/types";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { CloseCircleOutlined } from "@ant-design/icons";
+import LoadingView from "../loadingView";
 
 const classNamePrefix = "project-page";
 
@@ -21,6 +22,8 @@ const ProjectPage = (
 
   const [projectSelect, setProjectSelect] = useState<Boolean>(false);
   const [projectIndex, setProjectIndex] = useState(0);
+
+  const [loadingPage, setLoadingPage] = useState(true);
 
   const previous = () => {
     setProjectIndex((projectIndex + 1) % projectMocks.length);
@@ -41,6 +44,12 @@ const ProjectPage = (
   };
 
   useEffect(() => {
+    setTimeout(() => {
+      setLoadingPage(false);
+    }, 1000);
+  }, []);
+
+  useEffect(() => {
     const close = (e) => {
       if (e.key === "Escape") {
         setProjectSelect(false);
@@ -51,7 +60,12 @@ const ProjectPage = (
   }, []);
 
   return (
-    <div
+    <>
+    {loadingPage ? (
+      <LoadingView />
+    ) : (
+      <>
+         <div
       className={classNamePrefix}
       style={{ paddingTop: projectSelect ? 0 : 100 }}
     >
@@ -111,6 +125,11 @@ const ProjectPage = (
         </div>
       </div>
     </div>
+      </>
+    )}
+  </>
+
+   
   );
 };
 
