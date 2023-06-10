@@ -1,22 +1,22 @@
 export const infoMocks = [
   {
     id: 1,
-    text: "(+84)913999345",
+    text: "info.(+84)913999345",
   },
   {
     id: 2,
-    text: "info@foolist.vn",
+    text: "info.info@foolist.vn",
   },
   {
     id: 3,
-    text: "floor3-vietphone-building,",
+    text: "info.floor3-vietphone-building",
   },
   {
     id: 4,
-    text: "64vothisau-tandinhward-district1,",
+    text: "info.64vothisau-tandinhward-district1",
   },
   {
     id: 5,
-    text: "hochiminhcity-vietnam",
+    text: "info.hochiminhcity-vietnam",
   },
 ];
