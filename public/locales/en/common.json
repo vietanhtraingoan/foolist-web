@@ -51,5 +51,12 @@
   "send-success": "We will come back to you later",
   "empty-field": "Field is required !!",
   "name-format": "Name must contain at least 3 characters !!",
-  "email-format": "Email format must follow abc@xyz.com..."
+  "email-format": "Email format must follow abc@xyz.com...",
+  "info": {
+    "(+84)913999345": "(+84) 913 999 345",
+    "info@foolist.vn": "info@foolist.vn",
+    "floor3-vietphone-building": "Floor 3, Vietphone Building,",
+    "64vothisau-tandinhward-district1": "64 Vo Thi Sau, Tan Dinh Ward, District 1,",
+    "hochiminhcity-vietnam" : "Ho Chi Minh City, Viet Nam"
+  }
 }

@@ -1,7 +1,7 @@
 export const infoMocks = [
   {
     id: 1,
-    text: "(+84) 913 999 345",
+    text: "(+84)913999345",
   },
   {
     id: 2,
@@ -9,14 +9,14 @@ export const infoMocks = [
   },
   {
     id: 3,
-    text: "Floor 3, Vietphone Building, ",
+    text: "floor3-vietphone-building,",
   },
   {
     id: 4,
-    text: "64 Vo Thi Sau, Tan Dinh Ward, District 1,",
+    text: "64vothisau-tandinhward-district1,",
   },
   {
     id: 5,
-    text: "Ho Chi Minh City, Viet Nam",
+    text: "hochiminhcity-vietnam",
   },
 ];

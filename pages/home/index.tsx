@@ -175,7 +175,7 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
                 >
                   <div className={`${classNamePrefix}__footer-info-group`}>
                     {infoMocks.map((i) => (
-                      <span key={i.id}>{i.text}</span>
+                      <span key={i.id}>{t(i.text)}</span>
                     ))}
                   </div>
                 </AnimationOnScroll>

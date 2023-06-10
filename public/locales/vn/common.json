@@ -51,6 +51,12 @@
   "send-success": "Chúng tôi sẽ liên hệ lại bạn sau",
   "empty-field": "Thông tin này không được để trống !!",
   "name-format": "Tên phải có ít nhất 3 ký tự !!",
-  "email-format": "Email phải đúng định dạng abc@xyz.com..."
-  
+  "email-format": "Email phải đúng định dạng abc@xyz.com...",
+  "info": {
+    "(+84)913999345": "0 913 999 345",
+    "info@foolist.vn": "info@foolist.vn",
+    "floor3-vietphone-building": "Tầng 3 tòa nhà Vietphone,",
+    "64vothisau-tandinhward-district1": "Số 64 đường Võ Thị Sáu, phường Tân Bình, Quận 1",
+    "hochiminhcity-vietnam": "Thành phố Hồ Chí Minh, Việt Nam"
+  }
 }
