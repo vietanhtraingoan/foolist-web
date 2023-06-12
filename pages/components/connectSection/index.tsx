@@ -19,6 +19,14 @@ const ConnectSection = (
   const { t } = useTranslation("common");
   const router = useRouter();
 
+  const serviceList = [
+    { id: 1, title: t("service.tvc"), onClick: () => {} },
+    { id: 2, title: t("service.product-design"), onClick: () => {} },
+    { id: 3, title: t("service.website-development"), onClick: () => {} },
+    { id: 4, title: t("service.mobile-app-development"), onClick: () => {} },
+    { id: 5, title: t("service.erp"), onClick: () => {} },
+  ];
+
   return (
     <div className={classNamePrefix}>
       <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true}>
@@ -40,16 +48,6 @@ const ConnectSection = (
         <div className={`${classNamePrefix}__bottom`}>
           <div className={`${classNamePrefix}__bottom-left`}>
             <div className={`${classNamePrefix}__bottom-left-item`}>
-              <span>{t("register-to-receive-info")}</span>
-              <div className={`${classNamePrefix}__bottom-left-input`}>
-                <input type="text" id="" placeholder={t("input-placeholder")} />
-                <div className={`${classNamePrefix}__bottom-left-input-button`}>
-                  <CustomNavigationButton size="small" />
-                </div>
-              </div>
-            </div>
-
-            <div className={`${classNamePrefix}__bottom-left-item`}>
               <span>{t("explore")}</span>
               <div>
                 <SocialGroup />
@@ -60,7 +58,18 @@ const ConnectSection = (
           <div className={`${classNamePrefix}__bottom-right`}>
             <span>{t("Services")}</span>
 
-            <div></div>
+            <div className={`${classNamePrefix}__service-list`}>
+              {serviceList
+                ? serviceList.map((s) => (
+                    <div
+                      className={`${classNamePrefix}__service-item`}
+                      key={s.id}
+                    >
+                      <span>{s.title}</span>
+                    </div>
+                  ))
+                : ""}
+            </div>
           </div>
         </div>
       </AnimationOnScroll>

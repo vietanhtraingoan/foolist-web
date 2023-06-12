@@ -376,7 +376,10 @@ const AboutPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
 
             <ConnectSection />
 
-            <div className={`${classNamePrefix}__footer`}>
+            <div
+              className={`${classNamePrefix}__footer`}
+              style={{ padding: "0 15px", background: "#000000" }}
+            >
               <MiniFooter />
             </div>
           </div>

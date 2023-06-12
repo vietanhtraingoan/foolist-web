@@ -56,7 +56,7 @@ const ContactPage = (
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (email && phone && name && message) {
+    if (email && phone && name) {
       const res = await fetch("./api/sendgrid", {
         body: JSON.stringify({
           email: email,
