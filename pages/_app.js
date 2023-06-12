@@ -101,7 +101,7 @@ function MyApp({ Component, ...rest }) {
     Router.events.on("routeChangeComplete", () =>
       setTimeout(() => {
         setLoading(false);
-      }, 2000)
+      }, 1500)
     );
     Router.events.on("routeChangeError", () => setLoading(false));
     return () => {
@@ -133,6 +133,7 @@ function MyApp({ Component, ...rest }) {
           sizes="16x16"
           href="/images/favicon-16x16.png"
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
       </Head>
 
       {loading ? (
