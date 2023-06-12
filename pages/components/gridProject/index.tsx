@@ -6,6 +6,8 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { DEFAULT_LANG } from "../../../utils/constants";
 import { useTranslation } from "next-i18next";
 import { AnimationOnScroll } from "react-animation-on-scroll";
+import { useRouter } from "next/router";
+import CustomNavigationButton from "../customNavigationButton";
 
 type Props = {};
 
@@ -15,6 +17,7 @@ const GridProject = (
   _props: InferGetStaticPropsType<typeof getStaticProps>
 ) => {
   const { t } = useTranslation();
+  const router = useRouter();
 
   const [viewMore, setViewMore] = useState<boolean>(false);
 
@@ -37,10 +40,21 @@ const GridProject = (
       <div
         className={`${classNamePrefix}__show-more-wrapper`}
         onClick={() => setViewMore(!viewMore)}
+        style={{justifyContent: router.pathname === "/project" ? "center" : "flex-end"}}
       >
-        <div className={`${classNamePrefix}__show-more-button`}>
-          <span>{viewMore ? "Show Less" : "Show More"} </span>
-        </div>
+        {router.pathname === "/project" ? (
+          <div className={`${classNamePrefix}__show-more-button`}>
+            <span>{viewMore ? "Show Less" : "Show More"} </span>
+          </div>
+        ) : (
+          <div className={`${classNamePrefix}__view-all`}>
+            <div className={`${classNamePrefix}__view-all-text`}>{t("all-project")}</div>
+            <CustomNavigationButton
+              size="small"
+              onClick={() => router.push("/project")}
+            />
+          </div>
+        )}
       </div>
     </div>
   );

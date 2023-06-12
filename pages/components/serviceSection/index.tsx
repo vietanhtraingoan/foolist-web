@@ -4,7 +4,7 @@ import React from "react";
 import CustomNavigationButton from "../customNavigationButton";
 import { useRouter } from "next/router";
 import { AnimationOnScroll } from "react-animation-on-scroll";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 type Props = {
   // Add custom props here

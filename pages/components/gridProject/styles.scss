@@ -23,7 +23,7 @@
     border-top: 1px solid #f8a5c2;
 
     span {
-      font-family: 'Times New Roman', Times, serif;
+      font-family: "Times New Roman", Times, serif;
       font-style: normal;
       font-weight: 800;
       font-size: 64px;
@@ -41,6 +41,8 @@
     width: 100%;
 
     margin: 40px 0;
+
+    padding: 0 60px;
   }
 
   &__show-more-button {
@@ -60,11 +62,29 @@
       font-size: 40px;
     }
   }
-}
 
-@media screen and (max-width: 768px) {
-  .grid-project  {
-    padding: 0;
+  &__view-all {
+    display: flex;
+    align-items: center;
+  }
+
+  &__view-all-text {
+    margin-right: 20px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 78px;
+    color: #ffffff;
+    font-style: italic;
+    text-align: center;
+    text-transform: capitalize;
   }
 }
 
+@media screen and (max-width: 768px) {
+  .grid-project {
+    padding: 0;
+  }
+}

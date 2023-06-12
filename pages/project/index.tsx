@@ -127,7 +127,7 @@ const ProjectPage = (
           : ""}
       </div>
 
-      <div className={`${classNamePrefix}__connect`}>
+      <div className={`${classNamePrefix}__connect`} style={{width: "100%"}}>
         <ConnectSection />
       </div>
     </div>
