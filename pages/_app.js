@@ -98,7 +98,11 @@ function MyApp({ Component, ...rest }) {
 
   useEffect(() => {
     Router.events.on("routeChangeStart", () => setLoading(true));
-    Router.events.on("routeChangeComplete", () => setLoading(false));
+    Router.events.on("routeChangeComplete", () =>
+      setTimeout(() => {
+        setLoading(false);
+      }, 2000)
+    );
     Router.events.on("routeChangeError", () => setLoading(false));
     return () => {
       Router.events.off("routeChangeStart", () => setLoading(true));
