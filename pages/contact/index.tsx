@@ -95,7 +95,7 @@ const ContactPage = (
   useEffect(() => {
     setTimeout(() => {
       setLoadingPage(false);
-    }, 1000);
+    }, 1500);
   }, []);
 
   return (

@@ -336,3 +336,51 @@
     display: flex;
   }
 }
+
+@media screen and (max-width: 420px) {
+  .top-menu {
+    width: 100%;
+    .second {
+      width: 100%;
+      .content {
+        height: 200px;
+        .left-menu {
+          .left-menu-responsive-button {
+            display: flex;
+
+            width: 120px;
+            height: 120px;
+          }
+
+          .responsive-floated-language-change {
+            display: block;
+          }
+
+          .left-menu-responsive-grid {
+            display: none;
+          }
+        }
+
+        .logo-group {
+          margin-left: 30px;
+          .logo {
+            width: 120px;
+            height: 120px;
+          }
+        }
+      }
+    }
+  }
+
+  .navigation-menu-wrapper {
+    display: none;
+    .item {
+      width: 150px;
+      font-size: 30px;
+    }
+  }
+
+  .responsive-navigation-menu-wrapper {
+    display: flex;
+  }
+}

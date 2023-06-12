@@ -1,6 +1,4 @@
 import React from "react";
-import logo from "../../public/static/foolistLogo.png";
-import Image from "next/image";
 
 const classNamePrefix = "loading-page";
 
