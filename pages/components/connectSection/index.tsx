@@ -44,7 +44,7 @@ const ConnectSection = (
         </div>
       </AnimationOnScroll>
 
-      <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}>
+      <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true}>
         <div className={`${classNamePrefix}__bottom`}>
           <div className={`${classNamePrefix}__bottom-left`}>
             <div className={`${classNamePrefix}__bottom-left-item`}>
