@@ -11,7 +11,7 @@
     flex-direction: column;
 
     width: 100%;
-    height: 600px;
+    // height: 600px;
 
     background: #000000;
   }
@@ -44,14 +44,12 @@
 
   &__first-section-title-outline {
     span {
-      font-family: "Montserrat";
-      font-style: normal;
-      font-weight: 800;
+      font-family: "Times New Roman", Times, serif;
+      font-style: italic;
+      font-weight: 700;
       font-size: 80px;
       line-height: 156px;
-      text-shadow: 0.4px 0.4px 0 #ffffff, 0.4px -0.4px 0 #ffffff,
-        -0.4px 0.4px 0 #ffffff, -0.4px -0.4px 0 #ffffff, 0.4px 0px 0 #ffffff,
-        0px 0.4px 0 #ffffff, -0.4px 0px 0 #ffffff, 0px -0.4px 0 #ffffff;
+      color: #f6a5c1;
     }
   }
 
@@ -69,6 +67,23 @@
     }
   }
 
+  &__first-section-subtitle-item {
+    font-family: "Arial";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 39.0476px;
+    line-height: 68px;
+    color: #ffffff;
+
+    span {
+      margin: 10px;
+      font-family: "Times New Roman", Times, serif;
+      color: #f6a5c1;
+      font-style: italic;
+      font-size: 43px;
+    }
+  }
+
   &__divider {
     content: "";
 
@@ -78,6 +93,8 @@
 
     width: 100%;
     height: 2px;
+
+    margin-top: 50px;
 
     transition: ease-in-out 1s;
   }
@@ -106,8 +123,9 @@
 
   &__second-section-top {
     width: 600px;
+
     span {
-      font-family: "Montserrat";
+      font-family: "Times New Roman", Times, serif;
       font-style: normal;
       font-weight: 700;
       font-size: 25.9788px;
@@ -146,7 +164,7 @@
     width: 405px;
 
     span {
-      font-family: "Montserrat";
+      font-family: "Arial";
       font-style: normal;
       font-weight: 500;
       font-size: 20px;
@@ -169,7 +187,6 @@
 
   &__third-section {
     width: 100%;
-    min-height: 900px;
 
     background: #000000;
   }
@@ -184,7 +201,7 @@
     width: 700px;
     height: 204px;
 
-    font-family: "Montserrat";
+    font-family: "Arial";
     font-style: normal;
     font-weight: 700;
     font-size: 73px;
@@ -193,14 +210,12 @@
 
   &__third-section-top-outline {
     span {
-      font-family: "Montserrat";
-      font-style: normal;
+      font-family: "Times New Roman", Times, serif;
+      font-style: italic;
       font-weight: 700;
       font-size: 73px;
       line-height: 99px;
-      text-shadow: 0.4px 0.4px 0 #ffffff, 0.4px -0.4px 0 #ffffff,
-        -0.4px 0.4px 0 #ffffff, -0.4px -0.4px 0 #ffffff, 0.4px 0px 0 #ffffff,
-        0px 0.4px 0 #ffffff, -0.4px 0px 0 #ffffff, 0px -0.4px 0 #ffffff;
+      color: #f6a5c1;
     }
   }
 
@@ -210,7 +225,7 @@
     margin: 106px 0 0 750px;
 
     span {
-      font-family: "Montserrat";
+      font-family: "Arial";
       font-style: normal;
       font-weight: 700;
       font-size: 25.9788px;
@@ -237,9 +252,9 @@
     margin-left: 250px;
 
     span {
-      font-family: "Montserrat";
+      font-family: "Arial";
       font-style: normal;
-      font-weight: 500;
+      font-weight: 400;
       font-size: 20px;
       line-height: 34px;
       color: #ffffff;
@@ -252,7 +267,6 @@
 
   &__fourth-section {
     width: 100%;
-    min-height: 700px;
 
     background: #000000;
   }
@@ -263,21 +277,33 @@
     justify-content: space-between;
     align-items: center;
 
-    padding: 0 151px;
+    padding: 40px 151px;
   }
 
   &__fourth-section-title-text {
-    width: 600px;
-    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 500px;
 
     span {
-      font-family: "Montserrat";
+      font-family: "Arial";
       font-style: normal;
       font-weight: 700;
       font-size: 73px;
       line-height: 99px;
       color: #ffffff;
     }
+  }
+
+  &__fourth-section-title-text-highlight{
+    margin: 10px 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 99px;
+    color: #f6a5c1;
   }
 
   &__fourth-section-title-divider {
@@ -315,7 +341,7 @@
     width: 40%;
 
     span {
-      font-family: "Montserrat";
+      font-family: "Arial";
       font-style: normal;
       font-weight: 500;
       font-size: 20px;
@@ -353,7 +379,7 @@
     div:nth-child(1) {
       margin-bottom: 84px;
 
-      font-family: "Montserrat";
+      font-family: "Arial";
       font-style: normal;
       font-weight: 700;
       font-size: 26px;
@@ -362,7 +388,7 @@
     }
 
     div:nth-child(2) {
-      font-family: "Montserrat";
+      font-family: "Arial";
       font-style: normal;
       font-weight: 700;
       font-size: 20px;
@@ -394,17 +420,20 @@
 
   &__employee-group-title {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+
     width: 280px;
-    height: 100px;
+    height: 200px;
 
     span {
-      font-family: "Montserrat";
+      font-family: "Arial";
       font-style: normal;
       font-weight: 700;
       font-size: 60px;
       line-height: 99px;
       color: #ffffff;
+      text-transform: capitalize;
     }
   }
 
@@ -422,38 +451,23 @@
       span {
         font-size: 110px;
         line-height: 156px;
-        text-shadow: 2px 2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff,
-          -2px -2px 0 #ffffff, 2px 0px 0 #ffffff, 0px 2px 0 #ffffff,
-          -2px 0px 0 #ffffff, 0px -2px 0 #ffffff;
       }
     }
 
-    &__first-section-title{
+    &__first-section-title {
       padding: 0 20px 0 570px;
-    } 
-
-    &__first-section-subtitle {
-      span {
-        // font-size: 20px;
-      }
     }
 
-    &__third-section-top-outline {
-      text-shadow: 4px 4px 0 #ffffff, 4px -4px 0 #ffffff, -4px 4px 0 #ffffff,
-        -4px -4px 0 #ffffff, 4px 0px 0 #ffffff, 0px 4px 0 #ffffff,
-        -4px 0px 0 #ffffff, 0px -4px 0 #ffffff;
-    }
-
-    &__third-section-middle{
+    &__third-section-middle {
       width: 100%;
       margin: 0;
     }
 
-    &__third-section-bottom{
+    &__third-section-bottom {
       padding: 0;
     }
 
-    &__third-section-bottom-text{
+    &__third-section-bottom-text {
       width: 100%;
 
       margin-left: 0;
@@ -493,7 +507,7 @@
       flex-direction: column-reverse;
     }
 
-    &__third-section-top{
+    &__third-section-top {
       padding: 43px 0 0 600px;
     }
 
@@ -523,7 +537,7 @@
     }
 
     &__fourth-section-title {
-      padding: 0 60px;
+      padding: 40px 60px;
     }
 
     &__fourth-section-content {
@@ -574,7 +588,7 @@
     }
 
     &__divider-content {
-      width: 800px;
+      width: 830px;
     }
 
     &__footer {

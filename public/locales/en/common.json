@@ -18,23 +18,47 @@
   "product": "OUR PRODUCTS",
   "About_content": {
     "title": "Making an Impression",
-    "three-points": "Three-points Approach",
-    "three-points-content": "Unique Creative Thinking, Artistic Visual Perspective, and Brand Identity Language.",
-    "paragraph-1": "Foolist operates in the fields of creativity and technology. We provide innovative and artistic solutions for your business needs, whether it's graphic design, media development, or website creation. ",
+    "three-points": "Three-points",
+    "three-points-content": {
+      "first": {
+        "top": "Unique",
+        "middle": "Creative",
+        "end": "Thinking"
+      },
+      "second": {
+        "top": "Artistic",
+        "middle": "Visual",
+        "end": "Perspective"
+      },
+      "third": {
+        "top": "Brand",
+        "middle": "Identity",
+        "end": "Language"
+      }
+    },
+    "brand-name": "Foolist",
+    "paragraph-1": "operates in the fields of creativity and technology. We provide innovative and artistic solutions for your business needs, whether it's graphic design, media development, or website creation. ",
     "paragraph-2": "We will show you how we use three points to make an impression on our clients and partners: our unique creative thinking, our artistic visual perspective, and our brand identity language.",
     "creative-thinking": "Creative Thinking",
     "unique": "Unique",
     "paragraph-3": "At Foolist, we believe that creativity is not a talent, but a skill that can be learned and developed. We use various methods and tools to stimulate our creative thinking, such as brainstorming, mind mapping, lateral thinking, and design thinking. We also challenge ourselves to think outside the box and explore new possibilities and perspectives.",
     "paragraph-4": "We apply our creative thinking to every project we work on, no matter how big or small. We always try to find original and effective solutions that meet the needs and expectations of our clients.",
     "paragraph-5": "We also seek feedback and collaboration from our clients and partners, as we believe that creativity thrives on diversity and exchange of ideas.",
-    "visual": "Artistic Visual Perspective",
+    "visual": {
+      "first": "Artistic",
+      "second": "Visual",
+      "third": "Perspective"
+    },
     "paragraph-6": "At Foolist, we also value the power of visual communication. We know that a picture is worth a thousand words, and that a well-designed visual can convey a message more clearly and persuasively than words alone.",
     "paragraph-7": "That's why we pay attention to every detail of our visual design, such as color, shape, layout, typography, and imagery",
     "paragraph-8": "We also have an artistic vision that guides our visual design. We are inspired by various forms of art, such as painting, photography, sculpture, and animation. We use art as a way to express our emotions, opinions, and stories. We also use art as a way to connect with our audience and evoke their feelings and reactions.",
     "paragraph-9": "At Foolist, we finally understand the importance of language in creating a strong brand identity. We know that language is not only a means of communication, but also a reflection of our values, personality, and culture. That's why we carefully craft our language to suit our brand image and voice.",
     "paragraph-10": "We use language as a way to communicate our mission, vision, and values to our clients and partners. We also use language as a way to showcase our expertise, professionalism, and credibility. We also use language as a way to create a rapport with our audience and build trust and loyalty."
   },
-  "Staff": "Team member",
+  "Staff": {
+    "team": "team",
+    "staff": "member"
+  },
   "Brand-identity-language": "Brand Identity Language",
   "connect-with": "Connect with",
   "register-to-receive-info": "Register to receive infomation",

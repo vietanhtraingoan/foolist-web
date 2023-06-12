@@ -69,25 +69,62 @@ const AboutPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
                   <span>{t("About_content.three-points")}</span>
                 </div>
 
-                <div
-                  className={`${classNamePrefix}__first-section-subtitle  animate__animated animate__fadeInUp`}
-                >
-                  <span>{t("About_content.three-points-content")}</span>
+                <div className={`${classNamePrefix}__first-section-subtitle`}>
+                  <div
+                    className={`${classNamePrefix}__first-section-subtitle-item animate__animated animate__fadeInUp`}
+                  >
+                    {t("About_content.three-points-content.first.top")}{" "}
+                    <span>
+                      {t("About_content.three-points-content.first.middle")}
+                    </span>{" "}
+                    {t("About_content.three-points-content.first.end")}
+                  </div>
+
+                  <div
+                    className={`${classNamePrefix}__first-section-subtitle-item animate__animated animate__fadeInUp`}
+                  >
+                    {t("About_content.three-points-content.second.top")}{" "}
+                    <span>
+                      {t("About_content.three-points-content.second.middle")}
+                    </span>{" "}
+                    {t("About_content.three-points-content.second.end")}
+                  </div>
+
+                  <div
+                    className={`${classNamePrefix}__first-section-subtitle-item animate__animated animate__fadeInUp`}
+                  >
+                    {t("About_content.three-points-content.third.top")}{" "}
+                    <span>
+                      {t("About_content.three-points-content.third.middle")}
+                    </span>{" "}
+                    {t("About_content.three-points-content.third.end")}
+                  </div>
                 </div>
               </div>
-            </section>
 
-            <div
-              className={`${classNamePrefix}__divider`}
-              style={{ width: "100%" }}
-            >
-              <div className={`${classNamePrefix}__divider-content`}></div>
-            </div>
+              <div
+                className={`${classNamePrefix}__divider animate__animated animate__slideInLeft`}
+                style={{ width: "100%" }}
+              >
+                <div className={`${classNamePrefix}__divider-content`}></div>
+              </div>
+            </section>
 
             <section className={`${classNamePrefix}__second-section`}>
               <div
                 className={`${classNamePrefix}__second-section-top animate__animated animate__fadeInUp`}
               >
+                <span
+                  className={`${classNamePrefix}__brand-name`}
+                  style={{
+                    color: "#f6a5c1",
+                    fontStyle: "italic",
+                    marginRight: 15,
+                    fontSize: 60,
+                  }}
+                >
+                  {t("About_content.brand-name")}
+                </span>
                 <span>{t("About_content.paragraph-1")}</span>
               </div>
 
@@ -205,7 +242,13 @@ const AboutPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
                   <div
                     className={`${classNamePrefix}__fourth-section-title-text`}
                   >
-                    <span> {t("About_content.visual")}</span>
+                    <span>{t("About_content.visual.first")}</span>
+                    <div
+                      className={`${classNamePrefix}__fourth-section-title-text-highlight`}
+                    >
+                      {t("About_content.visual.second")}
+                    </div>
+                    <span>{t("About_content.visual.third")}</span>
                   </div>
 
                   <div
@@ -309,7 +352,17 @@ const AboutPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
               >
                 <div className={`${classNamePrefix}__employee-group`}>
                   <div className={`${classNamePrefix}__employee-group-title`}>
-                    <span>{t("Staff")}</span>
+                    <span>{t("Staff.team")}</span>
+                    <span
+                      style={{
+                        fontFamily: "Times New Roman",
+                        color: "#f6a5c1",
+                        fontStyle: "italic",
+                        fontSize: 70,
+                      }}
+                    >
+                      {t("Staff.staff")}
+                    </span>
                   </div>
 
                   <div
