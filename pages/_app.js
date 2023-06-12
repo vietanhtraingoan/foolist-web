@@ -140,13 +140,11 @@ function MyApp({ Component, ...rest }) {
       ) : (
         <Provider store={store}>
           <TopMenu />
-          {/* <div className="layout"> */}
           <Component {...pageProps} />
           <div className="floated-language-change">
             <LanguageChange />
           </div>
           <CustomDialog />
-          {/* </div> */}
         </Provider>
       )}
     </>

@@ -6,6 +6,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { DEFAULT_LANG } from "../utils/constants";
 
 import HomePage from "./home";
+import LoadingView from "./loadingView";
 
 type Props = {
   // Add custom props here
@@ -13,7 +14,7 @@ type Props = {
 
 const Home = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
-    <div>
+    <>
       <NextSeo
         title="Foolist Creative"
         description="This will be the page meta description"
@@ -41,7 +42,7 @@ const Home = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
         }}
       />
       <HomePage />
-    </div>
+    </>
   );
 };
 
