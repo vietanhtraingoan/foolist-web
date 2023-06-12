@@ -16,13 +16,21 @@ const SocialGroup = () => {
             href="https://www.linkedin.com/company/foolist-creative"
             target="_blank"
           >
-            <Image src={behanceIcon} alt="" width={40} height={40} />
+            <Image
+              className={`${classNamePrefix}__item-icon`}
+              src={behanceIcon}
+              alt=""
+            />
           </a>
         </div>
 
         <div className={`${classNamePrefix}__item`}>
           <a href="https://www.instagram.com/foolist.vn" target="_blank">
-            <Image src={instaIcon} alt="" width={40} height={40} />
+            <Image
+              className={`${classNamePrefix}__item-icon`}
+              src={instaIcon}
+              alt=""
+            />
           </a>
         </div>
 
@@ -31,13 +39,21 @@ const SocialGroup = () => {
             href="https://www.linkedin.com/company/foolist-creative"
             target="_blank"
           >
-            <Image src={faceIcon} alt="" width={40} height={40} />
+            <Image
+              className={`${classNamePrefix}__item-icon`}
+              src={faceIcon}
+              alt=""
+            />
           </a>
         </div>
 
         <div className={`${classNamePrefix}__item`}>
           <a href="https://www.facebook.com/foolistcreative" target="_blank">
-            <Image src={youtubeIcon} alt="" width={40} height={40} />
+            <Image
+              className={`${classNamePrefix}__item-icon`}
+              src={youtubeIcon}
+              alt=""
+            />
           </a>
         </div>
       </div>

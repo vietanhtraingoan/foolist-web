@@ -30,7 +30,7 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   useEffect(() => {
     setTimeout(() => {
       setLoadingPage(false);
-    }, 1500);
+    }, 2000);
   }, []);
 
   return (

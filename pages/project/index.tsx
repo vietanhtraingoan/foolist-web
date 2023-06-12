@@ -7,7 +7,6 @@ import { setProjectId } from "../../store/project/projectSlice";
 import { GetStaticProps, InferGetStaticPropsType } from "next/types";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { CloseCircleOutlined } from "@ant-design/icons";
-import LoadingView from "../loadingView";
 
 const classNamePrefix = "project-page";
 
@@ -22,8 +21,6 @@ const ProjectPage = (
 
   const [projectSelect, setProjectSelect] = useState<Boolean>(false);
   const [projectIndex, setProjectIndex] = useState(0);
-
-  const [loadingPage, setLoadingPage] = useState(true);
 
   const previous = () => {
     setProjectIndex((projectIndex + 1) % projectMocks.length);
@@ -44,12 +41,6 @@ const ProjectPage = (
   };
 
   useEffect(() => {
-    setTimeout(() => {
-      setLoadingPage(false);
-    }, 1000);
-  }, []);
-
-  useEffect(() => {
     const close = (e) => {
       if (e.key === "Escape") {
         setProjectSelect(false);
@@ -60,75 +51,65 @@ const ProjectPage = (
   }, []);
 
   return (
-    <>
-      {loadingPage ? (
-        <LoadingView />
-      ) : (
-        <>
-          <div
-            className={classNamePrefix}
-            style={{ paddingTop: projectSelect ? 0 : 100 }}
-          >
-            <div
-              className={`${classNamePrefix}__layer`}
-              style={{
-                zIndex: projectSelect ? 10 : 1,
-                width: projectSelect ? "90vw" : 400,
-                height: projectSelect ? "85vh" : 400,
-                borderRadius: projectSelect ? 20 : 360,
-                background: projectSelect
-                  ? "#ffffff"
-                  : "rgba(255, 255, 255, 0.5)",
-                marginTop: projectSelect ? 90 : 0,
-              }}
-            >
-              {projectSelect && (
-                <ProjectDetail handleClose={() => setProjectSelect(false)} />
-              )}
+    <div
+      className={classNamePrefix}
+      style={{ paddingTop: projectSelect ? 0 : 100 }}
+    >
+      <div
+        className={`${classNamePrefix}__layer`}
+        style={{
+          zIndex: projectSelect ? 10 : 1,
+          width: projectSelect ? "90vw" : 400,
+          height: projectSelect ? "85vh" : 400,
+          borderRadius: projectSelect ? 20 : 360,
+          background: projectSelect ? "#ffffff" : "rgba(255, 255, 255, 0.5)",
+          marginTop: projectSelect ? 90 : 0,
+        }}
+      >
+        {projectSelect && (
+          <ProjectDetail handleClose={() => setProjectSelect(false)} />
+        )}
 
-              {projectSelect && (
-                <div className={`${classNamePrefix}__next-button`}>
-                  <AnimatedNextButton />
-                </div>
-              )}
-
-              {projectSelect && (
-                <div
-                  className={`${classNamePrefix}__close-button`}
-                  onClick={() => setProjectSelect(false)}
-                >
-                  <CloseCircleOutlined
-                    rev="true"
-                    className={`${classNamePrefix}__close-button-icon`}
-                  />
-                </div>
-              )}
-            </div>
-
-            <div
-              className={`${classNamePrefix}__project-list-wrapper`}
-              style={{
-                zIndex: projectSelect ? -1 : 10,
-              }}
-            >
-              <div className={`${classNamePrefix}__project-list-container`}>
-                {projectMocks
-                  ? projectMocks.map((p) => (
-                      <div
-                        className={`${classNamePrefix}__project-item`}
-                        style={{
-                          backgroundImage: `url(${p.imgUrl.src})`,
-                        }}
-                        onClick={() => handleProjectSelect(p.id)}
-                      ></div>
-                    ))
-                  : ""}
-              </div>
-            </div>
+        {projectSelect && (
+          <div className={`${classNamePrefix}__next-button`}>
+            <AnimatedNextButton />
           </div>
-        </>
-      )}
-    </>
+        )}
+
+        {projectSelect && (
+          <div
+            className={`${classNamePrefix}__close-button`}
+            onClick={() => setProjectSelect(false)}
+          >
+            <CloseCircleOutlined
+              rev="true"
+              className={`${classNamePrefix}__close-button-icon`}
+            />
+          </div>
+        )}
+      </div>
+
+      <div
+        className={`${classNamePrefix}__project-list-wrapper`}
+        style={{
+          zIndex: projectSelect ? -1 : 10,
+        }}
+      >
+        <div className={`${classNamePrefix}__project-list-container`}>
+          {projectMocks
+            ? projectMocks.map((p) => (
+                <div
+                  className={`${classNamePrefix}__project-item`}
+                  style={{
+                    backgroundImage: `url(${p.imgUrl.src})`,
+                  }}
+                  onClick={() => handleProjectSelect(p.id)}
+                ></div>
+              ))
+            : ""}
+        </div>
+      </div>
+    </div>
   );
 };
 

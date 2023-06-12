@@ -1,8 +1,9 @@
 import { DefaultSeo } from "next-seo";
 import "animate.css";
 import "animate.css/animate.min.css";
-import 'react-phone-number-input/style.css'
+import "react-phone-number-input/style.css";
 import Head from "next/head";
+import { Router } from "next/router";
 
 import SEO from "../next-seo.config";
 import TopMenu from "./components/menu/TopMenu";
@@ -59,12 +60,15 @@ import nextI18NextConfig from "../next-i18next.config.js";
 import "antd/dist/reset.css";
 import { DEFAULT_LANG, KEY_LANGUAGE } from "../utils/constants";
 import LanguageChange from "./components/languageChange";
+import LoadingView from "./loadingView";
 
 function MyApp({ Component, ...rest }) {
   const { store, props } = wrapper.useWrappedStore(rest);
   const { pageProps } = props;
   const router = useRouter();
   const [isPrivateMenu, setisPrivateMenu] = useState(null);
+
+  const [loading, setLoading] = useState(false);
 
   const updateLanguage = (lang) => {
     const { pathname, asPath, query } = router;
@@ -92,6 +96,17 @@ function MyApp({ Component, ...rest }) {
     return () => {};
   }, []);
 
+  useEffect(() => {
+    Router.events.on("routeChangeStart", () => setLoading(true));
+    Router.events.on("routeChangeComplete", () => setLoading(false));
+    Router.events.on("routeChangeError", () => setLoading(false));
+    return () => {
+      Router.events.off("routeChangeStart", () => setLoading(true));
+      Router.events.off("routeChangeComplete", () => setLoading(false));
+      Router.events.off("routeChangeError", () => setLoading(false));
+    };
+  }, [Router.events]);
+
   return (
     <>
       <DefaultSeo {...SEO} />
@@ -115,16 +130,21 @@ function MyApp({ Component, ...rest }) {
           href="/images/favicon-16x16.png"
         />
       </Head>
-      <Provider store={store}>
-        {isPrivateMenu && <TopMenu />}
-        <div className="layout">
-          <Component {...pageProps} />
-          <div className="floated-language-change">
-            <LanguageChange />
+
+      {loading ? (
+        <LoadingView />
+      ) : (
+        <Provider store={store}>
+          {isPrivateMenu && <TopMenu />}
+          <div className="layout">
+            <Component {...pageProps} />
+            <div className="floated-language-change">
+              <LanguageChange />
+            </div>
+            <CustomDialog />
           </div>
-          <CustomDialog />
-        </div>
-      </Provider>
+        </Provider>
+      )}
     </>
   );
 }
