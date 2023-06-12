@@ -4,7 +4,7 @@ import Image from "next/image";
 import { GetStaticProps, InferGetStaticPropsType } from "next/types";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { DEFAULT_LANG } from "../../../utils/constants";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 
 const classNamePrefix = "responsive-client";
@@ -22,7 +22,7 @@ const ResponsiveClient = (
           animateIn="animate__fadeInLeft"
           animateOnce={true}
         >
-          <span> {t("Products")}</span>
+          <span> {t("Section_label.client")}</span>
         </AnimationOnScroll>
       </div>
 

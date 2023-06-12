@@ -2,7 +2,7 @@
   "Home": "Home",
   "About us": "About us",
   "Projects": "Projects",
-  "feature-project": "Our feature project",
+  "feature-project": "Breakthrough project",
   "Products": "Products",
   "Services": "Services",
   "Words": "Words",
@@ -13,10 +13,10 @@
   "Section_label": {
     "product": "OUR PRODUCTS",
     "project": "PROJETCS",
-    "client": "OUR CLIENTS"
+    "client": " COLLABORATE WITH MULTIPLE PARTNERS"
   },
   "all-project": "View all projects",
-  "product": "OUR PRODUCTS",
+  "product": "OUR PROJECTS",
   "About_content": {
     "title": "Making an Impression",
     "three-points": "Three-points",
@@ -85,7 +85,7 @@
     "hochiminhcity-vietnam": "Ho Chi Minh City, Viet Nam"
   },
   "service": {
-    "title": "our services",
+    "title": "Exceptional professional expertise",
     "media": "media production",
     "tvc": "tvc",
     "product-design": "product design",

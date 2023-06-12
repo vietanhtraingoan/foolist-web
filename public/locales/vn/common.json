@@ -2,7 +2,7 @@
   "Home": "Trang chủ",
   "About us": "Năng lực",
   "Projects": "Dự án",
-  "feature-project": "Dự án nổi bật của chúng tôi",
+  "feature-project": "Dự án đột phá",
   "Products": "Đối tác",
   "Services": "Dịch vụ",
   "Words": "Thuật ngữ",
@@ -13,7 +13,7 @@
   "Section_label": {
     "product": "SẢN PHẨM",
     "project": "DỰ ÁN",
-    "client": "ĐỐI TÁC"
+    "client": "KẾT NỐI CÙNG NHIỀU ĐỐI TÁC"
   },
   "all-project": "tất cả dự án",
   "product": "DỰ ÁN",
@@ -85,7 +85,7 @@
     "hochiminhcity-vietnam": "Thành phố Hồ Chí Minh, Việt Nam"
   },
   "service": {
-    "title": "dịch vụ của chúng tôi",
+    "title": "Năng lực chuyên môn vượt trội của chúng tôi",
     "media": "sản xuất media",
     "tvc": "tvc",
     "product-design": "thiết kế sản phẩm",
