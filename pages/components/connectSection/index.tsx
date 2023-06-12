@@ -29,50 +29,46 @@ const ConnectSection = (
 
   return (
     <div className={classNamePrefix}>
-      <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true}>
-        <div className={`${classNamePrefix}__top`}>
-          <div className={`${classNamePrefix}__top-text`}>
-            {t("connect-with")} <span>FOOLIST </span>
-          </div>
-
-          <div className={`${classNamePrefix}__top-button`}>
-            <CustomNavigationButton
-              size="large"
-              onClick={() => router.push("/contact")}
-            />
-          </div>
+      <div className={`${classNamePrefix}__top`}>
+        <div className={`${classNamePrefix}__top-text`}>
+          {t("connect-with")} <span>FOOLIST </span>
         </div>
-      </AnimationOnScroll>
 
-      <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true}>
-        <div className={`${classNamePrefix}__bottom`}>
-          <div className={`${classNamePrefix}__bottom-left`}>
-            <div className={`${classNamePrefix}__bottom-left-item`}>
-              <span>{t("explore")}</span>
-              <div>
-                <SocialGroup />
-              </div>
-            </div>
-          </div>
+        <div className={`${classNamePrefix}__top-button`}>
+          <CustomNavigationButton
+            size="large"
+            onClick={() => router.push("/contact")}
+          />
+        </div>
+      </div>
 
-          <div className={`${classNamePrefix}__bottom-right`}>
-            <span>{t("Services")}</span>
-
-            <div className={`${classNamePrefix}__service-list`}>
-              {serviceList
-                ? serviceList.map((s) => (
-                    <div
-                      className={`${classNamePrefix}__service-item`}
-                      key={s.id}
-                    >
-                      <span>{s.title}</span>
-                    </div>
-                  ))
-                : ""}
+      <div className={`${classNamePrefix}__bottom`}>
+        <div className={`${classNamePrefix}__bottom-left`}>
+          <div className={`${classNamePrefix}__bottom-left-item`}>
+            <span>{t("explore")}</span>
+            <div>
+              <SocialGroup />
             </div>
           </div>
         </div>
-      </AnimationOnScroll>
+
+        <div className={`${classNamePrefix}__bottom-right`}>
+          <span>{t("Services")}</span>
+
+          <div className={`${classNamePrefix}__service-list`}>
+            {serviceList
+              ? serviceList.map((s) => (
+                  <div
+                    className={`${classNamePrefix}__service-item`}
+                    key={s.id}
+                  >
+                    <span>{s.title}</span>
+                  </div>
+                ))
+              : ""}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

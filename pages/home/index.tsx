@@ -132,47 +132,33 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
             </section>
 
             <section className={`${classNamePrefix}__footer-container`}>
-              <AnimationOnScroll
-                animateIn="animate__slideInUp"
-                animateOnce={true}
-              >
-                <div className={`${classNamePrefix}__footer-left`}>
-                  <div className={`${classNamePrefix}__footer-left-title`}>
-                    <span>“LET ART</span>
-                    <div
-                      className={`${classNamePrefix}__footer-left-title-highlight`}
-                    >
-                      UNLOCK
-                    </div>
-                    <span> YOUR BUSINESS “</span>
-                  </div>
-                </div>
-              </AnimationOnScroll>
-
-              <AnimationOnScroll
-                animateIn="animate__slideInUp"
-                animateOnce={true}
-              >
-                <div className={`${classNamePrefix}__footer-right`}>
+              <div className={`${classNamePrefix}__footer-left`}>
+                <div className={`${classNamePrefix}__footer-left-title`}>
+                  <span>“LET ART</span>
                   <div
-                    className={`${classNamePrefix}__footer-info-group-title`}
+                    className={`${classNamePrefix}__footer-left-title-highlight`}
                   >
-                    Foolist Creative
+                    UNLOCK
                   </div>
-
-                  <span
-                    className={`${classNamePrefix}__footer-info-group-text`}
-                  >
-                    Foolist.vn
-                  </span>
-
-                  <div className={`${classNamePrefix}__footer-info-group`}>
-                    {infoMocks.map((i) => (
-                      <span key={i.id}>{t(i.text)}</span>
-                    ))}
-                  </div>
+                  <span> YOUR BUSINESS “</span>
                 </div>
-              </AnimationOnScroll>
+              </div>
+
+              <div className={`${classNamePrefix}__footer-right`}>
+                <div className={`${classNamePrefix}__footer-info-group-title`}>
+                  Foolist Creative
+                </div>
+
+                <span className={`${classNamePrefix}__footer-info-group-text`}>
+                  Foolist.vn
+                </span>
+
+                <div className={`${classNamePrefix}__footer-info-group`}>
+                  {infoMocks.map((i) => (
+                    <span key={i.id}>{t(i.text)}</span>
+                  ))}
+                </div>
+              </div>
             </section>
           </div>
         </>
