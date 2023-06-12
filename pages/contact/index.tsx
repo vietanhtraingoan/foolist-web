@@ -8,6 +8,8 @@ import MiniFooter from "../components/miniFooter";
 import CustomCheckbox from "../components/customCheckbox";
 import { InfoCircleOutlined } from "@ant-design/icons";
 import LoadingView from "../loadingView";
+import PhoneInput from "react-phone-number-input";
+import vn from "react-phone-number-input/locale/vi.json";
 
 const classNamePrefix = "contact-page";
 
@@ -21,11 +23,14 @@ const ContactPage = (
 
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState<string>();
   const [message, setMessage] = useState("");
 
   const [firstCheck, setFirstCheck] = useState<boolean>(false);
   const [secondCheck, setSecondCheck] = useState<boolean>(false);
+  const [thirdCheck, setThirdCheck] = useState<boolean>(false);
+  const [fourthCheck, setFourthCheck] = useState<boolean>(false);
+  const [fifthCheck, setFifthCheck] = useState<boolean>(false);
 
   const [errorMessage, setErrorMessage] = useState<string>("");
   const [showNameError, setShowNameError] = useState<boolean>(false);
@@ -33,7 +38,7 @@ const ContactPage = (
 
   const [loadingPage, setLoadingPage] = useState(true);
 
-  const isValidEmail = /\S+@\S+\.\S+/;
+  const isValidEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
   const resetInput = () => {
     setName("");
@@ -184,7 +189,7 @@ const ContactPage = (
                   ""
                 )}
 
-                {email && !isValidEmail.test(email) && showNameError ? (
+                {email && !isValidEmail.test(email) && showEmailError ? (
                   <div className={`${classNamePrefix}__form-error`}>
                     <InfoCircleOutlined
                       className={`${classNamePrefix}__form-error-icon`}
@@ -197,19 +202,17 @@ const ContactPage = (
                 )}
               </div>
 
-              <div className={`${classNamePrefix}__form-item`}>
-                <input
-                  type="number"
-                  value={phone}
-                  maxLength={10}
-                  name="phone"
-                  onChange={(e) => setPhone(e.target.value)}
+              <div className={`${classNamePrefix}__form-item-phone`}>
+                <PhoneInput
+                  defaultCountry="VN"
                   placeholder={t("your-phone")}
-                  style={{
-                    border:
-                      errorMessage !== "" && !phone ? "1px solid red" : "none",
-                  }}
+                  international
+                  labels={vn}
+                  value={phone}
+                  onChange={setPhone}
+                  limitMaxLength
                 />
+
                 {errorMessage !== "" && !phone ? (
                   <div className={`${classNamePrefix}__form-error`}>
                     <InfoCircleOutlined
@@ -241,7 +244,7 @@ const ContactPage = (
                       onClick={() => setFirstCheck(!firstCheck)}
                     />
                     <div onClick={() => setFirstCheck(!firstCheck)}>
-                      Website design & Development
+                      {t("service.tvc")}
                     </div>
                   </div>
 
@@ -252,7 +255,40 @@ const ContactPage = (
                       onClick={() => setSecondCheck(!secondCheck)}
                     />
                     <div onClick={() => setSecondCheck(!secondCheck)}>
-                      Media
+                      {t("service.product-design")}
+                    </div>
+                  </div>
+
+                  <div className={`${classNamePrefix}__service-item`}>
+                    <CustomCheckbox
+                      checked={thirdCheck}
+                      onChange={(e) => setThirdCheck(e.target.value)}
+                      onClick={() => setThirdCheck(!thirdCheck)}
+                    />
+                    <div onClick={() => setThirdCheck(!thirdCheck)}>
+                      {t("service.website-development")}
+                    </div>
+                  </div>
+
+                  <div className={`${classNamePrefix}__service-item`}>
+                    <CustomCheckbox
+                      checked={fourthCheck}
+                      onChange={(e) => setFourthCheck(e.target.value)}
+                      onClick={() => setFourthCheck(!fourthCheck)}
+                    />
+                    <div onClick={() => setFourthCheck(!fourthCheck)}>
+                      {t("service.mobile-app-development")}
+                    </div>
+                  </div>
+
+                  <div className={`${classNamePrefix}__service-item`}>
+                    <CustomCheckbox
+                      checked={fifthCheck}
+                      onChange={(e) => setFifthCheck(e.target.value)}
+                      onClick={() => setFifthCheck(!fifthCheck)}
+                    />
+                    <div onClick={() => setFifthCheck(!fifthCheck)}>
+                      {t("service.erp")}
                     </div>
                   </div>
                 </div>
@@ -281,9 +317,9 @@ const ContactPage = (
               </div>
 
               <div className={`${classNamePrefix}__map-title`}>
-                <div>64 VO THI SAU</div>
-                <div>TAN DINH WARD</div>
-                <div>DISTRICT 1 - TP.HCM CITY</div>
+                <div>{t("info.floor3-vietphone-building")}</div>
+                <div>{t("info.64vothisau-tandinhward-district1")}</div>
+                <div>{t("info.hochiminhcity-vietnam")}</div>
               </div>
             </section>
 

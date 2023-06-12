@@ -1,6 +1,7 @@
 import { DefaultSeo } from "next-seo";
 import "animate.css";
 import "animate.css/animate.min.css";
+import 'react-phone-number-input/style.css'
 import Head from "next/head";
 
 import SEO from "../next-seo.config";

@@ -115,7 +115,7 @@ const ProjectPage = (
                 {projectMocks
                   ? projectMocks.map((p) => (
                       <div
-                        className={`${classNamePrefix}__project-item animate__animated animate__fadeIn`}
+                        className={`${classNamePrefix}__project-item`}
                         style={{
                           backgroundImage: `url(${p.imgUrl.src})`,
                         }}

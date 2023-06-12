@@ -3,7 +3,7 @@
 
   width: 100%;
   height: 100%;
-  
+
   padding-top: 120px;
 
   &__introduction-container {
@@ -25,18 +25,15 @@
     align-items: flex-start;
 
     margin: 77px 0;
+  }
 
-    span {
-      font-family: "Montserrat";
-      font-style: normal;
-      font-weight: 800;
-      font-size: 190px;
-      line-height: 156px;
-      text-shadow: 2px 2px 0 #f6a5c1, 2px -2px 0 #f6a5c1, -2px 2px 0 #f6a5c1,
-        -2px -2px 0 #f6a5c1, 2px 0px 0 #f6a5c1, 0px 2px 0 #f6a5c1,
-        -2px 0px 0 #f6a5c1, 0px -2px 0 #f6a5c1,
-        0px 0px 3px rgba(246, 165, 193, 0);
-    }
+  &__introduction-title-brand {
+    font-family: "Arial";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 190px;
+    line-height: 156px;
+    color: #f6a5c1;
   }
 
   &__scroller {
@@ -55,9 +52,9 @@
       top: 0;
       animation: slide 8s infinite;
 
-      font-family: "Montserrat";
-      font-style: normal;
-      font-weight: 800;
+      font-family: "Times New Roman";
+      font-style: italic;
+      font-weight: 400;
       font-size: 160px;
       text-shadow: 2px 2px 0 #f6a5c1, 2px -2px 0 #f6a5c1, -2px 2px 0 #f6a5c1,
         -2px -2px 0 #f6a5c1, 2px 0px 0 #f6a5c1, 0px 2px 0 #f6a5c1,
@@ -90,9 +87,9 @@
   &__introduction-text-group {
     width: 60%;
 
-    div{
+    div {
       margin: 40px 0;
-    } 
+    }
 
     span {
       font-family: "Montserrat";
@@ -143,9 +140,9 @@
     border-top: 1px solid #f8a5c2;
 
     span {
-      font-family: "Montserrat";
-      font-style: normal;
-      font-weight: 800;
+      font-family: "Times New Roman";
+      font-style: italic;
+      font-weight: 400;
       font-size: 64px;
       line-height: 78px;
       color: #ffffff;
@@ -176,11 +173,11 @@
     width: 50%;
   }
 
-  &__responsive-client-container{
-    display: none;   
+  &__responsive-client-container {
+    display: none;
   }
 
-  &__service-section{
+  &__service-section {
     width: 100%;
   }
 
@@ -236,7 +233,7 @@
     width: 100%;
     height: 400px;
 
-    padding: 60px;
+    padding: 60px 138px;
 
     background: #000000;
   }
@@ -251,15 +248,16 @@
   }
 
   &__footer-right {
-    width: 40%;
+    width: 100%;
   }
 
   &__footer-info-group-title {
     cursor: pointer;
 
-    font-family: "Montserrat";
+    font-family: "Arial";
     font-size: 30px;
     font-weight: 700;
+    font-style: italic;
     color: #fafafa;
     transition: all 0.4s;
 
@@ -295,12 +293,12 @@
     flex-direction: column;
     align-items: flex-start;
 
-    width: 720px;
+    width: 800px;
 
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 700;
-    font-size: 45px;
+    font-size: 50px;
     line-height: 88px;
     color: #ffffff;
   }
@@ -308,13 +306,18 @@
   &__footer-left-title-highlight {
     width: 57%;
 
+    padding-left: 50px;
+
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 700;
-    font-size: 85px;
+    font-size: 40px;
     line-height: 88px;
     font-style: italic;
-    color: #ffffff;
+    color: black;
+    text-shadow: 2px 2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff,
+      -2px -2px 0 #ffffff, 2px 0px 0 #ffffff, 0px 2px 0 #ffffff,
+      -2px 0px 0 #ffffff, 0px -2px 0 #ffffff, 0px 0px 3px rgba(246, 165, 193, 0);
   }
 }
 
@@ -335,14 +338,14 @@
 
 @media screen and (max-width: 768px) {
   .home-page {
-    &__first-section{
+    &__first-section {
       padding: 0;
     }
 
-    &__introduction-text-group{
+    &__introduction-text-group {
       width: 75%;
 
-      span{
+      span {
         font-size: 35px;
       }
     }
@@ -359,7 +362,7 @@
       display: block;
     }
 
-    &__responsive-client-container{
+    &__responsive-client-container {
       display: block;
     }
 

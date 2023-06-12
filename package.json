@@ -29,6 +29,7 @@
     "react-fast-marquee": "^1.6.0",
     "react-firebaseui": "^6.0.0",
     "react-i18next": "^12.1.5",
+    "react-phone-number-input": "^3.2.23",
     "react-redux": "^8.0.5",
     "react-responsive-masonry": "^2.1.7",
     "sass": "^1.58.1"

@@ -14,16 +14,18 @@
 
     margin-top: 80px;
 
-    font-family: "Montserrat";
+    font-family: "Arial";
     font-style: normal;
     font-weight: 700;
     font-size: 59.1685px;
     line-height: 104px;
     color: #ffffff;
+    text-transform: uppercase;
   }
 
   &__introduction-wrapper-text {
     span {
+      font-style: italic;
       color: #f6a5c1;
     }
   }
@@ -31,7 +33,7 @@
   &__form-title {
     margin-bottom: 20px;
 
-    font-family: "Montserrat";
+    font-family: "Arial";
     font-style: normal;
     font-weight: 700;
     font-size: 33.1453px;
@@ -71,18 +73,22 @@
       margin: 10px 0;
       padding-left: 15px;
 
-      font-family: "Montserrat";
+      border-radius: 10px;
+      border: none;
+
+      font-family: "Arial";
       font-style: normal;
-      font-weight: 500;
+      font-weight: 400;
       font-size: 20px;
       color: #ffffff;
 
       background: rgba(217, 217, 217, 0.2);
-      border-radius: 10px;
 
-      &::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
+      &::placeholder {
+        font-family: "Arial";
+        font-style: normal;
+        font-weight: 400;
+        color: #ffffff;
       }
     }
 
@@ -104,6 +110,66 @@
 
       background: rgba(217, 217, 217, 0.2);
       border-radius: 10px;
+
+      &::placeholder {
+        font-family: "Arial";
+        font-style: normal;
+        font-weight: 400;
+        color: #ffffff;
+      }
+    }
+  }
+
+  &__form-item-phone {
+    width: 100%;
+
+    margin-bottom: 12px;
+
+    .PhoneInput {
+      position: relative;
+
+      .PhoneInputCountry {
+        position: absolute;
+        top: 26px;
+        left: 10px;
+      }
+
+      .PhoneInputCountryIcon {
+        color: #f6a5c1;
+        font-weight: 800;
+      }
+
+      input {
+        outline: none;
+
+        height: 52px;
+
+        margin: 10px 0;
+        padding-left: 40px;
+
+        border-radius: 10px;
+        border: none;
+
+        font-family: "Arial";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        color: #ffffff;
+
+        background: rgba(217, 217, 217, 0.2);
+
+        &::placeholder {
+          font-family: "Arial";
+          font-style: normal;
+          font-weight: 400;
+          color: #ffffff;
+        }
+
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
     }
   }
 
@@ -141,8 +207,6 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-
-    height: 100px;
   }
 
   &__service-item {
@@ -151,12 +215,15 @@
 
     cursor: pointer;
 
+    margin-bottom: 20px;
+
     div {
-      font-family: "Montserrat";
+      font-family: "Arial";
       font-style: normal;
-      font-weight: 500;
+      font-weight: 400;
       font-size: 22px;
       color: #ffffff;
+      text-transform: capitalize;
     }
   }
 
@@ -284,6 +351,30 @@
         font-size: 40px;
 
         &::placeholder {
+          font-size: 40px;
+        }
+      }
+    }
+
+    &__form-item-phone {
+      .PhoneInput {
+        input {
+          height: 120px;
+
+          padding-left: 90px;
+
+          font-size: 40px;
+
+          &::placeholder {
+            font-size: 40px;
+          }
+        }
+
+        .PhoneInputCountry {
+          top: 48px;
+        }
+
+        .PhoneInputCountryIcon {
           font-size: 40px;
         }
       }

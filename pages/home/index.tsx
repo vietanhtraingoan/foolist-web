@@ -45,9 +45,11 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
               className={`${classNamePrefix}__introduction-container`}
             >
               <div className={`${classNamePrefix}__introduction-title`}>
-                <span className="animate__animated animate__fadeInUp">
+                <div
+                  className={`${classNamePrefix}__introduction-title-brand animate__animated animate__fadeInUp`}
+                >
                   Foolist
-                </span>
+                </div>
 
                 <div
                   className={`${classNamePrefix}__scroller animate__animated animate__fadeInUp`}
@@ -107,7 +109,7 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
 
             <section className={`${classNamePrefix}__client-container`}>
               <div className={`${classNamePrefix}__section-title`}>
-                <span> {t("Section_label.client")}</span>
+                <span>{t("Section_label.client")}</span>
               </div>
 
               {ClientMocks ? (
