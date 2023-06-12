@@ -133,7 +133,6 @@ function MyApp({ Component, ...rest }) {
           sizes="16x16"
           href="/images/favicon-16x16.png"
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
       </Head>
 
       {loading ? (
@@ -141,11 +140,13 @@ function MyApp({ Component, ...rest }) {
       ) : (
         <Provider store={store}>
           <TopMenu />
-          <Component {...pageProps} />
-          <div className="floated-language-change">
-            <LanguageChange />
+          <div className="layout">
+            <Component {...pageProps} />
+            <div className="floated-language-change">
+              <LanguageChange />
+            </div>
+            <CustomDialog />
           </div>
-          <CustomDialog />
         </Provider>
       )}
     </>

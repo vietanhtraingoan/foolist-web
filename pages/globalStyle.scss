@@ -16,10 +16,9 @@ body {
   margin: 0 auto;
   box-sizing: border-box;
 
-  width: 100vw;
+  min-width: 1440px;
   min-height: 100vh;
   min-height: -webkit-fill-available;
-  height: 100vh;
   #__next {
     position: relative;
 
@@ -241,7 +240,9 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .floated-language-change {
-    display: none;
+  .layout {
+    .floated-language-change {
+      display: none;
+    }
   }
 }

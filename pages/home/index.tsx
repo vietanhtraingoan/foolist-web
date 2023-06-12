@@ -25,145 +25,121 @@ type Props = {};
 const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation("common");
 
-  const [loadingPage, setLoadingPage] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoadingPage(false);
-    }, 2000);
-  }, []);
-
   return (
-    <>
-      {loadingPage ? (
-        <LoadingView />
-      ) : (
-        <>
-          <div className={classNamePrefix} id="scrolly-div">
-            <section
-              id="first-section"
-              className={`${classNamePrefix}__introduction-container`}
-            >
-              <div className={`${classNamePrefix}__introduction-title`}>
-                <div
-                  className={`${classNamePrefix}__introduction-title-brand animate__animated animate__fadeInUp`}
-                >
-                  Foolist
-                </div>
-
-                <div
-                  className={`${classNamePrefix}__scroller animate__animated animate__fadeInUp`}
-                >
-                  <span>
-                    Creative
-                    <br />
-                    Tech
-                    <br />
-                    Media
-                    <br />
-                    ERP
-                  </span>
-                </div>
-              </div>
-
-              <div className={`${classNamePrefix}__introduction-text`}>
-                <div
-                  className={`${classNamePrefix}__introduction-text-group animate__animated animate__slideInUp animate__slow`}
-                >
-                  <span>{t("About_content.paragraph-1")}</span>
-                  <div />
-                  <span>{t("About_content.paragraph-2")}</span>
-                </div>
-              </div>
-
-              <div
-                className={`${classNamePrefix}__introduction-image-container`}
-              >
-                <IntroductionCarousel />
-              </div>
-            </section>
-
-            <section className={`${classNamePrefix}__grid-project`}>
-              <GridProject />
-            </section>
-
-            <section
-              className={`${classNamePrefix}__project-carousel-container`}
-            >
-              <div className={`${classNamePrefix}__section-title`}>
-                <span>{t("Section_label.product")}</span>
-              </div>
-
-              <ProjectCarousel />
-            </section>
-
-            <section
-              className={`${classNamePrefix}__responsive-client-container`}
-            >
-              <ResponsiveClient />
-            </section>
-
-            <section className={`${classNamePrefix}__service-section`}>
-              <ServiceSection />
-            </section>
-
-            <section className={`${classNamePrefix}__client-container`}>
-              <div className={`${classNamePrefix}__section-title`}>
-                <span>{t("Section_label.client")}</span>
-              </div>
-
-              {ClientMocks ? (
-                <div style={{ width: 1800, marginTop: 100 }}>
-                  <Marquee pauseOnHover>
-                    {ClientMocks.map((c: IClient) => (
-                      <ClientItem key={c.id} data={c} />
-                    ))}
-                  </Marquee>
-                </div>
-              ) : (
-                ""
-              )}
-            </section>
-
-            <section className={`${classNamePrefix}__divider-container`} />
-
-            <section className={`${classNamePrefix}__connection-container`}>
-              <ConnectSection />
-            </section>
-
-            <section className={`${classNamePrefix}__footer-container`}>
-              <div className={`${classNamePrefix}__footer-left`}>
-                <div className={`${classNamePrefix}__footer-left-title`}>
-                  <span>“LET ART</span>
-                  <div
-                    className={`${classNamePrefix}__footer-left-title-highlight`}
-                  >
-                    UNLOCK
-                  </div>
-                  <span> YOUR BUSINESS “</span>
-                </div>
-              </div>
-
-              <div className={`${classNamePrefix}__footer-right`}>
-                <div className={`${classNamePrefix}__footer-info-group-title`}>
-                  Foolist Creative
-                </div>
-
-                <span className={`${classNamePrefix}__footer-info-group-text`}>
-                  Foolist.vn
-                </span>
-
-                <div className={`${classNamePrefix}__footer-info-group`}>
-                  {infoMocks.map((i) => (
-                    <span key={i.id}>{t(i.text)}</span>
-                  ))}
-                </div>
-              </div>
-            </section>
+    <div className={classNamePrefix} id="scrolly-div">
+      <section
+        id="first-section"
+        className={`${classNamePrefix}__introduction-container`}
+      >
+        <div className={`${classNamePrefix}__introduction-title`}>
+          <div
+            className={`${classNamePrefix}__introduction-title-brand animate__animated animate__fadeInUp`}
+          >
+            Foolist
           </div>
-        </>
-      )}
-    </>
+
+          <div
+            className={`${classNamePrefix}__scroller animate__animated animate__fadeInUp`}
+          >
+            <span>
+              Creative
+              <br />
+              Tech
+              <br />
+              Media
+              <br />
+              ERP
+            </span>
+          </div>
+        </div>
+
+        <div className={`${classNamePrefix}__introduction-text`}>
+          <div
+            className={`${classNamePrefix}__introduction-text-group animate__animated animate__slideInUp animate__slow`}
+          >
+            <span>{t("About_content.paragraph-1")}</span>
+            <div />
+            <span>{t("About_content.paragraph-2")}</span>
+          </div>
+        </div>
+
+        <div className={`${classNamePrefix}__introduction-image-container`}>
+          <IntroductionCarousel />
+        </div>
+      </section>
+
+      <section className={`${classNamePrefix}__grid-project`}>
+        <GridProject />
+      </section>
+
+      <section className={`${classNamePrefix}__project-carousel-container`}>
+        <div className={`${classNamePrefix}__section-title`}>
+          <span>{t("Section_label.product")}</span>
+        </div>
+
+        <ProjectCarousel />
+      </section>
+
+      <section className={`${classNamePrefix}__responsive-client-container`}>
+        <ResponsiveClient />
+      </section>
+
+      <section className={`${classNamePrefix}__service-section`}>
+        <ServiceSection />
+      </section>
+
+      <section className={`${classNamePrefix}__client-container`}>
+        <div className={`${classNamePrefix}__section-title`}>
+          <span>{t("Section_label.client")}</span>
+        </div>
+
+        {ClientMocks ? (
+          <div style={{ width: 1800, marginTop: 100 }}>
+            <Marquee pauseOnHover>
+              {ClientMocks.map((c: IClient) => (
+                <ClientItem key={c.id} data={c} />
+              ))}
+            </Marquee>
+          </div>
+        ) : (
+          ""
+        )}
+      </section>
+
+      <section className={`${classNamePrefix}__divider-container`} />
+
+      <section className={`${classNamePrefix}__connection-container`}>
+        <ConnectSection />
+      </section>
+
+      <section className={`${classNamePrefix}__footer-container`}>
+        <div className={`${classNamePrefix}__footer-left`}>
+          <div className={`${classNamePrefix}__footer-left-title`}>
+            <span>“LET ART</span>
+            <div className={`${classNamePrefix}__footer-left-title-highlight`}>
+              UNLOCK
+            </div>
+            <span> YOUR BUSINESS “</span>
+          </div>
+        </div>
+
+        <div className={`${classNamePrefix}__footer-right`}>
+          <div className={`${classNamePrefix}__footer-info-group-title`}>
+            Foolist Creative
+          </div>
+
+          <span className={`${classNamePrefix}__footer-info-group-text`}>
+            Foolist.vn
+          </span>
+
+          <div className={`${classNamePrefix}__footer-info-group`}>
+            {infoMocks.map((i) => (
+              <span key={i.id}>{t(i.text)}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 
