@@ -238,9 +238,7 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .layout {
-    .floated-language-change {
-      display: none;
-    }
+  .floated-language-change {
+    display: none;
   }
 }
