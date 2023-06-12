@@ -39,7 +39,7 @@ const GridProject = (
         onClick={() => setViewMore(!viewMore)}
       >
         <div className={`${classNamePrefix}__show-more-button`}>
-          <span>{viewMore ? "Show More" : "Show Less"} </span>
+          <span>{viewMore ? "Show Less" : "Show More"} </span>
         </div>
       </div>
     </div>

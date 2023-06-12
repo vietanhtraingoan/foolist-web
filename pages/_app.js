@@ -105,9 +105,13 @@ function MyApp({ Component, ...rest }) {
     );
     Router.events.on("routeChangeError", () => setLoading(false));
     return () => {
-      Router.events.off("routeChangeStart", () => setLoading(true));
-      Router.events.off("routeChangeComplete", () => setLoading(false));
-      Router.events.off("routeChangeError", () => setLoading(false));
+      Router.events.on("routeChangeStart", () => setLoading(true));
+      Router.events.on("routeChangeComplete", () =>
+        setTimeout(() => {
+          setLoading(false);
+        }, 1900)
+      );
+      Router.events.on("routeChangeError", () => setLoading(false));
     };
   }, [Router.events]);
 

@@ -7,6 +7,9 @@ import { setProjectId } from "../../store/project/projectSlice";
 import { GetStaticProps, InferGetStaticPropsType } from "next/types";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { CloseCircleOutlined } from "@ant-design/icons";
+import { useTranslation } from "next-i18next";
+import ConnectSection from "../components/connectSection";
+import GridProject from "../components/gridProject";
 
 const classNamePrefix = "project-page";
 
@@ -18,6 +21,7 @@ const ProjectPage = (
   _props: InferGetStaticPropsType<typeof getStaticProps>
 ) => {
   const dispatch = useDispatch();
+  const { t } = useTranslation();
 
   const [projectSelect, setProjectSelect] = useState<Boolean>(false);
   const [projectIndex, setProjectIndex] = useState(0);
@@ -89,25 +93,42 @@ const ProjectPage = (
         )}
       </div>
 
+      <div className={`${classNamePrefix}__introduction`}>
+        <div className={`${classNamePrefix}__introduction-first`}>
+          <span>{t("About_content.brand-name")}</span>
+          {t("About_content.paragraph-1")}
+        </div>
+
+        <div className={`${classNamePrefix}__introduction-second`}>
+          {t("About_content.paragraph-4")}
+        </div>
+      </div>
+
+      <div className={`${classNamePrefix}__responsive-project-list`}>
+        <GridProject />
+      </div>
+
       <div
         className={`${classNamePrefix}__project-list-wrapper`}
         style={{
           zIndex: projectSelect ? -1 : 10,
         }}
       >
-        <div className={`${classNamePrefix}__project-list-container`}>
-          {projectMocks
-            ? projectMocks.map((p) => (
-                <div
-                  className={`${classNamePrefix}__project-item`}
-                  style={{
-                    backgroundImage: `url(${p.imgUrl.src})`,
-                  }}
-                  onClick={() => handleProjectSelect(p.id)}
-                ></div>
-              ))
-            : ""}
-        </div>
+        {projectMocks
+          ? projectMocks.map((p) => (
+              <div
+                className={`${classNamePrefix}__project-item`}
+                style={{
+                  backgroundImage: `url(${p.imgUrl.src})`,
+                }}
+                onClick={() => handleProjectSelect(p.id)}
+              ></div>
+            ))
+          : ""}
+      </div>
+
+      <div className={`${classNamePrefix}__connect`}>
+        <ConnectSection />
       </div>
     </div>
   );
