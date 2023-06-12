@@ -139,7 +139,7 @@ function MyApp({ Component, ...rest }) {
         <LoadingView />
       ) : (
         <Provider store={store}>
-          {isPrivateMenu && <TopMenu />}
+          <TopMenu />
           {/* <div className="layout"> */}
           <Component {...pageProps} />
           <div className="floated-language-change">

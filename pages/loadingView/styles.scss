@@ -10,18 +10,22 @@
   background: #000000;
 
   &__spinner {
+    position: relative;
+    z-index: 1;
+    
     width: 70.4px;
     height: 70.4px;
     --clr: #f6a5c1;
-    --clr-alpha: rgb(247, 197, 159, 0.1);
+    --clr-alpha: rgb(247, 197, 159);
     animation: spinner 1.6s infinite ease;
     transform-style: preserve-3d;
 
     div {
-      background-color: var(--clr-alpha);
-      height: 100%;
       position: absolute;
+
+      height: 100%;
       width: 100%;
+
       border: 3.5px solid var(--clr);
     }
 
