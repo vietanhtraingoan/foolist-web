@@ -80,15 +80,13 @@
     position: absolute;
 
     span {
-      font-family: "Montserrat";
+      font-family: "Arial";
       font-style: normal;
       font-weight: 700;
       font-size: 20px;
       line-height: 34px;
       color: #ffffff;
     }
-
-   
   }
 
   .text-1 {
@@ -100,9 +98,6 @@
   }
 
   .text-2 {
-    width: 160px;
-    height: 25px;
-
     top: 210px;
     left: 195px;
   }
@@ -150,6 +145,11 @@
     bottom: 120px;
     right: 170px;
   }
+
+  &__image {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -157,9 +157,98 @@
     width: 600px;
     height: 600px;
 
-    &__item{
+    &__item {
       width: 600px;
       height: 600px;
+    }
+
+    &__text {
+      width: 600px;
+      height: 600px;
+    }
+
+    .circle-1 {
+      top: 0;
+      left: 0;
+    }
+
+    .circle-2 {
+      top: 280px;
+      left: -170px;
+    }
+
+    .circle-3 {
+      top: 280px;
+      right: -170px;
+    }
+
+    &__circle-wrapper-2 {
+      top: 105px;
+      left: -65px;
+    }
+
+    &__circle-wrapper-3 {
+      top: 105px;
+      right: -65px;
+    }
+
+    &__text-item {
+      span {
+        font-size: 50px;
+        line-height: 50px;
+      }
+    }
+
+    .text-1 {
+      min-width: 300px;
+
+      top: 150px;
+      left: 260px;
+    }
+
+    .text-2 {
+      min-width: 300px;
+
+      top: 450px;
+      left: 350px;
+    }
+
+    .text-3 {
+      min-width: 300px;
+
+      bottom: -120px;
+      left: 20px;
+    }
+
+    .text-4 {
+      min-width: 300px;
+
+      bottom: -70px;
+      right: -200px;
+    }
+
+    .text-5 {
+      top: 350px;
+      left: 160px;
+
+      width: 80px;
+      height: 50px;
+    }
+
+    .text-6 {
+      top: 350px;
+      right: 20px;
+
+      width: 80px;
+      height: 50px;
+    }
+
+    .text-7 {
+      bottom: -80px;
+      right: 185px;
+
+      width: 80px;
+      height: 50px;
     }
   }
 }

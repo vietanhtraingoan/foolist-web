@@ -295,9 +295,9 @@
     }
   }
 
-  &__fourth-section-title-text-highlight{
+  &__fourth-section-title-text-highlight {
     margin: 10px 0;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Times New Roman", Times, serif;
     font-style: italic;
     font-weight: 700;
     font-size: 100px;
@@ -511,7 +511,7 @@
     }
 
     &__third-section-graph {
-      margin: 160px 0;
+      margin: 150px 0 300px 0;
     }
 
     &__third-section-middle {
@@ -555,7 +555,8 @@
 
       width: 100%;
 
-      margin: 70px 0 0 0;
+      margin: 120px 0;
+      padding-left: 0;
     }
 
     &__fourth-section-item-text {
@@ -580,6 +581,10 @@
         text-align: justify;
         line-height: 70px;
       }
+    }
+
+    &__fifth-section-graph {
+      margin-bottom: 150px;
     }
 
     &__image-divider {

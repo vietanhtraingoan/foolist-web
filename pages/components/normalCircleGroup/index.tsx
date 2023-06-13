@@ -44,7 +44,11 @@ const NormalCircleGroup: React.FC<INormalCircleProps> = (props) => {
                 <span>Thị giác</span>
               </div>
               <div className={`${classNamePrefix}__text-item text-2`}>
-                <Image src={logo} alt="" width={60} height={60} />
+                <Image
+                  className={`${classNamePrefix}__image`}
+                  src={logo}
+                  alt=""
+                />
               </div>
               <div className={`${classNamePrefix}__text-item text-6`}>
                 <span>Độc nhất</span>
