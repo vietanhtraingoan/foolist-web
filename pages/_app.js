@@ -101,7 +101,7 @@ function MyApp({ Component, ...rest }) {
     Router.events.on("routeChangeComplete", () =>
       setTimeout(() => {
         setLoading(false);
-      }, 1500)
+      }, 1900)
     );
     Router.events.on("routeChangeError", () => setLoading(false));
     return () => {
@@ -143,8 +143,8 @@ function MyApp({ Component, ...rest }) {
         <LoadingView />
       ) : (
         <Provider store={store}>
-          <TopMenu />
           <div className="layout">
+            <TopMenu />
             <Component {...pageProps} />
             <div className="floated-language-change">
               <LanguageChange />
