@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
@@ -14,9 +14,7 @@ import { IClient } from "../../utils/types/clientTypes";
 import ConnectSection from "../components/connectSection";
 import GridProject from "../components/gridProject";
 import ResponsiveClient from "../components/responsiveClient";
-import { AnimationOnScroll } from "react-animation-on-scroll";
 import ServiceSection from "../components/serviceSection";
-import LoadingView from "../loadingView";
 
 const classNamePrefix = "home-page";
 
