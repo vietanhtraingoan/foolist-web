@@ -90,6 +90,8 @@ const ContactPage = (
     }
   };
 
+  console.log(process.env.NEXT_PUBLIC_CAPTCHA_SITE_KEY)
+
   return (
     <div className={classNamePrefix}>
       <section className={`${classNamePrefix}__introduction-wrapper`}>
