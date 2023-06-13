@@ -98,12 +98,18 @@ function MyApp({ Component, ...rest }) {
 
   useEffect(() => {
     Router.events.on("routeChangeStart", () => setLoading(true));
-    Router.events.on("routeChangeComplete", () => setLoading(false));
-    Router.events.on("routeChangeError", () => setLoading(false));
+    Router.events.on("routeChangeComplete", () =>
+      setTimeout(() => {
+        setLoading(false);
+      }, 1500)
+    );
     return () => {
-      Router.events.on("routeChangeStart", () => setLoading(true));
-      Router.events.on("routeChangeComplete", () => setLoading(false));
-      Router.events.on("routeChangeError", () => setLoading(false));
+      Router.events.off("routeChangeStart", () => setLoading(true));
+      Router.events.off("routeChangeComplete", () =>
+        setTimeout(() => {
+          setLoading(false);
+        }, 1500)
+      );
     };
   }, [Router.events]);
 
