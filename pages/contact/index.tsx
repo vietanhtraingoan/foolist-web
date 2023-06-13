@@ -1,15 +1,15 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useTranslation } from "next-i18next";
 import { useDispatch } from "react-redux";
 import { openDialog } from "../../store/customDialog/dialogSlice";
 import MiniFooter from "../components/miniFooter";
 import CustomCheckbox from "../components/customCheckbox";
 import { InfoCircleOutlined } from "@ant-design/icons";
-import LoadingView from "../loadingView";
 import PhoneInput from "react-phone-number-input";
 import vn from "react-phone-number-input/locale/vi.json";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const classNamePrefix = "contact-page";
 
@@ -276,12 +276,18 @@ const ContactPage = (
             </div>
           </div>
 
-          <button
-            className={`${classNamePrefix}__confirm-button`}
-            type="submit"
-          >
-            <span>{t("submit-button")}</span>
-          </button>
+          <div>
+            <div>
+              <ReCAPTCHA size="normal" sitekey={process.env.NEXT_PUBLIC_CAPTCHA_SITE_KEY} />
+            </div>
+
+            <button
+              className={`${classNamePrefix}__confirm-button`}
+              type="submit"
+            >
+              <span>{t("submit-button")}</span>
+            </button>
+          </div>
         </div>
       </form>
 
