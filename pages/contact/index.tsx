@@ -1,6 +1,6 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "next-i18next";
 import { useDispatch } from "react-redux";
 import { openDialog } from "../../store/customDialog/dialogSlice";
@@ -35,6 +35,8 @@ const ContactPage = (
   const [errorMessage, setErrorMessage] = useState<string>("");
   const [showNameError, setShowNameError] = useState<boolean>(false);
   const [showEmailError, setShowEmailError] = useState<boolean>(false);
+
+  const [captchaKey, setCaptchaKey] = useState<string>();
 
   const isValidEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
@@ -90,7 +92,10 @@ const ContactPage = (
     }
   };
 
-  console.log(process.env.NEXT_PUBLIC_CAPTCHA_SITE_KEY)
+  useEffect(() => {
+    if (process.env.NEXT_PUBLIC_CAPTCHA_SITE_KEY)
+      setCaptchaKey(process.env.NEXT_PUBLIC_CAPTCHA_SITE_KEY);
+  }, []);
 
   return (
     <div className={classNamePrefix}>
@@ -280,7 +285,10 @@ const ContactPage = (
 
           <div>
             <div>
-              <ReCAPTCHA size="normal" sitekey={process.env.NEXT_PUBLIC_CAPTCHA_SITE_KEY} />
+              <ReCAPTCHA
+                size="normal"
+                sitekey="6Lf-NZImAAAAAOI40zC4yrGbjAcieRkDPf_IkcO7"
+              />
             </div>
 
             <button
