@@ -12,6 +12,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import MiniFooter from "../components/miniFooter";
 import { AnimationOnScroll } from "react-animation-on-scroll";
+import EmployeeSlider from "../components/employeeSlider";
 
 const classNamePrefix = "about-page";
 
@@ -310,6 +311,10 @@ const AboutPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
             <div className={`${classNamePrefix}__employee-group-line`}></div>
           </div>
         </AnimationOnScroll>
+
+        <div className={`${classNamePrefix}__employee-slider`}>
+          <EmployeeSlider />
+        </div>
       </section>
 
       <TextSlider text="- FOOLIST - CREATIVE - MEDIA - TECHNOLOGY" />

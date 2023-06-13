@@ -442,6 +442,10 @@
     height: 2px;
     background: #ffffff;
   }
+
+  &__employee-slider{
+    margin: 20px 0;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -504,6 +508,8 @@
 
     &__third-section-bottom {
       flex-direction: column-reverse;
+
+      width: 100%;
     }
 
     &__third-section-top {
@@ -511,6 +517,7 @@
     }
 
     &__third-section-graph {
+      width: 100%;
       margin: 150px 0 300px 0;
     }
 
@@ -597,6 +604,11 @@
 
     &__footer {
       display: none;
+    }
+
+    &__image{
+      width: 120px;
+      height: 120px;
     }
   }
 }

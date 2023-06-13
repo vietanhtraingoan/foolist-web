@@ -1,3 +1,17 @@
 .employee-slider{
-    
+    &__item{
+        width: 250px;
+        height: 350px;
+
+        margin: 10px;
+
+        
+    }
+
+    &__item-image{
+        width: 250px;
+        height: 350px;
+
+        border-radius: 15px;
+    }
 }
