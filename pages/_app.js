@@ -104,8 +104,8 @@ function MyApp({ Component, ...rest }) {
       }, 1500)
     );
     return () => {
-      Router.events.off("routeChangeStart", () => setLoading(true));
-      Router.events.off("routeChangeComplete", () =>
+      Router.events.on("routeChangeStart", () => setLoading(true));
+      Router.events.on("routeChangeComplete", () =>
         setTimeout(() => {
           setLoading(false);
         }, 1500)

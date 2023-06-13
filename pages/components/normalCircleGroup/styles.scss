@@ -152,9 +152,14 @@
   }
 }
 
-// @media screen and (max-width: 768px) {
-//   .normal-circle-group {
-//     width: 450px;
-//     height: 450px;
-//   }
-// }
+@media screen and (max-width: 768px) {
+  .normal-circle-group {
+    width: 600px;
+    height: 600px;
+
+    &__item{
+      width: 600px;
+      height: 600px;
+    }
+  }
+}
