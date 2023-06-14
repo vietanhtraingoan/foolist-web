@@ -47,6 +47,7 @@ import "../pages/services/styles.scss";
 import "../pages/words/styles.scss";
 import "../pages/wordDetail/styles.scss";
 import "../pages/loadingView/styles.scss";
+import "../pages/serviceDetail/styles.scss";
 
 import "./globalStyle.scss";
 import { useEffect, useState } from "react";

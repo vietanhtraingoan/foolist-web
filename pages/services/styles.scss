@@ -1,3 +1,164 @@
-.service-page{
-    
+.service-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+
+  background: #000000;
+
+  &__slogan {
+    width: 100%;
+
+    margin: 200px 0 50px 0;
+    padding: 0 60px;
+
+    div:nth-child(1) {
+      margin-bottom: 40px;
+      padding-right: 400px;
+
+      font-family: "Arial";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 38.2368px;
+      line-height: 36px;
+      color: #ffffff;
+    }
+
+    div:nth-child(2) {
+      padding-left: 400px;
+
+      font-family: "Times New Roman", Times, serif;
+      font-style: italic;
+      font-weight: 700;
+      font-size: 38.2368px;
+      line-height: 36px;
+      color: #eeeeee;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    min-height: 700px;
+
+    margin: 54px 0;
+    padding: 0 60px;
+  }
+
+  &__list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 22%;
+    height: 800px;
+
+    cursor: pointer;
+  }
+
+  &__list-item-image {
+    flex: 1;
+
+    width: 100%;
+
+    border-radius: 20px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__list-item-title {
+    width: 202px;
+    height: 61px;
+
+    margin-top: 70.72px;
+
+    font-family: "Arial";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38.2368px;
+    line-height: 36px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__slogan-highlight {
+    margin: 54px 0;
+    span {
+      font-family: "Times New Roman", Times, serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 45px;
+      line-height: 36px;
+      color: #f6a5c1;
+      font-style: italic;
+    }
+  }
+
+  &__connect {
+    width: 100%;
+  }
+
+  &__footer {
+    width: 100%;
+
+    padding: 0 20px;
+
+    background: #000000;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .service-page {
+    &__list {
+      flex-direction: column;
+      justify-content: unset;
+
+      margin-top: 100px;
+    }
+
+    &__list-item {
+      flex-direction: row;
+      align-items: center;
+
+      width: 100%;
+      height: unset;
+
+      margin-bottom: 50px;
+    }
+
+    &__list-item-image {
+      height: 400px;
+
+      margin-right: 50px;
+    }
+
+    &__list-item-title {
+      width: 300px;
+
+      margin-top: 0;
+
+      font-size: 50px;
+      text-align: left;
+      line-height: 70px;
+    }
+
+    &__slogan-highlight {
+      padding: 0 60px;
+
+      text-align: center;
+      line-height: 40px;
+    }
+
+    &__slogan {
+      margin: 300px 0 50px 0;
+    }
+  }
 }

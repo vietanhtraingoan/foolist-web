@@ -92,6 +92,11 @@
     "technology-development": "technology development",
     "website-development": "websites development",
     "mobile-app-development": "Mobile application development",
-    "erp": "erp"
+    "erp": "erp",
+    "slogan": {
+      "slogan1": "Foolist Creative always strives to bring creative, high-quality and effective solutions to customers.",
+      "slogan2": "Are you looking for a creative and reliable partner to help you build your brand and grow your business? Do you want high-quality, unique, and effective products and services?",
+      "slogan3": "Let Foolist Creative help you explore the potential of art in business"
+    }
   }
 }

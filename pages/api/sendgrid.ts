@@ -6,7 +6,7 @@ async function sendEmail(req, res) {
   try {
     await sendgrid.send({
       to: "tuanbinh.35@gmail.com",
-      from: "info@foolist.vn",
+      from: "binhtuandang35@gmail.com",
       subject: "Request for more information about services.",
       html: `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
       <html lang="en">

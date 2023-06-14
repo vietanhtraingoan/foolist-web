@@ -25,6 +25,12 @@ export const PrivateRoutes = [
     name: "Projects",
     index: 2,
   },
+  {
+    path: "/services",
+    element: <ServicesPage />,
+    name: "Services",
+    index: 3,
+  },
   // {
   //   path: "/words",
   //   element: <WordsPage />,
@@ -41,7 +47,7 @@ export const PrivateRoutes = [
     path: "/contact",
     element: <ContactPage />,
     name: "Contact Us",
-    index: 5,
+    index: 4,
   },
 ];
 
