@@ -35,7 +35,7 @@ const ServicesPage = (
         {ServicesMock
           ? ServicesMock.map((s) => (
               <div
-                className={`${classNamePrefix}__list-item`}
+                className={`${classNamePrefix}__list-item animate__animated animate__zoomIn`}
                 key={s.id}
                 onClick={() => router.push(`/serviceDetail?id=${s.id}`)}
               >

@@ -154,8 +154,12 @@
     &__slogan-highlight {
       padding: 0 60px;
 
-      text-align: center;
-      line-height: 40px;
+      span{
+        font-size: 35px;
+        text-align: center;
+        line-height: 40px;
+      }
+  
     }
 
     &__slogan {
