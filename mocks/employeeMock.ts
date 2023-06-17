@@ -14,35 +14,35 @@ export const EmployeeMock = [
     imgUrl: emp
   },
   {
-    id: 1,
+    id: 2,
     imgUrl: emp1
   },
   {
-    id: 1,
+    id: 3,
     imgUrl: emp2
   },
   {
-    id: 1,
+    id: 4,
     imgUrl: emp3
   },
   {
-    id: 1,
+    id: 5,
     imgUrl: emp4
   },
   {
-    id: 1,
+    id: 6,
     imgUrl: emp5
   },
   {
-    id: 1,
+    id: 7,
     imgUrl: emp6
   },
   {
-    id: 1,
+    id: 8,
     imgUrl: emp7
   },
   {
-    id: 1,
+    id: 9,
     imgUrl: emp8
   },
 ];

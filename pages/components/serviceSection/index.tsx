@@ -16,7 +16,7 @@ const ServiceSection = (
   _props: InferGetStaticPropsType<typeof getStaticProps>
 ) => {
   const router = useRouter();
-  const {t} = useTranslation()
+  const { t } = useTranslation();
 
   return (
     <div className={classNamePrefix}>
@@ -35,33 +35,29 @@ const ServiceSection = (
       </div>
 
       <div className={`${classNamePrefix}__content`}>
-        <div className={`${classNamePrefix}__content-item`}>
-          <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}>
+        <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}>
+          <div className={`${classNamePrefix}__content-item`}>
             <div className={`${classNamePrefix}__content-item-title`}>
-              {t("service.media")}
+              <span> {t("service.media")}</span>
             </div>
-          </AnimationOnScroll>
 
-          <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}>
             <div className={`${classNamePrefix}__content-item-list`}>
               <ul>
                 <li>{t("service.tvc")}</li>
                 <li>{t("service.product-design")}</li>
               </ul>
             </div>
-          </AnimationOnScroll>
-        </div>
+          </div>
+        </AnimationOnScroll>
 
         <div className={`${classNamePrefix}__content-divider`} />
 
-        <div className={`${classNamePrefix}__content-item`}>
-          <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}>
+        <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}>
+          <div className={`${classNamePrefix}__content-item`}>
             <div className={`${classNamePrefix}__content-item-title`}>
-              {t("service.technology-development")}
+              <span>{t("service.technology-development")}</span>
             </div>
-          </AnimationOnScroll>
 
-          <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}>
             <div className={`${classNamePrefix}__content-item-list`}>
               <ul>
                 <li>{t("service.website-development")}</li>
@@ -69,8 +65,8 @@ const ServiceSection = (
                 <li>{t("service.erp")}</li>
               </ul>
             </div>
-          </AnimationOnScroll>
-        </div>
+          </div>
+        </AnimationOnScroll>
       </div>
     </div>
   );

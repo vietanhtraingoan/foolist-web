@@ -116,8 +116,11 @@ function MyApp({ Component, ...rest }) {
 
   return (
     <>
-      <DefaultSeo {...SEO} />
       <Head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1"
+        ></meta>
         <link rel="shortcut icon" href="/images/favicon.ico" />
         <link
           rel="apple-touch-icon"
@@ -137,7 +140,7 @@ function MyApp({ Component, ...rest }) {
           href="/images/favicon-16x16.png"
         />
       </Head>
-
+      <DefaultSeo {...SEO} />
       {loading ? (
         <LoadingView />
       ) : (

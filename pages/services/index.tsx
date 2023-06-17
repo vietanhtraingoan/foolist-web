@@ -58,10 +58,6 @@ const ServicesPage = (
         </div>
       </AnimationOnScroll>
 
-      <div className={`${classNamePrefix}__connect`}>
-        <ConnectSection />
-      </div>
-
       <div className={`${classNamePrefix}__footer`}>
         <MiniFooter />
       </div>
