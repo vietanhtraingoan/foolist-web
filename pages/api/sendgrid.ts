@@ -6,7 +6,7 @@ export default async function handler(req, res) {
   if (req.method === "POST") {
     try {
       await sendgrid.send({
-        to: "tuanbinh.35@gmail,com",
+        to: "tuanbinh.35@gmail.com",
         from: "binhtuandang35@gmail.com",
         subject: "Request for more information about services.",
         html: `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
