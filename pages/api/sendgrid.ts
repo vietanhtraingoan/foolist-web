@@ -3,11 +3,6 @@ import sendgrid from "@sendgrid/mail";
 sendgrid.setApiKey(process.env.NEXT_PUBLIC_MAIL_API_KEY);
 
 export default async function handler(req, res) {
-  if (req.method !== "POST") {
-    res.status(405).send({ message: "Only POST requests allowed" });
-    return;
-  }
-
   if (req.method === "POST") {
     try {
       await sendgrid.send({
@@ -43,7 +38,7 @@ export default async function handler(req, res) {
         </body>
         </html>`,
       });
-      console.log(req.body)
+      console.log(req.body);
     } catch (error) {
       return res.status(error.statusCode).json({ error: error.message });
     }
