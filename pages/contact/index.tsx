@@ -57,7 +57,7 @@ const ContactPage = (
     e.preventDefault();
 
     if (email && phone && name) {
-      const res = await fetch("./api/sendgrid", {
+      const res = await fetch("/api/sendgrid", {
         body: JSON.stringify({
           email: email,
           fullname: name,
@@ -71,6 +71,8 @@ const ContactPage = (
         method: "POST",
         mode: "no-cors",
       });
+
+      console.log(res)
 
       if (res.status !== 200) {
         dispatch(
