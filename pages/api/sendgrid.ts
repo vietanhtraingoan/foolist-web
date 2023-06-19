@@ -2,7 +2,7 @@ import sendgrid from "@sendgrid/mail";
 
 sendgrid.setApiKey(process.env.NEXT_PUBLIC_MAIL_API_KEY);
 
-async function sendEmail(req, res) {
+export async function sendEmail(req, res) {
   try {
     await sendgrid.send({
       to: "tuanbinh.35@gmail.com",
@@ -38,11 +38,10 @@ async function sendEmail(req, res) {
       </html>`,
     });
   } catch (error) {
-    // console.log(error);
+    console.log(error);
     return res.status(error.statusCode).json({ error: error.message });
   }
 
   return res.status(200).json({ error: "" });
 }
 
-export default sendEmail;
