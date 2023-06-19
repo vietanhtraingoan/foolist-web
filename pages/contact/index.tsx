@@ -1,6 +1,6 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "next-i18next";
 import { useDispatch } from "react-redux";
 import { openDialog } from "../../store/customDialog/dialogSlice";
@@ -10,6 +10,7 @@ import { InfoCircleOutlined } from "@ant-design/icons";
 import PhoneInput from "react-phone-number-input";
 import vn from "react-phone-number-input/locale/vi.json";
 import ReCAPTCHA from "react-google-recaptcha";
+import emailjs from "@emailjs/browser";
 
 const classNamePrefix = "contact-page";
 
@@ -20,6 +21,8 @@ const ContactPage = (
 ) => {
   const { t } = useTranslation("common");
   const dispatch = useDispatch();
+
+  const form = useRef();
 
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -56,46 +59,62 @@ const ContactPage = (
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (email && phone && name) {
-      const res = await fetch("/api/sendgrid", {
-        body: JSON.stringify({
-          email: email,
-          fullname: name,
-          phone: phone,
-          message: message,
-        }),
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${process.env.NEXT_PUBLIC_MAIL_API_KEY}`,
+    // if (email && phone && name) {
+    //   const res = await fetch("/api/sendgrid", {
+    //     body: JSON.stringify({
+    //       email: email,
+    //       fullname: name,
+    //       phone: phone,
+    //       message: message,
+    //     }),
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //       Authorization: `Bearer ${process.env.NEXT_PUBLIC_MAIL_API_KEY}`,
+    //     },
+    //     method: "POST",
+    //     mode: "no-cors",
+    //   });
+
+    //   console.log(res)
+
+    //   if (res.status !== 200) {
+    //     dispatch(
+    //       openDialog({
+    //         content: "Oops somethig was wrong with the connection, please come back later or contact directly to",
+    //       })
+    //     );
+    //   } else {
+    //     resetInput();
+    //     dispatch(
+    //       openDialog({
+    //         content: t("send-success"),
+    //       })
+    //     );
+    //   }
+    // } else {
+    //   dispatch(
+    //     openDialog({
+    //       content: t("field-required"),
+    //       actionConfirm: validateEmptyField(),
+    //     })
+    //   );
+    // }
+
+    emailjs
+      .sendForm(
+        "service_n7g124k",
+        "template_0a1ax4n",
+        form.current,
+        "Y3xJNc3cSlGbnq0zl"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
         },
-        method: "POST",
-        mode: "no-cors",
-      });
-
-      console.log(res)
-
-      if (res.status !== 200) {
-        dispatch(
-          openDialog({
-            content: "Oops somethig was wrong with the connection, please come back later or contact directly to",
-          })
-        );
-      } else {
-        resetInput();
-        dispatch(
-          openDialog({
-            content: t("send-success"),
-          })
-        );
-      }
-    } else {
-      dispatch(
-        openDialog({
-          content: t("field-required"),
-          actionConfirm: validateEmptyField(),
-        })
+        (error) => {
+          console.log(error.text);
+        }
       );
-    }
   };
 
   useEffect(() => {
@@ -115,6 +134,7 @@ const ContactPage = (
       <form
         onSubmit={handleSubmit}
         className={`${classNamePrefix}__form-wrapper`}
+        ref={form}
       >
         <div className={`${classNamePrefix}__form-title`}>{t("user-info")}</div>
 
