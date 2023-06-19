@@ -43,8 +43,8 @@ export default async function handler(req, res) {
         </body>
         </html>`,
       });
+      console.log(req.body)
     } catch (error) {
-      console.log(error);
       return res.status(error.statusCode).json({ error: error.message });
     }
   }
