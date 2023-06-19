@@ -73,7 +73,11 @@ const ContactPage = (
       });
 
       if (res.status !== 200) {
-        return;
+        dispatch(
+          openDialog({
+            content: "Oops somethig was wrong with the connection, please come back later or contact directly to",
+          })
+        );
       } else {
         resetInput();
         dispatch(

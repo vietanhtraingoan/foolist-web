@@ -42,6 +42,8 @@ export async function sendEmail(req, res) {
     return res.status(error.statusCode).json({ error: error.message });
   }
 
+  res.redirect(302, "/thank-you")
+
   return res.status(200).json({ error: "" });
 }
 
