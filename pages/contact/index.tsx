@@ -50,71 +50,56 @@ const ContactPage = (
     setMessage("");
   };
 
-  const validateEmptyField = () => {
-    if (!name || !email || !phone) {
-      setErrorMessage(t("empty-field"));
-    }
+  const templateParams = {
+    to_name: "Foolist",
+    from_name: name,
+    message: `
+      You Got a message from ${name}, whose email is ${email}, phone number is ${phone}. ${
+      message ? message : "They may want to know more about the service"
+    }. ${firstCheck ? `they want to know more about TVC and` : ""} ${
+      secondCheck ? `they want to know more about Product Design and` : ""
+    } ${thirdCheck ? `they want to know more about Website and` : ""} ${
+      fourthCheck ? `they want to know more about Mobile Phone and` : ""
+    } ${fifthCheck ? `they want to know more about ERP and` : ""}  
+    `,
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // if (email && phone && name) {
-    //   const res = await fetch("/api/sendgrid", {
-    //     body: JSON.stringify({
-    //       email: email,
-    //       fullname: name,
-    //       phone: phone,
-    //       message: message,
-    //     }),
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //       Authorization: `Bearer ${process.env.NEXT_PUBLIC_MAIL_API_KEY}`,
-    //     },
-    //     method: "POST",
-    //     mode: "no-cors",
-    //   });
-
-    //   console.log(res)
-
-    //   if (res.status !== 200) {
-    //     dispatch(
-    //       openDialog({
-    //         content: "Oops somethig was wrong with the connection, please come back later or contact directly to",
-    //       })
-    //     );
-    //   } else {
-    //     resetInput();
-    //     dispatch(
-    //       openDialog({
-    //         content: t("send-success"),
-    //       })
-    //     );
-    //   }
-    // } else {
-    //   dispatch(
-    //     openDialog({
-    //       content: t("field-required"),
-    //       actionConfirm: validateEmptyField(),
-    //     })
-    //   );
-    // }
-
-    emailjs
-      .sendForm(
-        "service_n7g124k",
-        "template_0a1ax4n",
-        form.current,
-        "Y3xJNc3cSlGbnq0zl"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
+    if (name && email && phone) {
+      emailjs
+        .send(
+          "service_n7g124k",
+          "template_0a1ax4n",
+          templateParams,
+          "Y3xJNc3cSlGbnq0zl"
+        )
+        .then(
+          function (response) {
+            resetInput();
+            dispatch(
+              openDialog({
+                content: t("send-success"),
+              })
+            );
+          },
+          function (error) {
+            dispatch(
+              openDialog({
+                content:
+                  "Oops somethig was wrong with the connection, please come back later or contact directly to",
+              })
+            );
+          }
+        );
+    } else {
+      dispatch(
+        openDialog({
+          content: t("field-required"),
+        })
       );
+    }
   };
 
   useEffect(() => {
