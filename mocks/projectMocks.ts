@@ -6,7 +6,7 @@ import projectSub3 from "../public/static/projectSub3.png";
 
 export const projectMocks = [
   {
-    id: 1,
+    id: "1",
     imgUrl: project1,
     position: 1,
     name: "Travelio",
@@ -23,7 +23,7 @@ export const projectMocks = [
     },
   },
   {
-    id: 2,
+    id: "2",
     imgUrl: project2,
     position: 2,
     name: "Andromeda",
@@ -40,7 +40,7 @@ export const projectMocks = [
     },
   },
   {
-    id: 3,
+    id: "3",
     imgUrl: project3,
     position: 3,
     name: "Clor Spa",

@@ -2,12 +2,16 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 import { projectMocks } from "../../../mocks/projectMocks";
 import Image from "next/image";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
+import { useRouter } from "next/router";
 
 const classNamePrefix = "project-carousel";
 
 const ProjectCarousel = () => {
+  const router = useRouter()
+  
   const [visibleSlide, setVisibleSlide] = useState(3);
   const [targetSlide, setTargetSlide] = useState(3);
+
   const wrapperRef = useRef(null);
   const targetSlideRef = useRef(null);
 
@@ -61,6 +65,7 @@ const ProjectCarousel = () => {
             key={proj.id}
             className={`${classNamePrefix}__carousel-item`}
             ref={index === targetSlide ? targetSlideRef : null}
+            onClick={() => router.push(`/projectDetail?id=${proj.id}`)}
           >
             <Image
               src={proj.imgUrl}
