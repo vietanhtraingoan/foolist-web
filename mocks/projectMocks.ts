@@ -8,29 +8,47 @@ export const projectMocks = [
     imgUrl: project1,
     position: 1,
     name: "Travelio",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis",
-    subContent:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    title: "project.project1.title",
+    intro: "project.project1.intro",
+    paragraph1: {
+      title: "project.project1.paragraph-1.title",
+      content: "project.project1.paragraph-1.content",
+    },
+    paragraph2: {
+      title: "project.project1.paragraph-2.title",
+      content: "project.project1.paragraph-2.content",
+    }
   },
   {
     id: 2,
     imgUrl: project2,
     position: 2,
     name: "Andromeda",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis",
-    subContent:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    title: "project.project2.title",
+    intro: "project.project2.intro",
+    paragraph1: {
+      title: "project.project2.paragraph-1.title",
+      content: "project.project2.paragraph-1.content",
+    },
+    paragraph2: {
+      title: "project.project2.paragraph-2.title",
+      content: "project.project2.paragraph-2.content",
+    }
   },
   {
     id: 3,
     imgUrl: project3,
     position: 3,
     name: "Clor Spa",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis",
-    subContent:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    title: "project.project3.title",
+    intro: "project.project3.intro",
+    paragraph1: {
+      title: "project.project3.paragraph-1.title",
+      content: "project.project3.paragraph-1.content",
+    },
+    paragraph2: {
+      title: "project.project3.paragraph-2.title",
+      content: "project.project3.paragraph-2.content",
+    }
   },
 ];

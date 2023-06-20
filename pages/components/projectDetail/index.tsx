@@ -3,7 +3,7 @@ import AnimatedNextButton from "../animatedNextButton";
 import { useSelector } from "react-redux";
 import { getProjectId } from "../../../store/selector/rootSelector";
 import { projectMocks } from "../../../mocks/projectMocks";
-import project1 from "../../../public/static/project1.jpg";
+import { useTranslation } from "next-i18next";
 
 interface IProjectDetailProps {
   projectSelect?: boolean;
@@ -14,6 +14,7 @@ const classNamePrefix = "project-detail";
 
 const ProjectDetail: React.FC<IProjectDetailProps> = (props) => {
   const { projectSelect, handleClose } = props;
+  const { t } = useTranslation();
 
   const [animation, setAnimation] = useState<boolean>(true);
 
@@ -70,15 +71,47 @@ const ProjectDetail: React.FC<IProjectDetailProps> = (props) => {
                 display: animation ? "none" : "block",
               }}
             >
-              <div className={`${classNamePrefix}__content-main-title`}>
+              <div className={`${classNamePrefix}__content-main-name`}>
                 <span>
                   {projectSelected.name ? projectSelected.name : "No name"}
                 </span>
               </div>
 
+              <div className={`${classNamePrefix}__content-main-title`}>
+                <span>
+                  {projectSelected.title
+                    ? t(projectSelected.title)
+                    : "No title"}
+                </span>
+              </div>
+
               <div className={`${classNamePrefix}__content-main-text`}>
-                {projectSelected.content
-                  ? projectSelected.content
+                {projectSelected.intro
+                  ? t(projectSelected.intro)
+                  : "No introduction"}
+              </div>
+            </div>
+          </section>
+
+          <section className={`${classNamePrefix}__content-sub`}>
+            <div className={`${classNamePrefix}__content-sub-text-wrapper`}>
+              <div className={`${classNamePrefix}__content-main-name`}>
+                <span>
+                  {projectSelected.name ? projectSelected.name : "No name"}
+                </span>
+              </div>
+
+              <div className={`${classNamePrefix}__content-main-title`}>
+                <span>
+                  {projectSelected.paragraph1
+                    ? t(projectSelected.paragraph1.title)
+                    : "No title"}
+                </span>
+              </div>
+
+              <div className={`${classNamePrefix}__content-main-text`}>
+                {projectSelected.paragraph1
+                  ? t(projectSelected.paragraph1.content)
                   : "No content"}
               </div>
             </div>
@@ -88,13 +121,15 @@ const ProjectDetail: React.FC<IProjectDetailProps> = (props) => {
             <div className={`${classNamePrefix}__content-sub-text-wrapper`}>
               <div className={`${classNamePrefix}__content-main-title`}>
                 <span>
-                  {projectSelected.name ? projectSelected.name : "No name"}
+                  {projectSelected.paragraph2
+                    ? t(projectSelected.paragraph2.title)
+                    : "No title"}
                 </span>
               </div>
 
               <div className={`${classNamePrefix}__content-main-text`}>
-                {projectSelected.subContent
-                  ? projectSelected.subContent
+                {projectSelected.paragraph2
+                  ? t(projectSelected.paragraph2.content)
                   : "No content"}
               </div>
             </div>

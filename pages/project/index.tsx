@@ -122,6 +122,7 @@ const ProjectPage = (
                   backgroundImage: `url(${p.imgUrl.src})`,
                 }}
                 onClick={() => handleProjectSelect(p.id)}
+                key={p.id}
               ></div>
             ))
           : ""}

@@ -36,6 +36,13 @@
     font-size: 20px;
   }
 
+  &__next-button{
+    position: absolute;
+    z-index: 12;
+    bottom: 10px;
+    right: 30px;
+  }
+
   &__introduction {
     display: none;
 
