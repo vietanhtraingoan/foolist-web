@@ -35,7 +35,7 @@ const ProjectPage = (
     );
   };
 
-  const handleProjectSelect = (id: number) => {
+  const handleProjectSelect = (id: string) => {
     setProjectSelect(true);
     dispatch(
       setProjectId({
