@@ -115,9 +115,27 @@ const ProjectDetail: React.FC<IProjectDetailProps> = (props) => {
                   : "No content"}
               </div>
             </div>
+
+            <div
+              className={`${classNamePrefix}__content-sub-image`}
+              style={{
+                backgroundImage: `url(${
+                  projectSelected.subImgUrl ? projectSelected.subImgUrl.src : ""
+                })`,
+              }}
+            ></div>
           </section>
 
           <section className={`${classNamePrefix}__content-sub`}>
+            <div
+              className={`${classNamePrefix}__content-sub-image`}
+              style={{
+                backgroundImage: `url(${
+                  projectSelected.subImgUrl ? projectSelected.subImgUrl.src : ""
+                })`,
+              }}
+            ></div>
+
             <div className={`${classNamePrefix}__content-sub-text-wrapper`}>
               <div className={`${classNamePrefix}__content-main-title`}>
                 <span>

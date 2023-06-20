@@ -1,6 +1,8 @@
 import project1 from "../public/static/project1.png";
 import project2 from "../public/static/project2.png";
 import project3 from "../public/static/project3.png";
+import projectSub1 from "../public/static/projectSub1.png";
+import projectSub3 from "../public/static/projectSub3.png";
 
 export const projectMocks = [
   {
@@ -10,6 +12,7 @@ export const projectMocks = [
     name: "Travelio",
     title: "project.project1.title",
     intro: "project.project1.intro",
+    subImgUrl: projectSub1,
     paragraph1: {
       title: "project.project1.paragraph-1.title",
       content: "project.project1.paragraph-1.content",
@@ -17,7 +20,7 @@ export const projectMocks = [
     paragraph2: {
       title: "project.project1.paragraph-2.title",
       content: "project.project1.paragraph-2.content",
-    }
+    },
   },
   {
     id: 2,
@@ -26,6 +29,7 @@ export const projectMocks = [
     name: "Andromeda",
     title: "project.project2.title",
     intro: "project.project2.intro",
+    subImgUrl: projectSub1,
     paragraph1: {
       title: "project.project2.paragraph-1.title",
       content: "project.project2.paragraph-1.content",
@@ -33,7 +37,7 @@ export const projectMocks = [
     paragraph2: {
       title: "project.project2.paragraph-2.title",
       content: "project.project2.paragraph-2.content",
-    }
+    },
   },
   {
     id: 3,
@@ -42,6 +46,7 @@ export const projectMocks = [
     name: "Clor Spa",
     title: "project.project3.title",
     intro: "project.project3.intro",
+    subImgUrl: projectSub3,
     paragraph1: {
       title: "project.project3.paragraph-1.title",
       content: "project.project3.paragraph-1.content",
@@ -49,6 +54,6 @@ export const projectMocks = [
     paragraph2: {
       title: "project.project3.paragraph-2.title",
       content: "project.project3.paragraph-2.content",
-    }
+    },
   },
 ];

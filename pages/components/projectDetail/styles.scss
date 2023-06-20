@@ -109,13 +109,29 @@
   }
 
   &__content-sub {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
     width: 100%;
     min-height: 700px;
+
+    padding: 0 60px;
   }
 
   &__content-sub-text-wrapper {
-    width: 40%;
+    width: 45%;
+  }
 
-    margin-left: 161px;
+  &__content-sub-image{
+    width: 50%;
+    height: 600px;
+
+    border-radius: 20px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 }
