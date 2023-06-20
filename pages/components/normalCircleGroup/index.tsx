@@ -2,6 +2,9 @@ import React from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import logo from "../../../public/static/foolistLogo.png";
 import Image from "next/image";
+import { GetStaticProps } from "next/types";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { DEFAULT_LANG } from "../../../utils/constants";
 
 type IContentCircleType = "1" | "2" | "3";
 
@@ -124,5 +127,11 @@ const NormalCircleGroup: React.FC<INormalCircleProps> = (props) => {
     </div>
   );
 };
+
+// export const getStaticProps: GetStaticProps<Props> = async ({ locale }) => ({
+//   props: {
+//     ...(await serverSideTranslations(locale ?? DEFAULT_LANG, ["common"])),
+//   },
+// });
 
 export default NormalCircleGroup;

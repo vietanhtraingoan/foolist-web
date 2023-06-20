@@ -10,8 +10,10 @@
   &__slogan {
     width: 100%;
 
-    margin: 200px 0 50px 0;
-    padding: 0 60px;
+    margin: 200px 0 0px 0;
+    padding: 100px 60px;
+
+    background: #000000;
 
     div:nth-child(1) {
       margin-bottom: 40px;
@@ -44,10 +46,10 @@
     justify-content: space-between;
 
     width: 100%;
-    min-height: 700px;
 
-    margin: 54px 0;
-    padding: 0 60px;
+    padding: 54px 60px;
+
+    background: #000000;
   }
 
   &__list-item {
@@ -90,7 +92,9 @@
   }
 
   &__slogan-highlight {
-    margin: 54px 0;
+    padding: 54px 0;
+
+    background: #000000;
     span {
       font-family: "Times New Roman", Times, serif;
       font-style: normal;

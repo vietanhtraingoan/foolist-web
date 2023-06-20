@@ -2,7 +2,6 @@ import React from "react";
 import MiniFooter from "../components/miniFooter";
 import { ServicesMock } from "../../mocks/servicesMock";
 import { useRouter } from "next/router";
-import ConnectSection from "../components/connectSection";
 import { GetStaticProps, InferGetStaticPropsType } from "next/types";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
