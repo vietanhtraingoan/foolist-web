@@ -87,9 +87,17 @@
       li {
         margin-bottom: 20px;
 
+        cursor: pointer;
+
         font-size: 1.425rem;
         color: #f2f2f2;
         text-transform: capitalize;
+
+        transition: ease-in-out 0.4s;
+
+        &:hover{
+          color: #f8a5c2;
+        }
       }
     }
   }

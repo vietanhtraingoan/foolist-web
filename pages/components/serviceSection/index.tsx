@@ -43,8 +43,8 @@ const ServiceSection = (
 
             <div className={`${classNamePrefix}__content-item-list`}>
               <ul>
-                <li>{t("service.tvc")}</li>
-                <li>{t("service.product-design")}</li>
+                <li onClick={() => router.push(`/serviceDetail?id=1`)}>{t("service.tvc")}</li>
+                <li onClick={() => router.push(`/serviceDetail?id=2`)}>{t("service.product-design")}</li>
               </ul>
             </div>
           </div>
@@ -60,9 +60,9 @@ const ServiceSection = (
 
             <div className={`${classNamePrefix}__content-item-list`}>
               <ul>
-                <li>{t("service.website-development")}</li>
-                <li>{t("service.mobile-app-development")}</li>
-                <li>{t("service.erp")}</li>
+                <li onClick={() => router.push(`/serviceDetail?id=3`)}>{t("service.website-development")}</li>
+                <li onClick={() => router.push(`/serviceDetail?id=4`)}>{t("service.mobile-app-development")}</li>
+                <li onClick={() => router.push(`/serviceDetail?id=5`)}>{t("service.erp")}</li>
               </ul>
             </div>
           </div>

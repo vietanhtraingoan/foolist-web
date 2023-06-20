@@ -61,6 +61,7 @@ const ConnectSection = (
                   <div
                     className={`${classNamePrefix}__service-item`}
                     key={s.id}
+                    onClick={() => router.push(`/serviceDetail?id=${s.id}`)}
                   >
                     <span>{s.title}</span>
                   </div>
