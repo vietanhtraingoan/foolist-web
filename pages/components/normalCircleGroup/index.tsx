@@ -40,19 +40,64 @@ const NormalCircleGroup: React.FC<INormalCircleProps> = (props) => {
 
       {contentType === "3" && (
         <>
+          <AnimationOnScroll
+            animateIn="animate__zoomIn"
+            animateOnce={true}
+            delay={2}
+          >
+            <div className={`${classNamePrefix}__text-wrapper`}>
+              <div className={`${classNamePrefix}__text`}>
+                <div className={`${classNamePrefix}__text-item text-5`}>
+                  <span>Thị giác</span>
+                </div>
+                <div className={`${classNamePrefix}__text-item text-2`}>
+                  <Image
+                    className={`${classNamePrefix}__image`}
+                    src={logo}
+                    alt=""
+                  />
+                </div>
+                <div className={`${classNamePrefix}__text-item text-6`}>
+                  <span>Độc nhất</span>
+                </div>
+                <div className={`${classNamePrefix}__text-item text-7`}>
+                  <span>Góc nhìn</span>
+                </div>
+              </div>
+            </div>
+            <div className={`${classNamePrefix}__text-wrapper`}>
+              <div className={`${classNamePrefix}__text`}>
+                <div className={`${classNamePrefix}__text-item text-1`}>
+                  <span>Sáng tạo</span>
+                </div>
+                <div className={`${classNamePrefix}__text-item text-2`}>
+                  <Image src={logo} alt="" width={60} height={60} />
+                </div>
+                <div className={`${classNamePrefix}__text-item text-3`}>
+                  <span>Tư duy</span>
+                </div>
+                <div className={`${classNamePrefix}__text-item text-4`}>
+                  <span>Nghệ thuật</span>
+                </div>
+              </div>
+            </div>
+          </AnimationOnScroll>
+        </>
+      )}
+
+      {contentType === "2" && (
+        <AnimationOnScroll
+          animateIn="animate__zoomIn"
+          animateOnce={true}
+          delay={2}
+        >
           <div className={`${classNamePrefix}__text-wrapper`}>
-            <div
-              className={`${classNamePrefix}__text animate__animated animate__zoomIn animate__delay-2s`}
-            >
+            <div className={`${classNamePrefix}__text`}>
               <div className={`${classNamePrefix}__text-item text-5`}>
                 <span>Thị giác</span>
               </div>
               <div className={`${classNamePrefix}__text-item text-2`}>
-                <Image
-                  className={`${classNamePrefix}__image`}
-                  src={logo}
-                  alt=""
-                />
+                <Image src={logo} alt="" width={60} height={60} />
               </div>
               <div className={`${classNamePrefix}__text-item text-6`}>
                 <span>Độc nhất</span>
@@ -62,10 +107,18 @@ const NormalCircleGroup: React.FC<INormalCircleProps> = (props) => {
               </div>
             </div>
           </div>
+        </AnimationOnScroll>
+      )}
 
+      {contentType === "1" && (
+        <AnimationOnScroll
+          animateIn="animate__zoomIn"
+          animateOnce={true}
+          delay={2}
+        >
           <div className={`${classNamePrefix}__text-wrapper`}>
             <div
-              className={`${classNamePrefix}__text animate__animated animate__zoomIn animate__delay-2s`}
+              className={`${classNamePrefix}__text`}
             >
               <div className={`${classNamePrefix}__text-item text-1`}>
                 <span>Sáng tạo</span>
@@ -81,49 +134,7 @@ const NormalCircleGroup: React.FC<INormalCircleProps> = (props) => {
               </div>
             </div>
           </div>
-        </>
-      )}
-
-      {contentType === "2" && (
-        <div className={`${classNamePrefix}__text-wrapper`}>
-          <div
-            className={`${classNamePrefix}__text animate__animated animate__zoomIn animate__delay-1s`}
-          >
-            <div className={`${classNamePrefix}__text-item text-5`}>
-              <span>Thị giác</span>
-            </div>
-            <div className={`${classNamePrefix}__text-item text-2`}>
-              <Image src={logo} alt="" width={60} height={60} />
-            </div>
-            <div className={`${classNamePrefix}__text-item text-6`}>
-              <span>Độc nhất</span>
-            </div>
-            <div className={`${classNamePrefix}__text-item text-7`}>
-              <span>Góc nhìn</span>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {contentType === "1" && (
-        <div className={`${classNamePrefix}__text-wrapper`}>
-          <div
-            className={`${classNamePrefix}__text animate__animated animate__zoomIn animate__delay-1s`}
-          >
-            <div className={`${classNamePrefix}__text-item text-1`}>
-              <span>Sáng tạo</span>
-            </div>
-            <div className={`${classNamePrefix}__text-item text-2`}>
-              <Image src={logo} alt="" width={60} height={60} />
-            </div>
-            <div className={`${classNamePrefix}__text-item text-3`}>
-              <span>Tư duy</span>
-            </div>
-            <div className={`${classNamePrefix}__text-item text-4`}>
-              <span>Nghệ thuật</span>
-            </div>
-          </div>
-        </div>
+        </AnimationOnScroll>
       )}
     </div>
   );
