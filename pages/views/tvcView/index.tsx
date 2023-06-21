@@ -39,8 +39,8 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
           </div>
 
           <div className={`${classNamePrefix}__content-section-text`}>
-              {t(content.second)}
-            </div>
+            {t(content.second)}
+          </div>
         </div>
 
         <div className={`${classNamePrefix}__content-second`}>
@@ -107,14 +107,15 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
         </div>
       </div>
 
-      <div>
-        <div>
+      <div className={`${classNamePrefix}__bottom`}>
+        <div className={`${classNamePrefix}__bottom-video`}>
           <iframe
             src="https://res.cloudinary.com/dufh7rv0n/video/upload/v1687329964/output_compress-video-online.com_ojk2yb.mp4"
             title="W3Schools Free Online Web Tutorials"
             width="100%"
-            height="100%"
-          ></iframe>
+            height={700}
+            style={{ border: "none" }}
+          />
         </div>
 
         <div
