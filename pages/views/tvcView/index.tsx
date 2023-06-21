@@ -110,7 +110,7 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
       <div>
         <div>
           <iframe
-            src="https://drive.google.com/file/d/1vGTzb3bhbq74xBh2gKV0SxSb_De4PT-o/view?pli=1"
+            src="https://res.cloudinary.com/dufh7rv0n/video/upload/v1687329964/output_compress-video-online.com_ojk2yb.mp4"
             title="W3Schools Free Online Web Tutorials"
             width="100%"
             height="100%"
