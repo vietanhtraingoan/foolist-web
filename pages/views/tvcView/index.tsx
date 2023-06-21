@@ -32,6 +32,10 @@ const TVCView = () => {
           <div className={`${classNamePrefix}__content-section-text`}>
             {t(content.first)}
           </div>
+
+          <div className={`${classNamePrefix}__content-section-text`}>
+              {t(content.second)}
+            </div>
         </div>
 
         <div className={`${classNamePrefix}__content-second`}>
@@ -44,7 +48,7 @@ const TVCView = () => {
             </div>
 
             <div className={`${classNamePrefix}__content-section-text`}>
-              {t(content.second)}
+              {t(content.third)}
             </div>
 
             <Image
@@ -63,7 +67,7 @@ const TVCView = () => {
             </div>
 
             <div className={`${classNamePrefix}__content-section-text`}>
-              {t(content.third)}
+              {t(content.fourth)}
             </div>
           </div>
 
@@ -84,7 +88,7 @@ const TVCView = () => {
             </div>
 
             <div className={`${classNamePrefix}__content-section-text`}>
-              {t(content.fourth)}
+              {t(content.fifth)}
             </div>
 
             <Image
@@ -112,7 +116,7 @@ const TVCView = () => {
           className={`${classNamePrefix}__content-section-text`}
           style={{ marginTop: 32 }}
         >
-          {t(content.fifth)}
+          {t(content.sixth)}
         </div>
       </div>
     </div>
