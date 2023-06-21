@@ -6,6 +6,9 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import MiniFooter from "../components/miniFooter";
 import Image from "next/image";
 import TVCView from "../views/tvcView";
+import ProductDesignView from "../views/productDesignView";
+import WebDevelopmentView from "../views/webDevelopmentView";
+import ERPView from "../views/erpView";
 
 type Props = {};
 
@@ -20,6 +23,9 @@ const ServiceDetail = (
     <div className={classNamePrefix}>
       <div className={`${classNamePrefix}__content`}>
         {id === "1" && <TVCView />}
+        {id === "2" && <ProductDesignView />}
+        {id === "3" && <WebDevelopmentView />}
+        {id === "4" && <ERPView />}
       </div>
 
       <div className={`${classNamePrefix}__footer`}>

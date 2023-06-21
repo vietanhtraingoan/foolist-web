@@ -52,7 +52,8 @@ export const ServicesMock = [
       second: "service.detail.detail1.second",
       third: "service.detail.detail1.third",
       fourth: "service.detail.detail1.fourth",
-      fifth: "service.detail.detail1.fifth"
+      fifth: "service.detail.detail1.fifth",
+      sixth: "service.detail.detail1.sixth"
     },
   },
   {
@@ -87,7 +88,8 @@ export const ServicesMock = [
       second: "service.detail.detail2.second",
       third: "service.detail.detail2.third",
       fourth: "service.detail.detail2.fourth",
-      fifth: "service.detail.detail1.fifth"
+      fifth: "service.detail.detail2.fifth",
+      sixth: "service.detail.detail2.sixth",
     },
   },
   {
@@ -118,7 +120,8 @@ export const ServicesMock = [
       second: "service.detail.detail3.second",
       third: "service.detail.detail3.third",
       fourth: "service.detail.detail3.fourth",
-      fifth: "service.detail.detail1.fifth"
+      fifth: "service.detail.detail3.fifth",
+      sixth: "service.detail.detail3.sixth",
     },
   },
   {
@@ -141,7 +144,7 @@ export const ServicesMock = [
       second: "service.detail.detail4.second",
       third: "service.detail.detail4.third",
       fourth: "service.detail.detail4.fourth",
-      fifth: "service.detail.detail1.fifth"
+      fifth: "service.detail.detail4.fifth",
     },
   },
 ];
