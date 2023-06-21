@@ -50,6 +50,11 @@ import "../pages/loadingView/styles.scss";
 import "../pages/serviceDetail/styles.scss";
 import "../pages/projectDetail/styles.scss";
 
+import "../pages/views/tvcView/styles.scss";
+import "../pages/views/productDesignView/styles.scss";
+import "../pages/views/webDevelopmentView/styles.scss";
+import "../pages/views/erpView/styles.scss";
+
 import "./globalStyle.scss";
 import { useEffect, useState } from "react";
 import { PrivateRoutes } from "../routers";
