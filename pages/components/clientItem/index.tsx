@@ -15,7 +15,7 @@ const ClientItem: React.FC<IClientItem> = (props) => {
   return (
     <div className={`${classNamePrefix}__item-wrapper`}>
       {data ? (
-        <Image src={data.imgUrl.src} alt="" width={170} height={85} />
+        <Image src={data.imgUrl.src} alt="" width={350} height={250} />
       ) : (
         ""
       )}
