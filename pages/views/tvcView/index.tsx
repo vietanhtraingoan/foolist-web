@@ -2,10 +2,15 @@ import Image from "next/image";
 import React from "react";
 import { ServicesMock } from "../../../mocks/servicesMock";
 import { useTranslation } from "next-i18next";
+import { GetStaticProps, InferGetStaticPropsType } from "next/types";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { DEFAULT_LANG } from "../../../utils/constants";
+
+type Props = {};
 
 const classNamePrefix = "tvc-view";
 
-const TVCView = () => {
+const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation();
 
   const { subImg, content } = ServicesMock[0];
@@ -122,5 +127,11 @@ const TVCView = () => {
     </div>
   );
 };
+
+export const getStaticProps: GetStaticProps<Props> = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale ?? DEFAULT_LANG, ["common"])),
+  },
+});
 
 export default TVCView;

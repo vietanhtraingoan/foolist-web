@@ -2,10 +2,15 @@ import { useTranslation } from "next-i18next";
 import React from "react";
 import Image from "next/image";
 import { ServicesMock } from "../../../mocks/servicesMock";
+import { GetStaticProps, InferGetStaticPropsType } from "next/types";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { DEFAULT_LANG } from "../../../utils/constants";
+
+type Props = {};
 
 const classNamePrefix = "web-development-view";
 
-const WebDevelopmentView = () => {
+const WebDevelopmentView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation();
 
   const { subImg, content } = ServicesMock[2];
@@ -100,5 +105,11 @@ const WebDevelopmentView = () => {
     </div>
   );
 };
+
+export const getStaticProps: GetStaticProps<Props> = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale ?? DEFAULT_LANG, ["common"])),
+  },
+});
 
 export default WebDevelopmentView;

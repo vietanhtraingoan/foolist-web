@@ -2,10 +2,15 @@ import { useTranslation } from "next-i18next";
 import React from "react";
 import Image from "next/image";
 import { ServicesMock } from "../../../mocks/servicesMock";
+import { GetStaticProps, InferGetStaticPropsType } from "next/types";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { DEFAULT_LANG } from "../../../utils/constants";
+
+type Props = {};
 
 const classNamePrefix = "product-design-view";
 
-const ProductDesignView = () => {
+const ProductDesignView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation();
 
   const { subImg, content } = ServicesMock[1];
@@ -100,5 +105,11 @@ const ProductDesignView = () => {
     </div>
   );
 };
+
+export const getStaticProps: GetStaticProps<Props> = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale ?? DEFAULT_LANG, ["common"])),
+  },
+});
 
 export default ProductDesignView;
