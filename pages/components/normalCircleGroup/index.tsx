@@ -8,6 +8,7 @@ import { DEFAULT_LANG } from "../../../utils/constants";
 
 type IContentCircleType = "1" | "2" | "3";
 
+type Props = {};
 interface INormalCircleProps {
   contentType?: IContentCircleType;
 }
@@ -128,10 +129,10 @@ const NormalCircleGroup: React.FC<INormalCircleProps> = (props) => {
   );
 };
 
-// export const getStaticProps: GetStaticProps<Props> = async ({ locale }) => ({
-//   props: {
-//     ...(await serverSideTranslations(locale ?? DEFAULT_LANG, ["common"])),
-//   },
-// });
+export const getStaticProps: GetStaticProps<Props> = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale ?? DEFAULT_LANG, ["common"])),
+  },
+});
 
 export default NormalCircleGroup;
