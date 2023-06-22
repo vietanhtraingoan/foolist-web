@@ -21,7 +21,6 @@ const ProjectList: React.FC<IProjectList> = (props) => {
             <AnimationOnScroll
               key={item.id}
               animateIn="animate__zoomIn"
-              initiallyVisible={true}
               animateOnce={true}
             >
               <div

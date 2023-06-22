@@ -148,7 +148,7 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
       {showMenu ? (
         <>
           <div
-            className={`responsive-navigation-menu-wrapper animate__animated $animate__slideInRight`}
+            className={`responsive-navigation-menu-wrapper animate__animated animate__slideInRight`}
           >
             <div className="navigation-group-container">
               {PrivateRoutes.map((menuItem, key) => {
@@ -160,7 +160,7 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
                       setactiveMenu(menuItem.index);
                       handleCloseMenu();
                     }}
-                    className="item animate__animated animate__slideInRight"
+                    className="item"
                   >
                     <span>{t(`${menuItem.name}`)}</span>
                   </div>
