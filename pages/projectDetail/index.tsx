@@ -28,22 +28,13 @@ const ProjectDetailPage = (
         <section className={`${classNamePrefix}__content`}>
           <section className={`${classNamePrefix}__content-main`}>
             <div className={`${classNamePrefix}__floated-item`}>
-              <div
-                className={`${classNamePrefix}__content-main-image-wrapper`}
-                style={{
-                  width: 450,
-                  height: 550,
-                  marginLeft: 161,
-                }}
-              >
+              <div className={`${classNamePrefix}__content-main-image-wrapper`}>
                 <div
                   className={`${classNamePrefix}__content-main-image`}
                   style={{
                     backgroundImage: `url(${
                       projectSelected.imgUrl ? projectSelected.imgUrl.src : ""
                     })`,
-                    width: "100%",
-                    height: "100%",
                   }}
                 ></div>
 
@@ -55,10 +46,7 @@ const ProjectDetailPage = (
 
             <div
               className={`${classNamePrefix}__content-main-text-wrapper`}
-              style={{
-                bottom: 200,
-                display: "block",
-              }}
+              style={{}}
             >
               <div className={`${classNamePrefix}__content-main-name`}>
                 <span>
