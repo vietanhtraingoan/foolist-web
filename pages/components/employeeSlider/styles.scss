@@ -1,17 +1,29 @@
-.employee-slider{
-    &__item{
-        width: 250px;
-        height: 350px;
+.employee-slider {
+  &__item {
+    width: 250px;
+    height: 350px;
 
-        margin: 10px;
+    margin: 10px;
+  }
 
-        
+  &__item-image {
+    width: 250px;
+    height: 350px;
+
+    border-radius: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .employee-slider {
+    &__item {
+      width: 150px;
+      height: 200px;
     }
 
-    &__item-image{
-        width: 250px;
-        height: 350px;
-
-        border-radius: 15px;
+    &__item-image {
+      width: 150px;
+      height: 200px;
     }
+  }
 }

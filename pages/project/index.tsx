@@ -102,13 +102,17 @@ const ProjectPage = (
         </div>
 
         <div className={`${classNamePrefix}__introduction`}>
-          <div className={`${classNamePrefix}__introduction-first`}>
+          <div
+            className={`${classNamePrefix}__introduction-first animate__animated animate__zoomIn`}
+          >
             <span>{t("About_content.brand-name")}</span>
             {t("About_content.paragraph-1")}
           </div>
 
-          <div className={`${classNamePrefix}__introduction-second`}>
-            {t("About_content.paragraph-4")}
+          <div
+            className={`${classNamePrefix}__introduction-second animate__animated animate__zoomIn`}
+          >
+            "{t("About_content.paragraph-4")}"
           </div>
         </div>
 

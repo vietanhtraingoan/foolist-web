@@ -25,3 +25,11 @@
     color: #000000;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .text-slider{
+    &__item{
+      font-size: 40px;
+    }
+  }
+}

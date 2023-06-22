@@ -45,12 +45,16 @@ const GridProject = (
         }}
       >
         {router.pathname === "/project" ? (
-          <div
-            className={`${classNamePrefix}__show-more-button`}
-            onClick={() => setViewMore(!viewMore)}
-          >
-            <span>{viewMore ? "Show Less" : "Show More"} </span>
-          </div>
+          projectMocks.length > 3 ? (
+            <div
+              className={`${classNamePrefix}__show-more-button`}
+              onClick={() => setViewMore(!viewMore)}
+            >
+              <span>{viewMore ? "Show Less" : "Show More"} </span>
+            </div>
+          ) : (
+            ""
+          )
         ) : (
           <div className={`${classNamePrefix}__view-all`}>
             <div className={`${classNamePrefix}__view-all-text`}>

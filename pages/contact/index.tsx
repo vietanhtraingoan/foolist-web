@@ -109,7 +109,7 @@ const ContactPage = (
 
   return (
     <div className={classNamePrefix}>
-      <section className={`${classNamePrefix}__introduction-wrapper`}>
+      <section className={`${classNamePrefix}__introduction-wrapper animate__animated animate__slideInUp`}>
         <div className={`${classNamePrefix}__introduction-wrapper-text`}>
           {t("connect-with")} <span> FOOLIST</span>
         </div>
@@ -118,7 +118,7 @@ const ContactPage = (
 
       <form
         onSubmit={handleSubmit}
-        className={`${classNamePrefix}__form-wrapper`}
+        className={`${classNamePrefix}__form-wrapper animate__animated animate__slideInUp`}
         ref={form}
       >
         <div className={`${classNamePrefix}__form-title`}>{t("user-info")}</div>

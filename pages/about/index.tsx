@@ -97,9 +97,11 @@ const AboutPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
         </div>
       </section>
 
-      <section className={`${classNamePrefix}__second-section`}>
+      <section
+        className={`${classNamePrefix}__second-section animate__animated animate__slideInUp`}
+      >
         <div
-          className={`${classNamePrefix}__second-section-top animate__animated animate__fadeInUp`}
+          className={`${classNamePrefix}__second-section-top animate__animated animate__fadeInUp animation_delay-2s`}
         >
           <span
             className={`${classNamePrefix}__brand-name`}
@@ -114,19 +116,14 @@ const AboutPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
           </span>
           <span>{t("About_content.paragraph-1")}</span>
         </div>
-
         <div className={`${classNamePrefix}__second-section-bottom`}>
-          <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}>
-            <div className={`${classNamePrefix}__second-section-bottom-image`}>
-              <Image src={eyeGif} alt="" width={150} />
-            </div>
-          </AnimationOnScroll>
+          <div className={`${classNamePrefix}__second-section-bottom-image`}>
+            <Image src={eyeGif} alt="" width={150} />
+          </div>
 
-          <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}>
-            <div className={`${classNamePrefix}__second-section-bottom-text`}>
-              <span>{t("About_content.paragraph-2")}</span>
-            </div>
-          </AnimationOnScroll>
+          <div className={`${classNamePrefix}__second-section-bottom-text`}>
+            <span>"{t("About_content.paragraph-2")}"</span>
+          </div>
         </div>
       </section>
 
@@ -136,27 +133,19 @@ const AboutPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
       />
 
       <section className={`${classNamePrefix}__third-section`}>
-        <div className={`${classNamePrefix}__third-section-top`}>
-          <div className={`${classNamePrefix}__third-section-top-title`}>
-            <AnimationOnScroll
-              animateIn="animate__slideInUp"
-              animateOnce={true}
-            >
+        <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}>
+          <div className={`${classNamePrefix}__third-section-top`}>
+            <div className={`${classNamePrefix}__third-section-top-title`}>
               <div style={{ color: "#ffffff" }}>
                 {t("About_content.creative-thinking")}
               </div>
-            </AnimationOnScroll>
 
-            <AnimationOnScroll
-              animateIn="animate__slideInUp"
-              animateOnce={true}
-            >
               <div className={`${classNamePrefix}__third-section-top-outline`}>
                 <span>{t("About_content.unique")}</span>
               </div>
-            </AnimationOnScroll>
+            </div>
           </div>
-        </div>
+        </AnimationOnScroll>
 
         <div
           className={`${classNamePrefix}__divider`}
@@ -167,7 +156,7 @@ const AboutPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
 
         <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}>
           <div className={`${classNamePrefix}__third-section-middle`}>
-            <span>{t("About_content.paragraph-3")}</span>
+            <span>"{t("About_content.paragraph-3")}"</span>
           </div>
         </AnimationOnScroll>
 
@@ -187,7 +176,6 @@ const AboutPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
                 {t("About_content.paragraph-4")}
               </AnimationOnScroll>
 
-              <br></br>
               <br></br>
               <AnimationOnScroll
                 animateIn="animate__slideInUp"
@@ -217,6 +205,10 @@ const AboutPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
               className={`${classNamePrefix}__fourth-section-title-divider`}
             ></div>
 
+            <div className={`${classNamePrefix}__eye-gif`}>
+              <Image src={eyeGif} alt="" width={150} />
+            </div>
+
             <div className={`${classNamePrefix}__fourth-section-title-image`}>
               <Image src={eyeOpen} alt="" width={150} />
             </div>
@@ -225,24 +217,20 @@ const AboutPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
 
         <div className={`${classNamePrefix}__fourth-section-content`}>
           <div className={`${classNamePrefix}__fourth-section-content-item`}>
-            <div className={`${classNamePrefix}__fourth-section-item-text`}>
-              <span>
-                <AnimationOnScroll
-                  animateIn="animate__slideInUp"
-                  animateOnce={true}
-                >
+            <AnimationOnScroll
+              animateIn="animate__slideInUp"
+              animateOnce={true}
+            >
+              <div className={`${classNamePrefix}__fourth-section-item-text`}>
+                <span>
                   {t("About_content.paragraph-6")}
-                </AnimationOnScroll>
-                <br></br>
-                <br></br>
-                <AnimationOnScroll
-                  animateIn="animate__slideInUp"
-                  animateOnce={true}
-                >
+                  <br></br>
+                  <br></br>
+
                   {t("About_content.paragraph-7")}
-                </AnimationOnScroll>
-              </span>
-            </div>
+                </span>
+              </div>
+            </AnimationOnScroll>
 
             <div className={`${classNamePrefix}__fourth-section-graph`}>
               <NormalCircleGroup contentType="2" />

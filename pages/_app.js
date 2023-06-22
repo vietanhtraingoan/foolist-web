@@ -108,14 +108,14 @@ function MyApp({ Component, ...rest }) {
     Router.events.on("routeChangeComplete", () =>
       setTimeout(() => {
         setLoading(false);
-      }, 1500)
+      }, 700)
     );
     return () => {
       Router.events.on("routeChangeStart", () => setLoading(true));
       Router.events.on("routeChangeComplete", () =>
         setTimeout(() => {
           setLoading(false);
-        }, 1500)
+        }, 700)
       );
     };
   }, [Router.events]);
