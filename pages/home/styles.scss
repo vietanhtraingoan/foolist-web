@@ -345,7 +345,7 @@
 
 @media screen and (max-width: 768px) {
   .home-page {
-    padding-top: 300px;
+    padding-top: 120px;
 
     &__introduction-title {
       width: 100%;
@@ -355,12 +355,17 @@
       font-size: 100px;
     }
 
+    &__introduction-container{
+      padding: 20px;
+    }
+
     &__scroller {
-      height: 230px;
+      height: 85px;
 
-      margin: 150px 0 0 0px;
+      margin: 10px 0 0 0px;
+      padding: 0;
 
-      line-height: 235px;
+      line-height: 85px;
 
       span {
         font-size: 90px;
@@ -368,7 +373,7 @@
     }
 
     &__introduction-text {
-      margin: 50px 0 400px 0;
+      margin: 10px 0;
       padding: 0;
     }
 
@@ -376,9 +381,10 @@
       width: 100%;
 
       span {
-        font-size: 70px;
-        line-height: 80px;
+        font-size: 20px;
+        line-height: 40px;
         font-style: normal;
+        text-align: justify;
       }
     }
 

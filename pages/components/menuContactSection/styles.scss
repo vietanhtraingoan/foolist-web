@@ -5,12 +5,10 @@
 
   width: 100%;
 
-  padding: 40px 0;
-
   background: #000000;
 
   font-weight: 400;
-  font-size: 40px;
+  font-size: 20px;
   cursor: pointer;
   text-align: center;
   color: #f2f2f2a4;
@@ -19,14 +17,21 @@
     display: flex;
     align-items: center;
 
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 
     a {
-      margin-right: 60px;
+      margin-right: 30px;
 
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 45px;
+      font-size: 15px;
       color: #f2f2f2a4;
     }
+  }
+
+  &__address{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #f2f2f2a4;
+    text-align: left;
   }
 }

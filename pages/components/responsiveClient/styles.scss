@@ -3,8 +3,6 @@
 
   background: #090000;
 
-  padding: 40px 60px 0 60px;
-
   &__title {
     display: flex;
     flex-direction: row;
@@ -12,17 +10,15 @@
 
     width: 100%;
 
-    padding-top: 80px;
-    margin-bottom: 20px;
-    padding-left: 60px ;
+    padding: 40px 0 0 20px;  
 
     border-top: 1px solid #f8a5c2;
 
     span {
-      font-family: 'Times New Roman', Times, serif;
+      font-family: "Times New Roman", Times, serif;
       font-style: normal;
       font-weight: 700;
-      font-size: 50px;
+      font-size: 18px;
       line-height: 78px;
       color: #ffffff;
       font-style: italic;
@@ -30,11 +26,8 @@
   }
 
   &__wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 
     overflow: hidden;
   }
@@ -45,15 +38,12 @@
     justify-content: center;
     align-items: center;
 
-    width: 33%;
-    height: 300px;
-
-    margin-bottom: 20px;
+    width: 140px;
+    height: 100px;
   }
-}
 
-@media screen and (max-width: 768px) {
-  .responsive-client{
-    padding: 0;
+  &__item-image {
+    width: 120px;
+    height: 90px;
   }
 }

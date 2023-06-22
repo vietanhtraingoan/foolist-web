@@ -98,10 +98,6 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
             </div>
 
             <div className="left-menu">
-              <div className="responsive-floated-language-change">
-                <LanguageChange />
-              </div>
-
               <div
                 className="left-menu-responsive-button"
                 style={{ background: menuButtonBg }}
@@ -184,6 +180,13 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
               </div>
 
               <MenuContactSection />
+
+              <div
+                className="responsive-floated-language-change"
+                style={{ marginTop: 20 }}
+              >
+                <LanguageChange />
+              </div>
             </div>
           </div>
 

@@ -105,7 +105,7 @@
       text-transform: capitalize;
 
       transition: ease-in-out 0.4s;
-      &:hover{
+      &:hover {
         color: #f6a5c1;
       }
     }
@@ -116,7 +116,14 @@
   .connect-section {
     padding: 0;
     &__top {
-      padding: 84px 80px 84px 80px;
+      padding: 20px;
+    }
+
+    &__top-text {
+      width: unset;
+
+      font-size: 30px;
+      line-height: 50px;
     }
 
     &__bottom {
@@ -126,13 +133,36 @@
       align-items: flex-start;
 
       width: 100%;
+      padding: 20px;
+    }
 
-      padding: 84px 80px;
+    &__bottom-left-item {
+      margin-bottom: 40px;
+
+      span {
+        margin-bottom: 25px;
+
+        font-size: 30px;
+      }
     }
 
     &__service-item {
       span {
         font-size: 35px;
+      }
+    }
+
+    &__bottom-right {
+      width: 100%;
+
+      span {
+        font-size: 30px;
+      }
+    }
+
+    &__service-item {
+      span {
+        font-size: 20px;
       }
     }
   }

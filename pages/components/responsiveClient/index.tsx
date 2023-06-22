@@ -34,7 +34,7 @@ const ResponsiveClient = (
                   animateIn="animate__fadeInUp"
                   animateOnce={true}
                 >
-                  <Image src={c.imgUrl.src} alt="" width={250} height={140} />
+                  <img className={`${classNamePrefix}__item-image`} src={c.imgUrl.src} alt=""/>
                 </AnimationOnScroll>
               </div>
             ))

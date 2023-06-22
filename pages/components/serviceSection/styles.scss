@@ -69,7 +69,7 @@
   &__content-item-title {
     width: 65%;
     span {
-      font-family: "Arial";
+      font-family: 'Times New Roman', Times, serif;
       font-size: 60px;
       font-weight: 800;
       color: #ffffff;
@@ -105,8 +105,20 @@
 
 @media screen and (max-width: 768px) {
   .service-section {
+    padding: 0;
     &__title-button {
       display: none;
+    }
+
+    &__title{
+      margin: 20px 0;
+
+      font-size: 30px;
+      line-height: 35px;
+    }
+
+    &__title-wrapper{
+      padding: 20px;
     }
 
     &__content-item {
@@ -114,16 +126,26 @@
       align-items: flex-start;
 
       width: 100%;
+
+      padding: 10px 20px;
     }
 
     &__content-item-title {
-      margin-bottom: 40px;
+      width: 100%;
+
+      margin-bottom: 20px;
+
+      span{
+        font-size: 30px;
+      }
     }
 
     &__content-item-list {
       ul {
+        padding-left: 15px;
+
         li {
-          font-size: 40px;
+          font-size: 20px;
           color: rgb(242, 242, 242, 0.8);
         }
       }

@@ -39,16 +39,23 @@ const GridProject = (
 
       <div
         className={`${classNamePrefix}__show-more-wrapper`}
-        onClick={() => setViewMore(!viewMore)}
-        style={{justifyContent: router.pathname === "/project" ? "center" : "flex-end"}}
+        style={{
+          justifyContent:
+            router.pathname === "/project" ? "center" : "flex-end",
+        }}
       >
         {router.pathname === "/project" ? (
-          <div className={`${classNamePrefix}__show-more-button`}>
+          <div
+            className={`${classNamePrefix}__show-more-button`}
+            onClick={() => setViewMore(!viewMore)}
+          >
             <span>{viewMore ? "Show Less" : "Show More"} </span>
           </div>
         ) : (
           <div className={`${classNamePrefix}__view-all`}>
-            <div className={`${classNamePrefix}__view-all-text`}>{t("all-project")}</div>
+            <div className={`${classNamePrefix}__view-all-text`}>
+              {t("all-project")}
+            </div>
             <CustomNavigationButton
               size="small"
               onClick={() => router.push("/project")}

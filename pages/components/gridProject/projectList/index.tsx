@@ -20,7 +20,7 @@ const ProjectList: React.FC<IProjectList> = (props) => {
         ? data.map((item) => (
             <AnimationOnScroll
               key={item.id}
-              animateIn="animate__fadeInUp"
+              animateIn="animate__zoomIn"
               initiallyVisible={true}
               animateOnce={true}
             >
@@ -28,18 +28,7 @@ const ProjectList: React.FC<IProjectList> = (props) => {
                 className={`${classNamePrefix}__item`}
                 onClick={() => router.push(`/projectDetail?id=${item.id}`)}
                 style={{ backgroundImage: `url(${item.imgUrl.src})` }}
-              >
-                {/* <div
-                  className={`${classNamePrefix}__image-wrapper`}
-                
-                >
-                  <Image
-                    className={`${classNamePrefix}__image`}
-                    src={item.imgUrl}
-                    alt=""
-                  />
-                </div> */}
-              </div>
+              ></div>
             </AnimationOnScroll>
           ))
         : ""}
