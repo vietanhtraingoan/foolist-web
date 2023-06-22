@@ -355,7 +355,7 @@
       font-size: 100px;
     }
 
-    &__introduction-container{
+    &__introduction-container {
       padding: 20px;
     }
 
@@ -419,6 +419,28 @@
     &__divider-container {
       display: none;
     }
+
+    &__footer-left {
+      display: none;
+    }
+
+    &__footer-container {
+      height: unset;
+
+      padding: 0 20px 20px 20px;
+    }
+
+    &__footer-info-group-title {
+      font-size: 45px;
+    }
+
+    &__footer-info-group-text {
+      display: none;
+    }
+
+    &__footer-info-group {
+      font-size: 18px;
+      line-height: 65px;
+    }
   }
 }
-

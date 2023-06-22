@@ -1,8 +1,6 @@
 .contact-page {
   position: relative;
 
-  padding-top: 150px;
-
   width: 100%;
 
   background: #000000;
@@ -74,7 +72,7 @@
       padding-left: 20px;
 
       border-radius: 10px;
-      border: none;
+      border: 1px solid;
 
       font-family: "Arial";
       font-style: normal;
@@ -82,7 +80,7 @@
       font-size: 20px;
       color: #ffffff;
 
-      background: rgba(217, 217, 217, 0.2);
+      background: #d9d9d933;
 
       &::placeholder {
         font-family: "Arial";
@@ -321,39 +319,62 @@
 
 @media screen and (max-width: 768px) {
   .contact-page {
+    padding: 80px 20px;
     &__introduction-wrapper {
-      font-size: 55px;
-      line-height: 104px;
+      margin-top: 30px;
+
+      font-size: 25px;
+      line-height: 50px;
+    }
+
+    &__form-wrapper {
+      margin-top: 30px;
+      padding: 0;
+
+      border: none;
+    }
+
+    &__form-title {
+      display: none;
     }
 
     &__service-item {
       div {
-        font-size: 30px;
+        font-size: 20px;
       }
-    }
-
-    &__form-title {
-      font-size: 45px;
     }
 
     &__form-item {
       input {
-        height: 120px;
+        height: 50px;
 
-        font-size: 40px;
+        padding-left: 0;
+
+        border: unset;
+        border-bottom: 1px solid rgba(217, 217, 217);
+        border-radius: 0;
+
+        font-size: 1rem;
+        background: #000000;
 
         &::placeholder {
-          font-size: 40px;
+          font-size: 1rem;
         }
       }
 
       textarea {
-        height: 250px;
+        height: 150px;
 
-        font-size: 40px;
+        padding-left: 0;
+
+        border-bottom: 1px solid rgba(217, 217, 217);
+        border-radius: 0;
+
+        font-size: 1rem;
+        background: #000000;
 
         &::placeholder {
-          font-size: 40px;
+          font-size: 1rem;
         }
       }
     }
@@ -361,30 +382,35 @@
     &__form-item-phone {
       .PhoneInput {
         input {
-          height: 120px;
+          height: 50px;
 
-          padding-left: 90px;
+          padding-left: 60px;
 
-          font-size: 40px;
+          border-bottom: 1px solid rgba(217, 217, 217);
+          border-radius: 0;
+
+          font-size: 1rem;
+          background: #000000;
 
           &::placeholder {
-            font-size: 40px;
+            font-size: 1rem;
           }
         }
 
         .PhoneInputCountry {
-          top: 48px;
+          top: 22px;
+          left: 0;
         }
 
         .PhoneInputCountryIcon {
-          font-size: 40px;
+          font-size: 25px;
         }
       }
     }
 
     &__form-error {
       span {
-        font-size: 30px;
+        font-size: 16px;
       }
     }
 
@@ -394,18 +420,18 @@
     }
 
     &__confirm-button {
-      width: 300px;
+      width: 200px;
       height: 90px;
 
       margin-top: 40px;
 
       span {
-        font-size: 30px;
+        font-size: 20px;
       }
     }
 
     &__map-title {
-      font-size: 30px;
+      font-size: 17px;
       line-height: 35px;
     }
 
