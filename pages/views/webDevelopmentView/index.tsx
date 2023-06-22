@@ -10,7 +10,9 @@ type Props = {};
 
 const classNamePrefix = "web-development-view";
 
-const WebDevelopmentView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
+const WebDevelopmentView = (
+  _props: InferGetStaticPropsType<typeof getStaticProps>
+) => {
   const { t } = useTranslation();
 
   const { subImg, content } = ServicesMock[2];
@@ -27,9 +29,13 @@ const WebDevelopmentView = (_props: InferGetStaticPropsType<typeof getStaticProp
             height={600}
           />
 
+          <div className={`${classNamePrefix}__title`}>
+            {t("web-mobile-application")}
+          </div>
+
           <div
             className={`${classNamePrefix}__content-section-title`}
-            style={{ margin: "32px 0" }}
+            style={{ margin: "80px 0 40px 0" }}
           >
             {t(content.paragraphTitle1)}
           </div>

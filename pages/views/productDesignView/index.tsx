@@ -10,10 +10,12 @@ type Props = {};
 
 const classNamePrefix = "product-design-view";
 
-const ProductDesignView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
+const ProductDesignView = (
+  _props: InferGetStaticPropsType<typeof getStaticProps>
+) => {
   const { t } = useTranslation();
 
-  const { subImg, content } = ServicesMock[1];
+  const { subImg, content, title } = ServicesMock[1];
 
   return (
     <div className={classNamePrefix}>
@@ -27,9 +29,13 @@ const ProductDesignView = (_props: InferGetStaticPropsType<typeof getStaticProps
             height={600}
           />
 
+          <div className={`${classNamePrefix}__title`}>
+            {t("service.product-design")}
+          </div>
+
           <div
             className={`${classNamePrefix}__content-section-title`}
-            style={{ margin: "32px 0" }}
+            style={{ margin: "80px 0 40px 0" }}
           >
             {t(content.paragraphTitle1)}
           </div>

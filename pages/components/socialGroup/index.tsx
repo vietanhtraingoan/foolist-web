@@ -2,7 +2,7 @@ import React from "react";
 import faceIcon from "../../../public/images/faceIcon.png";
 import instaIcon from "../../../public/images/instaIcon.png";
 import youtubeIcon from "../../../public/images/youtubeIcon.png";
-import behanceIcon from "../../../public/images/behanceIcon.png";
+import linkedIn from "../../../public/static/linkedIn.png";
 import Image from "next/image";
 
 const classNamePrefix = "social-group";
@@ -18,7 +18,7 @@ const SocialGroup = () => {
           >
             <Image
               className={`${classNamePrefix}__item-icon`}
-              src={behanceIcon}
+              src={linkedIn}
               alt=""
             />
           </a>
@@ -36,7 +36,7 @@ const SocialGroup = () => {
 
         <div className={`${classNamePrefix}__item`}>
           <a
-            href="https://www.linkedin.com/company/foolist-creative"
+            href="https://www.facebook.com/foolistcreative?mibextid=LQQJ4d"
             target="_blank"
           >
             <Image
@@ -48,7 +48,7 @@ const SocialGroup = () => {
         </div>
 
         <div className={`${classNamePrefix}__item`}>
-          <a href="https://www.facebook.com/foolistcreative" target="_blank">
+          <a href="https://youtube.com/@FoolistCreative" target="_blank">
             <Image
               className={`${classNamePrefix}__item-icon`}
               src={youtubeIcon}

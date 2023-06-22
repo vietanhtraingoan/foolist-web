@@ -61,28 +61,28 @@
 
 @media screen and (max-width: 820px) {
   .language-change {
-    width: 160px;
-    height: 78px;
+    width: 115px;
+    height: 50px;
 
     &__title {
-      font-size: 28px;
+      font-size: 18px;
     }
 
     &__icon {
-      width: 42px;
-      height: 42px;
+      width: 32px;
+      height: 32px;
     }
 
     .button-move-left {
-      right: 105px;
+      right: 75px;
     }
 
     .button-move-right {
-      right: 10px;
+      right: 5px;
     }
 
     .title-move-right {
-      left: 80px;
+      left: 65px;
     }
   
     .title-move-left {

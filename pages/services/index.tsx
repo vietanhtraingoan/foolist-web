@@ -44,7 +44,7 @@ const ServicesPage = (
                 ></div>
 
                 <div className={`${classNamePrefix}__list-item-title`}>
-                  {s.title}
+                  {t(s.title)}
                 </div>
               </div>
             ))

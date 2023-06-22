@@ -294,13 +294,25 @@
     .second {
       width: 100%;
       .content {
-        height: 200px;
+        height: 85px;
+
+        padding: 20px;
+
+        .logo-group {
+          width: 50px;
+          height: 50px;
+          .logo {
+            width: 43px;
+            height: 43px;
+          }
+        }
+
         .left-menu {
           .left-menu-responsive-button {
             display: flex;
 
-            width: 120px;
-            height: 120px;
+            width: 60px;
+            height: 60px;
           }
 
           .responsive-floated-language-change {
@@ -309,14 +321,6 @@
 
           .left-menu-responsive-grid {
             display: none;
-          }
-        }
-
-        .logo-group {
-          margin-left: 30px;
-          .logo {
-            width: 120px;
-            height: 120px;
           }
         }
       }

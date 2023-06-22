@@ -76,7 +76,7 @@
   }
 
   &__list-item-title {
-    width: 202px;
+    min-width: 350px;
     height: 61px;
 
     margin-top: 70.72px;
@@ -84,7 +84,7 @@
     font-family: "Arial";
     font-style: normal;
     font-weight: 700;
-    font-size: 38.2368px;
+    font-size: 30px;
     line-height: 36px;
     color: #ffffff;
     text-transform: uppercase;

@@ -1,9 +1,64 @@
-import React from 'react'
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { GetStaticProps, InferGetStaticPropsType } from "next/types";
+import React from "react";
+import Image from "next/image";
+import { DEFAULT_LANG } from "../../../utils/constants";
+import { ServicesMock } from "../../../mocks/servicesMock";
+import { useTranslation } from "next-i18next";
 
-const ERPView = () => {
+type Props = {};
+
+const classNamePrefix = "erp-view";
+
+const ERPView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const { t } = useTranslation();
+
+  const { subImg, content } = ServicesMock[3];
+
   return (
-    <div>ERPView</div>
-  )
-}
+    <div className={classNamePrefix}>
+      <div className={`${classNamePrefix}__content`}>
+        <Image
+          style={{ borderRadius: 15 }}
+          src={subImg[0].item.src}
+          alt=""
+          className={`${classNamePrefix}__content-image`}
+          width={1200}
+          height={600}
+        />
 
-export default ERPView
+        <div className={`${classNamePrefix}__title`}>
+          {t("enterprise-planning")}
+        </div>
+
+        <div className={`${classNamePrefix}__content-section-text`}>
+          {t(content.first)}
+        </div>
+
+        <div className={`${classNamePrefix}__content-section-text`}>
+          {t(content.third)}
+        </div>
+
+        <div className={`${classNamePrefix}__content-section-text`}>
+          {t(content.fourth)}
+        </div>
+
+        <div className={`${classNamePrefix}__content-section-text`}>
+          {t(content.fifth)}
+        </div>
+
+        <div className={`${classNamePrefix}__content-section-text`}>
+          {t(content.sixth)}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const getStaticProps: GetStaticProps<Props> = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale ?? DEFAULT_LANG, ["common"])),
+  },
+});
+
+export default ERPView;

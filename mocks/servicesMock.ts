@@ -32,11 +32,11 @@ export const ServicesMock = [
       },
       {
         id: 2,
-        item: tvc2,
+        item: tvc3,
       },
       {
         id: 3,
-        item: tvc3,
+        item: tvc2,
       },
       {
         id: 4,
@@ -53,12 +53,12 @@ export const ServicesMock = [
       third: "service.detail.detail1.third",
       fourth: "service.detail.detail1.fourth",
       fifth: "service.detail.detail1.fifth",
-      sixth: "service.detail.detail1.sixth"
+      sixth: "service.detail.detail1.sixth",
     },
   },
   {
     id: "2",
-    title: "product design",
+    title: "service.product-design",
     imgeUrl: service2,
     bg: serviceBg2,
     subImg: [
