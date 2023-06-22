@@ -23,7 +23,7 @@ const ERPView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
           src={subImg[0].item.src}
           alt=""
           className={`${classNamePrefix}__content-image`}
-          width={1200}
+          width={1150}
           height={600}
         />
 
