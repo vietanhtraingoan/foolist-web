@@ -232,9 +232,14 @@ const AboutPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
               </div>
             </AnimationOnScroll>
 
-            <div className={`${classNamePrefix}__fourth-section-graph`}>
-              <NormalCircleGroup contentType="2" />
-            </div>
+            <AnimationOnScroll
+              animateIn="animate__slideInUp"
+              animateOnce={true}
+            >
+              <div className={`${classNamePrefix}__fourth-section-graph`}>
+                <NormalCircleGroup contentType="2" />
+              </div>
+            </AnimationOnScroll>
           </div>
 
           <div className={`${classNamePrefix}__fourth-section-content-item`}>

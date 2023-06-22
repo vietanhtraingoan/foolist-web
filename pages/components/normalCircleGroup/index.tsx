@@ -5,6 +5,8 @@ import Image from "next/image";
 import { GetStaticProps } from "next/types";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { DEFAULT_LANG } from "../../../utils/constants";
+import aboutBg from "../../../public/static/aboutBg.png";
+import bg from "../../../public/static/dividerBg.jpg";
 
 type IContentCircleType = "1" | "2" | "3";
 
@@ -50,13 +52,6 @@ const NormalCircleGroup: React.FC<INormalCircleProps> = (props) => {
                 <div className={`${classNamePrefix}__text-item text-5`}>
                   <span>Thị giác</span>
                 </div>
-                <div className={`${classNamePrefix}__text-item text-2`}>
-                  <Image
-                    className={`${classNamePrefix}__image`}
-                    src={logo}
-                    alt=""
-                  />
-                </div>
                 <div className={`${classNamePrefix}__text-item text-6`}>
                   <span>Độc nhất</span>
                 </div>
@@ -71,7 +66,11 @@ const NormalCircleGroup: React.FC<INormalCircleProps> = (props) => {
                   <span>Sáng tạo</span>
                 </div>
                 <div className={`${classNamePrefix}__text-item text-2`}>
-                  <Image src={logo} alt="" width={60} height={60} />
+                  <Image
+                    className={`${classNamePrefix}__icon`}
+                    src={logo}
+                    alt=""
+                  />
                 </div>
                 <div className={`${classNamePrefix}__text-item text-3`}>
                   <span>Tư duy</span>
@@ -97,7 +96,11 @@ const NormalCircleGroup: React.FC<INormalCircleProps> = (props) => {
                 <span>Thị giác</span>
               </div>
               <div className={`${classNamePrefix}__text-item text-2`}>
-                <Image src={logo} alt="" width={60} height={60} />
+                <Image
+                  src={logo}
+                  alt=""
+                  className={`${classNamePrefix}__icon`}
+                />
               </div>
               <div className={`${classNamePrefix}__text-item text-6`}>
                 <span>Độc nhất</span>
@@ -117,14 +120,16 @@ const NormalCircleGroup: React.FC<INormalCircleProps> = (props) => {
           delay={2}
         >
           <div className={`${classNamePrefix}__text-wrapper`}>
-            <div
-              className={`${classNamePrefix}__text`}
-            >
+            <div className={`${classNamePrefix}__text`}>
               <div className={`${classNamePrefix}__text-item text-1`}>
                 <span>Sáng tạo</span>
               </div>
               <div className={`${classNamePrefix}__text-item text-2`}>
-                <Image src={logo} alt="" width={60} height={60} />
+                <Image
+                  src={logo}
+                  alt=""
+                  className={`${classNamePrefix}__icon`}
+                />
               </div>
               <div className={`${classNamePrefix}__text-item text-3`}>
                 <span>Tư duy</span>

@@ -32,39 +32,10 @@
     right: -85px;
   }
 
-  &__circle-wrapper-2 {
-    position: absolute;
-    top: 105px;
-    left: -65px;
-  }
-
-  &__circle-wrapper-3 {
-    position: absolute;
-    top: 105px;
-    right: -65px;
-  }
-
-  .animate__animated.animate__slideInDown {
-    --animate-duration: 2s;
-  }
-
-  .animate__animated.animate__slideInLeft {
-    --animate-duration: 2s;
-  }
-
-  .animate__animated.animate__slideInRight {
-    --animate-duration: 2s;
-  }
-
   &__text-wrapper {
     position: absolute;
     top: 0;
     left: -75px;
-
-    .animate__animated.animate__zoomIn {
-      --animate-delay: 2s;
-      --animate-duration: 2s;
-    }
   }
 
   &__text {
@@ -146,7 +117,7 @@
     right: 170px;
   }
 
-  &__image {
+  &__icon {
     width: 60px;
     height: 60px;
   }
@@ -154,17 +125,17 @@
 
 @media screen and (max-width: 768px) {
   .normal-circle-group {
-    width: 600px;
-    height: 600px;
+    width: 230px;
+    height: 230px;
 
     &__item {
-      width: 600px;
-      height: 600px;
+      width: 230px;
+      height: 230px;
     }
 
     &__text {
-      width: 600px;
-      height: 600px;
+      width: 230px;
+      height: 230px;
     }
 
     .circle-1 {
@@ -173,28 +144,18 @@
     }
 
     .circle-2 {
-      top: 280px;
-      left: -170px;
+      top: 105px;
+      left: -70px;
     }
 
     .circle-3 {
-      top: 280px;
-      right: -170px;
-    }
-
-    &__circle-wrapper-2 {
       top: 105px;
-      left: -65px;
-    }
-
-    &__circle-wrapper-3 {
-      top: 105px;
-      right: -65px;
+      right: -70px;
     }
 
     &__text-item {
       span {
-        font-size: 50px;
+        font-size: 20px;
         line-height: 50px;
       }
     }
@@ -202,53 +163,70 @@
     .text-1 {
       min-width: 300px;
 
-      top: 150px;
-      left: 260px;
+      top: 50px;
+      left: 150px;
     }
 
     .text-2 {
       min-width: 300px;
 
-      top: 450px;
-      left: 350px;
+      top: 155px;
+      left: 160px;
+
+      &__icon {
+        width: 30px;
+        height: 30px;
+      }
     }
 
     .text-3 {
       min-width: 300px;
 
-      bottom: -120px;
+      bottom: -110px;
       left: 20px;
     }
 
     .text-4 {
       min-width: 300px;
 
-      bottom: -70px;
-      right: -200px;
+      bottom: 20px;
+      right: -280px;
     }
 
     .text-5 {
-      top: 350px;
-      left: 160px;
+      top: 120px;
+      left: 110px;
 
-      width: 80px;
-      height: 50px;
+      width: 50px;
+      height: 30px;
+
+      span{
+        line-height: 30px;
+      }
     }
 
     .text-6 {
-      top: 350px;
-      right: 20px;
+      top: 120px;
+      right: -85px;
 
       width: 80px;
-      height: 50px;
+      height: 30px;
+
+      span{
+        line-height: 30px;
+      }
     }
 
     .text-7 {
-      bottom: -80px;
-      right: 185px;
+      bottom: -30px;
+      right: -20px;
 
       width: 80px;
-      height: 50px;
+      height: 30px;
+
+      span{
+        line-height: 30px;
+      }
     }
   }
 }

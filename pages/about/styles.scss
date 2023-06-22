@@ -1,9 +1,15 @@
 .about-page {
+  overflow: hidden;
+
   width: 100%;
   height: 100%;
 
   padding-top: 288px;
 
+  // background-image: url("../../public//static/aboutBg.png");
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // background-size: cover;
   background: #000000;
 
   &__first-section {
@@ -597,7 +603,9 @@
 
     &__third-section-graph {
       width: 100%;
-      margin: 100px 0 300px 0;
+
+      padding: 0;
+      margin: 120px 0 120px 0;
     }
 
     &__fourth-section-title {
@@ -641,18 +649,14 @@
 
     &__fourth-section-content-item {
       flex-direction: column;
+      margin: 0;
     }
 
     &__fourth-section-graph {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-
       width: 100%;
 
-      margin: 120px 0;
-      padding-left: 0;
+      margin: 70px 0 0 0;
+      padding-right: 0;
     }
 
     &__fourth-section-item-text {
@@ -667,9 +671,10 @@
     }
 
     &__fifth-section-text {
-      padding: 0 20px;
-
       width: 100%;
+
+      padding: 0 20px;
+      margin-top: 50px;
 
       div:nth-child(1) {
         margin-bottom: 30px;
