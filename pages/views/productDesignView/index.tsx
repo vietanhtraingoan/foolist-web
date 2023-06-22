@@ -21,14 +21,16 @@ const ProductDesignView = (
     <div className={classNamePrefix}>
       <div className={`${classNamePrefix}__content`}>
         <div className={`${classNamePrefix}__content-first`}>
-          <Image
-            style={{ borderRadius: 15 }}
-            src={subImg[0].item.src}
-            alt=""
-            width={670}
-            height={600}
-            loading="lazy"
-          />
+          <div className="animate__animated animate__zoomIn">
+            <Image
+              style={{ borderRadius: 15 }}
+              src={subImg[0].item.src}
+              alt=""
+              width={670}
+              height={600}
+              loading="lazy"
+            />
+          </div>
 
           <div className={`${classNamePrefix}__title`}>
             {t("service.product-design")}
@@ -45,14 +47,16 @@ const ProductDesignView = (
             {t(content.first)}
           </div>
 
-          <Image
-            style={{ borderRadius: 15, margin: "40px 0" }}
-            src={subImg[2].item.src}
-            alt=""
-            width={670}
-            height={600}
-            loading="lazy"
-          />
+          <div className="animate__animated animate__zoomIn">
+            <Image
+              style={{ borderRadius: 15, margin: "40px 0" }}
+              src={subImg[2].item.src}
+              alt=""
+              width={670}
+              height={600}
+              loading="lazy"
+            />
+          </div>
 
           <div
             className={`${classNamePrefix}__content-section-title`}
@@ -81,14 +85,16 @@ const ProductDesignView = (
           </div>
 
           <div className={`${classNamePrefix}__content-second-item`}>
-            <Image
-              style={{ borderRadius: 15, margin: "40px 0" }}
-              src={subImg[1].item.src}
-              alt=""
-              width={670}
-              height={600}
-              loading="lazy"
-            />
+            <div className="animate__animated animate__zoomIn">
+              <Image
+                style={{ borderRadius: 15, margin: "40px 0" }}
+                src={subImg[1].item.src}
+                alt=""
+                width={670}
+                height={600}
+                loading="lazy"
+              />
+            </div>
 
             <div
               className={`${classNamePrefix}__content-section-title`}
@@ -101,14 +107,16 @@ const ProductDesignView = (
               {t(content.fourth)}
             </div>
 
-            <Image
-              style={{ borderRadius: 15, margin: "40px 0" }}
-              src={subImg[3].item.src}
-              alt=""
-              width={670}
-              height={600}
-              loading="lazy"
-            />
+            <div className="animate__animated animate__zoomIn">
+              <Image
+                style={{ borderRadius: 15, margin: "40px 0" }}
+                src={subImg[3].item.src}
+                alt=""
+                width={670}
+                height={600}
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
       </div>

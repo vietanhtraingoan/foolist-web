@@ -18,15 +18,17 @@ const ERPView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <div className={classNamePrefix}>
       <div className={`${classNamePrefix}__content`}>
-        <Image
-          style={{ borderRadius: 15 }}
-          src={subImg[0].item.src}
-          alt=""
-          className={`${classNamePrefix}__content-image`}
-          width={1150}
-          height={850}
-          loading="lazy"
-        />
+        <div className="animate__animated animate__zoomIn">
+          <Image
+            style={{ borderRadius: 15 }}
+            src={subImg[0].item.src}
+            alt=""
+            className={`${classNamePrefix}__content-image`}
+            width={1150}
+            height={850}
+            loading="lazy"
+          />
+        </div>
 
         <div className={`${classNamePrefix}__title`}>
           {t("enterprise-planning")}

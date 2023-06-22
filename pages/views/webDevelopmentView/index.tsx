@@ -21,14 +21,16 @@ const WebDevelopmentView = (
     <div className={classNamePrefix}>
       <div className={`${classNamePrefix}__content`}>
         <div className={`${classNamePrefix}__content-first`}>
-          <Image
-            style={{ borderRadius: 15 }}
-            src={subImg[0].item.src}
-            alt=""
-            width={670}
-            height={600}
-            loading="lazy"
-          />
+          <div className="animate__animated animate__zoomIn">
+            <Image
+              style={{ borderRadius: 15 }}
+              src={subImg[0].item.src}
+              alt=""
+              width={670}
+              height={600}
+              loading="lazy"
+            />
+          </div>
 
           <div className={`${classNamePrefix}__title`}>
             {t("web-mobile-application")}
@@ -45,14 +47,16 @@ const WebDevelopmentView = (
             {t(content.first)}
           </div>
 
-          <Image
-            style={{ borderRadius: 15, margin: "40px 0" }}
-            src={subImg[2].item.src}
-            alt=""
-            width={670}
-            height={1800}
-            loading="lazy"
-          />
+          <div className="animate__animated animate__zoomIn">
+            <Image
+              style={{ borderRadius: 15, margin: "40px 0" }}
+              src={subImg[2].item.src}
+              alt=""
+              width={670}
+              height={1800}
+              loading="lazy"
+            />
+          </div>
         </div>
 
         <div className={`${classNamePrefix}__content-second`}>
@@ -69,14 +73,16 @@ const WebDevelopmentView = (
             </div>
           </div>
 
-          <Image
-            style={{ borderRadius: 15, margin: "40px 0" }}
-            src={subImg[1].item.src}
-            alt=""
-            width={670}
-            height={600}
-            loading="lazy"
-          />
+          <div className="animate__animated animate__zoomIn">
+            <Image
+              style={{ borderRadius: 15, margin: "40px 0" }}
+              src={subImg[1].item.src}
+              alt=""
+              width={670}
+              height={600}
+              loading="lazy"
+            />
+          </div>
 
           <div
             className={`${classNamePrefix}__content-section-title`}

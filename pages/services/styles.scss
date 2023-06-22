@@ -8,34 +8,24 @@
   background: #000000;
 
   &__slogan {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
     width: 100%;
 
-    margin: 200px 0 0px 0;
-    padding: 100px 60px;
+    margin: 100px 0 0px 0;
+    padding: 50px 60px;
 
     background: #000000;
 
-    div:nth-child(1) {
-      margin-bottom: 40px;
-      padding-right: 400px;
-
-      font-family: "Arial";
+    div {
+      font-family: "Times New Roman", Times, serif;
       font-style: normal;
       font-weight: 700;
       font-size: 38.2368px;
       line-height: 36px;
       color: #ffffff;
-    }
-
-    div:nth-child(2) {
-      padding-left: 400px;
-
-      font-family: "Times New Roman", Times, serif;
-      font-style: italic;
-      font-weight: 700;
-      font-size: 38.2368px;
-      line-height: 36px;
-      color: #eeeeee;
     }
   }
 
@@ -158,12 +148,11 @@
     &__slogan-highlight {
       padding: 0 60px;
 
-      span{
+      span {
         font-size: 35px;
         text-align: center;
         line-height: 40px;
       }
-  
     }
 
     &__slogan {

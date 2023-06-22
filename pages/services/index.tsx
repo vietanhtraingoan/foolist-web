@@ -23,10 +23,7 @@ const ServicesPage = (
     <div className={classNamePrefix}>
       <div className={`${classNamePrefix}__slogan`}>
         <div className="animate__animated animate__slideInUp">
-          {t("service.slogan.slogan1")}
-        </div>
-        <div className="animate__animated animate__slideInUp animate__slow">
-          {t("service.slogan.slogan2")}
+          {t("Services")}
         </div>
       </div>
 

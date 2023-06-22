@@ -19,14 +19,16 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
     <div className={classNamePrefix}>
       <div className={`${classNamePrefix}__content`}>
         <div className={`${classNamePrefix}__content-first`}>
-          <Image
-            style={{ borderRadius: 15 }}
-            src={subImg[0].item.src}
-            alt=""
-            width={550}
-            height={500}
-            loading="lazy"
-          />
+          <div className="animate__animated animate__zoomIn">
+            <Image
+              style={{ borderRadius: 15 }}
+              src={subImg[0].item.src}
+              alt=""
+              width={550}
+              height={500}
+              loading="lazy"
+            />
+          </div>
 
           <div
             className={`${classNamePrefix}__content-section-title`}
@@ -57,14 +59,16 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
               {t(content.third)}
             </div>
 
-            <Image
-              style={{ borderRadius: 15, margin: "20px 0" }}
-              src={subImg[1].item.src}
-              alt=""
-              width={400}
-              height={400}
-              loading="lazy"
-            />
+            <div className="animate__animated animate__zoomIn">
+              <Image
+                style={{ borderRadius: 15, margin: "20px 0" }}
+                src={subImg[1].item.src}
+                alt=""
+                width={400}
+                height={400}
+                loading="lazy"
+              />
+            </div>
 
             <div
               className={`${classNamePrefix}__content-section-title`}
@@ -79,14 +83,16 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
           </div>
 
           <div className={`${classNamePrefix}__content-second-item`}>
-            <Image
-              style={{ borderRadius: 15, margin: "20px 0" }}
-              src={subImg[2].item.src}
-              alt=""
-              width={400}
-              height={400}
-              loading="lazy"
-            />
+            <div className="animate__animated animate__zoomIn">
+              <Image
+                style={{ borderRadius: 15, margin: "20px 0" }}
+                src={subImg[2].item.src}
+                alt=""
+                width={400}
+                height={400}
+                loading="lazy"
+              />
+            </div>
 
             <div
               className={`${classNamePrefix}__content-section-title`}
@@ -99,14 +105,16 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
               {t(content.fifth)}
             </div>
 
-            <Image
-              style={{ borderRadius: 15, margin: "20px 0" }}
-              src={subImg[3].item.src}
-              alt=""
-              width={400}
-              height={400}
-              loading="lazy"
-            />
+            <div className="animate__animated animate__zoomIn">
+              <Image
+                style={{ borderRadius: 15, margin: "20px 0" }}
+                src={subImg[3].item.src}
+                alt=""
+                width={400}
+                height={400}
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
       </div>
