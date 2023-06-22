@@ -27,6 +27,7 @@ const ProductDesignView = (
             alt=""
             width={670}
             height={600}
+            loading="lazy"
           />
 
           <div className={`${classNamePrefix}__title`}>
@@ -50,6 +51,7 @@ const ProductDesignView = (
             alt=""
             width={670}
             height={600}
+            loading="lazy"
           />
 
           <div
@@ -85,6 +87,7 @@ const ProductDesignView = (
               alt=""
               width={670}
               height={600}
+              loading="lazy"
             />
 
             <div
@@ -104,6 +107,7 @@ const ProductDesignView = (
               alt=""
               width={670}
               height={600}
+              loading="lazy"
             />
           </div>
         </div>

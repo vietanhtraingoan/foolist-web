@@ -27,14 +27,18 @@ const ProjectList: React.FC<IProjectList> = (props) => {
               <div
                 className={`${classNamePrefix}__item`}
                 onClick={() => router.push(`/projectDetail?id=${item.id}`)}
+                style={{ backgroundImage: `url(${item.imgUrl.src})` }}
               >
-                <div className={`${classNamePrefix}__image-wrapper`}>
+                {/* <div
+                  className={`${classNamePrefix}__image-wrapper`}
+                
+                >
                   <Image
                     className={`${classNamePrefix}__image`}
                     src={item.imgUrl}
                     alt=""
                   />
-                </div>
+                </div> */}
               </div>
             </AnimationOnScroll>
           ))

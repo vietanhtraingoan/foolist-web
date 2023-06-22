@@ -25,6 +25,7 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
             alt=""
             width={550}
             height={500}
+            loading="lazy"
           />
 
           <div
@@ -62,6 +63,7 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
               alt=""
               width={400}
               height={400}
+              loading="lazy"
             />
 
             <div
@@ -83,6 +85,7 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
               alt=""
               width={400}
               height={400}
+              loading="lazy"
             />
 
             <div
@@ -102,6 +105,7 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
               alt=""
               width={400}
               height={400}
+              loading="lazy"
             />
           </div>
         </div>

@@ -13,6 +13,8 @@
 
     transition: ease-in-out 0.7s;
     backdrop-filter: blur(10px);
+
+    width: 100%;
     .content {
       display: flex;
       flex-direction: row;
@@ -290,7 +292,7 @@
 
 @media screen and (max-width: 768px) {
   .top-menu {
-    width: 100%;
+    width: 100vw;
     .second {
       width: 100%;
       .content {
@@ -340,54 +342,3 @@
   }
 }
 
-@media screen and (max-width: 520px) {
-  .top-menu {
-    width: 100%;
-    .second {
-      width: 100%;
-      .content {
-        height: 160px;
-
-        padding: 0 40px;
-
-        .logo-group {
-          width: 50px;
-          height: 50px;
-          .logo {
-            width: 80px;
-            height: 80px;
-          }
-        }
-
-        .left-menu {
-          .left-menu-responsive-button {
-            display: flex;
-
-            width: 60px;
-            height: 60px;
-          }
-
-          .responsive-floated-language-change {
-            display: block;
-          }
-
-          .left-menu-responsive-grid {
-            display: none;
-          }
-        }
-      }
-    }
-  }
-
-  .navigation-menu-wrapper {
-    display: none;
-    .item {
-      width: 150px;
-      font-size: 30px;
-    }
-  }
-
-  .responsive-navigation-menu-wrapper {
-    display: flex;
-  }
-}

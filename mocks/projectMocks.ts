@@ -3,6 +3,7 @@ import project2 from "../public/static/project2.png";
 import project3 from "../public/static/project3.png";
 import projectSub1 from "../public/static/projectSub1.png";
 import projectSub3 from "../public/static/projectSub3.png";
+import projectSub2 from "../public/static/projectSub2.png"
 
 export const projectMocks = [
   {
@@ -29,7 +30,7 @@ export const projectMocks = [
     name: "Andromeda",
     title: "project.project2.title",
     intro: "project.project2.intro",
-    subImgUrl: projectSub1,
+    subImgUrl: projectSub3,
     paragraph1: {
       title: "project.project2.paragraph-1.title",
       content: "project.project2.paragraph-1.content",
@@ -46,7 +47,7 @@ export const projectMocks = [
     name: "Clor Spa",
     title: "project.project3.title",
     intro: "project.project3.intro",
-    subImgUrl: projectSub3,
+    subImgUrl: projectSub2,
     paragraph1: {
       title: "project.project3.paragraph-1.title",
       content: "project.project3.paragraph-1.content",

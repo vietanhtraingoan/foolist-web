@@ -35,6 +35,8 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+
+    overflow: hidden;
   }
 
   &__item {

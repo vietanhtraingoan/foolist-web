@@ -24,7 +24,8 @@ const ERPView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
           alt=""
           className={`${classNamePrefix}__content-image`}
           width={1150}
-          height={600}
+          height={850}
+          loading="lazy"
         />
 
         <div className={`${classNamePrefix}__title`}>
