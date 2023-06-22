@@ -90,3 +90,35 @@
     }
   }
 }
+
+@media screen and (max-width: 438px) {
+  .language-change {
+    width: 95px;
+    height: 50px;
+
+    &__title {
+      font-size: 14px;
+    }
+
+    &__icon {
+      width: 28px;
+      height: 28px;
+    }
+
+    .button-move-left {
+      right: 55px;
+    }
+
+    .button-move-right {
+      right: 5px;
+    }
+
+    .title-move-right {
+      left: 50px;
+    }
+  
+    .title-move-left {
+      left: 15px;
+    }
+  }
+}
