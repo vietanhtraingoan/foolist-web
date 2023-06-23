@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import MiniFooter from "../components/miniFooter";
 import { ServicesMock } from "../../mocks/servicesMock";
 import { useRouter } from "next/router";
@@ -6,6 +6,7 @@ import { GetStaticProps, InferGetStaticPropsType } from "next/types";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import { AnimationOnScroll } from "react-animation-on-scroll";
+import Image from "next/image";
 
 type Props = {
   // Add custom props here
@@ -18,6 +19,14 @@ const ServicesPage = (
 ) => {
   const router = useRouter();
   const { t } = useTranslation();
+
+  const [windowSize, setWindowSize] = useState<number>();
+
+  console.log(windowSize);
+
+  useEffect(() => {
+    setWindowSize(window.innerWidth);
+  }, []);
 
   return (
     <div className={classNamePrefix}>
@@ -35,10 +44,20 @@ const ServicesPage = (
                 key={s.id}
                 onClick={() => router.push(`/serviceDetail?id=${s.id}`)}
               >
-                <div
-                  className={`${classNamePrefix}__list-item-image`}
-                  style={{ backgroundImage: `url(${s.imgeUrl.src})` }}
-                ></div>
+                {windowSize < 768 ? (
+                  <div
+                    className={`${classNamePrefix}__list-item-image`}
+                    style={{ backgroundImage: `url(${s.imgeUrl.src})` }}
+                  ></div>
+                ) : (
+                  <Image
+                    src={s.presentImg.src}
+                    alt=""
+                    className={`${classNamePrefix}__list-item-image`}
+                    width={200}
+                    height={300}
+                  />
+                )}
 
                 <div className={`${classNamePrefix}__list-item-title`}>
                   {t(s.title)}

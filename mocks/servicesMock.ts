@@ -18,6 +18,10 @@ import webDesign1 from "../public/static/webDesign1.png";
 import webDesign2 from "../public/static/webDesign2.png";
 import webDesign3 from "../public/static/webDesign3.png";
 import erp1 from "../public/static/erp1.png";
+import servicePresent1 from "../public/static/servicePresent1.png";
+import servicePresent2 from "../public/static/servicePresent2.png";
+import servicePresent3 from "../public/static/servicePresent3.png";
+import servicePresent4 from "../public/static/servicePresent4.png";
 
 export const ServicesMock = [
   {
@@ -25,6 +29,7 @@ export const ServicesMock = [
     title: "tvc",
     imgeUrl: service1,
     bg: serviceBg1,
+    presentImg: servicePresent1,
     subImg: [
       {
         id: 1,
@@ -61,6 +66,7 @@ export const ServicesMock = [
     title: "service.product-design",
     imgeUrl: service2,
     bg: serviceBg2,
+    presentImg: servicePresent2,
     subImg: [
       {
         id: 1,
@@ -97,6 +103,7 @@ export const ServicesMock = [
     title: "website",
     imgeUrl: service3,
     bg: serviceBg3,
+    presentImg: servicePresent3,
     subImg: [
       {
         id: 1,
@@ -129,6 +136,7 @@ export const ServicesMock = [
     title: "erp",
     imgeUrl: service4,
     bg: serviceBg4,
+    presentImg: servicePresent4,
     subImg: [
       {
         id: 1,

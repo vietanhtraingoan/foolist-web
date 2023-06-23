@@ -10,6 +10,7 @@ import { CloseCircleOutlined } from "@ant-design/icons";
 import { useTranslation } from "next-i18next";
 import ConnectSection from "../components/connectSection";
 import GridProject from "../components/gridProject";
+import Image from "next/image";
 
 const classNamePrefix = "project-page";
 
@@ -130,12 +131,17 @@ const ProjectPage = (
             ? projectMocks.map((p) => (
                 <div
                   className={`${classNamePrefix}__project-item animate__animated animate__zoomIn`}
-                  style={{
-                    backgroundImage: `url(${p.imgUrl.src})`,
-                  }}
                   onClick={() => handleProjectSelect(p.id)}
                   key={p.id}
-                ></div>
+                >
+                  <Image
+                    src={p.projectPresent}
+                    alt=""
+                    loading="lazy"
+                    width={270}
+                    height={500}
+                  />
+                </div>
               ))
             : ""}
         </div>
