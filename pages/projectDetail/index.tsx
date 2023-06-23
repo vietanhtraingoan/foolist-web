@@ -70,7 +70,7 @@ const ProjectDetailPage = (
             </div>
           </section>
 
-          <section className={`${classNamePrefix}__content-sub`}>
+          <section className={`${classNamePrefix}__content-sub-1`}>
             <div className={`${classNamePrefix}__content-sub-text-wrapper`}>
               <div className={`${classNamePrefix}__content-main-name`}>
                 <span>
@@ -92,7 +92,6 @@ const ProjectDetailPage = (
                   : "No content"}
               </div>
             </div>
-
             <div
               className={`${classNamePrefix}__content-sub-image`}
               style={{
@@ -100,10 +99,10 @@ const ProjectDetailPage = (
                   projectSelected.subImgUrl ? projectSelected.subImgUrl.src : ""
                 })`,
               }}
-            ></div>
+            />
           </section>
 
-          <section className={`${classNamePrefix}__content-sub`}>
+          <section className={`${classNamePrefix}__content-sub-2`}>
             <div
               className={`${classNamePrefix}__content-sub-image`}
               style={{

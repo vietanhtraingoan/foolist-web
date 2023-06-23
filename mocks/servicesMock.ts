@@ -21,7 +21,7 @@ import erp1 from "../public/static/erp1.png";
 import servicePresent1 from "../public/static/servicePresent1.png";
 import servicePresent2 from "../public/static/servicePresent2.png";
 import servicePresent3 from "../public/static/servicePresent3.png";
-import servicePresent4 from "../public/static/servicePresent4.png";
+import servicePresent4 from "../public/static/servicepresent4.png";
 
 export const ServicesMock = [
   {

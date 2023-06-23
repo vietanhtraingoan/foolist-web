@@ -133,7 +133,7 @@ const ContactPage = (
             }}
             placeholder={t("your-name")}
             style={{
-              borderColor: errorMessage !== "" && !name ? "red" : "1px solid #d9d9d933",
+              borderColor: errorMessage !== "" && !name ? "red" : "#ffffff",
             }}
             onBlur={(e) => setShowNameError(true)}
           />
@@ -174,7 +174,7 @@ const ContactPage = (
             }}
             placeholder={t("your-email")}
             style={{
-              borderColor: errorMessage !== "" && !email ? "red" : "1px solid #d9d9d933",
+              borderColor: errorMessage !== "" && !email ? "red" : "#ffffff",
             }}
             onBlur={(e) => setShowEmailError(true)}
           />
