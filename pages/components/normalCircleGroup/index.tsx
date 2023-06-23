@@ -58,7 +58,7 @@ const NormalCircleGroup: React.FC<INormalCircleProps> = (props) => {
                   <span>{t("circle.unique")}</span>
                 </div>
                 <div className={`${classNamePrefix}__text-item text-7`}>
-                  <span>{t("circle.eyesight")}</span>
+                  <span>{t("circle.vision")}</span>
                 </div>
               </div>
             </div>

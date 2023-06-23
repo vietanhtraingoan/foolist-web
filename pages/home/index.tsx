@@ -15,6 +15,7 @@ import ConnectSection from "../components/connectSection";
 import GridProject from "../components/gridProject";
 import ResponsiveClient from "../components/responsiveClient";
 import ServiceSection from "../components/serviceSection";
+import MenuContactSection from "../components/menuContactSection";
 
 const classNamePrefix = "home-page";
 
@@ -129,6 +130,10 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
           <span className={`${classNamePrefix}__footer-info-group-text`}>
             Foolist.vn
           </span>
+
+          <div className={`${classNamePrefix}__menu-contact`}>
+            <MenuContactSection />
+          </div>
 
           <div className={`${classNamePrefix}__footer-info-group`}>
             {infoMocks.map((i) => (

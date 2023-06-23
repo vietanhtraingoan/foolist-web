@@ -11,7 +11,7 @@ const MenuContactSection = () => {
       </div>
 
       <div className={`${classNamePrefix}__address`}>
-        Floor 3,64 Vo Thi Sau, Tan Dinh Ward, District 1, HCM, Viet Nam
+        64 Vo Thi Sau,Tan Dinh Ward,District 1,HCM, Viet Nam
       </div>
     </div>
   );

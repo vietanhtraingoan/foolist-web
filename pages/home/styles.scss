@@ -321,6 +321,10 @@
       -2px -2px 0 #ffffff, 2px 0px 0 #ffffff, 0px 2px 0 #ffffff,
       -2px 0px 0 #ffffff, 0px -2px 0 #ffffff, 0px 0px 3px rgba(246, 165, 193, 0);
   }
+
+  &__menu-contact{
+    display: none;
+  }
 }
 
 @keyframes slide {
@@ -432,6 +436,8 @@
 
     &__footer-info-group-title {
       font-size: 45px;
+
+      color: #f6a5c1;
     }
 
     &__footer-info-group-text {
@@ -439,8 +445,11 @@
     }
 
     &__footer-info-group {
-      font-size: 18px;
-      line-height: 65px;
+      display: none;
+    }
+
+    &__menu-contact{
+      display: block;
     }
   }
 }
