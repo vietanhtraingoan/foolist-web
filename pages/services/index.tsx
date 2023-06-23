@@ -67,11 +67,9 @@ const ServicesPage = (
           : ""}
       </div>
 
-      <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}>
-        <div className={`${classNamePrefix}__slogan-highlight`}>
-          <span>{t("service.slogan.slogan3")}</span>
-        </div>
-      </AnimationOnScroll>
+      <div className={`${classNamePrefix}__slogan-highlight`}>
+        <span>{t("service.slogan.slogan3")}</span>
+      </div>
 
       <div className={`${classNamePrefix}__footer`}>
         <MiniFooter />
