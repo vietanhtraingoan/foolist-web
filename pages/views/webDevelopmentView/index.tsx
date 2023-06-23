@@ -20,7 +20,10 @@ const WebDevelopmentView = (
   return (
     <div className={classNamePrefix}>
       <div className={`${classNamePrefix}__content`}>
-        <div className={`${classNamePrefix}__content-first`}>
+        <div
+          className={`${classNamePrefix}__content-first`}
+          style={{ width: "100%" }}
+        >
           <div className="animate__animated animate__zoomIn">
             <Image
               style={{ borderRadius: 15 }}
@@ -29,6 +32,7 @@ const WebDevelopmentView = (
               width={670}
               height={600}
               loading="lazy"
+              className={`${classNamePrefix}__image`}
             />
           </div>
 
@@ -47,7 +51,10 @@ const WebDevelopmentView = (
             {t(content.first)}
           </div>
 
-          <div className="animate__animated animate__zoomIn">
+          <div
+            className="animate__animated animate__zoomIn"
+            style={{ width: "100%" }}
+          >
             <Image
               style={{ borderRadius: 15, margin: "40px 0" }}
               src={subImg[2].item.src}
@@ -55,6 +62,7 @@ const WebDevelopmentView = (
               width={670}
               height={1800}
               loading="lazy"
+              className={`${classNamePrefix}__image-large`}
             />
           </div>
         </div>
@@ -73,7 +81,10 @@ const WebDevelopmentView = (
             </div>
           </div>
 
-          <div className="animate__animated animate__zoomIn">
+          <div
+            className="animate__animated animate__zoomIn"
+            style={{ width: "100%" }}
+          >
             <Image
               style={{ borderRadius: 15, margin: "40px 0" }}
               src={subImg[1].item.src}
@@ -81,6 +92,7 @@ const WebDevelopmentView = (
               width={670}
               height={600}
               loading="lazy"
+              className={`${classNamePrefix}__image`}
             />
           </div>
 

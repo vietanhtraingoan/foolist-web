@@ -61,8 +61,8 @@ const ServiceSection = (
             <div className={`${classNamePrefix}__content-item-list`}>
               <ul>
                 <li onClick={() => router.push(`/serviceDetail?id=3`)}>{t("service.website-development")}</li>
-                <li onClick={() => router.push(`/serviceDetail?id=4`)}>{t("service.mobile-app-development")}</li>
-                <li onClick={() => router.push(`/serviceDetail?id=5`)}>{t("service.erp")}</li>
+                <li onClick={() => router.push(`/serviceDetail?id=3`)}>{t("service.mobile-app-development")}</li>
+                <li onClick={() => router.push(`/serviceDetail?id=4`)}>{t("service.erp")}</li>
               </ul>
             </div>
           </div>

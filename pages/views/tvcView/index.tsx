@@ -27,6 +27,7 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
               width={550}
               height={500}
               loading="lazy"
+              className={`${classNamePrefix}__image-large`}
             />
           </div>
 
@@ -59,7 +60,10 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
               {t(content.third)}
             </div>
 
-            <div className="animate__animated animate__zoomIn">
+            <div
+              className="animate__animated animate__zoomIn"
+              style={{ width: "100%" }}
+            >
               <Image
                 style={{ borderRadius: 15, margin: "20px 0" }}
                 src={subImg[1].item.src}
@@ -67,6 +71,7 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
                 width={400}
                 height={400}
                 loading="lazy"
+                className={`${classNamePrefix}__image-small`}
               />
             </div>
 
@@ -83,7 +88,10 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
           </div>
 
           <div className={`${classNamePrefix}__content-second-item`}>
-            <div className="animate__animated animate__zoomIn">
+            <div
+              className="animate__animated animate__zoomIn"
+              style={{ width: "100%" }}
+            >
               <Image
                 style={{ borderRadius: 15, margin: "20px 0" }}
                 src={subImg[2].item.src}
@@ -91,6 +99,7 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
                 width={400}
                 height={400}
                 loading="lazy"
+                className={`${classNamePrefix}__image-small`}
               />
             </div>
 
@@ -105,7 +114,10 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
               {t(content.fifth)}
             </div>
 
-            <div className="animate__animated animate__zoomIn">
+            <div
+              className="animate__animated animate__zoomIn"
+              style={{ width: "100%" }}
+            >
               <Image
                 style={{ borderRadius: 15, margin: "20px 0" }}
                 src={subImg[3].item.src}
@@ -113,6 +125,7 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
                 width={400}
                 height={400}
                 loading="lazy"
+                className={`${classNamePrefix}__image-small`}
               />
             </div>
           </div>
@@ -125,7 +138,7 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
             src="https://res.cloudinary.com/dufh7rv0n/video/upload/v1687329964/output_compress-video-online.com_ojk2yb.mp4"
             title="W3Schools Free Online Web Tutorials"
             width="100%"
-            height={700}
+            height="100%"
             style={{ border: "none" }}
           />
         </div>

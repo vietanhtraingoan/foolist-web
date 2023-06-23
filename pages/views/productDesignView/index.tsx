@@ -21,7 +21,10 @@ const ProductDesignView = (
     <div className={classNamePrefix}>
       <div className={`${classNamePrefix}__content`}>
         <div className={`${classNamePrefix}__content-first`}>
-          <div className="animate__animated animate__zoomIn">
+          <div
+            className="animate__animated animate__zoomIn"
+            style={{ width: "100%" }}
+          >
             <Image
               style={{ borderRadius: 15 }}
               src={subImg[0].item.src}
@@ -29,6 +32,7 @@ const ProductDesignView = (
               width={670}
               height={600}
               loading="lazy"
+              className={`${classNamePrefix}__image`}
             />
           </div>
 
@@ -47,7 +51,10 @@ const ProductDesignView = (
             {t(content.first)}
           </div>
 
-          <div className="animate__animated animate__zoomIn">
+          <div
+            className="animate__animated animate__zoomIn"
+            style={{ width: "100%" }}
+          >
             <Image
               style={{ borderRadius: 15, margin: "40px 0" }}
               src={subImg[2].item.src}
@@ -55,6 +62,7 @@ const ProductDesignView = (
               width={670}
               height={600}
               loading="lazy"
+              className={`${classNamePrefix}__image`}
             />
           </div>
 
@@ -85,7 +93,10 @@ const ProductDesignView = (
           </div>
 
           <div className={`${classNamePrefix}__content-second-item`}>
-            <div className="animate__animated animate__zoomIn">
+            <div
+              className="animate__animated animate__zoomIn"
+              style={{ width: "100%" }}
+            >
               <Image
                 style={{ borderRadius: 15, margin: "40px 0" }}
                 src={subImg[1].item.src}
@@ -93,6 +104,7 @@ const ProductDesignView = (
                 width={670}
                 height={600}
                 loading="lazy"
+                className={`${classNamePrefix}__image`}
               />
             </div>
 
@@ -107,7 +119,10 @@ const ProductDesignView = (
               {t(content.fourth)}
             </div>
 
-            <div className="animate__animated animate__zoomIn">
+            <div
+              className="animate__animated animate__zoomIn"
+              style={{ width: "100%" }}
+            >
               <Image
                 style={{ borderRadius: 15, margin: "40px 0" }}
                 src={subImg[3].item.src}
@@ -115,6 +130,7 @@ const ProductDesignView = (
                 width={670}
                 height={600}
                 loading="lazy"
+                className={`${classNamePrefix}__image`}
               />
             </div>
           </div>
