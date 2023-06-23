@@ -20,11 +20,11 @@ const WebDevelopmentView = (
   return (
     <div className={classNamePrefix}>
       <div className={`${classNamePrefix}__content`}>
-        <div
-          className={`${classNamePrefix}__content-first`}
-          style={{ width: "100%" }}
-        >
-          <div className="animate__animated animate__zoomIn">
+        <div className={`${classNamePrefix}__content-first`}>
+          <div
+            className="animate__animated animate__zoomIn"
+            style={{ width: "100%", position: "relative" }}
+          >
             <Image
               style={{ borderRadius: 15 }}
               src={subImg[0].item.src}
@@ -34,6 +34,10 @@ const WebDevelopmentView = (
               loading="lazy"
               className={`${classNamePrefix}__image`}
             />
+
+            <div className={`${classNamePrefix}__image-layer`}>
+
+            </div>
           </div>
 
           <div className={`${classNamePrefix}__title`}>

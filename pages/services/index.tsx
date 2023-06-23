@@ -67,10 +67,6 @@ const ServicesPage = (
           : ""}
       </div>
 
-      <div className={`${classNamePrefix}__slogan-highlight`}>
-        <span>{t("service.slogan.slogan3")}</span>
-      </div>
-
       <div className={`${classNamePrefix}__footer`}>
         <MiniFooter />
       </div>
