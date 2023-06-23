@@ -35,7 +35,7 @@ export const projectMocks = [
     title: "project.project2.title",
     intro: "project.project2.intro",
     projectPresent: projectPresent2,
-    subImgUrl: projectSub3,
+    subImgUrl: projectSub2,
     paragraph1: {
       title: "project.project2.paragraph-1.title",
       content: "project.project2.paragraph-1.content",
@@ -53,7 +53,7 @@ export const projectMocks = [
     title: "project.project3.title",
     intro: "project.project3.intro",
     projectPresent: projectPresent3,
-    subImgUrl: projectSub2,
+    subImgUrl: projectSub3,
     paragraph1: {
       title: "project.project3.paragraph-1.title",
       content: "project.project3.paragraph-1.content",
