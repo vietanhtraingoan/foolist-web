@@ -20,12 +20,11 @@
     background: #000000;
 
     div {
-      font-family: "Times New Roman", Times, serif;
-      font-style: normal;
-      font-weight: 700;
-      font-size: 38.2368px;
-      line-height: 36px;
+      font-family: Arial;
       color: #ffffff;
+      font-weight: 700;
+      font-size: 30px;
+      text-align: center;
       text-transform: uppercase;
     }
   }
@@ -109,15 +108,13 @@
 
 @media screen and (max-width: 768px) {
   .service-page {
-
-    &__slogan{
+    &__slogan {
       justify-content: flex-start;
 
       margin-top: 80px;
       padding: 50px 20px;
 
-      div{
-        
+      div {
       }
     }
 
@@ -152,18 +149,18 @@
       line-height: 70px;
     }
 
-    &__slogan-highlight{
+    &__slogan-highlight {
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
 
-      span{
+      span {
         font-size: 22px;
       }
     }
 
-    &__footer{
+    &__footer {
       display: none;
     }
   }

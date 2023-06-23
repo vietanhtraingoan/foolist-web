@@ -13,7 +13,6 @@ interface IProjectDetailProps {
 const classNamePrefix = "project-detail";
 
 const ProjectDetail: React.FC<IProjectDetailProps> = (props) => {
-  const { projectSelect, handleClose } = props;
   const { t } = useTranslation();
 
   const [animation, setAnimation] = useState<boolean>(true);
