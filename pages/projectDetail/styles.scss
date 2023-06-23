@@ -86,7 +86,7 @@
     margin-bottom: 40px;
 
     span {
-      font-family: "Montserrat";
+      font-family: Arial, Helvetica, sans-serif;
       font-style: normal;
       font-weight: 800;
       font-size: 70px;
@@ -97,7 +97,7 @@
 
   &__content-main-title {
     span {
-      font-family: "Montserrat";
+      font-family: 'Times New Roman', Times, serif;
       font-style: normal;
       font-weight: 800;
       font-size: 20px;
@@ -205,6 +205,7 @@
 
       span {
         font-size: 16px;
+        text-align: right;
       }
     }
 
