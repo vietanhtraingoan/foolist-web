@@ -1,7 +1,9 @@
 import React from "react";
-import Image from "next/image";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import { useRouter } from "next/router";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import Skeleton from "react-loading-skeleton";
 
 interface IProjectList {
   data: any;
@@ -26,8 +28,17 @@ const ProjectList: React.FC<IProjectList> = (props) => {
               <div
                 className={`${classNamePrefix}__item`}
                 onClick={() => router.push(`/projectDetail?id=${item.id}`)}
-                style={{ backgroundImage: `url(${item.imgUrl.src})` }}
-              ></div>
+              >
+                {(
+                  <LazyLoadImage
+                    src={item.imgUrl.src}
+                    placeholderSrc={item.imgUrl.src}
+                    effect="blur"
+                    width="100%"
+                    height="100%"
+                  />
+                ) || <Skeleton />}
+              </div>
             </AnimationOnScroll>
           ))
         : ""}

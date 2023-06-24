@@ -2,6 +2,7 @@ import { DefaultSeo } from "next-seo";
 import "animate.css";
 import "animate.css/animate.min.css";
 import "react-phone-number-input/style.css";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import Head from "next/head";
 import { Router } from "next/router";
 
@@ -14,7 +15,6 @@ import "./components/menu/styles.scss";
 import "./components/customHamburgMenu/styles.scss";
 import "./components/socialGroup/styles.scss";
 import "./components/languageChange/styles.scss";
-import "./components/productSider/styles.scss";
 import "./components/projectCarousel/styles.scss";
 import "./components/clientItem/styles.scss";
 import "./components/circleProjectSlider/styles.scss";

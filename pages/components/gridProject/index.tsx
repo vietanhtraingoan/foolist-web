@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { projectMocks } from "../../../mocks/projectMocks";
-import ProjectList from "./projectList";
+import ProjectList from "./projectList/index";
 import { GetStaticProps, InferGetStaticPropsType } from "next/types";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { DEFAULT_LANG } from "../../../utils/constants";

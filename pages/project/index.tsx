@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ProjectDetail from "../components/projectDetail";
+import ProjectDetail from "../components/projectDetail/index";
 import AnimatedNextButton from "../components/animatedNextButton";
 import { projectMocks } from "../../mocks/projectMocks";
 import { useDispatch } from "react-redux";
@@ -10,7 +10,9 @@ import { CloseCircleOutlined } from "@ant-design/icons";
 import { useTranslation } from "next-i18next";
 import ConnectSection from "../components/connectSection";
 import GridProject from "../components/gridProject";
-import Image from "next/image";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import Skeleton from "react-loading-skeleton";
 
 const classNamePrefix = "project-page";
 
@@ -134,13 +136,17 @@ const ProjectPage = (
                   onClick={() => handleProjectSelect(p.id)}
                   key={p.id}
                 >
-                  <Image
-                    src={p.projectPresent}
-                    alt=""
-                    loading="lazy"
-                    width={270}
-                    height={500}
-                  />
+                  <div className={`${classNamePrefix}__project-item-image`}>
+                    {(
+                      <LazyLoadImage
+                        src={p.projectPresent.src}
+                        placeholderSrc={p.projectPresent.src}
+                        effect="blur"
+                        width="100%"
+                        height="100%"
+                      />
+                    ) || <Skeleton />}
+                  </div>
                 </div>
               ))
             : ""}

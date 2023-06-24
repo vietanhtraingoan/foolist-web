@@ -1,10 +1,12 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { GetStaticProps, InferGetStaticPropsType } from "next/types";
 import React from "react";
-import Image from "next/image";
 import { DEFAULT_LANG } from "../../../utils/constants";
 import { ServicesMock } from "../../../mocks/servicesMock";
 import { useTranslation } from "next-i18next";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import Skeleton from "react-loading-skeleton";
 
 type Props = {};
 
@@ -15,35 +17,22 @@ const ERPView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
 
   const { subImg, content } = ServicesMock[3];
 
-  const keyStr =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
-
-  const triplet = (e1: number, e2: number, e3: number) =>
-    keyStr.charAt(e1 >> 2) +
-    keyStr.charAt(((e1 & 3) << 4) | (e2 >> 4)) +
-    keyStr.charAt(((e2 & 15) << 2) | (e3 >> 6)) +
-    keyStr.charAt(e3 & 63);
-
-  const rgbDataURL = (r: number, g: number, b: number) =>
-    `data:image/gif;base64,R0lGODlhAQABAPAA${
-      triplet(0, r, g) + triplet(b, 255, 255)
-    }/yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==`;
-
   return (
     <div className={classNamePrefix}>
       <div className={`${classNamePrefix}__content`}>
         <div className="animate__animated animate__zoomIn">
-          <Image
-            style={{ borderRadius: 15 }}
-            src={subImg[0].item.src}
-            alt=""
-            className={`${classNamePrefix}__content-image`}
-            width={1150}
-            height={850}
-            loading="lazy"
-            placeholder="blur"
-            blurDataURL={rgbDataURL(237, 181, 6)}
-          />
+          <div className={`${classNamePrefix}__content-image`}>
+            {(
+              <LazyLoadImage
+                style={{ borderRadius: 15 }}
+                src={subImg[0].item.src}
+                placeholderSrc={subImg[0].item.src}
+                effect="blur"
+                width="100%"
+                height="100%"
+              />
+            ) || <Skeleton />}
+          </div>
         </div>
 
         <div className={`${classNamePrefix}__title`}>

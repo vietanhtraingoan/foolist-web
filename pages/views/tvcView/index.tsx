@@ -5,6 +5,9 @@ import { useTranslation } from "next-i18next";
 import { GetStaticProps, InferGetStaticPropsType } from "next/types";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { DEFAULT_LANG } from "../../../utils/constants";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import Skeleton from "react-loading-skeleton";
 
 type Props = {};
 
@@ -20,7 +23,18 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
       <div className={`${classNamePrefix}__content`}>
         <div className={`${classNamePrefix}__content-first`}>
           <div className="animate__animated animate__zoomIn">
-            <Image
+            <div className={`${classNamePrefix}__image-large`}>
+              {(
+                <LazyLoadImage
+                  src={subImg[0].item.src}
+                  placeholderSrc={subImg[0].item.src}
+                  effect="blur"
+                  width="100%"
+                  height="100%"
+                />
+              ) || <Skeleton />}
+            </div>
+            {/* <Image
               style={{ borderRadius: 15 }}
               src={subImg[0].item.src}
               alt=""
@@ -28,7 +42,7 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
               height={500}
               loading="lazy"
               className={`${classNamePrefix}__image-large`}
-            />
+            /> */}
           </div>
 
           <div
@@ -64,15 +78,17 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
               className="animate__animated animate__zoomIn"
               style={{ width: "100%" }}
             >
-              <Image
-                style={{ borderRadius: 15, margin: "20px 0" }}
-                src={subImg[1].item.src}
-                alt=""
-                width={400}
-                height={400}
-                loading="lazy"
-                className={`${classNamePrefix}__image-small`}
-              />
+              <div className={`${classNamePrefix}__image-small`}>
+                {(
+                  <LazyLoadImage
+                    src={subImg[1].item.src}
+                    placeholderSrc={subImg[1].item.src}
+                    effect="blur"
+                    width="100%"
+                    height="100%"
+                  />
+                ) || <Skeleton />}
+              </div>
             </div>
 
             <div
@@ -92,15 +108,17 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
               className="animate__animated animate__zoomIn"
               style={{ width: "100%" }}
             >
-              <Image
-                style={{ borderRadius: 15, margin: "20px 0" }}
-                src={subImg[2].item.src}
-                alt=""
-                width={400}
-                height={400}
-                loading="lazy"
-                className={`${classNamePrefix}__image-small`}
-              />
+              <div className={`${classNamePrefix}__image-small`}>
+                {(
+                  <LazyLoadImage
+                    src={subImg[2].item.src}
+                    placeholderSrc={subImg[2].item.src}
+                    effect="blur"
+                    width="100%"
+                    height="100%"
+                  />
+                ) || <Skeleton />}
+              </div>
             </div>
 
             <div
@@ -118,15 +136,17 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
               className="animate__animated animate__zoomIn"
               style={{ width: "100%" }}
             >
-              <Image
-                style={{ borderRadius: 15, margin: "20px 0" }}
-                src={subImg[3].item.src}
-                alt=""
-                width={400}
-                height={400}
-                loading="lazy"
-                className={`${classNamePrefix}__image-small`}
-              />
+              <div className={`${classNamePrefix}__image-small`}>
+                {(
+                  <LazyLoadImage
+                    src={subImg[3].item.src}
+                    placeholderSrc={subImg[3].item.src}
+                    effect="blur"
+                    width="100%"
+                    height="100%"
+                  />
+                ) || <Skeleton />}
+              </div>
             </div>
           </div>
         </div>

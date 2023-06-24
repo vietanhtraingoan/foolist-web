@@ -5,6 +5,9 @@ import { ServicesMock } from "../../../mocks/servicesMock";
 import { GetStaticProps, InferGetStaticPropsType } from "next/types";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { DEFAULT_LANG } from "../../../utils/constants";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import Skeleton from "react-loading-skeleton";
 
 type Props = {};
 
@@ -25,15 +28,18 @@ const ProductDesignView = (
             className="animate__animated animate__zoomIn"
             style={{ width: "100%" }}
           >
-            <Image
-              style={{ borderRadius: 15 }}
-              src={subImg[0].item.src}
-              alt=""
-              width={670}
-              height={600}
-              loading="lazy"
-              className={`${classNamePrefix}__image`}
-            />
+            <div className={`${classNamePrefix}__image`}>
+              {(
+                <LazyLoadImage
+                  style={{ borderRadius: 15 }}
+                  src={subImg[0].item.src}
+                  placeholderSrc={subImg[0].item.src}
+                  effect="blur"
+                  width="100%"
+                  height="100%"
+                />
+              ) || <Skeleton />}
+            </div>
           </div>
 
           <div className={`${classNamePrefix}__title`}>
@@ -55,15 +61,18 @@ const ProductDesignView = (
             className="animate__animated animate__zoomIn"
             style={{ width: "100%" }}
           >
-            <Image
-              style={{ borderRadius: 15, margin: "40px 0" }}
-              src={subImg[2].item.src}
-              alt=""
-              width={670}
-              height={600}
-              loading="lazy"
-              className={`${classNamePrefix}__image`}
-            />
+            <div className={`${classNamePrefix}__image`}>
+              {(
+                <LazyLoadImage
+                  style={{ borderRadius: 15, margin: "40px 0" }}
+                  src={subImg[2].item.src}
+                  placeholderSrc={subImg[2].item.src}
+                  effect="blur"
+                  width="100%"
+                  height="100%"
+                />
+              ) || <Skeleton />}
+            </div>
           </div>
 
           <div
@@ -97,15 +106,18 @@ const ProductDesignView = (
               className="animate__animated animate__zoomIn"
               style={{ width: "100%" }}
             >
-              <Image
-                style={{ borderRadius: 15, margin: "40px 0" }}
-                src={subImg[1].item.src}
-                alt=""
-                width={670}
-                height={600}
-                loading="lazy"
-                className={`${classNamePrefix}__image`}
-              />
+              <div className={`${classNamePrefix}__image`}>
+                {(
+                  <LazyLoadImage
+                    style={{ borderRadius: 15, margin: "40px 0" }}
+                    src={subImg[1].item.src}
+                    placeholderSrc={subImg[1].item.src}
+                    effect="blur"
+                    width="100%"
+                    height="100%"
+                  />
+                ) || <Skeleton />}
+              </div>
             </div>
 
             <div
@@ -123,15 +135,18 @@ const ProductDesignView = (
               className="animate__animated animate__zoomIn"
               style={{ width: "100%" }}
             >
-              <Image
-                style={{ borderRadius: 15, margin: "40px 0" }}
-                src={subImg[3].item.src}
-                alt=""
-                width={670}
-                height={600}
-                loading="lazy"
-                className={`${classNamePrefix}__image`}
-              />
+              <div className={`${classNamePrefix}__image`}>
+                {(
+                  <LazyLoadImage
+                    style={{ borderRadius: 15, margin: "40px 0" }}
+                    src={subImg[3].item.src}
+                    placeholderSrc={subImg[3].item.src}
+                    effect="blur"
+                    width="100%"
+                    height="100%"
+                  />
+                ) || <Skeleton />}
+              </div>
             </div>
           </div>
         </div>

@@ -1,14 +1,13 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { projectMocks } from "../../../mocks/projectMocks";
-import Image from "next/image";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 import { useRouter } from "next/router";
 
 const classNamePrefix = "project-carousel";
 
 const ProjectCarousel = () => {
-  const router = useRouter()
-  
+  const router = useRouter();
+
   const [visibleSlide, setVisibleSlide] = useState(3);
   const [targetSlide, setTargetSlide] = useState(3);
 
@@ -60,20 +59,25 @@ const ProjectCarousel = () => {
         onScroll={handleScroll}
         ref={wrapperRef}
       >
-        {projectMocks.map((proj, index) => (
-          <div
-            key={proj.id}
-            className={`${classNamePrefix}__carousel-item`}
-            ref={index === targetSlide ? targetSlideRef : null}
-            onClick={() => router.push(`/projectDetail?id=${proj.id}`)}
-          >
-            <Image
-              src={proj.imgUrl}
-              alt=""
-              className={`${classNamePrefix}__carousel-item-img`}
-            />
-          </div>
-        ))}
+        {projectMocks
+          ? projectMocks.map((proj, index) => (
+              <div
+                key={proj.id}
+                className={`${classNamePrefix}__carousel-item`}
+                ref={index === targetSlide ? targetSlideRef : null}
+                onClick={() => router.push(`/projectDetail?id=${proj.id}`)}
+              >
+                <div className={`${classNamePrefix}__carousel-item-img`}>
+                  <img
+                    src={proj.imgUrl.src}
+                    width="100%"
+                    height="100%"
+                    alt=""
+                  />
+                </div>
+              </div>
+            ))
+          : ""}
       </div>
 
       <div className={`${classNamePrefix}__carousel-button-group`}>
@@ -86,7 +90,7 @@ const ProjectCarousel = () => {
       </div>
 
       <div className="dots">
-        {projectMocks.slice(0, 3).map((photo, index) => (
+        {projectMocks.map((photo, index) => (
           <span
             key={photo.id}
             className={

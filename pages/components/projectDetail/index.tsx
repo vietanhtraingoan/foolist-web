@@ -4,6 +4,9 @@ import { useSelector } from "react-redux";
 import { getProjectId } from "../../../store/selector/rootSelector";
 import { projectMocks } from "../../../mocks/projectMocks";
 import { useTranslation } from "next-i18next";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import Skeleton from "react-loading-skeleton";
 
 interface IProjectDetailProps {
   projectSelect?: boolean;
@@ -24,7 +27,7 @@ const ProjectDetail: React.FC<IProjectDetailProps> = (props) => {
   useEffect(() => {
     setTimeout(() => {
       setAnimation(false);
-    }, 700);
+    }, 200);
   }, []);
 
   return (
@@ -42,20 +45,31 @@ const ProjectDetail: React.FC<IProjectDetailProps> = (props) => {
                 className={`${classNamePrefix}__content-main-image-wrapper`}
                 style={{
                   width: animation ? "100vw" : 450,
-                  height: animation ? "100vh" : 550,
+                  height: animation ? "100vh" : 450,
                   marginLeft: animation ? 0 : 161,
                 }}
               >
                 <div
                   className={`${classNamePrefix}__content-main-image`}
                   style={{
-                    backgroundImage: `url(${
-                      projectSelected.imgUrl ? projectSelected.imgUrl.src : ""
-                    })`,
+                    // backgroundImage: `url(${
+                    //   projectSelected.subImgUrl ? projectSelected.subImgUrl.src : ""
+                    // })`,
                     width: "100%",
                     height: "100%",
                   }}
-                ></div>
+                >
+                  {(
+                    <LazyLoadImage
+                      style={{ borderRadius: 15 }}
+                      src={projectSelected.imgUrl.src}
+                      placeholderSrc={projectSelected.imgUrl.src}
+                      effect="blur"
+                      width="100%"
+                      height="100%"
+                    />
+                  ) || <Skeleton />}
+                </div>
 
                 <div
                   className={`${classNamePrefix}__content-main-image-layer`}
@@ -119,7 +133,7 @@ const ProjectDetail: React.FC<IProjectDetailProps> = (props) => {
               className={`${classNamePrefix}__content-sub-image`}
               style={{
                 backgroundImage: `url(${
-                  projectSelected.subImgUrl ? projectSelected.subImgUrl.src : ""
+                  projectSelected.imgUrl ? projectSelected.subImgUrl.src : ""
                 })`,
               }}
             ></div>

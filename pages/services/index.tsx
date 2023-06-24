@@ -7,6 +7,9 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import Image from "next/image";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import Skeleton from "react-loading-skeleton";
 
 type Props = {
   // Add custom props here
@@ -57,20 +60,32 @@ const ServicesPage = (
                 onClick={() => router.push(`/serviceDetail?id=${s.id}`)}
               >
                 {windowSize < 768 ? (
+                  <div className={`${classNamePrefix}__list-item-image`}>
+                    {(
+                      <LazyLoadImage
+                        src={s.imgeUrl.src}
+                        placeholderSrc={s.imgeUrl.src}
+                        effect="blur"
+                        width="100%"
+                        height="100%"
+                      />
+                    ) || <Skeleton />}
+                  </div>
+                ) : (
                   <div
                     className={`${classNamePrefix}__list-item-image`}
                     style={{ backgroundImage: `url(${s.imgeUrl.src})` }}
-                  ></div>
-                ) : (
-                  <Image
-                    src={s.presentImg.src}
-                    alt=""
-                    className={`${classNamePrefix}__list-item-image`}
-                    width={200}
-                    height={300}
-                    placeholder="blur"
-                    blurDataURL={rgbDataURL(237, 181, 6)}
-                  />
+                  >
+                    {(
+                      <LazyLoadImage
+                        src={s.presentImg.src}
+                        placeholderSrc={s.presentImg.src}
+                        effect="blur"
+                        width="100%"
+                        height="100%"
+                      />
+                    ) || <Skeleton />}
+                  </div>
                 )}
 
                 <div className={`${classNamePrefix}__list-item-title`}>

@@ -11,4 +11,10 @@
     width: 100%;
     height: 850px;
   }
+
+  .ant-carousel{
+    .slick-dots-bottom{
+      bottom: -50px;
+    }
+  }
 }

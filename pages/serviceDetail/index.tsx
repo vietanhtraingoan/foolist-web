@@ -1,13 +1,11 @@
 import React from "react";
 import { getUrlParams } from "../../utils/commonFunctions";
-import { ServicesMock } from "../../mocks/servicesMock";
 import { GetStaticProps, InferGetStaticPropsType } from "next/types";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import MiniFooter from "../components/miniFooter";
-import Image from "next/image";
-import TVCView from "../views/tvcView";
-import ProductDesignView from "../views/productDesignView";
-import WebDevelopmentView from "../views/webDevelopmentView";
+import TVCView from "../views/tvcView/index";
+import ProductDesignView from "../views/productDesignView/index";
+import WebDevelopmentView from "../views/webDevelopmentView/index";
 import ERPView from "../views/erpView";
 
 type Props = {};
