@@ -7,16 +7,12 @@
 
   overflow-y: scroll;
 
-  padding: 120px 60px;
+  padding: 20px 60px;
 
   transition: ease-in-out 0.5s;
 
   &::-webkit-scrollbar {
     display: none;
-  }
-
-  &__content{
-    padding: 120px 0;
   }
 
   &__content-main {
