@@ -23,13 +23,13 @@
     align-items: center;
 
     width: 100%;
-
+    
     transition: ease-in-out 1s;
   }
 
   &__title {
     position: absolute;
-    top: 120px;
+    top: 110px;
 
     width: 100%;
 
@@ -94,14 +94,6 @@
     }
   }
 
-  &__introduction-second {
-    font-size: 30px;
-    font-family: "Times New Roman", Times, serif;
-    text-align: justify;
-    font-style: italic;
-    color: #ffffff;
-  }
-
   &__responsive-project-list {
     display: none;
   }
@@ -113,7 +105,7 @@
     align-items: center;
 
     width: 2000px;
-    height: 100vh;
+    min-height: 700px;
     white-space: nowrap;
 
     overflow-x: scroll;
@@ -126,21 +118,18 @@
   }
 
   &__project-item {
-    width: 270px;
-    height: 500px;
-
     cursor: pointer;
 
     border-radius: 10px;
 
-    margin: 0 10px;
+    margin: 0 20px;
 
     color: #ffffff;
   }
 
-  &__project-item-image{
-    width: 270px;
-    height: 500px;
+  &__project-item-image {
+    width: 254px;
+    height: 520px;
   }
 
   &__connect {

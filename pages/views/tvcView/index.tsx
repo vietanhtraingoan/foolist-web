@@ -155,11 +155,13 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
       <div className={`${classNamePrefix}__bottom`}>
         <div className={`${classNamePrefix}__bottom-video`}>
           <iframe
-            src="https://res.cloudinary.com/dufh7rv0n/video/upload/v1687329964/output_compress-video-online.com_ojk2yb.mp4"
-            title="W3Schools Free Online Web Tutorials"
             width="100%"
             height="100%"
-            style={{ border: "none" }}
+            style={{border: "none"}}
+            src={`https://www.youtube.com/embed/watch?v=Uc5dm66PjM8`}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            title="Embedded youtube"
           />
         </div>
 

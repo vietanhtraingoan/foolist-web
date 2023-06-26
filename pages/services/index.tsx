@@ -72,10 +72,7 @@ const ServicesPage = (
                     ) || <Skeleton />}
                   </div>
                 ) : (
-                  <div
-                    className={`${classNamePrefix}__list-item-image`}
-                    style={{ backgroundImage: `url(${s.imgeUrl.src})` }}
-                  >
+                  <div className={`${classNamePrefix}__list-item-image`}>
                     {(
                       <LazyLoadImage
                         src={s.presentImg.src}
