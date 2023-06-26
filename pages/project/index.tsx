@@ -85,11 +85,11 @@ const ProjectPage = (
             <ProjectDetail handleClose={() => setProjectSelect(false)} />
           )}
 
-          {projectSelect && (
+          {/* {projectSelect && (
             <div className={`${classNamePrefix}__next-button`}>
               <AnimatedNextButton />
             </div>
-          )}
+          )} */}
 
           {projectSelect && (
             <div
