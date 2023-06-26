@@ -16,16 +16,18 @@ const IntroductionCarousel = () => {
         {introductionMocks
           ? introductionMocks.map((i) => (
               <div className={`${classNamePrefix}__item`} key={i.id}>
-                <div className={`${classNamePrefix}__item-image`}>
-                  {(
-                    <LazyLoadImage
-                      src={i.imgUrl.src}
-                      placeholderSrc={i.imgUrl.src}
-                      effect="blur"
-                      width="100%"
-                      height="100%"
-                    />
-                  ) || <Skeleton />}
+                <div className={`${classNamePrefix}__item-image-wrapper`}>
+                  <div className={`${classNamePrefix}__item-image`}>
+                    {(
+                      <LazyLoadImage
+                        src={i.imgUrl.src}
+                        placeholderSrc={i.imgUrl.src}
+                        effect="blur"
+                        width="100%"
+                        height="100%"
+                      />
+                    ) || <Skeleton />}
+                  </div>
                 </div>
               </div>
             ))
