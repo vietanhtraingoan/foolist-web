@@ -42,6 +42,7 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
                   height="100%"
                 />
               ) || <Skeleton />}
+              <div className={`${classNamePrefix}__image-layer`}></div>
             </div>
           </div>
 
