@@ -7,6 +7,7 @@ import { useTranslation } from "next-i18next";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import Skeleton from "react-loading-skeleton";
+import Image from "next/image";
 
 interface IProjectDetailProps {
   projectSelect?: boolean;
@@ -52,23 +53,17 @@ const ProjectDetail: React.FC<IProjectDetailProps> = (props) => {
                 <div
                   className={`${classNamePrefix}__content-main-image`}
                   style={{
-                    // backgroundImage: `url(${
-                    //   projectSelected.subImgUrl ? projectSelected.subImgUrl.src : ""
-                    // })`,
                     width: "100%",
                     height: "100%",
                   }}
                 >
-                  {(
-                    <LazyLoadImage
-                      style={{ borderRadius: 15 }}
-                      src={projectSelected.imgUrl.src}
-                      placeholderSrc={projectSelected.imgUrl.src}
-                      effect="blur"
-                      width="100%"
-                      height="100%"
-                    />
-                  ) || <Skeleton />}
+                  <Image
+                    src={projectSelected.imgUrl.src}
+                    alt=""
+                    width={450}
+                    height={450}
+                    className={`${classNamePrefix}__content-main-image`}
+                  />
                 </div>
 
                 <div

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { ServicesMock } from "../../../mocks/servicesMock";
 import { useTranslation } from "next-i18next";
 import { GetStaticProps, InferGetStaticPropsType } from "next/types";
@@ -8,6 +8,9 @@ import { DEFAULT_LANG } from "../../../utils/constants";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import Skeleton from "react-loading-skeleton";
+import videoBg from "../../../public/static/videoBg.png";
+import videoLayer from "../../../public/static/videoLayer.png";
+import { RightCircleOutlined } from "@ant-design/icons";
 
 type Props = {};
 
@@ -17,6 +20,12 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation();
 
   const { subImg, content } = ServicesMock[0];
+
+  const [videoPlay, setVideoPlay] = useState<boolean>(false)
+
+  const handlePlayVideo = () => {
+    setVideoPlay(true)
+  }
 
   return (
     <div className={classNamePrefix}>
@@ -34,15 +43,6 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
                 />
               ) || <Skeleton />}
             </div>
-            {/* <Image
-              style={{ borderRadius: 15 }}
-              src={subImg[0].item.src}
-              alt=""
-              width={550}
-              height={500}
-              loading="lazy"
-              className={`${classNamePrefix}__image-large`}
-            /> */}
           </div>
 
           <div
@@ -153,23 +153,34 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
       </div>
 
       <div className={`${classNamePrefix}__bottom`}>
-        <div className={`${classNamePrefix}__bottom-video`}>
+        <div
+          className={`${classNamePrefix}__bottom-video`}
+          style={{ backgroundImage: `url(${videoBg.src})` }}
+        >
           <iframe
-            width="100%"
-            height="100%"
-            style={{border: "none"}}
-            src={`https://www.youtube.com/embed/watch?v=Uc5dm66PjM8`}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            title="Embedded youtube"
-          />
+            style={{ border: 0 }}
+            width="944"
+            height="530"
+            src="https://www.youtube.com/embed/Uc5dm66PjM8"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          ></iframe>
+
+          <div
+            className={`${classNamePrefix}__bottom-video-layer`}
+            style={{ backgroundImage: `url(${videoLayer.src})`, zIndex: videoPlay ? -1 : 0}}
+          >
+            <RightCircleOutlined rev="true" className={`${classNamePrefix}__bottom-video-layer-icon`} onClick={handlePlayVideo}/>
+          </div>
         </div>
 
-        <div
-          className={`${classNamePrefix}__content-section-text`}
-          style={{ marginTop: 32 }}
-        >
-          {t(content.sixth)}
+        <div className={`${classNamePrefix}__content-bottom-text`}>
+          <div
+            className={`${classNamePrefix}__content-section-text`}
+            style={{ marginTop: 32 }}
+          >
+            {t(content.sixth)}
+          </div>
         </div>
       </div>
     </div>
