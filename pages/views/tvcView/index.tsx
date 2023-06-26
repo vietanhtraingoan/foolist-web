@@ -11,6 +11,7 @@ import Skeleton from "react-loading-skeleton";
 import videoBg from "../../../public/static/videoBg.png";
 import videoLayer from "../../../public/static/videoLayer.png";
 import { RightCircleOutlined } from "@ant-design/icons";
+import Head from "next/head";
 
 type Props = {};
 
@@ -29,6 +30,9 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
 
   return (
     <div className={classNamePrefix}>
+       <Head>
+        <title>{t("Services")}-TVC</title>
+      </Head>
       <div className={`${classNamePrefix}__content`}>
         <div className={`${classNamePrefix}__content-first`}>
           <div className="animate__animated animate__zoomIn">

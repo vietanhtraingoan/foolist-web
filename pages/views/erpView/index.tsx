@@ -7,6 +7,7 @@ import { useTranslation } from "next-i18next";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import Skeleton from "react-loading-skeleton";
+import Head from "next/head";
 
 type Props = {};
 
@@ -19,6 +20,9 @@ const ERPView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
 
   return (
     <div className={classNamePrefix}>
+      <Head>
+        <title>{t("Services")}-ERP</title>
+      </Head>
       <div className={`${classNamePrefix}__content`}>
         <div className="animate__animated animate__zoomIn">
           <div className={`${classNamePrefix}__content-image`}>

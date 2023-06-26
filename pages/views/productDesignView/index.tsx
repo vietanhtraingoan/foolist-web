@@ -8,6 +8,7 @@ import { DEFAULT_LANG } from "../../../utils/constants";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import Skeleton from "react-loading-skeleton";
+import Head from "next/head";
 
 type Props = {};
 
@@ -22,6 +23,9 @@ const ProductDesignView = (
 
   return (
     <div className={classNamePrefix}>
+       <Head>
+        <title>{t("Services")}-Product Design</title>
+      </Head>
       <div className={`${classNamePrefix}__content`}>
         <div className={`${classNamePrefix}__content-first`}>
           <div
