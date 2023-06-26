@@ -6,10 +6,10 @@ import { GetStaticProps, InferGetStaticPropsType } from "next/types";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import { AnimationOnScroll } from "react-animation-on-scroll";
-import Image from "next/image";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import Skeleton from "react-loading-skeleton";
+import Head from 'next/head'
 
 type Props = {
   // Add custom props here
@@ -45,6 +45,9 @@ const ServicesPage = (
 
   return (
     <div className={classNamePrefix}>
+       <Head>
+        <title>{t("Services")}</title>
+      </Head>
       <div className={`${classNamePrefix}__slogan`}>
         <div className="animate__animated animate__slideInUp">
           {t("Services")}

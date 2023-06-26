@@ -11,6 +11,7 @@ import PhoneInput from "react-phone-number-input";
 import vn from "react-phone-number-input/locale/vi.json";
 import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from "@emailjs/browser";
+import Head from "next/head";
 
 const classNamePrefix = "contact-page";
 
@@ -109,7 +110,12 @@ const ContactPage = (
 
   return (
     <div className={classNamePrefix}>
-      <section className={`${classNamePrefix}__introduction-wrapper animate__animated animate__slideInUp`}>
+      <Head>
+        <title>{t("Contact Us")}</title>
+      </Head>
+      <section
+        className={`${classNamePrefix}__introduction-wrapper animate__animated animate__slideInUp`}
+      >
         <div className={`${classNamePrefix}__introduction-wrapper-text`}>
           {t("connect-with")} <span> FOOLIST</span>
         </div>

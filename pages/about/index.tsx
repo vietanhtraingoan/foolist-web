@@ -13,6 +13,7 @@ import { useTranslation } from "next-i18next";
 import MiniFooter from "../components/miniFooter";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import EmployeeSlider from "../components/employeeSlider";
+import Head from 'next/head'
 
 const classNamePrefix = "about-page";
 
@@ -42,6 +43,9 @@ const AboutPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
 
   return (
     <div className={classNamePrefix}>
+      <Head>
+        <title>{t("About us")}</title>
+      </Head>
       <section className={`${classNamePrefix}__first-section`}>
         <div
           className={`${classNamePrefix}__first-section-slogan animate__animated animate__fadeInUp`}

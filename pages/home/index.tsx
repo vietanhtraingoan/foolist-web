@@ -16,6 +16,7 @@ import GridProject from "../components/gridProject/index";
 import ResponsiveClient from "../components/responsiveClient";
 import ServiceSection from "../components/serviceSection";
 import MenuContactSection from "../components/menuContactSection";
+import Head from 'next/head'
 
 const classNamePrefix = "home-page";
 
@@ -26,6 +27,9 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
 
   return (
     <div className={classNamePrefix} id="scrolly-div">
+      <Head>
+        <title>{t("Home")}</title>
+      </Head>
       <section
         id="first-section"
         className={`${classNamePrefix}__introduction-container`}
