@@ -21,11 +21,11 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
 
   const { subImg, content } = ServicesMock[0];
 
-  const [videoPlay, setVideoPlay] = useState<boolean>(false)
+  const [videoPlay, setVideoPlay] = useState<boolean>(false);
 
   const handlePlayVideo = () => {
-    setVideoPlay(true)
-  }
+    setVideoPlay(true);
+  };
 
   return (
     <div className={classNamePrefix}>
@@ -134,7 +134,7 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
 
             <div
               className="animate__animated animate__zoomIn"
-              style={{ width: "100%" }}
+              style={{ width: "100%", marginTop: 30 }}
             >
               <div className={`${classNamePrefix}__image-small`}>
                 {(
@@ -157,20 +157,29 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
           className={`${classNamePrefix}__bottom-video`}
           style={{ backgroundImage: `url(${videoBg.src})` }}
         >
-          <iframe
-            style={{ border: 0 }}
-            width="944"
-            height="530"
-            src="https://www.youtube.com/embed/Uc5dm66PjM8"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          ></iframe>
+          <div className={`${classNamePrefix}__bottom-video-wrapper`}>
+            <iframe
+              style={{ border: 0 }}
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/Uc5dm66PjM8"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            ></iframe>
+          </div>
 
           <div
             className={`${classNamePrefix}__bottom-video-layer`}
-            style={{ backgroundImage: `url(${videoLayer.src})`, zIndex: videoPlay ? -1 : 0}}
+            style={{
+              backgroundImage: `url(${videoLayer.src})`,
+              zIndex: videoPlay ? -1 : 0,
+            }}
           >
-            <RightCircleOutlined rev="true" className={`${classNamePrefix}__bottom-video-layer-icon`} onClick={handlePlayVideo}/>
+            <RightCircleOutlined
+              rev="true"
+              className={`${classNamePrefix}__bottom-video-layer-icon`}
+              onClick={handlePlayVideo}
+            />
           </div>
         </div>
 

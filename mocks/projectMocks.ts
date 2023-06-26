@@ -7,11 +7,15 @@ import projectSub2 from "../public/static/projectSub2.png";
 import projectPresent1 from "../public/static/projectPresent1.png";
 import projectPresent2 from "../public/static/projectPresent2.png";
 import projectPresent3 from "../public/static/projectPresent3.png";
+import projectLarge1 from "../public/static/projectLarge1.png";
+import projectLarge2 from "../public/static/projectLarge2.png";
+import projectLarge3 from "../public/static/projectLarge3.png"
 
 export const projectMocks = [
   {
     id: "1",
     imgUrl: project1,
+    largeImg: projectLarge1,
     position: 1,
     name: "Travelio",
     title: "project.project1.title",
@@ -30,6 +34,7 @@ export const projectMocks = [
   {
     id: "2",
     imgUrl: project2,
+    largeImg: projectLarge2,
     position: 2,
     name: "Andromeda",
     title: "project.project2.title",
@@ -48,6 +53,7 @@ export const projectMocks = [
   {
     id: "3",
     imgUrl: project3,
+    largeImg: projectLarge3,
     position: 3,
     name: "Clor Spa",
     title: "project.project3.title",

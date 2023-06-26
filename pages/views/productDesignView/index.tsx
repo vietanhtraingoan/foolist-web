@@ -26,7 +26,7 @@ const ProductDesignView = (
         <div className={`${classNamePrefix}__content-first`}>
           <div
             className="animate__animated animate__zoomIn"
-            style={{ width: "100%" }}
+            style={{ width: "100%", position: "relative" }}
           >
             <div className={`${classNamePrefix}__image`}>
               {(
@@ -39,6 +39,7 @@ const ProductDesignView = (
                   height="100%"
                 />
               ) || <Skeleton />}
+              <div className={`${classNamePrefix}__image-layer`}></div>
             </div>
           </div>
 
@@ -65,8 +66,8 @@ const ProductDesignView = (
               {(
                 <LazyLoadImage
                   style={{ borderRadius: 15, margin: "40px 0" }}
-                  src={subImg[2].item.src}
-                  placeholderSrc={subImg[2].item.src}
+                  src={subImg[1].item.src}
+                  placeholderSrc={subImg[1].item.src}
                   effect="blur"
                   width="100%"
                   height="100%"
@@ -110,8 +111,8 @@ const ProductDesignView = (
                 {(
                   <LazyLoadImage
                     style={{ borderRadius: 15, margin: "40px 0" }}
-                    src={subImg[1].item.src}
-                    placeholderSrc={subImg[1].item.src}
+                    src={subImg[2].item.src}
+                    placeholderSrc={subImg[2].item.src}
                     effect="blur"
                     width="100%"
                     height="100%"

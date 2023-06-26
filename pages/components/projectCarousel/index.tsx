@@ -2,6 +2,9 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 import { projectMocks } from "../../../mocks/projectMocks";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 import { useRouter } from "next/router";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import Skeleton from "react-loading-skeleton";
 
 const classNamePrefix = "project-carousel";
 
@@ -68,12 +71,15 @@ const ProjectCarousel = () => {
                 onClick={() => router.push(`/projectDetail?id=${proj.id}`)}
               >
                 <div className={`${classNamePrefix}__carousel-item-img`}>
-                  <img
-                    src={proj.imgUrl.src}
-                    width="100%"
-                    height="100%"
-                    alt=""
-                  />
+                  {(
+                    <LazyLoadImage
+                      src={proj.largeImg.src}
+                      placeholderSrc={proj.largeImg.src}
+                      effect="blur"
+                      width="100%"
+                      height="100%"
+                    />
+                  ) || <Skeleton />}
                 </div>
               </div>
             ))
