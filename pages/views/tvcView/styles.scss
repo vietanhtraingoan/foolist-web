@@ -5,6 +5,7 @@
 
   &__content {
     display: flex;
+    justify-content: space-between;
     align-items: flex-start;
 
     width: 100%;
@@ -43,6 +44,7 @@
   &__content-second {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: flex-start;
 
     width: 60%;
@@ -339,6 +341,7 @@
       width: 100%;
 
       margin-top: 32px;
+      margin-right: 0;
     }
 
     &__content-section-title {
