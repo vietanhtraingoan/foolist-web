@@ -82,7 +82,6 @@ const ProjectPage = (
             height: projectSelect ? "85vh" : 400,
             borderRadius: projectSelect ? 20 : 360,
             background: projectSelect ? "#ffffff" : "rgba(255, 255, 255, 0.5)",
-            marginTop: projectSelect ? 90 : 0,
           }}
         >
           {projectSelect && (

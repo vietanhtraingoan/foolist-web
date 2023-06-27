@@ -48,6 +48,7 @@
     background: rgba(255, 255, 255, 0.5);
 
     transition: ease-in-out 1s;
+    margin-top: 90px;
 
     overflow: hidden;
   }
@@ -141,16 +142,26 @@
 
 @media screen and (max-width: 1950px) {
   .project-page {
+    &__layer{
+      margin-top: 250px;
+    }
   }
 }
 
 @media screen and (max-width: 1580px) {
   .project-page {
+    &__layer{
+      margin-top: 100px;
+    }
   }
 }
 
 @media screen and (max-width: 950px) {
   .project-page {
+    &__layer{
+      margin-top: 100px;
+    }
+
     &__project-item-image {
       width: 203.2px;
       height: 416px;
