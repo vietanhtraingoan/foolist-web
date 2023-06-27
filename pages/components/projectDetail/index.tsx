@@ -4,9 +4,7 @@ import { useSelector } from "react-redux";
 import { getProjectId } from "../../../store/selector/rootSelector";
 import { projectMocks } from "../../../mocks/projectMocks";
 import { useTranslation } from "next-i18next";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import Skeleton from "react-loading-skeleton";
 import Image from "next/image";
 
 interface IProjectDetailProps {
@@ -48,7 +46,7 @@ const ProjectDetail: React.FC<IProjectDetailProps> = (props) => {
                 style={{
                   width: animation ? "100vw" : 450,
                   height: animation ? "100vh" : 450,
-                  marginLeft: animation ? 0 : 80,
+                  marginLeft: animation ? 0 : 40,
                 }}
               >
                 <div

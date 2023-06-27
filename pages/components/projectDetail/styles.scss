@@ -193,8 +193,6 @@
     &__content-sub-image {
       width: 50%;
       height: 450px;
-  
-     
     }
   }
 }
@@ -255,8 +253,6 @@
     &__content-sub-image {
       width: 50%;
       height: 400px;
-  
-     
     }
   }
 }
@@ -301,8 +297,25 @@
     &__content-sub-image {
       width: 50%;
       height: 300px;
-  
-     
+    }
+  }
+}
+
+@media screen and (max-width: 868px) {
+  .project-detail {
+    &__content-main-image {
+      width: 220px;
+      height: 220px;
+    }
+
+    &__content-main-image-layer {
+      position: absolute;
+      z-index: -1;
+      top: 40px;
+      left: -30px;
+
+      width: 220px;
+      height: 220px;
     }
   }
 }

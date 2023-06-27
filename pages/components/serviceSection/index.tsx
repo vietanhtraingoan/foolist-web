@@ -29,7 +29,7 @@ const ServiceSection = (
 
         <div className={`${classNamePrefix}__title-button`}>
           <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}>
-            <CustomNavigationButton size="large" />
+            <CustomNavigationButton size="large" onClick={() => router.push("/about")} />
           </AnimationOnScroll>
         </div>
       </div>
