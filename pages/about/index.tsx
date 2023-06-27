@@ -13,7 +13,7 @@ import { useTranslation } from "next-i18next";
 import MiniFooter from "../components/miniFooter";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import EmployeeSlider from "../components/employeeSlider";
-import Head from 'next/head'
+import Head from "next/head";
 
 const classNamePrefix = "about-page";
 
@@ -23,23 +23,6 @@ type Props = {
 
 const AboutPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation("common");
-
-  const [showDivider, setShowDivider] = useState<boolean>(false);
-
-  const listenScrollEvent = () => {
-    const scroll = window.pageYOffset;
-    if (scroll >= 500 && scroll < 1500) {
-      setShowDivider(true);
-    } else if (scroll >= 1500 && scroll < 1800) {
-      setShowDivider(false);
-    } else if (scroll >= 1800 && scroll < 2000) {
-      setShowDivider(true);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", listenScrollEvent);
-  });
 
   return (
     <div className={classNamePrefix}>
@@ -151,10 +134,7 @@ const AboutPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
           </div>
         </AnimationOnScroll>
 
-        <div
-          className={`${classNamePrefix}__divider`}
-          style={{ width: "100%" }}
-        >
+        <div className={`${classNamePrefix}__divider`}>
           <div className={`${classNamePrefix}__divider-content`}></div>
         </div>
 
@@ -258,14 +238,14 @@ const AboutPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
               </div>
             </AnimationOnScroll>
 
-            <div className={`${classNamePrefix}__fourth-section-item-text`}>
-              <AnimationOnScroll
-                animateIn="animate__slideInUp"
-                animateOnce={true}
-              >
-                <div>{t("About_content.paragraph-8")}</div>
-              </AnimationOnScroll>
-            </div>
+            <AnimationOnScroll
+              animateIn="animate__slideInUp"
+              animateOnce={true}
+            >
+              <div className={`${classNamePrefix}__fourth-section-item-text`}>
+                <span>{t("About_content.paragraph-8")}</span>
+              </div>
+            </AnimationOnScroll>
           </div>
         </div>
       </section>

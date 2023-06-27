@@ -112,6 +112,42 @@
   }
 }
 
+@media screen and (max-width: 1180px) {
+  .connect-section {
+    &__bottom {
+      width: 100%;
+
+      padding: 64px 20px;
+    }
+
+    &__bottom-left {
+      width: 50%;
+    }
+
+    &__bottom-right{
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: 868px) {
+  .connect-section {
+    &__bottom {
+      width: 100%;
+
+      padding: 64px 20px;
+    }
+
+    &__bottom-left {
+      width: 40%;
+    }
+
+    &__bottom-right{
+      width: 60%;
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
   .connect-section {
     padding: 0;
