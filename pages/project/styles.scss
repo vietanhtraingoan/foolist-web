@@ -155,7 +155,19 @@
 @media screen and (max-width: 1580px) {
   .project-page {
     &__content {
-      padding-top: 250px;
+      padding-top: 227px;
+    }
+
+    &__title {
+      top: 200px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .project-page {
+    &__content {
+      padding-top: 333px;
     }
 
     &__title {
