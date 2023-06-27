@@ -16,7 +16,6 @@
 
   &__content {
     position: relative;
-    overflow: hidden;
 
     display: flex;
     flex-direction: row;
@@ -24,8 +23,6 @@
     align-items: center;
 
     width: 100%;
-
-    padding: 120px 0;
 
     transition: ease-in-out 1s;
   }
@@ -110,6 +107,8 @@
     width: 2000px;
     min-height: 700px;
     white-space: nowrap;
+
+    padding-bottom:90px;
 
     overflow-x: scroll;
 
