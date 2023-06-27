@@ -317,6 +317,34 @@
   }
 }
 
+@media screen and (max-width: 1180px) {
+  .contact-page {
+    &__introduction-wrapper {
+
+      font-size: 45px;
+      line-height: 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .contact-page {
+    padding: 120px 20px;
+
+    &__introduction-wrapper {
+
+      font-size: 35px;
+      line-height: 50px;
+    }
+
+    &__service-item {
+      div {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
   .contact-page {
     padding: 80px 20px;

@@ -61,7 +61,8 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
             className={`${classNamePrefix}__introduction-text-group animate__animated animate__slideInUp animate__slow`}
           >
             <span>{t("About_content.paragraph-1")}</span>
-            <div />
+            <br />
+            <br />
             <span>{t("About_content.paragraph-2")}</span>
           </div>
         </div>

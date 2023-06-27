@@ -25,6 +25,12 @@ const ProjectDetail: React.FC<IProjectDetailProps> = (props) => {
 
   const projectSelected = projectMocks.find((p) => p.id === projectId);
 
+  const [windowSize, setWindowSize] = useState<number>();
+
+  useEffect(() => {
+    setWindowSize(window.innerWidth);
+  }, []);
+
   useEffect(() => {
     setTimeout(() => {
       setAnimation(false);
@@ -32,12 +38,7 @@ const ProjectDetail: React.FC<IProjectDetailProps> = (props) => {
   }, []);
 
   return (
-    <div
-      className={classNamePrefix}
-      style={{
-        padding: animation ? 0 : "20px 60px",
-      }}
-    >
+    <div className={classNamePrefix}>
       {projectSelected ? (
         <section className={`${classNamePrefix}__content`}>
           <section className={`${classNamePrefix}__content-main`}>
@@ -47,7 +48,7 @@ const ProjectDetail: React.FC<IProjectDetailProps> = (props) => {
                 style={{
                   width: animation ? "100vw" : 450,
                   height: animation ? "100vh" : 450,
-                  marginLeft: animation ? 0 : 161,
+                  marginLeft: animation ? 0 : 80,
                 }}
               >
                 <div

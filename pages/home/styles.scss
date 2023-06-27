@@ -11,7 +11,6 @@
     align-items: flex-start;
 
     width: 100%;
-    min-height: 700px;
 
     padding: 100px 60px;
 
@@ -295,7 +294,7 @@
     flex-direction: column;
     align-items: flex-start;
 
-    width: 800px;
+    width: 670px;
 
     font-family: "Montserrat";
     font-style: normal;
@@ -322,7 +321,7 @@
       -2px 0px 0 #ffffff, 0px -2px 0 #ffffff, 0px 0px 3px rgba(246, 165, 193, 0);
   }
 
-  &__menu-contact{
+  &__menu-contact {
     display: none;
   }
 }
@@ -342,8 +341,95 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1260px) {
   .home-page {
+    &__footer-container {
+      padding: 40px;
+    }
+
+    &__footer-info-group {
+      span {
+        font-size: 18px;
+        line-height: 30px;
+      }
+    }
+
+    &__footer-right{
+      padding-left: 20px;
+    }
+
+    &__footer-left-title {
+      padding-left: 40px;
+
+      width: 600px;
+
+      font-size: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  .home-page {
+    &__introduction-text-group {
+      width: 80%;
+
+      span {
+        font-size: 25px;
+        line-height: 40px;
+        font-style: normal;
+        text-align: justify;
+      }
+    }
+
+    &__introduction-text {
+      margin: 20px 0 20px 0;
+    }
+
+    &__section-title {
+      span {
+        font-size: 40px;
+      }
+    }
+
+    &__footer-container {
+      padding: 20px;
+    }
+
+    &__footer-right{
+      padding-left: 60px;
+    }
+
+    &__footer-info-group {    
+      span {
+        font-size: 16px;
+        line-height: 30px;
+      }
+    }
+
+    &__footer-left-title {
+      width: 450px;
+
+      font-size: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .home-page {
+    &__footer-left-title {
+      padding-left: 10px;
+
+      width: 400px;
+
+      font-size: 40px;
+    }
+
+    &__footer-info-group {      
+      span {
+        font-size: 14px;
+        line-height: 30px;
+      }
+    }
   }
 }
 
@@ -360,6 +446,8 @@
     }
 
     &__introduction-container {
+      min-height: unset;
+
       padding: 20px;
     }
 
@@ -384,7 +472,13 @@
     &__introduction-text-group {
       width: 100%;
 
+      div {
+        margin: 0;
+      }
+
       span {
+        margin-bottom: 20px;
+
         font-size: 20px;
         line-height: 40px;
         font-style: normal;
@@ -434,6 +528,10 @@
       padding: 0 20px 40px 20px;
     }
 
+    &__footer-right{
+      padding: 0;
+    }
+
     &__footer-info-group-title {
       font-size: 45px;
 
@@ -448,7 +546,7 @@
       display: none;
     }
 
-    &__menu-contact{
+    &__menu-contact {
       display: block;
     }
   }
