@@ -139,8 +139,19 @@
   }
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1950px) {
   .project-page {
+    &__content{
+      margin-top: 200px;
+    }
+  }
+}
+
+@media screen and (max-width: 1580px) {
+  .project-page {
+    &__content{
+      margin-top: 0;
+    }
   }
 }
 
