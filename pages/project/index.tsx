@@ -61,7 +61,7 @@ const ProjectPage = (
   return (
     <div
       className={classNamePrefix}
-      // style={{ paddingTop: projectSelect ? 150 : 120 }}
+      style={{ paddingTop: projectSelect ? 0 : 100 }}
     >
       <Head>
         <title>{t("Projects")}</title>
@@ -73,13 +73,16 @@ const ProjectPage = (
         {t("product")}
       </div>
 
-      <div className={`${classNamePrefix}__content`}>
+      <div
+        className={`${classNamePrefix}__content`}
+        style={{ paddingTop: projectSelect ? 90 : 0 }}
+      >
         <div
           className={`${classNamePrefix}__layer`}
           style={{
             zIndex: projectSelect ? 10 : 1,
             width: projectSelect ? "90vw" : 400,
-            height: projectSelect ? "85vh" : 400,
+            height: projectSelect ? "80vh" : 400,
             borderRadius: projectSelect ? 20 : 360,
             background: projectSelect ? "#ffffff" : "rgba(255, 255, 255, 0.5)",
           }}
