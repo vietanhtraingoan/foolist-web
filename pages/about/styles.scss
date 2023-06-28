@@ -182,7 +182,7 @@
 
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     background-attachment: fixed;
   }
 
@@ -584,6 +584,14 @@
     &__fourth-section-content {
       padding: 0 20px;
     }
+
+    &__image-divider {
+      width: 100%;
+
+      background-size: contain;
+      background-attachment: unset;
+    }
+
   }
 }
 
@@ -627,7 +635,7 @@
       width: 150px;
     }
 
-    &__fourth-section-content-item{
+    &__fourth-section-content-item {
       flex-direction: column;
     }
 
@@ -637,9 +645,9 @@
 
     &__fourth-section-graph {
       width: 100%;
-  
+
       padding-right: 0;
-  
+
       padding-bottom: 200px;
     }
 
@@ -905,9 +913,9 @@
 
     &__image-divider {
       width: 100%;
+      height: 320px;
 
-      margin-bottom: 30px;
-
+      background-size: contain;
       background-attachment: unset;
     }
 
@@ -1168,8 +1176,6 @@
     &__image-divider {
       width: 100%;
 
-      margin-bottom: 30px;
-
       background-attachment: unset;
     }
 
@@ -1187,4 +1193,3 @@
     }
   }
 }
-
