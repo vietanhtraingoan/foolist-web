@@ -44,3 +44,17 @@
     }
   }
 }
+
+@media screen and (max-width: 394x) {
+  .social-group {
+    &__item-wrapper {
+      width: 200px;
+    }
+
+    &__item-icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
