@@ -354,7 +354,7 @@
       }
     }
 
-    &__footer-right{
+    &__footer-right {
       padding-left: 20px;
     }
 
@@ -395,11 +395,11 @@
       padding: 20px;
     }
 
-    &__footer-right{
+    &__footer-right {
       padding-left: 60px;
     }
 
-    &__footer-info-group {    
+    &__footer-info-group {
       span {
         font-size: 16px;
         line-height: 30px;
@@ -424,7 +424,7 @@
       font-size: 40px;
     }
 
-    &__footer-info-group {      
+    &__footer-info-group {
       span {
         font-size: 14px;
         line-height: 30px;
@@ -528,7 +528,7 @@
       padding: 0 20px 40px 20px;
     }
 
-    &__footer-right{
+    &__footer-right {
       padding: 0;
     }
 
@@ -548,6 +548,22 @@
 
     &__menu-contact {
       display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 392px) {
+  .home-page {
+    padding-top: 120px;
+
+    &__introduction-title-brand {
+      font-size: 90px;
+    }
+
+    &__introduction-text-group {
+      span {
+        line-height: 30px;
+      }
     }
   }
 }

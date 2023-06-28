@@ -352,3 +352,69 @@
     }
   }
 }
+
+@media screen and (max-width: 394px) {
+  .top-menu {
+    width: 100vw;
+    .second {
+      width: 100%;
+      .content {
+        padding: 0 20px;
+
+        .logo-group {
+          .logo {
+            width: 50px;
+            height: 50px;
+          }
+        }
+
+        .left-menu {
+          .left-menu-responsive-button {
+            display: flex;
+
+            width: 55px;
+            height: 55px;
+          }
+
+          .responsive-floated-language-change {
+            display: block;
+          }
+
+          .left-menu-responsive-grid {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .navigation-menu-wrapper {
+    display: none;
+    .item {
+      width: 150px;
+      font-size: 30px;
+    }
+  }
+
+  .responsive-navigation-menu-wrapper {
+    display: flex;
+
+    top: 0;
+    
+    width: 100%;
+
+    padding: 10px 20px;
+
+    .navigation-group-container {
+      min-height: 200px;
+      margin-top: 20px;
+    }
+
+    .item {
+      span {
+        font-size: 25px;
+      }
+    }
+  }
+}
+

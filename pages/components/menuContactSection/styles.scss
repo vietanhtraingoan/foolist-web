@@ -30,10 +30,20 @@
     }
   }
 
-  &__address{
+  &__address {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     color: #f2f2f2a4;
     text-align: left;
+  }
+}
+
+@media screen and (max-width: 396px) {
+  .menu-contact-section {
+    &__info {
+      a {
+        font-size: 12px;
+      }
+    }
   }
 }
