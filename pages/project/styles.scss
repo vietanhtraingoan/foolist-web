@@ -141,7 +141,7 @@
 @media screen and (max-width: 1950px) {
   .project-page {
     &__content {
-      padding-top: 352px;
+      padding-top: 330px;
     }
 
     &__title {
@@ -153,7 +153,7 @@
 @media screen and (max-width: 1536px) {
   .project-page {
     &__content {
-      padding-top: unset;
+      padding-top: 250px;
     }
 
     &__title {
@@ -161,7 +161,6 @@
     }
   }
 }
-
 
 @media screen and (max-width: 1024px) {
   .project-page {

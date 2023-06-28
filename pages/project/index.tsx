@@ -13,7 +13,7 @@ import GridProject from "../components/gridProject";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import Skeleton from "react-loading-skeleton";
-import Head from 'next/head'
+import Head from "next/head";
 
 const classNamePrefix = "project-page";
 
@@ -61,7 +61,7 @@ const ProjectPage = (
   return (
     <div
       className={classNamePrefix}
-      style={{ paddingTop: projectSelect ? 0 : 100 }}
+      // style={{ paddingTop: projectSelect ? 150 : 120 }}
     >
       <Head>
         <title>{t("Projects")}</title>
