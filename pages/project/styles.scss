@@ -75,14 +75,17 @@
 
     width: 100%;
 
-    padding: 0 20px;
+    padding: 0 20px 100px 20px;
+
+    background: #000000;
   }
 
   &__introduction-first {
-    margin-bottom: 50px;
-    font-size: 30px;
+    padding-bottom: 50px;
+    font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
     color: #ffffff;
+    line-height: 35px;
 
     span {
       margin-right: 15px;
@@ -95,8 +98,7 @@
   }
 
   &__introduction-second {
-    margin-bottom: 50px;
-    font-size: 30px;
+    font-size: 25px;
     font-family: 'Times New Roman', Times, serif;
     color: #ffffff;
   }
@@ -164,7 +166,7 @@
       flex-direction: column;
       align-items: unset;
 
-      margin-top: 120px;
+      margin-top: 20px;
 
       overflow: unset;
     }
@@ -220,6 +222,8 @@
 
     &__introduction {
       display: block;
+
+      padding-top: 120px;
     }
 
     &__project-list-wrapper {
@@ -232,6 +236,8 @@
 
     &__connect {
       display: block;
+
+      margin-top: 90px;
     }
   }
 }
