@@ -151,111 +151,190 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1280px) {
   .project-detail-page {
-    padding: 120px 20px 0 20px;
     &__content-main {
-      flex-direction: column-reverse;
-      align-items: flex-start;
+      min-height: 550px;
     }
 
-    &__floated-item {
-      position: relative;
-
-      width: 100%;
-      height: 370px;
-
-      margin: 30px 0;
+    &__content-sub {
+      padding: 0;
     }
 
-    &__content-main-image-wrapper {
-      position: relative;
+    &__content-main-image {
+      width: 380px;
+      height: 380px;
+    }
 
-      width: 100%;
-      height: 100%;
-
-      margin-left: 0;
-
-      transition: ease-in-out 1.5s;
+    &__content-main-text {
+      font-size: 16px;
     }
 
     &__content-main-image-layer {
-      display: none;
-    }
+      position: absolute;
+      z-index: -1;
+      top: 54px;
+      left: -49px;
 
-    &__content-main-text-wrapper {
-      position: unset;
-      top: unset;
-      right: unset;
-      bottom: unset;
+      width: 380px;
+      height: 380px;
 
-      width: 100%;
+      background: rgba(150, 147, 147, 0.3);
+      border-radius: 20px;
     }
 
     &__content-main-name {
-      margin-bottom: 0;
+      margin-bottom: 30px;
+      margin-top: 30px;
 
-      span{
+      span {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 800;
         font-size: 60px;
+        line-height: 20px;
+        color: #000000;
       }
     }
 
     &__content-main-title {
-      width: 100%;
-
       span {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 800;
         font-size: 16px;
-        text-align: right;
+        line-height: 112px;
+        color: #000000;
       }
     }
 
-    &__content-main-text {
-      width: 100%;
-    }
-
-    &__content-sub-1 {
-      display: flex;
-      flex-direction: column;
-      justify-content: unset;
-      align-items: unset;
-
-      width: 100%;
-
-      padding: 0;
-    }
-
-    &__content-sub-2{
-      display: flex;
-      flex-direction: column-reverse;
-      justify-content: unset;
-      align-items: unset;
-
-      width: 100%;
-
-      padding: 0;
-    }
-
-    &__content-sub-image{
-      margin: 30px 0;
-    }
-
-    &__content-sub-text-wrapper {
-      width: 100%;
-    }
-
     &__content-sub-image {
-      width: 100%;
-      height: 370px;
-
-      border-radius: 20px;
-
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-    }
-
-    &__footer{
-      display: none;
+      width: 50%;
+      height: 450px;
     }
   }
 }
+
+@media screen and (max-width: 1100px) {
+  .project-detail-page {
+    &__content-main {
+      min-height: 550px;
+    }
+
+    &__content-sub {
+      padding: 0;
+    }
+
+    &__content-main-image {
+      width: 320px;
+      height: 320px;
+    }
+
+    &__content-main-image-layer {
+      position: absolute;
+      z-index: -1;
+      top: 40px;
+      left: -30px;
+
+      width: 320px;
+      height: 320px;
+
+      background: rgba(150, 147, 147, 0.3);
+      border-radius: 20px;
+    }
+
+    &__content-main-name {
+      margin-bottom: 30px;
+      margin-top: 30px;
+
+      span {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 60px;
+        line-height: 20px;
+        color: #000000;
+      }
+    }
+
+    &__content-main-title {
+      span {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 16px;
+        line-height: 112px;
+        color: #000000;
+      }
+    }
+
+    &__content-sub-image {
+      width: 50%;
+      height: 400px;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .project-detail-page {
+    &__content-main {
+      min-height: 550px;
+    }
+
+    &__content-sub {
+      padding: 0;
+    }
+
+    &__content-main-image {
+      width: 250px;
+      height: 250px;
+    }
+
+    &__content-main-image-layer {
+      position: absolute;
+      z-index: -1;
+      top: 40px;
+      left: -30px;
+
+      width: 250px;
+      height: 250px;
+    }
+
+    &__content-main-name {
+      margin-bottom: 30px;
+      margin-top: 30px;
+    }
+
+    &__content-main-title {
+      span {
+        font-size: 15px;
+        line-height: 40px;
+      }
+    }
+
+    &__content-sub-image {
+      width: 50%;
+      height: 300px;
+    }
+  }
+}
+
+@media screen and (max-width: 868px) {
+  .project-detail-page {
+    &__content-main-image {
+      width: 220px;
+      height: 220px;
+    }
+
+    &__content-main-image-layer {
+      position: absolute;
+      z-index: -1;
+      top: 40px;
+      left: -30px;
+
+      width: 220px;
+      height: 220px;
+    }
+  }
+}
+

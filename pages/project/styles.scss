@@ -9,7 +9,7 @@
   height: 100vh;
 
   background: #000000;
-  padding-top: 200px;
+  padding-top: 100px;
 
   transition: ease-in-out 1s;
 
@@ -22,8 +22,6 @@
     align-items: center;
 
     width: 100%;
-
-    padding-top: 120px;
 
     transition: ease-in-out 1s;
   }
@@ -143,7 +141,7 @@
 @media screen and (max-width: 1950px) {
   .project-page {
     &__content {
-      padding-top: 250px;
+      padding-top: 150px;
     }
 
     &__title {
@@ -152,17 +150,18 @@
   }
 }
 
-@media screen and (max-width: 1580px) {
+@media screen and (max-width: 1536px) {
   .project-page {
     &__content {
-      padding-top: 227px;
+      padding-top: unset;
     }
 
     &__title {
-      top: 200px;
+      top: 90px;
     }
   }
 }
+
 
 @media screen and (max-width: 1024px) {
   .project-page {
