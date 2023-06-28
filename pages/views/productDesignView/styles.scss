@@ -48,6 +48,8 @@
   }
 
   &__content-section-text {
+    margin-top: 30px;
+
     font-family: "Times New Roman", Times, serif;
     font-style: normal;
     font-weight: 500;
@@ -134,11 +136,11 @@
   }
 }
 
-@media screen and (max-width: 1468px) {
+@media screen and (max-width: 1568px) {
   .product-design-view {
     &__image {
-      width: 620px;
-      height: 560px;
+      width: 670px;
+      height: 610px;
     }
 
     &__title {
@@ -153,8 +155,8 @@
       top: -35px;
       left: 15px;
 
-      width: 620px;
-      height: 650px;
+      width: 640px;
+      height: 670px;
     }
   }
 }
