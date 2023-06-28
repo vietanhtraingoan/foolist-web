@@ -200,7 +200,7 @@
       width: 50px;
       height: 30px;
 
-      span{
+      span {
         line-height: 30px;
       }
     }
@@ -212,7 +212,7 @@
       width: 80px;
       height: 30px;
 
-      span{
+      span {
         line-height: 30px;
       }
     }
@@ -224,8 +224,116 @@
       width: 80px;
       height: 30px;
 
-      span{
+      span {
         line-height: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .normal-circle-group {
+    width: 180px;
+    height: 180px;
+
+    &__item {
+      width: 180px;
+      height: 180px;
+    }
+
+    &__text {
+      width: 180px;
+      height: 180px;
+    }
+
+    .circle-1 {
+      top: 0;
+      left: 0;
+    }
+
+    .circle-2 {
+      top: 85px;
+      left: -60px;
+    }
+
+    .circle-3 {
+      top: 85px;
+      right: -60px;
+    }
+
+    &__text-item {
+      span {
+        font-size: 15px;
+        line-height: 50px;
+      }
+    }
+
+    .text-1 {
+      min-width: 300px;
+
+      top: 35px;
+      left: 128px;
+    }
+
+    .text-2 {
+      min-width: 300px;
+
+      top: 135px;
+      left: 150px;
+    }
+
+    &__icon {
+      width: 30px;
+      height: 30px;
+    }
+
+    .text-3 {
+      min-width: 300px;
+
+      bottom: -100px;
+      left: 30px;
+    }
+
+    .text-4 {
+      min-width: 300px;
+
+      bottom: 45px;
+      right: -300px;
+    }
+
+    .text-5 {
+      top: 100px;
+      left: 104px;
+
+      width: 30px;
+      height: 30px;
+
+      span {
+        line-height: 22px;
+      }
+    }
+
+    .text-6 {
+      top: 100px;
+      right: -47px;
+
+      width: 30px;
+      height: 30px;
+
+      span {
+        line-height: 22px;
+      }
+    }
+
+    .text-7 {
+      bottom: -28px;
+      right: 0;
+
+      width: 30px;
+      height: 30px;
+
+      span {
+        line-height: 22px;
       }
     }
   }
