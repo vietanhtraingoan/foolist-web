@@ -134,9 +134,11 @@ const AboutPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
           </div>
         </AnimationOnScroll>
 
-        <div className={`${classNamePrefix}__divider`}>
-          <div className={`${classNamePrefix}__divider-content`}></div>
-        </div>
+        <AnimationOnScroll animateIn="animate__slideInLeft" animateOnce={true}>
+          <div className={`${classNamePrefix}__divider`}>
+            <div className={`${classNamePrefix}__divider-content`}></div>
+          </div>
+        </AnimationOnScroll>
 
         <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}>
           <div className={`${classNamePrefix}__third-section-middle`}>
