@@ -1,15 +1,15 @@
-import project1 from "../public/static/project1.png";
-import project2 from "../public/static/project2.png";
-import project3 from "../public/static/project3.png";
-import projectSub1 from "../public/static/projectSub1.png";
-import projectSub3 from "../public/static/projectSub3.png";
-import projectSub2 from "../public/static/projectSub2.png";
+import project1 from "../public/static/project1.jpg";
+import project2 from "../public/static/project2.jpg";
+import project3 from "../public/static/project3.jpg";
+import projectSub1 from "../public/static/projectSub1.jpg";
+import projectSub3 from "../public/static/projectSub3.jpg";
+import projectSub2 from "../public/static/projectSub2.jpg";
 import projectPresent1 from "../public/static/projectPresent1.png";
 import projectPresent2 from "../public/static/projectPresent2.png";
 import projectPresent3 from "../public/static/projectPresent3.png";
-import projectLarge1 from "../public/static/projectLarge1.png";
-import projectLarge2 from "../public/static/projectLarge2.png";
-import projectLarge3 from "../public/static/projectLarge3.png"
+import projectLarge1 from "../public/static/projectLarge1.jpg";
+import projectLarge2 from "../public/static/projectLarge2.jpg";
+import projectLarge3 from "../public/static/projectLarge3.jpg"
 
 export const projectMocks = [
   {
