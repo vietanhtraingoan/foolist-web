@@ -30,7 +30,7 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
 
   return (
     <div className={classNamePrefix}>
-       <Head>
+      <Head>
         <title>{t("Services")}-TVC</title>
       </Head>
       <div className={`${classNamePrefix}__content`}>
@@ -171,20 +171,20 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             ></iframe>
-          </div>
 
-          <div
-            className={`${classNamePrefix}__bottom-video-layer`}
-            style={{
-              backgroundImage: `url(${videoLayer.src})`,
-              zIndex: videoPlay ? -1 : 0,
-            }}
-          >
-            <RightCircleOutlined
-              rev="true"
-              className={`${classNamePrefix}__bottom-video-layer-icon`}
-              onClick={handlePlayVideo}
-            />
+            <div
+              className={`${classNamePrefix}__bottom-video-layer`}
+              style={{
+                backgroundImage: `url(${videoLayer.src})`,
+                zIndex: videoPlay ? -1 : 0,
+              }}
+            >
+              <RightCircleOutlined
+                rev="true"
+                className={`${classNamePrefix}__bottom-video-layer-icon`}
+                onClick={handlePlayVideo}
+              />
+            </div>
           </div>
         </div>
 
