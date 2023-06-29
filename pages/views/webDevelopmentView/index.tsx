@@ -1,6 +1,5 @@
 import { useTranslation } from "next-i18next";
 import React from "react";
-import Image from "next/image";
 import { ServicesMock } from "../../../mocks/servicesMock";
 import { GetStaticProps, InferGetStaticPropsType } from "next/types";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -43,9 +42,10 @@ const WebDevelopmentView = (
                   height="100%"
                 />
               ) || <Skeleton />}
+              <div className={`${classNamePrefix}__image-layer`}></div>
             </div>
 
-            <div className={`${classNamePrefix}__image-layer`}></div>
+            
           </div>
 
           <div className={`${classNamePrefix}__title`}>
