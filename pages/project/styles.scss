@@ -164,7 +164,10 @@
       flex-direction: column;
       align-items: unset;
 
-      margin-top: 20px;
+      min-height: 2500px;
+
+      padding-top: 120px;
+      margin-bottom: 0;
 
       overflow: unset;
     }
@@ -175,6 +178,8 @@
 
     &__introduction {
       display: block;
+
+      padding-top: 120px;
     }
 
     &__project-list-wrapper {
