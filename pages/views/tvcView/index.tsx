@@ -36,7 +36,7 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
       <div className={`${classNamePrefix}__content`}>
         <div className={`${classNamePrefix}__content-first`}>
           <div className="animate__animated animate__zoomIn">
-            <div className={`${classNamePrefix}__image-large`}>
+            <div className={`${classNamePrefix}__image-large`} style={{overflow: "hidden"}}>
               {(
                 <LazyLoadImage
                   src={subImg[0].item.src}

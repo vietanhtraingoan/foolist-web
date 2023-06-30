@@ -72,6 +72,8 @@
 
   &__image {
     position: relative;
+    overflow: hidden;
+
     width: 670px;
     height: 600px;
   }
@@ -111,6 +113,50 @@
     &__image-large {
       width: 856.9px;
       height: 870px;
+    }
+  }
+}
+
+@media screen and (max-width: 1728px) {
+  .web-development-view {
+    &__image {
+      width: 752.83px;
+      height: 752.83px;
+    }
+
+    &__title {
+      position: absolute;
+      top: 490px;
+
+      font-size: 80px;
+      line-height: 100px;
+    }
+
+    &__image-large {
+      width: 752.83px;
+      height: 750px;
+    }
+  }
+}
+
+@media screen and (max-width: 1628px) {
+  .web-development-view {
+    &__image {
+      width: 620px;
+      height: 560px;
+    }
+
+    &__title {
+      position: absolute;
+      top: 490px;
+
+      font-size: 80px;
+      line-height: 100px;
+    }
+
+    &__image-large {
+      width: 620px;
+      height: 650px;
     }
   }
 }

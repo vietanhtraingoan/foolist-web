@@ -151,3 +151,19 @@
     }
   }
 }
+
+@media screen and (max-width: 500px) {
+  .erp-view {
+    &__content-image {
+      height: 390px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .erp-view {
+    &__content-image {
+      height: 335.2px;
+    }
+  }
+}

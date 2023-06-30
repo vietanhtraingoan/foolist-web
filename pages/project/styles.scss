@@ -25,6 +25,8 @@
     height: 100%;
 
     transition: ease-in-out 1s;
+
+    background: #000000;
   }
 
   &__title {
@@ -44,7 +46,7 @@
     position: absolute;
 
     border-radius: 360px;
-    
+
     transition: ease-in-out 1s;
 
     overflow: hidden;
@@ -97,7 +99,7 @@
 
   &__introduction-second {
     font-size: 25px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Times New Roman", Times, serif;
     color: #ffffff;
   }
 
@@ -140,6 +142,8 @@
 
   &__connect {
     display: none;
+
+    background: #000000;
   }
 }
 
@@ -164,7 +168,7 @@
       flex-direction: column;
       align-items: unset;
 
-      min-height: 2500px;
+      min-height: 2800px;
 
       padding-top: 120px;
       margin-bottom: 0;
@@ -192,6 +196,8 @@
 
     &__connect {
       display: block;
+
+      margin-top: 45px;
     }
   }
 }
@@ -240,6 +246,14 @@
     &__connect {
       display: block;
 
+      margin-top: 45px;
+    }
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .project-page {
+    &__connect {
       margin-top: 90px;
     }
   }
