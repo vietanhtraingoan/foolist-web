@@ -55,13 +55,13 @@ const ContactPage = (
     to_name: "Foolist",
     from_name: name,
     message: `
-      You Got a message from <strong>${name}</strong>, <br /> whose email is <strong>${email}</strong> , <br /> phone number is <strong>${phone}</strong>. ${
+      You Got a message from ${name}, whose email is ${email} , phone number is ${phone}. ${
       message ? message : "They may want to know more about the service"
-    }. <br /> ${firstCheck ? `TVC and` : ""} <br /> ${
+    }. ${firstCheck ? `TVC and` : ""} ${
       secondCheck ? `Product Design and` : ""
-    } <br /> ${thirdCheck ? `Website and` : ""} <br /> ${
+    } ${thirdCheck ? `Website and` : ""} ${
       fourthCheck ? `Mobile Phone and` : ""
-    } <br /> ${fifthCheck ? `ERP and` : ""}  
+    } ${fifthCheck ? `ERP and` : ""}  
     `,
   };
 

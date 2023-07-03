@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { ServicesMock } from "../../../mocks/servicesMock";
 import { useTranslation } from "next-i18next";
 import { GetStaticProps, InferGetStaticPropsType } from "next/types";
@@ -18,14 +18,21 @@ type Props = {};
 const classNamePrefix = "tvc-view";
 
 const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const vidRef = useRef(null);
+
   const { t } = useTranslation();
 
   const { subImg, content } = ServicesMock[0];
 
   const [videoPlay, setVideoPlay] = useState<boolean>(false);
 
+  const url = videoPlay
+  ? `https://www.youtube.com/embed/Uc5dm66PjM8?autoplay=1`
+  : `https://www.youtube.com/embed/Uc5dm66PjM8`;
+
   const handlePlayVideo = () => {
     setVideoPlay(true);
+    // vidRef.current.contentWindow.play();
   };
 
   return (
@@ -36,7 +43,10 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
       <div className={`${classNamePrefix}__content`}>
         <div className={`${classNamePrefix}__content-first`}>
           <div className="animate__animated animate__zoomIn">
-            <div className={`${classNamePrefix}__image-large`} style={{overflow: "hidden"}}>
+            <div
+              className={`${classNamePrefix}__image-large`}
+              style={{ overflow: "hidden" }}
+            >
               {(
                 <LazyLoadImage
                   src={subImg[0].item.src}
@@ -164,10 +174,11 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
         >
           <div className={`${classNamePrefix}__bottom-video-wrapper`}>
             <iframe
+              ref={vidRef}
               style={{ border: 0 }}
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/Uc5dm66PjM8"
+              src={url}
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             ></iframe>
