@@ -27,12 +27,11 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const [videoPlay, setVideoPlay] = useState<boolean>(false);
 
   const url = videoPlay
-  ? `https://www.youtube.com/embed/Uc5dm66PjM8?autoplay=1`
-  : `https://www.youtube.com/embed/Uc5dm66PjM8`;
+    ? `https://www.youtube.com/embed/Uc5dm66PjM8?autoplay=1`
+    : `https://www.youtube.com/embed/Uc5dm66PjM8`;
 
   const handlePlayVideo = () => {
     setVideoPlay(true);
-    // vidRef.current.contentWindow.play();
   };
 
   return (
@@ -182,20 +181,19 @@ const TVCView = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             ></iframe>
-
-            <div
-              className={`${classNamePrefix}__bottom-video-layer`}
-              style={{
-                backgroundImage: `url(${videoLayer.src})`,
-                zIndex: videoPlay ? -1 : 0,
-              }}
-            >
-              <RightCircleOutlined
-                rev="true"
-                className={`${classNamePrefix}__bottom-video-layer-icon`}
-                onClick={handlePlayVideo}
-              />
-            </div>
+          </div>
+          <div
+            className={`${classNamePrefix}__bottom-video-layer`}
+            style={{
+              backgroundImage: `url(${videoLayer.src})`,
+              zIndex: videoPlay ? -1 : 0,
+            }}
+          >
+            <RightCircleOutlined
+              rev="true"
+              className={`${classNamePrefix}__bottom-video-layer-icon`}
+              onClick={handlePlayVideo}
+            />
           </div>
         </div>
 

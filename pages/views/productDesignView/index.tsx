@@ -23,7 +23,7 @@ const ProductDesignView = (
 
   return (
     <div className={classNamePrefix}>
-       <Head>
+      <Head>
         <title>{t("Services")}-Product Design</title>
       </Head>
       <div className={`${classNamePrefix}__content`}>
@@ -45,10 +45,10 @@ const ProductDesignView = (
               ) || <Skeleton />}
               <div className={`${classNamePrefix}__image-layer`}></div>
             </div>
-          </div>
 
-          <div className={`${classNamePrefix}__title`}>
-            {t("service.product-design")}
+            <div className={`${classNamePrefix}__title`}>
+              {t("service.product-design")}
+            </div>
           </div>
 
           <div

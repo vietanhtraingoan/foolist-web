@@ -43,13 +43,11 @@ const WebDevelopmentView = (
                 />
               ) || <Skeleton />}
               <div className={`${classNamePrefix}__image-layer`}></div>
+
+              <div className={`${classNamePrefix}__title`}>
+                {t("web-mobile-application")}
+              </div>
             </div>
-
-            
-          </div>
-
-          <div className={`${classNamePrefix}__title`}>
-            {t("web-mobile-application")}
           </div>
 
           <div
