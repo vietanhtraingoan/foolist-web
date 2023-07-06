@@ -19,8 +19,9 @@ const Home = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
         canonical="https://www.canonicalurl.ie/"
         openGraph={{
           url: "www.foolist.vn",
-          title: "Open Graph Title",
-          description: "Open Graph Description",
+          title: "Foolist Creative",
+          description:
+            "Foolist operates in the fields of creativity and technology,graphic design, media development, or website creation",
           images: [
             {
               url: "https://www.example.ie/og-image-01.jpg",
