@@ -12,7 +12,6 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import MiniFooter from "../components/miniFooter";
 import { AnimationOnScroll } from "react-animation-on-scroll";
-import EmployeeSlider from "../components/employeeSlider";
 import Head from "next/head";
 
 const classNamePrefix = "about-page";
