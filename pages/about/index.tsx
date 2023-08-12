@@ -269,32 +269,6 @@ const AboutPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
         </div>
       </section>
 
-      <section className={`${classNamePrefix}__final-section`}>
-        <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}>
-          <div className={`${classNamePrefix}__employee-group`}>
-            <div className={`${classNamePrefix}__employee-group-title`}>
-              <span>{t("Staff.team")}</span>
-              <span
-                style={{
-                  fontFamily: "Times New Roman",
-                  color: "#f6a5c1",
-                  fontStyle: "italic",
-                  fontSize: 70,
-                }}
-              >
-                {t("Staff.staff")}
-              </span>
-            </div>
-
-            <div className={`${classNamePrefix}__employee-group-line`}></div>
-          </div>
-        </AnimationOnScroll>
-
-        <div className={`${classNamePrefix}__employee-slider`}>
-          <EmployeeSlider />
-        </div>
-      </section>
-
       <TextSlider text="- FOOLIST - CREATIVE - MEDIA - TECHNOLOGY" />
 
       <ConnectSection />
