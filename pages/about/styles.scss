@@ -422,26 +422,6 @@
     background: #000000;
   }
 
-  &__employee-group {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    width: 100%;
-
-    padding-left: 100px;
-
-    background: #000000;
-  }
-
-  &__employee-group-title {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    width: 280px;
-    height: 200px;
-
     span {
       font-family: "Arial";
       font-style: normal;
