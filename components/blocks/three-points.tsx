@@ -30,7 +30,7 @@ const ThreePoints = () => {
                 <Link href='#tu-duy-sang-tao-doc-nhat'>
                   <div className='max-w-xs mx-auto text-center'>
                     <div className='flex flex-col items-center justify-center w-full mb-8 cursor-pointer aspect-video rounded-xl'>
-                      <h3 className='mb-4 group text-3xl font-semibold tracking-tight [&>*]:font-heading !font-heading'>
+                      <h3 className='mb-4 group text-3xl text-white font-semibold tracking-tight [&>*]:font-heading !font-heading'>
                         <span className=''>
                           {t('About_content.three-points-content.first.top')}{' '}
                         </span>
@@ -50,7 +50,7 @@ const ThreePoints = () => {
               <div className='w-full p-8 md:w-1/3'>
                 <div className='max-w-xs mx-auto text-center'>
                   <div className='flex flex-col items-center justify-center w-full mb-8 aspect-video rounded-xl'>
-                    <h3 className='mb-4 text-3xl font-semibold tracking-tight [&>*]:font-heading !font-heading'>
+                    <h3 className='mb-4 text-3xl font-semibold text-white tracking-tight [&>*]:font-heading !font-heading'>
                       <span>
                         {t('About_content.three-points-content.second.top')}{' '}
                       </span>
@@ -68,7 +68,7 @@ const ThreePoints = () => {
               <div className='w-full p-8 md:w-1/3'>
                 <div className='max-w-xs mx-auto text-center'>
                   <div className='flex flex-col items-center justify-center w-full mb-8 aspect-video rounded-xl'>
-                    <h3 className='mb-4 text-3xl font-semibold tracking-tight [&>*]:font-heading !font-heading'>
+                    <h3 className='mb-4 text-3xl font-semibold text-white tracking-tight [&>*]:font-heading !font-heading'>
                       <span>
                         {t('About_content.three-points-content.third.top')}{' '}
                       </span>

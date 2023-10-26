@@ -3,10 +3,6 @@ module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
-    // './components/**/*.{js,ts,jsx,tsx,mdx}',
-
-    // Or if using `src` directory:
-    // "./**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -27,5 +23,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require('@tailwindcss/typography'), require('daisyui')],
+  plugins: [require('@tailwindcss/typography')],
 };

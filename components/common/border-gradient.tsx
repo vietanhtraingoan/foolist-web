@@ -9,6 +9,7 @@ const BorderGradient = ({
   borderClassName,
   commonClassName,
   bgClassName,
+  ...props
 }: BaseComponent & {
   type?: 'contain' | 'linear';
   borderClassName?: string;
@@ -26,6 +27,7 @@ const BorderGradient = ({
           'flex items-center justify-center': type === 'contain',
         }
       )}
+      {...props}
     >
       <div
         className={clsx(

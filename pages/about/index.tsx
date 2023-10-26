@@ -43,12 +43,12 @@ const AboutPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
       <Head>
         <title>{t('About us')}</title>
       </Head>
-
-      <Section className={`animate__animated animate__slideInUp`}>
+      <Section className={`animate__animated animate__slideInUp mt-20 `}>
         <Section.Title>
-          <GrayGradientTypography className='block w-full font-bold leading-normal text-center text-2xl md:!text-4xl lg:text-h2 font-heading'>
+          <GrayGradientTypography className='block w-full font-bold leading-normal text-center text-xl md:!text-4xl lg:text-h2 font-heading'>
             Về chúng tôi
           </GrayGradientTypography>
+          <Divider direction='center' className='mt-4 md:mt-6' />
         </Section.Title>
         <div
           className={` max-w-3xl mx-auto text-justify animate__animated animate__fadeInUp animation_delay-2s`}

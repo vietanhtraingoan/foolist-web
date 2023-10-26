@@ -12,7 +12,7 @@ const HeroSection = ({
   const isLaptopOrMobile = useMediaQuery({ query: '(max-width: 1024px)' });
   const [paragraph, setParagraph] = useState('');
   const { t } = useTranslation('common');
-  console.log({ isLaptopOrMobile });
+
   useEffect(() => {
     setParagraph(t('About_content.paragraph-1'));
   }, [t('About_content.paragraph-1')]);

@@ -11,4 +11,5 @@ export interface BaseComponent {
   children?: ReactNode;
   className?: string;
   onClick?: () => void;
+  style?: React.CSSProperties;
 }

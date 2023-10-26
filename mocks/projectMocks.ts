@@ -10,12 +10,16 @@ import projectPresent3 from '../public/static/projectPresent3.png';
 import projectLarge1 from '../public/static/projectLarge1.png';
 import projectLarge2 from '../public/static/projectLarge2.png';
 import projectLarge3 from '../public/static/projectLarge3.png';
+import sp1 from '../public/images/services/Sp1.png';
+import sp2 from '../public/images/services/Sp2.jpg';
+import sp3 from '../public/images/services/Sp3.png';
+import sp4 from '../public/images/services/Sp4.png';
+import sp5 from '../public/images/services/Sp5.jpg';
 
 export const projectMocks = [
   {
     id: '1',
-    imgUrl: project1,
-    largeImg: projectLarge1,
+    largeImg: sp1,
     position: 1,
     name: 'Travelio',
     title: 'project.project1.title',
@@ -35,8 +39,7 @@ export const projectMocks = [
   },
   {
     id: '2',
-    imgUrl: project2,
-    largeImg: projectLarge2,
+    largeImg: sp2,
     position: 2,
     name: 'Andromeda',
     title: 'project.project2.title',
@@ -57,7 +60,7 @@ export const projectMocks = [
   {
     id: '3',
     imgUrl: project3,
-    largeImg: projectLarge3,
+    largeImg: sp3,
     position: 3,
     name: 'Clor Spa',
     title: 'project.project3.title',
@@ -78,9 +81,30 @@ export const projectMocks = [
   {
     id: '4',
     imgUrl: project3,
-    largeImg: projectLarge3,
+    largeImg: sp4,
     position: 3,
-    isVideo: true,
+    isVideo: false,
+
+    videoUrl: 'https://www.youtube.com/watch?v=F084mTHtBpI',
+    name: 'Clor Spa',
+    title: 'project.project3.title',
+    intro: 'project.project3.intro',
+    projectPresent: projectPresent3,
+    subImgUrl: projectSub3,
+    paragraph1: {
+      title: 'project.project3.paragraph-1.title',
+      content: 'project.project3.paragraph-1.content',
+    },
+    paragraph2: {
+      title: 'project.project3.paragraph-2.title',
+      content: 'project.project3.paragraph-2.content',
+    },
+  },
+  {
+    id: '5',
+    largeImg: sp5,
+    position: 3,
+    isVideo: false,
     videoUrl: 'https://www.youtube.com/watch?v=F084mTHtBpI',
     name: 'Clor Spa',
     title: 'project.project3.title',

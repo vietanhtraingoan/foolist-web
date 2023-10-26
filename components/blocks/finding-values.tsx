@@ -4,8 +4,12 @@ import PinkGradientTypography from '../common/typography/pink-gradient-typograph
 import clsx from 'clsx';
 import GrayGradientTypography from '../common/typography/gray-gradient-typography';
 import Divider from '../common/divider';
+import { useMediaQuery } from 'react-responsive';
 
 const FindingValue = () => {
+  const isMobile = useMediaQuery({
+    query: '(max-width:768px)',
+  });
   const values = [
     {
       title: 'Trung thực',
@@ -37,21 +41,33 @@ const FindingValue = () => {
         </GrayGradientTypography>
         <Divider direction='left' />
       </h3>
-      <div className='grid w-full max-w-3xl grid-cols-1 md:grid-cols-2 md:grid-rows-2 mx-auto mt-20'>
-        {values.map((item, index) => {
+      <div className='grid w-full max-w-3xl grid-cols-1 gap-3 mx-auto mt-20 md:grid-cols-2 md:grid-rows-2'>
+        {values.map((item, index: number) => {
           return (
             <div
+              key={item.title + index}
               className={clsx(
-                'flex flex-col px-6 py-8 text-left transition-all border cursor-pointer shadow-2xl hover:[box-shadow:#f5a4c0_0px_13px_50px_-26px] hover:-translate-y-4 bg-black-900/30 border-white/20 rounded-xl'
+                'flex md:aspect-square relative flex-col px-8 py-8 text-left transition-all border cursor-pointer shadow-2xl hover:[box-shadow:#f5a4c0_0px_13px_50px_-26px] bg-black-900/30 border-white/20 rounded-lg md:rounded-[50px]',
+                {
+                  'rounded-br-xl rounded-lr-xl rounded-tr-xl rounded-bl-xl hover:-translate-y-4 hover:-translate-x-4 hover:rounded-br-xl hover:rounded-lr-xl hover:rounded-tr-xl hover:rounded-bl-xl':
+                    index === 0 && !isMobile,
+                  'rounded-bl-xl rounded-tl-xl rounded-br-xl hover:-translate-y-4 hover:translate-x-4 ':
+                    index === 1 && !isMobile,
+                  'rounded-tr-xl rounded-tl-xl rounded-br-xl hover:translate-y-4 hover:-translate-x-4':
+                    index === 2 && !isMobile,
+                  'rounded-tl-xl rounded-tr-xl rounded-bl-xl hover:translate-y-4 hover:translate-x-4':
+                    index === 3 && !isMobile,
+                }
               )}
               style={{
                 backdropFilter: 'blur( 10px )',
                 WebkitBackdropFilter: 'blur( 10px )',
-                borderRadius: '10px',
               }}
             >
-              <h3 className='mb-5 md:mb-8 text-3xl md:text-4xl lg:text-5xl font-bold'>
-                {item.title}
+              <h3 className='mb-5 md:mb-8'>
+                <GrayGradientTypography className='text-3xl font-bold text-white md:text-4xl lg:text-5xl font-heading'>
+                  {item.title}
+                </GrayGradientTypography>
               </h3>
               <p className='text-sm md:text-base lg:text-xl text-white/80'>
                 {item.description}

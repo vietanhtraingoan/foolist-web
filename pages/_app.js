@@ -1,6 +1,4 @@
 import { DefaultSeo } from 'next-seo';
-import 'animate.css';
-import 'animate.css/animate.min.css';
 import 'react-phone-number-input/style.css';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import Head from 'next/head';
@@ -70,6 +68,7 @@ import { DEFAULT_LANG, KEY_LANGUAGE } from '../utils/constants';
 import LanguageChange from './components/languageChange';
 import LoadingView from './loadingView';
 import Footer from '../components/blocks/footer';
+import 'animate.css';
 
 function MyApp({ Component, ...rest }) {
   const { store, props } = wrapper.useWrappedStore(rest);

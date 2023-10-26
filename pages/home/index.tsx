@@ -1,27 +1,20 @@
-import React from 'react';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Marquee from 'react-fast-marquee';
 
-import { DEFAULT_LANG } from '../../utils/constants';
-import ProjectCarousel from '../components/projectCarousel';
-import { ClientMocks } from '../../mocks/clientMocks';
-import ClientItem from '../components/clientItem';
-import { infoMocks } from '../../mocks/infoMocks';
-import IntroductionCarousel from '../components/introductionCarousel/index';
-import { IClient } from '../../utils/types/clientTypes';
-import ConnectSection from '../components/connectSection';
-import GridProject from '../components/gridProject/index';
-import ResponsiveClient from '../components/responsiveClient';
-import ServiceSection from '../components/serviceSection';
-import MenuContactSection from '../components/menuContactSection';
-import Head from 'next/head';
-import Section from '../../components/common/section';
-import HeroSection from '../../components/blocks/hero-section';
-import AboutUs from '../../components/blocks/about-us';
-import Footer from '../../components/blocks/footer';
 import dynamic from 'next/dynamic';
+import Head from 'next/head';
+import AboutUs from '../../components/blocks/about-us';
+import HeroSection from '../../components/blocks/hero-section';
+import Section from '../../components/common/section';
+import { ClientMocks } from '../../mocks/clientMocks';
+import { DEFAULT_LANG } from '../../utils/constants';
+import { IClient } from '../../utils/types/clientTypes';
+import ClientItem from '../components/clientItem';
+import ConnectSection from '../components/connectSection';
+import ProjectCarousel from '../components/projectCarousel';
+import ResponsiveClient from '../components/responsiveClient';
 const NewServiceSection = dynamic(
   () => import('../../components/blocks/new-service-section'),
   { ssr: false }

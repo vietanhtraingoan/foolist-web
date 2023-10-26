@@ -1,5 +1,6 @@
 {
   "Home": "Home",
+  "About_us_home": "About us",
   "About us": "About us",
   "Projects": "Projects",
   "feature-project": "Breakthrough project",
@@ -13,7 +14,8 @@
   "Section_label": {
     "product": "Our products",
     "project": "Projects",
-    "client": " COLLABORATE WITH MULTIPLE PARTNERS"
+    "service": "Capacity",
+    "client": " Collaborate with multiple partners"
   },
   "all-project": "View all projects",
   "product": "Our projects",
@@ -39,7 +41,7 @@
     },
     "brand-name": "Foolist",
     "paragraph-1": "Foolist Creative is an Agency operating in the field of Marketing with the mission of \"Accompanying, using a unique creative spirit to elevate Vietnamese brands\". Foolist has been incubated since the last months of 2022 and officially went into operation as a company from May 27, 2023.",
-    "paragraph-2": "We will show you how we use three points to make an impression on our clients and partners: our unique creative thinking, our artistic visual perspective, and our brand identity language.",
+    "paragraph-2": "Foolist has within us the expectation and energy to break through, so we are constantly acquiring knowledge about the following contents: branding, media development and media production,... To become the top choice of Clients with the ability to lead trends and shape brands.",
     "creative-thinking": "Creative Thinking",
     "unique": "Unique",
     "paragraph-3": "At Foolist, we believe that creativity is not a talent, but a skill that can be learned and developed. We use various methods and tools to stimulate our creative thinking, such as brainstorming, mind mapping, lateral thinking, and design thinking. We also challenge ourselves to think outside the box and explore new possibilities and perspectives.",

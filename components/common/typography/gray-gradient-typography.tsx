@@ -9,7 +9,7 @@ const GrayGradientTypography = ({
 }: BaseComponent) => {
   return (
     <span
-      className={clsx(className, 'inline-block')}
+      className={clsx(className, 'inline-block font-[inherit]')}
       style={{
         background: 'linear-gradient(180deg,#fff 0%,rgba(255,255,255,.7) 100%)',
         WebkitBackgroundClip: 'text',

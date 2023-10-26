@@ -1,21 +1,20 @@
-import { useRouter } from 'next/router';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import { projectMocks } from '../../../mocks/projectMocks';
 
+import { PlayIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { A11y, Navigation, Pagination, Scrollbar } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { PlayIcon, XMarkIcon } from '@heroicons/react/24/outline';
 // Import Swiper styles
-import { ImageNext } from '../../../components/common/image-next';
-import ChevronRight from '../../../components/icons/chevron-right';
-import ChevronLeft from '../../../components/icons/chevron-left';
+import { Skeleton } from 'antd';
 import clsx from 'clsx';
+import { ImageNext } from '../../../components/common/image-next';
 import YoutubeIframe from '../../../components/common/youtube-iframe';
+import ChevronLeft from '../../../components/icons/chevron-left';
+import ChevronRight from '../../../components/icons/chevron-right';
 import { getYoutubeEmbedUrl } from '../../../utils/commonFunctions';
-import { Progress, Skeleton, Spin } from 'antd';
 
 const classNamePrefix = 'project-carousel';
 
@@ -79,9 +78,10 @@ const ProjectCarousel = () => {
                   setLoadingProject(true);
                 }
               }}
-              className='relative group before:absolute before:content-[""] before:inset-0 before:bg-transparent hover:before:bg-white/20 cursor-pointer'
+              className='relative group overflow-hidden aspect-square before:absolute before:content-[""] before:inset-0 before:bg-transparent hover:before:bg-white/20 cursor-pointer'
             >
               <ImageNext
+                className='object-cover w-full h-full'
                 src={proj.largeImg.src}
                 alt='image-product'
                 // placeholderSrc={proj.largeImg.src}
@@ -94,15 +94,6 @@ const ProjectCarousel = () => {
                 </div>
               )}
             </div>
-          </SwiperSlide>
-        ))}
-        {projectMocks?.map((proj, index) => (
-          <SwiperSlide key={proj.id}>
-            <ImageNext
-              src={proj.largeImg.src}
-              alt='image-product'
-              // placeholderSrc={proj.largeImg.src}
-            />
           </SwiperSlide>
         ))}
       </Swiper>

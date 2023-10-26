@@ -15,6 +15,7 @@ import SocialGroup from '../socialGroup';
 import LanguageChange from '../languageChange';
 import MenuContactSection from '../menuContactSection';
 import clsx from 'clsx';
+import Link from 'next/link';
 
 type Props = {
   // Add custom props here
@@ -111,11 +112,9 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
                   <div className='menu-grid-wrapper'>
                     {filterPrivateRoutes.map((menuItem, key) => {
                       return (
-                        <div
+                        <Link
                           key={key}
-                          onClick={() => {
-                            router.push(menuItem.path);
-                          }}
+                          href={menuItem.path}
                           className={`menu-grid-item ${
                             router.pathname === menuItem.path
                               ? 'menu-grid-item-active'
@@ -123,7 +122,7 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
                           }`}
                         >
                           <span>{t(`${menuItem.name}`)}</span>
-                        </div>
+                        </Link>
                       );
                     })}
                   </div>
