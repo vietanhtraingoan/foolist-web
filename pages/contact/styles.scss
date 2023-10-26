@@ -5,14 +5,12 @@
 
   background: #000000;
 
-  padding: 120px 60px;
+  padding: 120px 0;
 
   &__introduction-wrapper {
     width: 100%;
 
     margin-top: 80px;
-
-    font-family: "Arial";
     font-style: normal;
     font-weight: 700;
     font-size: 59.1685px;
@@ -31,7 +29,6 @@
   &__form-title {
     margin-bottom: 20px;
 
-    font-family: "Arial";
     font-style: normal;
     font-weight: 700;
     font-size: 33.1453px;
@@ -59,31 +56,22 @@
     display: flex;
     flex-direction: column;
 
-    margin-bottom: 12px;
-
     width: 100%;
 
     input {
       outline: none;
-
       height: 52px;
-
+      background-color: transparent;
       margin: 10px 0;
       padding-left: 20px;
-
       border-radius: 10px;
-      border: 1px solid;
 
-      font-family: "Arial";
       font-style: normal;
       font-weight: 400;
       font-size: 20px;
       color: #ffffff;
 
-      background: #d9d9d933;
-
       &::placeholder {
-        font-family: "Arial";
         font-style: normal;
         font-weight: 400;
         color: #bdbdbd;
@@ -98,19 +86,13 @@
       margin: 10px 0;
       padding: 15px;
 
-      border: 1px solid #ffffff;
-
-      font-family: "Arial";
       font-style: normal;
       font-weight: 500;
       font-size: 20px;
       color: #ffffff;
-
-      background: rgba(217, 217, 217, 0.2);
-      border-radius: 10px;
+      background-color: transparent;
 
       &::placeholder {
-        font-family: "Arial";
         font-style: normal;
         font-weight: 400;
         color: #bdbdbd;
@@ -121,8 +103,6 @@
   &__form-item-phone {
     width: 100%;
 
-    margin-bottom: 12px;
-
     .PhoneInput {
       position: relative;
 
@@ -130,8 +110,6 @@
         position: absolute;
         top: 26px;
         left: 10px;
-
-        border-right: 1px solid #ffffff;
       }
 
       .PhoneInputCountryIcon {
@@ -141,25 +119,16 @@
 
       input {
         outline: none;
-
         height: 52px;
-
+        background-color: transparent;
         margin: 10px 0;
         padding-left: 50px;
-
         border-radius: 10px;
-        border: 1px solid #ffffff;
-
-        font-family: "Arial";
         font-style: normal;
         font-weight: 400;
         font-size: 20px;
         color: #ffffff;
-
-        background: rgba(217, 217, 217, 0.2);
-
         &::placeholder {
-          font-family: "Arial";
           font-style: normal;
           font-weight: 400;
           color: #bdbdbd;
@@ -179,7 +148,7 @@
     align-items: center;
 
     span {
-      font-family: "Montserrat";
+      font-family: 'Montserrat';
       color: red;
     }
   }
@@ -218,7 +187,7 @@
     margin-bottom: 20px;
 
     div {
-      font-family: "Arial";
+      font-family: 'Arial';
       font-style: normal;
       font-weight: 400;
       font-size: 22px;
@@ -281,7 +250,7 @@
     margin-top: 50px;
     padding-bottom: 50px;
 
-    font-family: "Montserrat";
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -303,7 +272,6 @@
     background: #f8a5c2;
 
     span {
-      font-family: "Montserrat";
       font-style: normal;
       font-weight: 700;
       font-size: 17px;
@@ -320,7 +288,6 @@
 @media screen and (max-width: 1180px) {
   .contact-page {
     &__introduction-wrapper {
-
       font-size: 45px;
       line-height: 60px;
     }
@@ -329,10 +296,9 @@
 
 @media screen and (max-width: 900px) {
   .contact-page {
-    padding: 120px 20px;
+    padding: 120px 0;
 
     &__introduction-wrapper {
-
       font-size: 35px;
       line-height: 50px;
     }
@@ -347,7 +313,7 @@
 
 @media screen and (max-width: 768px) {
   .contact-page {
-    padding: 80px 20px;
+    padding: 80px 0;
     &__introduction-wrapper {
       margin-top: 30px;
 
@@ -379,7 +345,6 @@
         padding-left: 0;
 
         border: unset;
-        border-bottom: 1px solid rgba(217, 217, 217);
         border-radius: 0;
 
         font-size: 1rem;
@@ -395,7 +360,6 @@
 
         padding-left: 0;
 
-        border-bottom: 1px solid rgba(217, 217, 217);
         border-radius: 0;
 
         font-size: 1rem;
@@ -414,7 +378,6 @@
 
           padding-left: 60px;
 
-          border-bottom: 1px solid rgba(217, 217, 217);
           border-radius: 0;
 
           font-size: 1rem;

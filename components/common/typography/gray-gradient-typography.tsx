@@ -2,7 +2,11 @@ import React from 'react';
 import { BaseComponent } from '../../../utils/types/clientTypes';
 import clsx from 'clsx';
 
-const GrayGradientTypography = ({ children, className }: BaseComponent) => {
+const GrayGradientTypography = ({
+  children,
+  className,
+  ...props
+}: BaseComponent) => {
   return (
     <span
       className={clsx(className, 'inline-block')}
@@ -12,6 +16,7 @@ const GrayGradientTypography = ({ children, className }: BaseComponent) => {
         backgroundClip: 'text',
         color: 'transparent',
       }}
+      {...props}
     >
       {children}
     </span>
