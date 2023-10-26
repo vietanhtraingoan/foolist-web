@@ -1,13 +1,16 @@
-import React from "react";
-import CustomNavigationButton from "../customNavigationButton";
-import SocialGroup from "../socialGroup";
-import { useRouter } from "next/router";
-import { GetStaticProps, InferGetStaticPropsType } from "next/types";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useTranslation } from "next-i18next";
-import { AnimationOnScroll } from "react-animation-on-scroll";
+import React from 'react';
+import CustomNavigationButton from '../customNavigationButton';
+import SocialGroup from '../socialGroup';
+import { useRouter } from 'next/router';
+import { GetStaticProps, InferGetStaticPropsType } from 'next/types';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
+import PinkGradientTypography from '../../../components/common/typography/pink-gradient-typography';
+import GrayGradientTypography from '../../../components/common/typography/gray-gradient-typography';
+import Section from '../../../components/common/section';
 
-const classNamePrefix = "connect-section";
+const classNamePrefix = 'connect-section';
 
 type Props = {
   // Add custom props here
@@ -16,67 +19,60 @@ type Props = {
 const ConnectSection = (
   _props: InferGetStaticPropsType<typeof getStaticProps>
 ) => {
-  const { t } = useTranslation("common");
+  const { t } = useTranslation('common');
   const router = useRouter();
 
   const serviceList = [
-    { id: 1, title: t("service.tvc"), onClick: () => router.push(`/serviceDetail?id=1`) },
-    { id: 2, title: t("service.product-design"), onClick: () => router.push(`/serviceDetail?id=2`) },
-    { id: 3, title: t("service.website-development"), onClick: () => router.push(`/serviceDetail?id=3`) },
-    { id: 4, title: t("service.mobile-app-development"), onClick: () => router.push(`/serviceDetail?id=3`) },
-    { id: 5, title: t("service.erp"), onClick: () => router.push(`/serviceDetail?id=4`) },
+    {
+      id: 1,
+      title: t('service.tvc'),
+      onClick: () => router.push(`/serviceDetail?id=1`),
+    },
+    {
+      id: 2,
+      title: t('service.product-design'),
+      onClick: () => router.push(`/serviceDetail?id=2`),
+    },
+    {
+      id: 3,
+      title: t('service.website-development'),
+      onClick: () => router.push(`/serviceDetail?id=3`),
+    },
+    {
+      id: 4,
+      title: t('service.mobile-app-development'),
+      onClick: () => router.push(`/serviceDetail?id=3`),
+    },
+    {
+      id: 5,
+      title: t('service.erp'),
+      onClick: () => router.push(`/serviceDetail?id=4`),
+    },
   ];
 
   return (
-    <div className={classNamePrefix}>
-      <div className={`${classNamePrefix}__top`}>
-        <div className={`${classNamePrefix}__top-text`}>
-          {t("connect-with")} <span>FOOLIST </span>
+    <Section className='!pb-0'>
+      <div className='flex flex-wrap items-center justify-between w-full'>
+        <div className={`text-2xl lg:text-4xl font-main font-medium `}>
+          <GrayGradientTypography>{t('connect-with')} </GrayGradientTypography>
+          <GrayGradientTypography className='block w-full text-4xl font-bold md:text-5xl max-md:mb-8 lg:text-7xl'>
+            Foolist Creative
+          </GrayGradientTypography>
         </div>
-
         <div className={`${classNamePrefix}__top-button`}>
           <CustomNavigationButton
-            size="large"
-            onClick={() => router.push("/contact")}
+            size='large'
+            onClick={() => router.push('/contact')}
           />
         </div>
       </div>
-
-      <div className={`${classNamePrefix}__bottom`}>
-        <div className={`${classNamePrefix}__bottom-left`}>
-          <div className={`${classNamePrefix}__bottom-left-item`}>
-            <span>{t("explore")}</span>
-            <div>
-              <SocialGroup />
-            </div>
-          </div>
-        </div>
-
-        <div className={`${classNamePrefix}__bottom-right`}>
-          <span>{t("Services")}</span>
-
-          <div className={`${classNamePrefix}__service-list`}>
-            {serviceList
-              ? serviceList.map((s) => (
-                  <div
-                    className={`${classNamePrefix}__service-item`}
-                    key={s.id}
-                    onClick={s.onClick}
-                  >
-                    <span>{s.title}</span>
-                  </div>
-                ))
-              : ""}
-          </div>
-        </div>
-      </div>
-    </div>
+    </Section>
   );
 };
 
 export const getStaticProps: GetStaticProps<Props> = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ["common"])),
+    ...(await serverSideTranslations(locale, ['common'])),
   },
 });
 

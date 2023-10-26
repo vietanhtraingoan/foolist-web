@@ -111,14 +111,14 @@
     width: 35px;
     height: 20px;
     span {
-      height: 5px;
+      height: 2px;
     }
 
     span:nth-child(3),
     span:nth-child(4) {
       top: 8px;
     }
-  
+
     span:nth-child(5),
     span:nth-child(6) {
       top: 16px;
@@ -139,17 +139,17 @@
     left: -50%;
     opacity: 0;
   }
-  
+
   #hamburg-menu.open span:nth-child(4) {
     left: 100%;
     opacity: 0;
   }
-  
+
   #hamburg-menu.open span:nth-child(5) {
     left: 3px;
     top: 15px;
   }
-  
+
   #hamburg-menu.open span:nth-child(6) {
     left: calc(50% - 5px);
     top: 15px;

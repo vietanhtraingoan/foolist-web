@@ -6,13 +6,13 @@
 
   width: 100%;
 
-  transition: ease-in-out 0.4s;
+  // transition: ease-in-out 0.4s;
 
   .second {
     position: relative;
 
-    transition: ease-in-out 0.7s;
-    backdrop-filter: blur(10px);
+    // transition: ease-in-out 0.3s;
+    // backdrop-filter: blur(10px);
 
     width: 100%;
     .content {
@@ -23,8 +23,6 @@
 
       height: 80px;
       width: 100%;
-
-      padding: 0 52.07px;
 
       .logo-group {
         display: flex;
@@ -114,7 +112,7 @@
 
             &:hover {
               &:after {
-                content: "";
+                content: '';
 
                 width: 40px;
                 height: 2px;
@@ -134,7 +132,7 @@
             }
 
             &:after {
-              content: "";
+              content: '';
 
               width: 0;
               height: 2px;
@@ -151,7 +149,7 @@
             }
 
             &:after {
-              content: "";
+              content: '';
 
               width: 10px;
               height: 10px;
@@ -236,8 +234,6 @@
 
   padding: 150px 60px 170px 60px;
 
-  background: #000000;
-
   transition: ease-in-out 0.8s;
 
   .navigation-group-container {
@@ -255,7 +251,7 @@
 
     margin-bottom: 30px;
     span {
-      font-family: "Times New Roman", Times, serif;
+      font-family: 'Times New Roman', Times, serif;
       font-style: italic;
       font-weight: 400;
       font-size: 140px;
@@ -294,8 +290,6 @@
     .second {
       width: 100%;
       .content {
-        padding: 0 20px;
-
         .logo-group {
           .logo {
             width: 50px;
@@ -376,7 +370,7 @@
 
     .item {
       margin-bottom: 15px;
-      
+
       span {
         font-size: 25px;
       }

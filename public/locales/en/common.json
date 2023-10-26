@@ -11,12 +11,12 @@
   "view-more": "VIEW MORE",
   "change-locale": "Language: {{changeTo}}",
   "Section_label": {
-    "product": "OUR PRODUCTS",
-    "project": "PROJETCS",
+    "product": "Our products",
+    "project": "Projects",
     "client": " COLLABORATE WITH MULTIPLE PARTNERS"
   },
   "all-project": "View all projects",
-  "product": "OUR PROJECTS",
+  "product": "Our projects",
   "About_content": {
     "title": "Making an Impression",
     "three-points": "Three-points",
@@ -38,7 +38,7 @@
       }
     },
     "brand-name": "Foolist",
-    "paragraph-1": "Operates in the fields of creativity and technology. We provide innovative and artistic solutions for your business needs, whether it's graphic design, media development, or website creation. ",
+    "paragraph-1": "Foolist Creative is an Agency operating in the field of Marketing with the mission of \"Accompanying, using a unique creative spirit to elevate Vietnamese brands\". Foolist has been incubated since the last months of 2022 and officially went into operation as a company from May 27, 2023.",
     "paragraph-2": "We will show you how we use three points to make an impression on our clients and partners: our unique creative thinking, our artistic visual perspective, and our brand identity language.",
     "creative-thinking": "Creative Thinking",
     "unique": "Unique",
@@ -193,7 +193,7 @@
     "mindset": "Mindset",
     "art": "Art",
     "unique": "Unique",
-    "eyesight":"Eyesight",
+    "eyesight": "Eyesight",
     "vision": "Vision"
   }
 }

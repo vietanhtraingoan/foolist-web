@@ -1,34 +1,34 @@
-import Home from "../pages";
-import AboutPage from "../pages/about";
-import ContactPage from "../pages/contact";
-import PostPage from "../pages/posts";
-import ProjectPage from "../pages/project";
-import ServicesPage from "../pages/services";
-import WordsPage from "../pages/words";
+import Home from '../pages';
+import AboutPage from '../pages/about';
+import ContactPage from '../pages/contact';
+import PostPage from '../pages/posts';
+import ProjectPage from '../pages/project';
+import ServicesPage from '../pages/services';
+import WordsPage from '../pages/words';
 
 export const PrivateRoutes = [
   {
-    path: "/",
+    path: '/',
     element: <Home />,
-    name: "Home",
+    name: 'Home',
     index: 0,
   },
   {
-    path: "/about",
+    path: '/about',
     element: <AboutPage />,
-    name: "About us",
+    name: 'About us',
     index: 1,
   },
+  // {
+  //   path: "/project",
+  //   element: <ProjectPage />,
+  //   name: "Projects",
+  //   index: 2,
+  // },
   {
-    path: "/project",
-    element: <ProjectPage />,
-    name: "Projects",
-    index: 2,
-  },
-  {
-    path: "/services",
+    path: '/services',
     element: <ServicesPage />,
-    name: "Services",
+    name: 'Services',
     index: 3,
   },
   // {
@@ -44,22 +44,22 @@ export const PrivateRoutes = [
   //   index: 4,
   // },
   {
-    path: "/contact",
+    path: '/contact',
     element: <ContactPage />,
-    name: "Contact Us",
+    name: 'Contact Us',
     index: 4,
   },
 ];
 
 export const PublicRoutes = [
   {
-    path: "/auth/login",
+    path: '/auth/login',
     element: <ContactPage />,
-    name: "Login",
+    name: 'Login',
   },
   {
-    path: "/auth/register",
+    path: '/auth/register',
     element: <ContactPage />,
-    name: "Register",
+    name: 'Register',
   },
 ];

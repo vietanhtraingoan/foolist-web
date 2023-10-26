@@ -1,19 +1,20 @@
-import React, { useEffect, useState } from "react";
-import { useRouter } from "next/router";
-import { PrivateRoutes } from "../../../routers";
+import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
+import { PrivateRoutes } from '../../../routers';
 
-import foolistLogo from "../../../public/static/foolistLogo.png";
+import foolistLogo from '../../../public/static/foolistLogo.png';
 
-import type { GetStaticProps, InferGetStaticPropsType } from "next";
-import { useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { DEFAULT_LANG } from "../../../utils/constants";
-import Image from "next/image";
+import type { GetStaticProps, InferGetStaticPropsType } from 'next';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { DEFAULT_LANG } from '../../../utils/constants';
+import Image from 'next/image';
 
-import CustomHamburgMenu from "../customHamburgMenu";
-import SocialGroup from "../socialGroup";
-import LanguageChange from "../languageChange";
-import MenuContactSection from "../menuContactSection";
+import CustomHamburgMenu from '../customHamburgMenu';
+import SocialGroup from '../socialGroup';
+import LanguageChange from '../languageChange';
+import MenuContactSection from '../menuContactSection';
+import clsx from 'clsx';
 
 type Props = {
   // Add custom props here
@@ -28,30 +29,29 @@ export interface MenuObj {
 
 const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const router = useRouter();
-  const { t } = useTranslation("common");
+  const { t } = useTranslation('common');
 
   const [isMenuClick, setIsMenuClick] = useState<boolean>(false);
+  const [menuScrolling, setMenuScrolling] = useState<boolean>(false);
   const [showMenu, setShowMenu] = useState<boolean>(false);
   const [showMenuItem, setShowMenuItem] = useState<boolean>(false);
-
-  const [menuBg, setMenuBg] = useState("none");
-  const [menuButtonBg, setMenuNButtonBg] = useState("none");
+  const [menuButtonBg, setMenuNButtonBg] = useState('none');
 
   const [activeMenu, setactiveMenu] = useState(null);
 
   const filterPrivateRoutes = PrivateRoutes.filter(
-    (route) => route.path !== "/"
+    (route) => route.path !== '/'
   );
 
   const scrollListener = () => {
     const scroll = window.scrollY;
 
     if (scroll > 105) {
-      setMenuBg(" rgba(100, 100, 100, 0.55)");
-      setMenuNButtonBg("#f6a5c1");
+      setMenuNButtonBg('#f6a5c1');
+      setMenuScrolling(true);
     } else {
-      setMenuBg("");
-      setMenuNButtonBg("none");
+      setMenuScrolling(false);
+      setMenuNButtonBg('none');
     }
   };
 
@@ -61,7 +61,7 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
 
     setTimeout(() => {
       setShowMenuItem(true);
-    }, 900);
+    }, 300);
   };
 
   const handleCloseMenu = () => {
@@ -69,50 +69,46 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
 
     setTimeout(() => {
       setShowMenu(false);
-    }, 800);
+    }, 300);
     setIsMenuClick(false);
   };
 
   useEffect(() => {
-    document.addEventListener("scroll", scrollListener);
+    document.addEventListener('scroll', scrollListener);
   }, []);
 
   return (
     <>
-      <div
-        className="top-menu"
-        style={{ background: showMenu ? "rgba(0, 0, 0)" : "#000000" }}
+      <header
+        className={clsx(
+          'top-menu before:content-[""] before:opacity-0 before:absolute before:inset-0 before:backdrop-blur-md',
+          {
+            'bg-black/70 border-b border-b-white/20 before:transition-all before:opacity-100 shadow-2xl':
+              menuScrolling && !showMenu,
+            'bg-black': showMenu,
+          }
+        )}
       >
-        <div
-          className="second"
-          style={{ background: showMenu ? "#000000" : menuBg }}
-        >
-          <div className="content">
-            <div className="logo-group" onClick={() => router.push("/")}>
-              <Image
-                src={foolistLogo}
-                className="logo"
-                alt="logo"
-                priority={false}
-              />
+        <div className='container second'>
+          <div className='content'>
+            <div className='logo-group' onClick={() => router.push('/')}>
+              <Image src={foolistLogo} className='logo' alt='logo' priority />
             </div>
-
-            <div className="left-menu">
+            <div className='left-menu'>
               <div
-                className="left-menu-responsive-button"
-                style={{ background: menuButtonBg }}
+                className='left-menu-responsive-button'
+                style={{ background: 'transparent' }}
               >
                 <CustomHamburgMenu
                   isMenuClick={isMenuClick}
                   handleMenuClick={handleMenuClick}
                   handleCloseMenu={handleCloseMenu}
-                  spanBgColor="#ffffff"
+                  spanBgColor='#ffffff'
                 />
               </div>
-
-              <div className="left-menu-responsive-grid">
-                {router.pathname !== "/" ? (
-                  <div className="menu-grid-wrapper">
+              <div className='left-menu-responsive-grid'>
+                {router.pathname !== '/' ? (
+                  <div className='menu-grid-wrapper'>
                     {filterPrivateRoutes.map((menuItem, key) => {
                       return (
                         <div
@@ -122,8 +118,8 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
                           }}
                           className={`menu-grid-item ${
                             router.pathname === menuItem.path
-                              ? "menu-grid-item-active"
-                              : ""
+                              ? 'menu-grid-item-active'
+                              : ''
                           }`}
                         >
                           <span>{t(`${menuItem.name}`)}</span>
@@ -136,21 +132,22 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
                     isMenuClick={isMenuClick}
                     handleMenuClick={handleMenuClick}
                     handleCloseMenu={handleCloseMenu}
-                    spanBgColor="#ffffff"
+                    spanBgColor='#ffffff'
                   />
                 )}
               </div>
             </div>
           </div>
         </div>
-      </div>
+        {/* <div className='absolute inset-0 z-[-1] blur-2xl backdrop-blur-xl bg-black/70'></div> */}
+      </header>
 
       {showMenu ? (
         <>
           <div
-            className={`responsive-navigation-menu-wrapper animate__animated animate__slideInRight`}
+            className={`responsive-navigation-menu-wrapper bg-black/80 backdrop-blur-2xl animate__animated animate__slideInRight `}
           >
-            <div className="navigation-group-container">
+            <div className='navigation-group-container'>
               {PrivateRoutes.map((menuItem, key) => {
                 return (
                   <div
@@ -160,7 +157,7 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
                       setactiveMenu(menuItem.index);
                       handleCloseMenu();
                     }}
-                    className="item"
+                    className='item'
                   >
                     <span>{t(`${menuItem.name}`)}</span>
                   </div>
@@ -168,13 +165,13 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
               })}
             </div>
 
-            <div className="menu-contact-section">
-              <div className="social-group-container">
-                <div className="social-group-container-title">
+            <div className='menu-contact-section'>
+              <div className='social-group-container'>
+                <div className='social-group-container-title'>
                   <span>Social media</span>
                 </div>
 
-                <div className="social-group-wrapper">
+                <div className='social-group-wrapper'>
                   <SocialGroup />
                 </div>
               </div>
@@ -182,7 +179,7 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
               <MenuContactSection />
 
               <div
-                className="responsive-floated-language-change"
+                className='responsive-floated-language-change'
                 style={{ marginTop: 20 }}
               >
                 <LanguageChange />
@@ -190,10 +187,10 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
             </div>
           </div>
 
-          <div className="navigation-menu-wrapper animate__animated animate__slideInDown">
+          <div className='navigation-menu-wrapper bg-black/80 backdrop-blur-xl animate__animated animate__slideInDown'>
             <div
               className={`${
-                showMenuItem ? "item-wrapper-show" : "item-wrapper"
+                showMenuItem ? 'item-wrapper-show' : 'item-wrapper'
               }`}
             >
               {PrivateRoutes.map((menuItem, key) => {
@@ -206,11 +203,11 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
                       handleCloseMenu();
                     }}
                     className={`item ${
-                      activeMenu === menuItem.index ? "active" : ""
+                      activeMenu === menuItem.index ? 'active' : ''
                     } ${
                       showMenuItem
-                        ? "animate__animated animate__slideInDown"
-                        : "animate__animated animate__animate__fadeOut"
+                        ? 'animate__animated animate__slideInDown'
+                        : 'animate__animated animate__animate__fadeOut'
                     }  `}
                   >
                     {t(`${menuItem.name}`)}
@@ -222,7 +219,7 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
           </div>
         </>
       ) : (
-        ""
+        ''
       )}
     </>
   );
@@ -230,7 +227,7 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
 
 export const getStaticProps: GetStaticProps<Props> = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale ?? DEFAULT_LANG, ["common"])),
+    ...(await serverSideTranslations(locale ?? DEFAULT_LANG, ['common'])),
   },
 });
 

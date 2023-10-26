@@ -1,39 +1,37 @@
-import React from "react";
-import { Carousel } from "antd";
+import { Carousel } from 'antd';
 
-import { introductionMocks } from "../../../mocks/introductionMocks";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
-import Skeleton from "react-loading-skeleton";
+import 'react-lazy-load-image-component/src/effects/blur.css';
+import { ImageNext } from '../../../components/common/image-next';
+import { introductionMocks } from '../../../mocks/introductionMocks';
+import Slider from '../../../components/common/slider';
+import { BaseComponent } from '../../../utils/types/clientTypes';
+import clsx from 'clsx';
 
-const classNamePrefix = "introduction-carousel";
+const classNamePrefix = 'introduction-carousel';
 
-const IntroductionCarousel = () => {
+const IntroductionCarousel = ({ className }: BaseComponent) => {
   return (
-    <div className={classNamePrefix}>
-      
-      <Carousel autoplay={true} effect="fade">
-        {introductionMocks
-          ? introductionMocks.map((i) => (
-              <div className={`${classNamePrefix}__item`} key={i.id}>
-                <div className={`${classNamePrefix}__item-image-wrapper`}>
-                  <div className={`${classNamePrefix}__item-image`}>
-                    {(
-                      <LazyLoadImage
-                        src={i.imgUrl.src}
-                        placeholderSrc={i.imgUrl.src}
-                        effect="blur"
-                        width="100%"
-                        height="100%"
-                      />
-                    ) || <Skeleton />}
-                  </div>
-                </div>
-              </div>
-            ))
-          : ""}
-      </Carousel>
-    </div>
+    <Slider
+      className={clsx(
+        className,
+        'w-full max-w-[400px] lg:max-w-[480px] xl:max-w-[550px]'
+      )}
+      slidesPerView={1}
+      effect='slide'
+      pagination
+    >
+      {introductionMocks &&
+        introductionMocks.map((i) => (
+          <div className='overflow-hidden aspect-square rounded-xl' key={i.id}>
+            <ImageNext
+              className='object-cover w-full h-full'
+              priority={false}
+              src={i.imgUrl.src}
+              alt='image'
+            />
+          </div>
+        ))}
+    </Slider>
   );
 };
 

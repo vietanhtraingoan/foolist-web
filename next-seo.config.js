@@ -1,7 +1,7 @@
 export default {
   openGraph: {
     type: 'website',
-    locale: 'en_IE',
+    locale: 'vi_VN',
     site_name: 'SiteName',
   },
   twitter: {
@@ -9,4 +9,4 @@ export default {
     site: '@site',
     cardType: 'summary_large_image',
   },
-}
+};

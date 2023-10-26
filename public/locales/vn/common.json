@@ -3,20 +3,21 @@
   "About us": "Năng lực",
   "Projects": "Dự án",
   "feature-project": "Dự án đột phá",
-  "Products": "Đối tác",
+  "Products": "KẾT NỐI CÙNG NHIỀU ĐỐI TÁC",
   "Services": "Dịch vụ",
   "Words": "Thuật ngữ",
   "Blogs": "Góc nhìn",
   "Contact Us": "Liên hệ",
-  "view-more": "XEM THÊM",
+  "view-more": "Xem thêm",
   "change-locale": "Language: {{changeTo}}",
   "Section_label": {
-    "product": "SẢN PHẨM",
-    "project": "DỰ ÁN",
+    "product": "Sản phẩm",
+    "project": "Dự án",
+    "service": "Năng lực chuyên môn vượt trội của chính tôi",
     "client": "KẾT NỐI CÙNG NHIỀU ĐỐI TÁC"
   },
   "all-project": "tất cả dự án",
-  "product": "DỰ ÁN",
+  "product": "Dự án",
   "About_content": {
     "title": "Tạo ra ấn tượng bằng",
     "three-points": "Mũi Đinh Ba",
@@ -38,7 +39,7 @@
       }
     },
     "brand-name": "Foolist",
-    "paragraph-1": "Hoạt động trong lĩnh vực Sáng tạo và Công nghệ, cung cấp các giải pháp sáng tạo và nghệ thuật cho nhu cầu về thiết kế đồ họa, phát triển truyền thông, hay tạo dựng website.",
+    "paragraph-1": "Foolist Creative là Agency hoạt động trong lĩnh vực Marketing với sứ mệnh “Đồng hành, dùng tinh thần sáng tạo độc nhất để nâng tầm thương hiệu Việt”. Foolist được ấp ủ từ những tháng cuối năm 2022 và chính thức đi vào hoạt động dưới hình thức công ty từ ngày 27/05/2023.",
     "paragraph-2": "Chúng tôi sử dụng mũi đinh ba để tạo ấn tượng với khách hàng và đối tác của mình: tư duy sáng tạo độc nhất, góc nhìn nghệ thuật thị giác, và ngôn từ mang bản sắc thương hiệu.",
     "creative-thinking": "Tư duy sáng tạo",
     "unique": "độc nhất",
@@ -90,11 +91,9 @@
     "title": "Năng lực chuyên môn vượt trội của chúng tôi",
     "media": "sản xuất media",
     "tvc": "TVC",
-    "product-design": "thiết kế sản phẩm",
-    "technology-development": "phát triển công nghệ",
-    "website-development": "phát triển websites",
-    "mobile-app-development": "phát triển ứng dụng mobile",
-    "erp": "ERP",
+    "product-design": "Chiến lược thương hiệu",
+    "technology-development": "Sản xuất media",
+    "website-development": "truyền thông",
     "slogan": {
       "slogan1": "Với phương châm Let art UNLOCK your business, Foolist Creative luôn nỗ lực mang đến cho khách hàng những giải pháp sáng tạo, chất lượng và hiệu quả.",
       "slogan2": "Bạn đang tìm kiếm một đối tác sáng tạo và đáng tin cậy để giúp bạn xây dựng thương hiệu và phát triển kinh doanh? Bạn muốn có những sản phẩm và dịch vụ chất lượng cao, độc đáo và hiệu quả ?",
@@ -193,7 +192,7 @@
     "mindset": "Tư duy",
     "art": "Nghệ thuật",
     "unique": "Độc nhất",
-    "eyesight":"Thị giác",
+    "eyesight": "Thị giác",
     "vision": "Góc nhìn"
   }
 }

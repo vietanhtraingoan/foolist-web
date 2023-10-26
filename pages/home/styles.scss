@@ -9,59 +9,18 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
     width: 100%;
-
-    padding: 100px 60px;
-
-    background: #000000;
-  }
-
-  &__introduction-title {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    margin: 77px 0;
-
-    width: 100%;
+    padding-bottom: 100px;
   }
 
   &__introduction-title-brand {
-    font-family: "Arial";
     font-style: normal;
     font-weight: 600;
-    font-size: 190px;
-    line-height: 156px;
-    color: #f6a5c1;
-  }
-
-  &__scroller {
-    position: relative;
-    overflow: hidden;
-
-    height: 160px;
-    width: 100%;
-
-    margin: 20px 0 0 0;
-    padding-left: 250px;
-
-    line-height: 160px;
-
-    span {
-      position: absolute;
-      top: 0;
-      animation: slide 8s infinite;
-
-      font-family: "Times New Roman";
-      font-style: italic;
-      font-weight: 400;
-      font-size: 160px;
-      text-shadow: 2px 2px 0 #f6a5c1, 2px -2px 0 #f6a5c1, -2px 2px 0 #f6a5c1,
-        -2px -2px 0 #f6a5c1, 2px 0px 0 #f6a5c1, 0px 2px 0 #f6a5c1,
-        -2px 0px 0 #f6a5c1, 0px -2px 0 #f6a5c1,
-        0px 0px 3px rgba(246, 165, 193, 0);
-    }
+    line-height: 1;
+    background: linear-gradient(#f6a5c1, #873652);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 
   &__introduction-image-container {
@@ -93,11 +52,11 @@
     }
 
     span {
-      font-family: "Montserrat";
+      font-family: 'Montserrat';
       font-style: italic;
       font-weight: 500;
-      font-size: 30px;
-      line-height: 50px;
+      font-size: 24px;
+      line-height: 1.6;
       color: #ffffff;
     }
   }
@@ -116,11 +75,11 @@
 
   &__project-carousel-container {
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
 
-    min-height: 800px;
+    // min-height: 800px;
 
     padding: 80px 60px;
 
@@ -130,21 +89,14 @@
   &__section-title {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-
     width: 100%;
-
     padding-top: 80px;
-    margin-bottom: 20px;
-
     border-top: 1px solid #f8a5c2;
-
     span {
-      font-family: "Times New Roman";
-      font-style: italic;
-      font-weight: 400;
-      font-size: 64px;
-      line-height: 78px;
+      @apply font-heading text-5xl pb-8 uppercase font-semibold;
+      // font-style: italic;
+      // font-size: 64px;
+      line-height: 1.5;
       color: #ffffff;
     }
   }
@@ -190,8 +142,6 @@
     width: 100%;
     min-height: 500px;
 
-    padding: 80px 60px;
-
     background: #000000;
 
     overflow: hidden;
@@ -200,7 +150,7 @@
   .animted {
     &__client-title {
       span {
-        font-family: "Montserrat";
+        font-family: 'Montserrat';
         font-style: normal;
         font-weight: 800;
         font-size: 64px;
@@ -215,7 +165,7 @@
     width: 100%;
     height: 417px;
 
-    background-image: url("../../public//static//dividerBg.jpg");
+    background-image: url('../../public//static//dividerBg.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -255,7 +205,7 @@
   &__footer-info-group-title {
     cursor: pointer;
 
-    font-family: "Arial";
+    font-family: 'Arial';
     font-size: 30px;
     font-weight: 700;
     font-style: italic;
@@ -268,7 +218,7 @@
   }
 
   &__footer-info-group-text {
-    font-family: "Montserrat";
+    font-family: 'Montserrat';
     font-size: 13px;
     font-weight: 700;
     color: #abadb3;
@@ -282,7 +232,7 @@
     margin-top: 15px;
 
     span {
-      font-family: "Montserrat";
+      font-family: 'Montserrat';
       font-size: 22px;
       color: #abadb3;
       line-height: 30px;
@@ -296,7 +246,7 @@
 
     width: 670px;
 
-    font-family: "Montserrat";
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
     font-size: 50px;
@@ -309,7 +259,7 @@
 
     padding-left: 50px;
 
-    font-family: "Montserrat";
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
     font-size: 40px;

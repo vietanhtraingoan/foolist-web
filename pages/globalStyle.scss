@@ -1,21 +1,28 @@
-@font-face {
-  font-family: "Montserrat";
-  src: url("../public/fonts/Montserrat-Regular.ttf");
-  font-weight: normal;
-  font-style: normal;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@font-face {
-  font-family: "Montserrat";
-  src: url("../public/fonts/Montserrat-Bold.ttf");
-  font-weight: bold;
-  font-style: normal;
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+
+@layer {
+  * {
+    @apply font-main text-white leading-[1.5];
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+    font-weight: 600;
+  }
 }
 
 body {
   margin: 0 auto;
   box-sizing: border-box;
-
+  background: #000 !important;
   #__next {
     position: relative;
     display: flex;
@@ -23,13 +30,24 @@ body {
   }
 }
 
+.container {
+  @apply md:max-w-[768px] lg:max-w-[1100px] xl:max-w-[1280px] 2xl:max-w-[1400px] px-6;
+  margin: 0 auto;
+  width: 100%;
+}
+
 .layout {
   position: relative;
 
   display: flex;
   flex-direction: column;
-
-  background: #000000;
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #000;
+    z-index: -1;
+  }
 }
 
 .floated-language-change {
@@ -81,7 +99,7 @@ body {
   }
 
   .info-group-text {
-    font-family: "Montserrat";
+    font-family: 'Montserrat';
     font-size: 13px;
     font-weight: 700;
     color: #abadb3;
@@ -90,7 +108,7 @@ body {
   .info-group-title {
     cursor: pointer;
 
-    font-family: "Montserrat";
+    font-family: 'Montserrat';
     font-size: 24px;
     font-weight: 700;
     color: #fafafa;
@@ -109,7 +127,7 @@ body {
     margin-top: 15px;
 
     span {
-      font-family: "Montserrat";
+      font-family: 'Montserrat';
       font-size: 16px;
       color: #abadb3;
       line-height: 26px;
@@ -117,7 +135,7 @@ body {
   }
 
   .link-group-title {
-    font-family: "Montserrat";
+    font-family: 'Montserrat';
     font-size: 24px;
     font-weight: 700;
     color: #fafafa;
@@ -140,7 +158,7 @@ body {
 
     cursor: pointer;
 
-    font-family: "Montserrat";
+    font-family: 'Montserrat';
     font-size: 18px;
     font-weight: 500;
     color: #abadb3;
@@ -188,7 +206,7 @@ body {
   .footer-patent {
     width: 30%;
 
-    font-family: "Mas";
+    font-family: 'Mas';
     font-size: 16px;
 
     span {
@@ -233,6 +251,27 @@ body {
       }
     }
   }
+}
+
+:where(.css-dev-only-do-not-override-diro6f).ant-skeleton.ant-skeleton-active
+  .ant-skeleton-title::after,
+:where(.css-dev-only-do-not-override-diro6f).ant-skeleton.ant-skeleton-active
+  .ant-skeleton-paragraph
+  > li::after,
+:where(.css-dev-only-do-not-override-diro6f).ant-skeleton.ant-skeleton-active
+  .ant-skeleton-avatar::after,
+:where(.css-dev-only-do-not-override-diro6f).ant-skeleton.ant-skeleton-active
+  .ant-skeleton-button::after,
+:where(.css-dev-only-do-not-override-diro6f).ant-skeleton.ant-skeleton-active
+  .ant-skeleton-input::after,
+:where(.css-dev-only-do-not-override-diro6f).ant-skeleton.ant-skeleton-active
+  .ant-skeleton-image::after {
+  background: linear-gradient(
+    90deg,
+    rgb(193 193 193 / 6%) 25%,
+    rgb(241 241 241 / 15%) 37%,
+    rgb(243 243 243 / 6%) 63%
+  ) !important;
 }
 
 @media screen and (max-width: 768px) {

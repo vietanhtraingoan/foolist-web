@@ -1,122 +1,80 @@
-import React from "react";
-import { GetStaticProps, InferGetStaticPropsType } from "next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useTranslation } from "next-i18next";
-import Marquee from "react-fast-marquee";
+import React from 'react';
+import { GetStaticProps, InferGetStaticPropsType } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
+import Marquee from 'react-fast-marquee';
 
-import { DEFAULT_LANG } from "../../utils/constants";
-import ProjectCarousel from "../components/projectCarousel";
-import { ClientMocks } from "../../mocks/clientMocks";
-import ClientItem from "../components/clientItem";
-import { infoMocks } from "../../mocks/infoMocks";
-import IntroductionCarousel from "../components/introductionCarousel/index";
-import { IClient } from "../../utils/types/clientTypes";
-import ConnectSection from "../components/connectSection";
-import GridProject from "../components/gridProject/index";
-import ResponsiveClient from "../components/responsiveClient";
-import ServiceSection from "../components/serviceSection";
-import MenuContactSection from "../components/menuContactSection";
-import Head from 'next/head'
-
-const classNamePrefix = "home-page";
+import { DEFAULT_LANG } from '../../utils/constants';
+import ProjectCarousel from '../components/projectCarousel';
+import { ClientMocks } from '../../mocks/clientMocks';
+import ClientItem from '../components/clientItem';
+import { infoMocks } from '../../mocks/infoMocks';
+import IntroductionCarousel from '../components/introductionCarousel/index';
+import { IClient } from '../../utils/types/clientTypes';
+import ConnectSection from '../components/connectSection';
+import GridProject from '../components/gridProject/index';
+import ResponsiveClient from '../components/responsiveClient';
+import ServiceSection from '../components/serviceSection';
+import MenuContactSection from '../components/menuContactSection';
+import Head from 'next/head';
+import Section from '../../components/common/section';
+import HeroSection from '../../components/blocks/hero-section';
+import AboutUs from '../../components/blocks/about-us';
+import Footer from '../../components/blocks/footer';
+import dynamic from 'next/dynamic';
+const NewServiceSection = dynamic(
+  () => import('../../components/blocks/new-service-section'),
+  { ssr: false }
+);
+const classNamePrefix = 'home-page';
 
 type Props = {};
 
 const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const { t } = useTranslation("common");
+  const { t } = useTranslation('common');
 
   return (
-    <div className={classNamePrefix} id="scrolly-div">
+    <div className={classNamePrefix} id='scrolly-div'>
       <Head>
-        <title>{t("Home")}</title>
+        <title>{t('Home')}</title>
       </Head>
-      <section
-        id="first-section"
-        className={`${classNamePrefix}__introduction-container`}
-      >
-        <div className={`${classNamePrefix}__introduction-title`}>
-          <div
-            className={`${classNamePrefix}__introduction-title-brand animate__animated animate__fadeInUp`}
-          >
-            Foolist
-          </div>
-
-          <div
-            className={`${classNamePrefix}__scroller animate__animated animate__fadeInUp`}
-          >
-            <span>
-              Creative
-              <br />
-              Tech
-              <br />
-              Media
-              <br />
-              ERP
-            </span>
-          </div>
-        </div>
-
-        <div className={`${classNamePrefix}__introduction-text`}>
-          <div
-            className={`${classNamePrefix}__introduction-text-group animate__animated animate__slideInUp animate__slow`}
-          >
-            <span>{t("About_content.paragraph-1")}</span>
-            <br />
-            <br />
-            <span>{t("About_content.paragraph-2")}</span>
-          </div>
-        </div>
-
-        <div className={`${classNamePrefix}__introduction-image-container`}>
-          <IntroductionCarousel />
-        </div>
-      </section>
-
-      <section className={`${classNamePrefix}__grid-project`}>
+      <HeroSection classNamePrefix={classNamePrefix} />
+      <AboutUs />
+      {/* <Section className={`${classNamePrefix}__grid-project`}>
+        <Section.Title className='mb-12'>{t('feature-project')}</Section.Title>
         <GridProject />
-      </section>
-
-      <section className={`${classNamePrefix}__project-carousel-container`}>
-        <div className={`${classNamePrefix}__section-title`}>
-          <span>{t("Section_label.product")}</span>
-        </div>
-
+      </Section> */}
+      <Section>
+        <Section.Title className='mb-12 text-center'>
+          {t('Section_label.product')}
+        </Section.Title>
         <ProjectCarousel />
-      </section>
-
-      <section className={`${classNamePrefix}__responsive-client-container`}>
+      </Section>
+      <NewServiceSection />
+      <Section className={`${classNamePrefix}__responsive-client-container`}>
         <ResponsiveClient />
-      </section>
-
-      <section className={`${classNamePrefix}__service-section`}>
-        <ServiceSection />
-      </section>
-
-      <section className={`${classNamePrefix}__client-container`}>
-        <div className={`${classNamePrefix}__section-title`}>
-          <span>{t("Section_label.client")}</span>
-        </div>
-
+      </Section>
+      <Section className={`${classNamePrefix}__client-container`}>
+        <Section.Title className='!text-2xl w-full font-medium text-white uppercase border-b font-heading mb-12 md:mb-14 lg:mb-28'>
+          {t('Section_label.client')}
+        </Section.Title>
         {ClientMocks ? (
-          <div style={{ width: 1800, marginTop: 100 }}>
+          <div style={{ width: 1800 }}>
             <Marquee pauseOnHover>
-              {ClientMocks.map((c: IClient) => (
+              {ClientMocks?.map((c: IClient) => (
                 <ClientItem key={c.id} data={c} />
               ))}
             </Marquee>
           </div>
         ) : (
-          ""
+          <></>
         )}
-      </section>
-
+      </Section>
       <section className={`${classNamePrefix}__divider-container`} />
-
       <section className={`${classNamePrefix}__connection-container`}>
         <ConnectSection />
       </section>
-
-      <section className={`${classNamePrefix}__footer-container`}>
+      {/* <section className={`${classNamePrefix}__footer-container`}>
         <div className={`${classNamePrefix}__footer-left`}>
           <div className={`${classNamePrefix}__footer-left-title`}>
             <span>“LET ART</span>
@@ -126,13 +84,15 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
             <span> YOUR BUSINESS “</span>
           </div>
         </div>
-
-        <div className={`${classNamePrefix}__footer-right`}>
-          <div className={`${classNamePrefix}__footer-info-group-title`}>
+        <div className={`${classNamePrefix}__footer-right font-main`}>
+          <div
+            className={`${classNamePrefix}__introduction-title-brand text-center md:text-left text-3xl font-specialHeading mb-8 animate__animated animate__fadeInUp`}
+          >
             Foolist Creative
           </div>
-
-          <span className={`${classNamePrefix}__footer-info-group-text`}>
+          <span
+            className={`${classNamePrefix}__footer-info-group-text font-main`}
+          >
             Foolist.vn
           </span>
 
@@ -146,14 +106,14 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
 
 export const getStaticProps: GetStaticProps<Props> = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale ?? DEFAULT_LANG, ["common"])),
+    ...(await serverSideTranslations(locale ?? DEFAULT_LANG, ['common'])),
   },
 });
 

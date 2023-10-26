@@ -1,15 +1,16 @@
-import React from "react";
-import { AnimationOnScroll } from "react-animation-on-scroll";
-import { useRouter } from "next/router";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
-import Skeleton from "react-loading-skeleton";
+import React from 'react';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
+import { useRouter } from 'next/router';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+import Skeleton from 'react-loading-skeleton';
+import { ImageNext } from '../../../../components/common/image-next';
 
 interface IProjectList {
   data: any;
 }
 
-const classNamePrefix = "project-list";
+const classNamePrefix = 'project-list';
 
 const ProjectList: React.FC<IProjectList> = (props) => {
   const { data } = props;
@@ -19,29 +20,21 @@ const ProjectList: React.FC<IProjectList> = (props) => {
   return (
     <div className={classNamePrefix}>
       {data
-        ? data.map((item) => (
+        ? data.map((item: any) => (
             <AnimationOnScroll
               key={item.id}
-              animateIn="animate__zoomIn"
+              animateIn='animate__zoomIn'
               animateOnce={true}
             >
               <div
                 className={`${classNamePrefix}__item`}
                 onClick={() => router.push(`/projectDetail?id=${item.id}`)}
               >
-                {(
-                  <LazyLoadImage
-                    src={item.imgUrl.src}
-                    placeholderSrc={item.imgUrl.src}
-                    effect="blur"
-                    width="100%"
-                    height="100%"
-                  />
-                ) || <Skeleton />}
+                <ImageNext src={item.imgUrl.src} alt='image' />
               </div>
             </AnimationOnScroll>
           ))
-        : ""}
+        : ''}
     </div>
   );
 };
