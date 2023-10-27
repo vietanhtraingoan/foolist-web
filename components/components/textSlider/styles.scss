@@ -1,0 +1,34 @@
+.text-slider {
+  width: 100%;
+  height: 100px;
+
+  background: #ffffff;
+
+  &__item {
+    @apply font-heading;
+    margin-right: 77px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 1.6;
+  }
+
+  .outline {
+    color: #ffffff;
+    text-shadow: 1px 1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000,
+      -1px -1px 0 #000000, 1px 0px 0 #000000, 0px 1px 0 #000000,
+      -1px 0px 0 #000000, 0px -1px 0 #000000;
+  }
+
+  .normal {
+    color: #000000;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .text-slider {
+    &__item {
+      font-size: 40px;
+    }
+  }
+}

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import MiniFooter from '../components/miniFooter';
+import MiniFooter from '../../components/components/miniFooter';
 import { ServicesMock, services } from '../../mocks/servicesMock';
 import { useRouter } from 'next/router';
 import { GetStaticProps, InferGetStaticPropsType } from 'next/types';

@@ -3,7 +3,7 @@ import Section from '../common/section';
 import { BaseComponent } from '../../utils/types/clientTypes';
 import clsx from 'clsx';
 import { useTranslation } from 'react-i18next';
-import ProjectCarousel from '../../pages/components/projectCarousel';
+import ProjectCarousel from '../components/projectCarousel';
 
 const ProductSection = ({
   classNamePrefix,

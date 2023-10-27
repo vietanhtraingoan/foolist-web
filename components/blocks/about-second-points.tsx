@@ -9,7 +9,7 @@ import { ImageNext } from '../common/image-next';
 import eyeGif from '../../public/static/eyeGif.gif';
 import eyeOpen from '../../public/static/eyeOpen.png';
 import Image from 'next/image';
-import NormalCircleGroup from '../../pages/components/normalCircleGroup';
+import NormalCircleGroup from '../components/normalCircleGroup';
 import ParagraphResponsive from '../common/typography/paragraph-responsive';
 const classNamePrefix = 'about-page';
 

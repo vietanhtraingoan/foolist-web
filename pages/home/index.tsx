@@ -11,10 +11,10 @@ import Section from '../../components/common/section';
 import { ClientMocks } from '../../mocks/clientMocks';
 import { DEFAULT_LANG } from '../../utils/constants';
 import { IClient } from '../../utils/types/clientTypes';
-import ClientItem from '../components/clientItem';
-import ConnectSection from '../components/connectSection';
-import ProjectCarousel from '../components/projectCarousel';
-import ResponsiveClient from '../components/responsiveClient';
+import ClientItem from '../../components/components/clientItem';
+import ConnectSection from '../../components/components/connectSection';
+import ProjectCarousel from '../../components/components/projectCarousel';
+import ResponsiveClient from '../../components/components/responsiveClient';
 import clsx from 'clsx';
 const NewServiceSection = dynamic(
   () => import('../../components/blocks/new-service-section'),

@@ -1,16 +1,16 @@
-import { CloseOutlined, SearchOutlined } from "@ant-design/icons";
-import { Modal } from "antd";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { GetStaticProps, InferGetStaticPropsType } from "next/types";
-import React, { useEffect, useRef, useState } from "react";
-import CustomNavigationButton from "../components/customNavigationButton";
-import MiniFooter from "../components/miniFooter";
-import { useRouter } from "next/router";
-import { WordsMock } from "../../mocks/wordsMock";
-import { useSelector } from "react-redux";
-import { getLanguage } from "../../store/selector/rootSelector";
+import { CloseOutlined, SearchOutlined } from '@ant-design/icons';
+import { Modal } from 'antd';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { GetStaticProps, InferGetStaticPropsType } from 'next/types';
+import React, { useEffect, useRef, useState } from 'react';
+import CustomNavigationButton from '../../components/components/customNavigationButton';
+import MiniFooter from '../../components/components/miniFooter';
+import { useRouter } from 'next/router';
+import { WordsMock } from '../../mocks/wordsMock';
+import { useSelector } from 'react-redux';
+import { getLanguage } from '../../store/selector/rootSelector';
 
-const classNamePrefix = "words-page";
+const classNamePrefix = 'words-page';
 
 type Props = {};
 
@@ -22,12 +22,12 @@ const WordsPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const language = useSelector(getLanguage);
 
   const [openModal, setOpenModal] = useState<boolean>(false);
-  const [searchTerm, setSearchTerm] = useState<string>("");
+  const [searchTerm, setSearchTerm] = useState<string>('');
   const [collapse, setCollapse] = useState<boolean>(false);
   const [itemClickId, setItemClickId] = useState<number>(null);
 
-  const alphabet = "abcdefghijklmnopqrstuvwxyz"
-    .split("")
+  const alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    .split('')
     .map((c, index) => ({ id: index + 1, label: c.toUpperCase() }));
 
   const renderFilterWordArray = (character: string): Array<any> => {
@@ -58,18 +58,18 @@ const WordsPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
     if (searchItemId) {
       router.push(`/wordDetail?id=${searchItemId.id}`);
     } else {
-      console.log("word not found");
+      console.log('word not found');
     }
   };
 
   const handleKeyDown = (event) => {
-    if (event.key === "Enter") {
+    if (event.key === 'Enter') {
       handleSearchWord();
     }
   };
 
   useEffect(() => {
-    window.addEventListener("click", handleClickOutside);
+    window.addEventListener('click', handleClickOutside);
   }, []);
 
   return (
@@ -84,16 +84,16 @@ const WordsPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
           onKeyDown={handleKeyDown}
         >
           <input
-            type="text"
+            type='text'
             value={searchTerm}
-            placeholder="Search"
+            placeholder='Search'
             onChange={(e) => setSearchTerm(e.target.value)}
           />
 
           <SearchOutlined
             onClick={handleSearchWord}
             className={`${classNamePrefix}__search-icon`}
-            rev="true"
+            rev='true'
           />
         </div>
       </div>
@@ -107,8 +107,8 @@ const WordsPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
                     style={{
                       background:
                         itemClickId === item.id
-                          ? "#F8A5C2"
-                          : "rgba(255, 255, 255, 0.2)",
+                          ? '#F8A5C2'
+                          : 'rgba(255, 255, 255, 0.2)',
                     }}
                     onClick={(e) => {
                       e.stopPropagation();
@@ -123,7 +123,7 @@ const WordsPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
                   className={`${classNamePrefix}__collapse`}
                   style={{
                     display:
-                      collapse && itemClickId === item.id ? "block" : "none",
+                      collapse && itemClickId === item.id ? 'block' : 'none',
                   }}
                 >
                   {renderFilterWordArray(item.label) &&
@@ -144,11 +144,11 @@ const WordsPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
                 </div>
               </div>
             ))
-          : ""}
+          : ''}
       </div>
 
       <Modal
-        title=""
+        title=''
         open={openModal}
         closable={false}
         onCancel={() => setOpenModal(false)}
@@ -192,8 +192,8 @@ const WordsPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
           </div>
 
           <div className={`${classNamePrefix}__modal-navigation-button`}>
-            <CustomNavigationButton size="small" />
-            <CustomNavigationButton size="small" />
+            <CustomNavigationButton size='small' />
+            <CustomNavigationButton size='small' />
           </div>
         </div>
       </Modal>
@@ -205,7 +205,7 @@ const WordsPage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
 
 export const getStaticProps: GetStaticProps<Props> = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ["common"])),
+    ...(await serverSideTranslations(locale, ['common'])),
   },
 });
 

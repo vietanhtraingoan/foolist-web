@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Section from '../common/section';
 import { BaseComponent } from '../../utils/types/clientTypes';
 import { useTranslation } from 'react-i18next';
-import IntroductionCarousel from '../../pages/components/introductionCarousel';
+import IntroductionCarousel from '../components/introductionCarousel';
 import clsx from 'clsx';
 import { useMediaQuery } from 'react-responsive';
 

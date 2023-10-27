@@ -1,6 +1,6 @@
 import React from 'react';
 import Section from '../common/section';
-import MenuContactSection from '../../pages/components/menuContactSection';
+import MenuContactSection from '../components/menuContactSection';
 import Link from 'next/link';
 
 const Footer = () => {

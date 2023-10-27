@@ -6,7 +6,7 @@ import PinkGradientTypography from '../common/typography/pink-gradient-typograph
 import { useMediaQuery } from 'react-responsive';
 import { useTranslation } from 'react-i18next';
 import Divider from '../common/divider';
-import NormalCircleGroup from '../../pages/components/normalCircleGroup';
+import NormalCircleGroup from '../components/normalCircleGroup';
 import ParagraphResponsive from '../common/typography/paragraph-responsive';
 
 const AboutFirstPoints = () => {

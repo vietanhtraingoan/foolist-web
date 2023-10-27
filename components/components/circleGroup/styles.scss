@@ -1,0 +1,113 @@
+.circle-group {
+  position: relative;
+  width: 210px;
+  height: 210px;
+
+  &__item {
+    content: "";
+
+    position: absolute;
+
+    width: 210px;
+    height: 210px;
+
+    border: 1px solid #ffffff;
+    border-radius: 999px;
+
+    transition: ease-in-out 10s;
+  }
+
+  .circle-1 {
+    top: 0;
+    left: 0;
+  }
+
+  .circle-2 {
+    top: 105px;
+    left: -65px;
+  }
+
+  .circle-3 {
+    top: 105px;
+    right: -65px;
+  }
+
+  &__circle-wrapper-2 {
+    position: absolute;
+    top: 105px;
+    left: -65px;
+  }
+
+  &__circle-wrapper-3 {
+    position: absolute;
+    top: 105px;
+    right: -65px;
+  }
+}
+
+.circle__box {
+  width: 210px;
+  height: 210px;
+  margin: 50px auto;
+  position: relative;
+}
+
+.circle__wrapper {
+  width: 105px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+}
+
+.circle__wrapper--right {
+  right: 0;
+}
+
+.circle__wrapper--left {
+  left: 0;
+}
+
+.circle__whole {
+  width: 160px;
+  height: 160px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  transform: rotate(-135deg);
+}
+
+.circle__right {
+  border-top: 2px solid #ffffff;
+  border-right: 2px solid #ffffff;
+  right: 0;
+  animation: circleRight 3s linear forwards;
+}
+
+.circle__left {
+  border-bottom: 2x solid #ffffff;
+  border-left: 2px solid #ffffff;
+  left: 0;
+  animation: circleLeft 3s linear forwards;
+}
+
+@keyframes circleRight {
+  0% {
+    transform: rotate(-135deg);
+  }
+  50%,
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes circleLeft {
+  0%,
+  50% {
+    transform: rotate(-135deg);
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+  }
+}
