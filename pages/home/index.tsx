@@ -15,6 +15,7 @@ import ClientItem from '../components/clientItem';
 import ConnectSection from '../components/connectSection';
 import ProjectCarousel from '../components/projectCarousel';
 import ResponsiveClient from '../components/responsiveClient';
+import clsx from 'clsx';
 const NewServiceSection = dynamic(
   () => import('../../components/blocks/new-service-section'),
   { ssr: false }
@@ -27,7 +28,7 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation('common');
 
   return (
-    <div className={classNamePrefix} id='scrolly-div'>
+    <div className={clsx(classNamePrefix)} id='scrolly-div'>
       <Head>
         <title>{t('Home')}</title>
       </Head>

@@ -90,6 +90,13 @@
   "enterprise-planning": "phầm mềm ERP",
   "service": {
     "title": "Năng lực chuyên môn vượt trội của chúng tôi",
+    "home": {
+      "service1": "",
+      "service2": "",
+      "service3": "",
+      "service4": "",
+      "service5": ""
+    },
     "media": "sản xuất media",
     "tvc": "TVC",
     "product-design": "Chiến lược thương hiệu",
