@@ -211,24 +211,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
     paths: [
       {
         params: {
-          serviceSlug: 'dich-vu/chien-luoc-thuong-hieu'.split('/'),
-        },
-        locale: 'vn',
-      },
-      {
-        params: {
-          serviceSlug: 'dich-vu/san-xuat-media'.split('/'),
-        },
-        locale: 'vn',
-      },
-      {
-        params: {
-          serviceSlug: 'dich-vu/truyen-thong'.split('/'),
-        },
-        locale: 'vn',
-      },
-      {
-        params: {
           serviceSlug: 'services/brand-strategy'.split('/'),
         },
         locale: 'en',
