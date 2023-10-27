@@ -222,24 +222,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
         },
         locale: 'vn',
       },
-      {
-        params: {
-          serviceSlug: 'brand-strategy',
-        },
-        locale: 'en',
-      },
-      {
-        params: {
-          serviceSlug: 'media-production',
-        },
-        locale: 'en',
-      },
-      {
-        params: {
-          serviceSlug: 'the-media',
-        },
-        locale: 'en',
-      },
     ],
     fallback: false,
   };

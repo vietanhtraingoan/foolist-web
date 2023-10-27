@@ -39,7 +39,6 @@ const ServicesPage = (
       : null;
   });
   const { t } = useTranslation();
-  console.log({ query: router.query });
   useEffect(() => {
     const currentLocale = getCurrentLocale();
     if (
@@ -212,18 +211,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
     paths: [
       {
         params: {
-          serviceSlug: ['dich-vu'],
-        },
-        locale: 'vn',
-      },
-      {
-        params: {
-          serviceSlug: ['services'],
-        },
-        locale: 'vn',
-      },
-      {
-        params: {
           serviceSlug: 'dich-vu/chien-luoc-thuong-hieu'.split('/'),
         },
         locale: 'vn',
@@ -258,12 +245,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
         },
         locale: 'en',
       },
-      {
-        params: {
-          serviceSlug: ['vn', 'dich-vu'],
-        },
-        locale: 'vn',
-      },
+
       {
         params: {
           serviceSlug: ['en', 'dich-vu'],
@@ -291,24 +273,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
       {
         params: {
           serviceSlug: 'dich-vu/truyen-thong'.split('/'),
-        },
-        locale: 'en',
-      },
-      {
-        params: {
-          serviceSlug: 'services/brand-strategy'.split('/'),
-        },
-        locale: 'en',
-      },
-      {
-        params: {
-          serviceSlug: 'services/media-production'.split('/'),
-        },
-        locale: 'en',
-      },
-      {
-        params: {
-          serviceSlug: 'services/the-media'.split('/'),
         },
         locale: 'en',
       },
