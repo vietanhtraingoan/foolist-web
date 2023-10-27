@@ -97,8 +97,9 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
             </div>
             <div className='left-menu'>
               <div
-                className='left-menu-responsive-button'
+                className='cursor-pointer left-menu-responsive-button'
                 style={{ background: 'transparent' }}
+                onClick={handleMenuClick}
               >
                 <CustomHamburgMenu
                   isMenuClick={isMenuClick}
@@ -149,11 +150,10 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
             <div className='navigation-group-container'>
               {PrivateRoutes.map((menuItem, key) => {
                 return (
-                  <div
+                  <Link
+                    href={t(`topmenu.${menuItem.path}`)}
                     key={key}
                     onClick={() => {
-                      router.push(menuItem.path);
-                      setactiveMenu(menuItem.index);
                       handleCloseMenu();
                     }}
                     className='item font-main group'
@@ -161,7 +161,7 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
                     <span className='!text-base group-hover:underline'>
                       {t(`${menuItem.name}`)}
                     </span>
-                  </div>
+                  </Link>
                 );
               })}
             </div>
@@ -196,11 +196,10 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
             >
               {PrivateRoutes.map((menuItem, key) => {
                 return (
-                  <div
+                  <Link
+                    href={t(`topmenu.${menuItem.path}`)}
                     key={key}
                     onClick={() => {
-                      router.push(menuItem.path);
-                      setactiveMenu(menuItem.index);
                       handleCloseMenu();
                     }}
                     className={`item ${
@@ -212,7 +211,7 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
                     }  `}
                   >
                     {t(`${menuItem.name}`)}
-                  </div>
+                  </Link>
                 );
               })}
               <SocialGroup />

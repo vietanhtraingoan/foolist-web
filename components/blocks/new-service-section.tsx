@@ -108,12 +108,9 @@ const NewServiceSection = () => {
                           }}
                           key={item}
                         >
-                          <Link
-                            href={item || '#'}
-                            className='relative before:absolute before:content-[""] hover:text-white before:bg-white before:h-[1px] before:w-0 hover:before:w-full before:transition-all before:left-0 before:-bottom-[4px]'
-                          >
+                          <div className=' cursor-pointer relative before:absolute before:content-[""] hover:text-white before:bg-white before:h-[1px] before:w-0 hover:before:w-full before:transition-all before:left-0 before:-bottom-[4px]'>
                             {item}
-                          </Link>
+                          </div>
                         </li>
                       ))}
                     </ul>

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 interface ICustomHamburgMenuProps {
   isMenuClick?: boolean;
@@ -12,27 +12,27 @@ const CustomHamburgMenu: React.FC<ICustomHamburgMenuProps> = (props) => {
 
   return (
     <div
-      id="hamburg-menu"
-      className={`${isMenuClick ? "open" : ""}`}
+      id='hamburg-menu'
+      className={`cursor-pointer aspect-square ${isMenuClick ? 'open' : ''}`}
       onClick={isMenuClick === false ? handleMenuClick : handleCloseMenu}
     >
       <span
-        style={{ background: isMenuClick ? "#ffffff" : spanBgColor }}
+        style={{ background: isMenuClick ? '#ffffff' : spanBgColor }}
       ></span>
       <span
-        style={{ background: isMenuClick ? "#ffffff" : spanBgColor }}
+        style={{ background: isMenuClick ? '#ffffff' : spanBgColor }}
       ></span>
       <span
-        style={{ background: isMenuClick ? "#ffffff" : spanBgColor }}
+        style={{ background: isMenuClick ? '#ffffff' : spanBgColor }}
       ></span>
       <span
-        style={{ background: isMenuClick ? "#ffffff" : spanBgColor }}
+        style={{ background: isMenuClick ? '#ffffff' : spanBgColor }}
       ></span>
       <span
-        style={{ background: isMenuClick ? "#ffffff" : spanBgColor }}
+        style={{ background: isMenuClick ? '#ffffff' : spanBgColor }}
       ></span>
       <span
-        style={{ background: isMenuClick ? "#ffffff" : spanBgColor }}
+        style={{ background: isMenuClick ? '#ffffff' : spanBgColor }}
       ></span>
     </div>
   );

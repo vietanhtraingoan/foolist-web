@@ -1,14 +1,10 @@
-import React from 'react';
-import CustomNavigationButton from '../customNavigationButton';
-import SocialGroup from '../socialGroup';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useRouter } from 'next/router';
 import { GetStaticProps, InferGetStaticPropsType } from 'next/types';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { useTranslation } from 'next-i18next';
-import { AnimationOnScroll } from 'react-animation-on-scroll';
-import PinkGradientTypography from '../../common/typography/pink-gradient-typography';
-import GrayGradientTypography from '../../common/typography/gray-gradient-typography';
 import Section from '../../common/section';
+import GrayGradientTypography from '../../common/typography/gray-gradient-typography';
+import CustomNavigationButton from '../customNavigationButton';
 
 const classNamePrefix = 'connect-section';
 
