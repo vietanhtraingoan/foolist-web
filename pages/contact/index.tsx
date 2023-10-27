@@ -131,7 +131,7 @@ const ContactPage = (
               FOOLIST
             </PinkGradientTypography>
           </GrayGradientTypography>
-          <GrayGradientTypography className='block w-full mt-4 text-4xl font-bold md:text-5xl '>
+          <GrayGradientTypography className='block !leading-[1.5] w-full mt-4 text-4xl font-bold md:text-5xl '>
             {t('create-story')}
           </GrayGradientTypography>
         </Section.Title>
@@ -141,13 +141,13 @@ const ContactPage = (
         />
         <BorderGradient
           commonClassName='rounded-2xl'
-          borderClassName='bg-gradient-to-br transition-all to-neutral-900 from-neutral-600'
+          borderClassName='bg-gradient-to-br transition-all to-neutral-900 from-neutral-600  animate__animated text-center animate__fadeIn'
           bgClassName='py-8 px-4 md:py-20 md:px-10 bg-neutral-950'
           type='contain'
         >
           <form
             onSubmit={handleSubmit}
-            className={` max-w-2xl mx-auto animate__animated animate__slideInUp`}
+            className={` max-w-2xl mx-auto `}
             ref={form}
           >
             <GrayGradientTypography className='block w-full mx-auto mb-10 text-xl font-semibold text-center md:text-3xl font-heading'>
@@ -313,7 +313,7 @@ const ContactPage = (
                     className='text-xl font-semibold'
                     onClick={() => setFirstCheck(!firstCheck)}
                   >
-                    {t('service.tvc')}
+                    {t('service.first')}
                   </GrayGradientTypography>
                 </div>
 
@@ -327,7 +327,7 @@ const ContactPage = (
                     className='text-xl font-semibold'
                     onClick={() => setSecondCheck(!secondCheck)}
                   >
-                    {t('service.product-design')}
+                    {t('service.second')}
                   </GrayGradientTypography>
                 </div>
 
@@ -341,7 +341,7 @@ const ContactPage = (
                     className='text-xl font-semibold'
                     onClick={() => setThirdCheck(!thirdCheck)}
                   >
-                    {t('service.website-development')}
+                    {t('service.third')}
                   </GrayGradientTypography>
                 </div>
               </div>

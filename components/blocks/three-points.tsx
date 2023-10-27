@@ -5,6 +5,8 @@ import PinkGradientTypography from '../common/typography/pink-gradient-typograph
 import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
 import Divider from '../common/divider';
+import { ImageNext } from '../common/image-next';
+import threePointsImage from '../../public/images/vecteezy_trident_flat_illustration_clean_icon_design_element_on.png';
 const classNamePrefix = 'about-page';
 
 const ThreePoints = () => {
@@ -18,16 +20,26 @@ const ThreePoints = () => {
         <GrayGradientTypography className='block w-full'>
           {t('About_content.title')}
         </GrayGradientTypography>
-        <PinkGradientTypography className='!text-4xl  max-md:mt-8 font-heading md:!text-6xl lg:text-8xl'>
+        <PinkGradientTypography className='!text-4xl !leading-[1.3]  max-md:mt-8 font-heading md:!text-6xl lg:text-8xl'>
           {t('About_content.three-points')}
         </PinkGradientTypography>
       </div>
-      <div className=''>
-        <section className='overflow-hidden lg:pt-16'>
+      <div className='relative'>
+        <div className='absolute left-1/2 -translate-y-[50px] md:translate-y-[2%] lg:-translate-y-[30px] before:content-[""] before:absolute before:inset-0 before:bg-[radial-gradient(ellipse_at_top_center,_var(--tw-gradient-stops))] before:from-white before:to-black before:blur-2xl before:z-[-2] before:opacity-60 after:content-[""] after:absolute after:w-full after:h-[90%] after:bottom-0 after:bg-gradient-to-t after:from-black after:z-[0] after:via-black after:to-transparent min-w-[200px] md:w-[60%] lg:w-[600px] -translate-x-1/2 z-[-1] top-0 opacity-10'>
+          <ImageNext
+            className='w-full h-full object-contain'
+            src={threePointsImage.src}
+            width={threePointsImage.width}
+            height={threePointsImage.height}
+            blurDataURL={threePointsImage.blurDataURL}
+            alt='three point image'
+          />
+        </div>
+        <section className='overflow-hidden relative lg:pt-16'>
           <div className='container mx-auto max-md:px-0'>
             <div className='flex flex-wrap -m-8'>
               <div className='w-full p-4 md:p-6 lg:p-8 md:w-1/3'>
-                <Link href='#tu-duy-sang-tao-doc-nhat'>
+                <Link href='#1'>
                   <div className='max-w-xs mx-auto text-center'>
                     <div className='flex flex-col items-center justify-center w-full mb-8 cursor-pointer aspect-video rounded-xl'>
                       <h3 className='mb-4 group text-3xl text-white font-semibold tracking-tight [&>*]:font-heading !font-heading'>
@@ -48,40 +60,46 @@ const ThreePoints = () => {
                 </Link>
               </div>
               <div className='w-full p-8 md:w-1/3'>
-                <div className='max-w-xs mx-auto text-center'>
-                  <div className='flex flex-col items-center justify-center w-full mb-8 aspect-video rounded-xl'>
-                    <h3 className='mb-4 text-3xl font-semibold text-white tracking-tight [&>*]:font-heading !font-heading'>
-                      <span>
-                        {t('About_content.three-points-content.second.top')}{' '}
-                      </span>
-                      <span className=''>
-                        {t('About_content.three-points-content.second.middle')}{' '}
-                      </span>
-                      <span className='block w-full'>
-                        {t('About_content.three-points-content.second.end')}
-                      </span>
-                    </h3>
-                    <Divider direction='center' />
+                <Link href='#2'>
+                  <div className='max-w-xs mx-auto text-center'>
+                    <div className='flex flex-col items-center justify-center w-full mb-8 aspect-video rounded-xl'>
+                      <h3 className='mb-4 text-3xl font-semibold text-white tracking-tight [&>*]:font-heading !font-heading'>
+                        <span>
+                          {t('About_content.three-points-content.second.top')}{' '}
+                        </span>
+                        <span className=''>
+                          {t(
+                            'About_content.three-points-content.second.middle'
+                          )}{' '}
+                        </span>
+                        <span className='block w-full'>
+                          {t('About_content.three-points-content.second.end')}
+                        </span>
+                      </h3>
+                      <Divider direction='center' />
+                    </div>
                   </div>
-                </div>
+                </Link>
               </div>
               <div className='w-full p-8 md:w-1/3'>
-                <div className='max-w-xs mx-auto text-center'>
-                  <div className='flex flex-col items-center justify-center w-full mb-8 aspect-video rounded-xl'>
-                    <h3 className='mb-4 text-3xl font-semibold text-white tracking-tight [&>*]:font-heading !font-heading'>
-                      <span>
-                        {t('About_content.three-points-content.third.top')}{' '}
-                      </span>
-                      <span className=''>
-                        {t('About_content.three-points-content.third.middle')}{' '}
-                      </span>
-                      <span className=''>
-                        {t('About_content.three-points-content.third.end')}
-                      </span>
-                    </h3>
-                    <Divider direction='center' />
+                <Link href='#3'>
+                  <div className='max-w-xs mx-auto text-center'>
+                    <div className='flex flex-col items-center justify-center w-full mb-8 aspect-video rounded-xl'>
+                      <h3 className='mb-4 text-3xl font-semibold text-white tracking-tight [&>*]:font-heading !font-heading'>
+                        <span>
+                          {t('About_content.three-points-content.third.top')}{' '}
+                        </span>
+                        <span className=''>
+                          {t('About_content.three-points-content.third.middle')}{' '}
+                        </span>
+                        <span className=''>
+                          {t('About_content.three-points-content.third.end')}
+                        </span>
+                      </h3>
+                      <Divider direction='center' />
+                    </div>
                   </div>
-                </div>
+                </Link>
               </div>
             </div>
           </div>

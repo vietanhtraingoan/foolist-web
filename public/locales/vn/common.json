@@ -3,6 +3,11 @@
   "About_us_home": "Về chúng tôi",
   "About us": "Năng lực",
   "Projects": "Dự án",
+  "topmenu": {
+    "about": "/ve-chung-toi",
+    "services": "/dich-vu",
+    "contact": "/lien-he"
+  },
   "feature-project": "Dự án đột phá",
   "Products": "KẾT NỐI CÙNG NHIỀU ĐỐI TÁC",
   "Services": "Dịch vụ",
@@ -19,7 +24,53 @@
   },
   "all-project": "tất cả dự án",
   "product": "Dự án",
+  "core_values": {
+    "title": "Giá trị cốt lõi",
+    "first": {
+      "title": "Đồng hành",
+      "description": "Cùng chung chiến tuyến, cùng chung mục tiêu, cùng chung lý tưởng"
+    },
+    "second": {
+      "title": "Sáng tạo",
+      "description": "không ngừng thả cái tôi vào vô hạn góc nhìn để chạm đến sự khác biệt duy nhất."
+    },
+    "third": {
+      "title": "Phát triển",
+      "description": "là phải được cộng đồng công nhận"
+    }
+  },
+  "finding_values": {
+    "title": {
+      "first": "Chúng tôi tìm kiếm các mảnh ghép của",
+      "second": "dựa trên 4 yếu tố chính"
+    },
+    "first": {
+      "title": "Trung thực",
+      "description": "Đặt sự thật vào trong từng hơi thở."
+    },
+    "second": {
+      "title": "Trách nhiệm",
+      "description": "Sống chết trong từng bước đi."
+    },
+    "third": {
+      "title": "Đam mê",
+      "description": "Không ngừng chinh phục khát vọng từng ngày."
+    },
+    "forth": {
+      "title": "Học hỏi",
+      "description": "Không ngần ngại phá vỡ rào cản của năng lực trong từng giây."
+    }
+  },
   "About_content": {
+    "numbers": {
+      "first": "20+",
+      "first_label": "Du an tieu bieu",
+      "second": "30+",
+      "second_label": "Khach hang tin tuong",
+      "third": "20+",
+      "third_label": "Doi tac dong hanh"
+    },
+
     "title": "Tạo ra ấn tượng bằng",
     "three-points": "Mũi Đinh Ba",
     "three-points-content": {
@@ -58,6 +109,25 @@
     "paragraph-9": "Tại Foolist, chúng tôi hiểu được ý nghĩa của ngôn ngữ trong việc xây dựng bản sắc thương hiệu mạnh mẽ. Ngôn ngữ không chỉ là một phương tiện giao tiếp, mà còn là một phản ánh của giá trị, tính cách, và văn hóa của chúng ta. Đó là lý do vì sao chúng tôi luôn cẩn thận chọn lọc ngôn ngữ để phù hợp với hình ảnh và giọng điệu của thương hiệu.",
     "paragraph-10": " Chúng tôi sử dụng ngôn ngữ làm phương tiện để truyền đạt sứ mệnh, tầm nhìn, và giá trị của chúng ta cho khách hàng và đối tác. Ngôn ngữ được dùng làm phương tiện để thể hiện chuyên môn, chuyên nghiệp,và uy tính của chúng ta. Chúng ta sử dụng ngôn ngữ làm phương tiện để thiết lập quan hệ với khách hàng và xây dựng lòng tin và trung thành"
   },
+  "capacity": {
+    "first": {
+      "title": "CHIẾN LƯỢC THƯƠNG HIỆU",
+      "slug": "dich-vu/chien-luoc-thuong-hieu",
+
+      "services": "Nghiên cứu thị trường,Xây dựng thương hiệu,Định vị thương hiệu,Phát triển thương hiệu"
+    },
+    "second": {
+      "title": "SẢN XUẤT MEDIA",
+      "slug": "dich-vu/san-xuat-media",
+
+      "services": "Chụp hình,Quay phim,Dựng video,Thiết kế hình ảnh,Thiết kế đồ họa,3D Design"
+    },
+    "third": {
+      "title": "TRUYỀN THÔNG",
+      "slug": "dich-vu/truyen-thong",
+      "services": "Quảng cáo,PR,Marketing,Social media"
+    }
+  },
   "Staff": {
     "team": "đội ngũ",
     "staff": "nhân sự"
@@ -90,18 +160,9 @@
   "enterprise-planning": "phầm mềm ERP",
   "service": {
     "title": "Năng lực chuyên môn vượt trội của chúng tôi",
-    "home": {
-      "service1": "",
-      "service2": "",
-      "service3": "",
-      "service4": "",
-      "service5": ""
-    },
-    "media": "sản xuất media",
-    "tvc": "TVC",
-    "product-design": "Chiến lược thương hiệu",
-    "technology-development": "Sản xuất media",
-    "website-development": "truyền thông",
+    "first": "Chiến lược thương hiệu",
+    "second": "Sản xuất media",
+    "third": "Truyền thông",
     "slogan": {
       "slogan1": "Với phương châm Let art UNLOCK your business, Foolist Creative luôn nỗ lực mang đến cho khách hàng những giải pháp sáng tạo, chất lượng và hiệu quả.",
       "slogan2": "Bạn đang tìm kiếm một đối tác sáng tạo và đáng tin cậy để giúp bạn xây dựng thương hiệu và phát triển kinh doanh? Bạn muốn có những sản phẩm và dịch vụ chất lượng cao, độc đáo và hiệu quả ?",

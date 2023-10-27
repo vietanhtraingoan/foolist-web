@@ -3,30 +3,34 @@ import Section from '../common/section';
 import { ImageNext } from '../common/image-next';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { useTranslation } from 'react-i18next';
+import Divider from '../common/divider';
+import aboutUsImage from '../../public/images/about.png';
+import BorderGradient from '../common/border-gradient';
 
 const AboutUs = () => {
   const { t } = useTranslation('common');
 
   return (
-    <Section className='relative flex items-center overflow-hidden'>
+    <Section className='relative flex items-center overflow-hidden max-md:flex-col'>
       <div className='absolute top-0 right-0 mr-64 rounded-full -mt-52 w-186 h-186 bg-gradient-to-t from-violet-900 via-darkBlue-900 to-transparent filter blur-4xl' />
-      <div className='container relative px-4 mx-auto'>
-        <div className='relative max-w-lg mx-auto prose lg:max-w-xl xl:max-w-2xl md:mx-0'>
+      <div className='container relative px-4 max-md:w-full md:mx-auto'>
+        <div className='relative prose max-md:prose:max-w-full md:max-w-lg lg:max-w-xl xl:max-w-2xl md:mx-0'>
           <AnimationOnScroll
+            animateOnce
             animateIn='animate__fadeInLeft'
-            animateOut='animate__fadeOutLeft'
             delay={50}
           >
-            <h2 className='mb-10 text-4xl font-medium tracking-tight text-white font-heading xs:text-5xl sm:text-6xl md:text-7xl'>
+            <Section.Title className='mb-6 text-4xl font-medium tracking-tight text-white md:mb-10 font-heading xs:text-5xl sm:text-6xl md:text-7xl'>
               {t('About_us_home')}
-            </h2>
+            </Section.Title>
+            <Divider direction='left' className='mb-8' />
           </AnimationOnScroll>
           <AnimationOnScroll
+            animateOnce
             animateIn='animate__fadeInLeft'
-            animateOut='animate__fadeOutLeft'
             delay={100}
           >
-            <div className='max-lg:pr-10'>
+            <div className='max-lg:pr-10 '>
               <p className='mb-4 text-lg leading-relaxed tracking-tight text-gray-400'>
                 {t('About_content.paragraph-1')}
               </p>
@@ -39,29 +43,29 @@ const AboutUs = () => {
             <div className='relative flex flex-col sm:flex-row'>
               <div className='pb-8 sm:pb-0 sm:pr-8'>
                 <AnimationOnScroll
+                  animateOnce
                   animateIn='animate__fadeInUp'
-                  animateOut='animate__fadeOutDown'
                   delay={100}
                 >
                   <span className='block text-5xl font-medium text-white lg:text-7xl'>
-                    300+
+                    {t('About_content.numbers.first')}
                   </span>
-                  <span className='block tracking-tight text-gray-500'>
-                    PRODUCTS
+                  <span className='block tracking-tight uppercase text-gray-500'>
+                    {t('About_content.numbers.first_label')}
                   </span>
                 </AnimationOnScroll>
               </div>
               <div className='relative py-8 sm:py-0 sm:px-8'>
                 <AnimationOnScroll
+                  animateOnce
                   animateIn='animate__fadeInUp'
-                  animateOut='animate__fadeOutDown'
                   delay={200}
                 >
                   <span className='block text-5xl font-medium text-white lg:text-7xl'>
-                    100+
+                    {t('About_content.numbers.second')}
                   </span>
-                  <span className='block tracking-tight text-gray-500'>
-                    WEB TEMPLATE
+                  <span className='block tracking-tight uppercase text-gray-500'>
+                    {t('About_content.numbers.second_label')}
                   </span>
                 </AnimationOnScroll>
                 <div className='absolute top-0 left-0 hidden w-px h-full bg-white sm:block bg-opacity-20' />
@@ -71,15 +75,15 @@ const AboutUs = () => {
               </div>
               <div className='pt-8 sm:pt-0 sm:pl-8'>
                 <AnimationOnScroll
+                  animateOnce
                   animateIn='animate__fadeInUp'
-                  animateOut='animate__fadeOutDown'
                   delay={300}
                 >
                   <span className='block text-5xl font-medium text-white lg:text-7xl'>
-                    215
+                    {t('About_content.numbers.third')}
                   </span>
-                  <span className='block tracking-tight text-gray-500'>
-                    MOBILE TEMPLATE
+                  <span className='block tracking-tight uppercase text-gray-500'>
+                    {t('About_content.numbers.third_label')}
                   </span>
                 </AnimationOnScroll>
               </div>
@@ -89,15 +93,26 @@ const AboutUs = () => {
       </div>
       <div className='w-1/5 sm:w-2/5'>
         <AnimationOnScroll
+          animateOnce
           animateIn='animate__fadeInRight'
-          animateOut='animate__fadeOutRight'
           delay={100}
         >
-          <ImageNext
-            className='hidden w-full h-full overflow-hidden transform object- rounded-xl md:block '
-            src='https://source.unsplash.com/random'
-            alt=''
-          />
+          <BorderGradient
+            commonClassName='rounded-xl'
+            borderClassName='bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-neutral-700 to-neutral-950'
+            type='contain'
+          >
+            <div className='m-[1px]'>
+              <ImageNext
+                className='hidden w-full h-full overflow-hidden transform object- rounded-xl md:block '
+                src={aboutUsImage.src}
+                height={aboutUsImage.height}
+                width={aboutUsImage.width}
+                blurDataURL={aboutUsImage.blurDataURL}
+                alt=''
+              />
+            </div>
+          </BorderGradient>
         </AnimationOnScroll>
       </div>
     </Section>

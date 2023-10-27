@@ -1,3 +1,4 @@
+import { t } from 'i18next';
 import Home from '../pages';
 import AboutPage from '../pages/about';
 import ContactPage from '../pages/contact';
@@ -14,7 +15,7 @@ export const PrivateRoutes = [
     index: 0,
   },
   {
-    path: '/about',
+    path: 'about',
     element: <AboutPage />,
     name: 'About us',
     index: 1,
@@ -26,25 +27,14 @@ export const PrivateRoutes = [
   //   index: 2,
   // },
   {
-    path: '/services',
+    path: 'services',
     element: <ServicesPage />,
     name: 'Services',
     index: 3,
   },
-  // {
-  //   path: "/words",
-  //   element: <WordsPage />,
-  //   name: "Words",
-  //   index: 3,
-  // },
-  // {
-  //   path: "/posts",
-  //   element: <PostPage />,
-  //   name: "Blogs",
-  //   index: 4,
-  // },
+
   {
-    path: '/contact',
+    path: 'contact',
     element: <ContactPage />,
     name: 'Contact Us',
     index: 4,

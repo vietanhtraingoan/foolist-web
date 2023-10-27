@@ -4,6 +4,7 @@ import Marquee from 'react-fast-marquee';
 
 interface ITextSliderProps {
   text?: string;
+  id?: string;
 }
 
 const classNamePrefix = 'text-slider';
@@ -12,7 +13,7 @@ const TextSlider: React.FC<ITextSliderProps> = (props) => {
   const { text } = props;
 
   return (
-    <div className={clsx(classNamePrefix, 'flex items-center')}>
+    <div id={props?.id} className={clsx(classNamePrefix, 'flex items-center')}>
       <Marquee pauseOnHover>
         <div className={`${classNamePrefix}__item outline`}>{text}</div>
 

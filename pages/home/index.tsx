@@ -3,19 +3,20 @@ import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Marquee from 'react-fast-marquee';
 
+import clsx from 'clsx';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import AboutUs from '../../components/blocks/about-us';
 import HeroSection from '../../components/blocks/hero-section';
 import Section from '../../components/common/section';
-import { ClientMocks } from '../../mocks/clientMocks';
-import { DEFAULT_LANG } from '../../utils/constants';
-import { IClient } from '../../utils/types/clientTypes';
 import ClientItem from '../../components/components/clientItem';
 import ConnectSection from '../../components/components/connectSection';
 import ProjectCarousel from '../../components/components/projectCarousel';
 import ResponsiveClient from '../../components/components/responsiveClient';
-import clsx from 'clsx';
+import { ClientMocks } from '../../mocks/clientMocks';
+import { DEFAULT_LANG } from '../../utils/constants';
+import { IClient } from '../../utils/types/clientTypes';
+
 const NewServiceSection = dynamic(
   () => import('../../components/blocks/new-service-section'),
   { ssr: false }
@@ -34,10 +35,6 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
       </Head>
       <HeroSection classNamePrefix={classNamePrefix} />
       <AboutUs />
-      {/* <Section className={`${classNamePrefix}__grid-project`}>
-        <Section.Title className='mb-12'>{t('feature-project')}</Section.Title>
-        <GridProject />
-      </Section> */}
       <Section>
         <Section.Title className='mb-12 text-center'>
           {t('Section_label.product')}
@@ -68,39 +65,6 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
       <section className={`${classNamePrefix}__connection-container`}>
         <ConnectSection />
       </section>
-      {/* <section className={`${classNamePrefix}__footer-container`}>
-        <div className={`${classNamePrefix}__footer-left`}>
-          <div className={`${classNamePrefix}__footer-left-title`}>
-            <span>“LET ART</span>
-            <div className={`${classNamePrefix}__footer-left-title-highlight`}>
-              UNLOCK
-            </div>
-            <span> YOUR BUSINESS “</span>
-          </div>
-        </div>
-        <div className={`${classNamePrefix}__footer-right font-main`}>
-          <div
-            className={`${classNamePrefix}__introduction-title-brand text-center md:text-left text-3xl font-specialHeading mb-8 animate__animated animate__fadeInUp`}
-          >
-            Foolist Creative
-          </div>
-          <span
-            className={`${classNamePrefix}__footer-info-group-text font-main`}
-          >
-            Foolist.vn
-          </span>
-
-          <div className={`${classNamePrefix}__menu-contact`}>
-            <MenuContactSection />
-          </div>
-
-          <div className={`${classNamePrefix}__footer-info-group`}>
-            {infoMocks.map((i) => (
-              <span key={i.id}>{t(i.text)}</span>
-            ))}
-          </div>
-        </div>
-      </section> */}
     </div>
   );
 };

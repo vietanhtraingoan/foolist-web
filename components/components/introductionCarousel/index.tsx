@@ -21,11 +21,11 @@ const IntroductionCarousel = ({ className }: BaseComponent) => {
       pagination
     >
       {introductionMocks &&
-        introductionMocks.map((i) => (
+        introductionMocks.map((i, index: number) => (
           <div className='overflow-hidden aspect-square rounded-xl' key={i.id}>
             <ImageNext
               className='object-cover w-full h-full'
-              priority={false}
+              priority={index == 0}
               src={i.imgUrl.src}
               alt='image'
             />

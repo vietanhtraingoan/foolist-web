@@ -22,6 +22,7 @@ const AboutSecondPoint = () => {
     >
       <AnimationOnScroll animateIn='animate__slideInUp' animateOnce={true}>
         <div
+          id='2'
           className={`flex items-center flex-col md:flex-row-reverse gap-12 w-full justify-between`}
         >
           <div

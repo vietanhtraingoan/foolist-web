@@ -7,6 +7,11 @@
   "Products": "Products",
   "Services": "Services",
   "Words": "Words",
+  "topmenu": {
+    "about": "/en/about",
+    "services": "/en/services",
+    "contact": "/en/contact"
+  },
   "Blogs": "Blogs",
   "Contact Us": "Contact us",
   "view-more": "VIEW MORE",
@@ -19,7 +24,52 @@
   },
   "all-project": "View all projects",
   "product": "Our projects",
+  "core_values": {
+    "title": "Core values",
+    "first": {
+      "title": "Companion",
+      "description": "must be on the same battle line, have the same goals, have the same ideals."
+    },
+    "second": {
+      "title": "Creativity",
+      "description": "constantly drop one's self into infinite perspectives to reach a unique difference."
+    },
+    "third": {
+      "title": "Development",
+      "description": "must be recognized by the community."
+    }
+  },
+  "finding_values": {
+    "title": {
+      "first": "We are looking for",
+      "second": "pieces based on 4 key factors"
+    },
+    "first": {
+      "title": "Honesty",
+      "description": "Put the truth in every breath."
+    },
+    "second": {
+      "title": "Responsibility",
+      "description": "Life and death in every step."
+    },
+    "third": {
+      "title": "Passion",
+      "description": "Constantly conquering aspirations every day."
+    },
+    "forth": {
+      "title": "Learning",
+      "description": "Don't hesitate to break the barriers of ability in every second."
+    }
+  },
   "About_content": {
+    "numbers": {
+      "first": "20+",
+      "first_label": "Du an tieu bieu",
+      "second": "30+",
+      "second_label": "Khach hang tin tuong",
+      "third": "20+",
+      "third_label": "Doi tac dong hanh"
+    },
     "title": "Making an Impression",
     "three-points": "Three-points",
     "three-points-content": {
@@ -58,6 +108,23 @@
     "paragraph-9": "At Foolist, we finally understand the importance of language in creating a strong brand identity. We know that language is not only a means of communication, but also a reflection of our values, personality, and culture. That's why we carefully craft our language to suit our brand image and voice.",
     "paragraph-10": "We use language as a way to communicate our mission, vision, and values to our clients and partners. We also use language as a way to showcase our expertise, professionalism, and credibility. We also use language as a way to create a rapport with our audience and build trust and loyalty."
   },
+  "capacity": {
+    "first": {
+      "title": "BRAND STRATEGY",
+      "slug": "services/brand-strategy",
+      "services": "Market research,Branding,Brand Positioning,Brand developping"
+    },
+    "second": {
+      "title": "MEDIA PRODUCTION",
+      "slug": "services/media-production",
+      "services": "Take a photo,Film,Video editing,Image design,Graphic design,3D Design"
+    },
+    "third": {
+      "title": "THE MEDIA",
+      "slug": "services/the-media",
+      "services": "Advertisement,PR,Marketing,Social media"
+    }
+  },
   "Staff": {
     "team": "team",
     "staff": "member"
@@ -90,13 +157,9 @@
   "enterprise-planning": "erp",
   "service": {
     "title": "Exceptional professional expertise",
-    "media": "media production",
-    "tvc": "TVC",
-    "product-design": "product design",
-    "technology-development": "technology development",
-    "website-development": "websites development",
-    "mobile-app-development": "Mobile application development",
-    "erp": "ERP",
+    "first": "Brand strategy",
+    "second": "Media production",
+    "third": "The media",
     "slogan": {
       "slogan1": "Foolist Creative always strives to bring creative, high-quality and effective solutions to customers.",
       "slogan2": "Are you looking for a creative and reliable partner to help you build your brand and grow your business? Do you want high-quality, unique, and effective products and services?",

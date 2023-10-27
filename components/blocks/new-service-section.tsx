@@ -12,47 +12,22 @@ const NewServiceSection = () => {
 
   const services = [
     {
-      id: 1,
-      title: 'CHIẾN LƯỢC THƯƠNG HIỆU',
-      description:
-        'Foolist sẽ đưa ra cho khách hàng và đối tác những thông tin,',
-      slug: '/dich-vu/chien-luoc-thuong-hieu',
-      services: [
-        'Dịch vụ 1',
-        'Dịch vụ 2',
-        'Dịch vụ 3',
-        'Dịch vụ 4',
-        'Dịch vụ 5',
-      ],
+      id: t('capacity.first.slug'),
+      title: t('capacity.first.title'),
+      slug: t('capacity.first.slug'),
+      services: t('capacity.first.services')?.split(','),
     },
     {
-      id: 2,
-      title: 'SẢN XUẤT MEDIA',
-      description:
-        'Foolist sẽ đưa ra cho khách hàng và đối tác những thông tin,',
-      slug: '/dich-vu/chien-luoc-thuong-hieu',
-      services: [
-        'Dịch vụ 1',
-        'Dịch vụ 2',
-        'Dịch vụ 3',
-        'Dịch vụ 4',
-        'Dịch vụ 5',
-      ],
+      id: t('capacity.second.slug'),
+      title: t('capacity.second.title'),
+      slug: t('capacity.second.slug'),
+      services: t('capacity.second.services')?.split(','),
     },
-
     {
-      id: 3,
-      title: 'TRUYỀN THÔNG',
-      description:
-        'Foolist sẽ đưa ra cho khách hàng và đối tác những thông tin,',
-      slug: '/dich-vu/chien-luoc-thuong-hieu',
-      services: [
-        'Dịch vụ 1',
-        'Dịch vụ 2',
-        'Dịch vụ 3',
-        'Dịch vụ 4',
-        'Dịch vụ 5',
-      ],
+      id: t('capacity.third.slug'),
+      title: t('capacity.third.title'),
+      slug: t('capacity.third.slug'),
+      services: t('capacity.third.services')?.split(','),
     },
   ];
 

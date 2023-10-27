@@ -18,6 +18,7 @@ const AboutFirstPoints = () => {
       <AnimationOnScroll animateIn='animate__slideInUp' animateOnce={true}>
         <div className={`container`}>
           <div
+            id='1'
             className={`text-2xl max-md:text-center md:!text-4xl lg:text-h2 font-bold font-heading`}
           >
             <GrayGradientTypography className='block mb-4 font-heading'>

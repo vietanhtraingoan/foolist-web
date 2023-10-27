@@ -1,25 +1,19 @@
-import React, { useEffect, useState } from 'react';
-import MiniFooter from '../../components/components/miniFooter';
-import { ServicesMock, services } from '../../mocks/servicesMock';
-import { useRouter } from 'next/router';
-import { GetStaticProps, InferGetStaticPropsType } from 'next/types';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { useTranslation } from 'next-i18next';
-import { AnimationOnScroll } from 'react-animation-on-scroll';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
-import Skeleton from 'react-loading-skeleton';
-import Head from 'next/head';
-import { ImageNext } from '../../components/common/image-next';
-import Section from '../../components/common/section';
-import clsx from 'clsx';
-import ParagraphResponsive from '../../components/common/typography/paragraph-responsive';
-import Link from 'next/link';
-import Divider from '../../components/common/divider';
-import GrayGradientTypography from '../../components/common/typography/gray-gradient-typography';
-import BorderGradient from '../../components/common/border-gradient';
 import { XMarkIcon } from '@heroicons/react/24/outline';
 import { Empty } from 'antd';
+import clsx from 'clsx';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import { GetStaticProps, InferGetStaticPropsType } from 'next/types';
+import { useState } from 'react';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+import BorderGradient from '../../components/common/border-gradient';
+import Divider from '../../components/common/divider';
+import { ImageNext } from '../../components/common/image-next';
+import Section from '../../components/common/section';
+import GrayGradientTypography from '../../components/common/typography/gray-gradient-typography';
+import { services } from '../../mocks/servicesMock';
 
 type Props = {
   // Add custom props here
@@ -30,16 +24,26 @@ const classNamePrefix = 'service-page';
 const ServicesPage = (
   _props: InferGetStaticPropsType<typeof getStaticProps>
 ) => {
-  const [viewingService, setViewingService] = useState<any | null>(null);
   const router = useRouter();
+  const [viewingService, setViewingService] = useState<any | null>(null);
   const { t } = useTranslation();
-
+  const getCurrentLocale = () => {
+    const currentLocale = (_props as any)?._nextI18Next?.initialLocale;
+    return currentLocale;
+  };
+  const isEnglish = getCurrentLocale() == 'en';
   const handleChangeViewService = (service: any) => {
     setViewingService(service);
+    // const currentLocale = (_props as any)?._nextI18Next?.initialLocale;
+    // const baseLocale = currentLocale == 'en' ? '/services' : 'dich-vu';
+    // router.push(baseLocale + '/' + service?.slug);
   };
 
-  const handleResetViewingService = () => setViewingService(null);
-
+  const handleResetViewingService = () => {
+    // const currentLocale = (_props as any)?._nextI18Next?.initialLocale;
+    // router.push(currentLocale == 'en' ? '/services' : 'dich-vu');
+    setViewingService(null);
+  };
   return (
     <div className={classNamePrefix}>
       <Head>
@@ -74,7 +78,7 @@ const ServicesPage = (
                     <ImageNext
                       className='object-cover w-full h-full rounded-2xl'
                       src={item?.image}
-                      alt={item.title}
+                      alt={isEnglish ? item?.titleEn : item.title}
                     />
                   </div>
                   <div className='relative bg-gradient-to-t from-black/40 to-transparent z-[1] flex flex-col justify-end h-full p-8'>
@@ -84,7 +88,7 @@ const ServicesPage = (
                         index === 0 ? 'text-4xl' : 'text-2xl'
                       )}
                     >
-                      {item?.title}
+                      {isEnglish ? item?.titleEn : item.title}
                     </h3>
                     <p
                       className={clsx(
@@ -100,7 +104,7 @@ const ServicesPage = (
                         index === 0 ? 'mt-5 text-xl' : 'mt-3 text-base'
                       )}
                     >
-                      Xem thêm
+                      {isEnglish ? 'Read more' : 'Xem thêm'}
                     </div>
                   </div>
                 </div>
@@ -121,7 +125,12 @@ const ServicesPage = (
             type='contain'
             bgClassName='bg-neutral-950 h-full'
           >
-            <div className='relative h-full ModalCard'>
+            <div
+              onClick={(e) => {
+                e.stopPropagation();
+              }}
+              className='relative h-full ModalCard'
+            >
               <div className='absolute top-0 left-0 flex h-[60px] items-center justify-end w-full p-4 bg-transparent ModalHeader'>
                 <button
                   onClick={handleResetViewingService}
@@ -134,13 +143,17 @@ const ServicesPage = (
                 <div className='max-w-full mx-8 prose prose-h2:text-white [&>h2>span]:font-heading prose-p:md:text-xl prose-p:text-justify'>
                   <h1 className='text-center text-white'>
                     <GrayGradientTypography className='font-bold font-heading'>
-                      {viewingService?.title}
+                      {isEnglish
+                        ? viewingService?.titleEn || viewingService?.title
+                        : viewingService?.title}
                     </GrayGradientTypography>
                     <Divider direction='center' className='!mt-6' />
                   </h1>
                   {viewingService?.content && viewingService?.content !== '' ? (
                     <div className='max-w-full mb-8 prose prose-h2:text-white prose-p:md:text-lg'>
-                      {viewingService?.content}
+                      {isEnglish
+                        ? viewingService?.contentEn
+                        : viewingService?.content}
                     </div>
                   ) : (
                     <Empty />

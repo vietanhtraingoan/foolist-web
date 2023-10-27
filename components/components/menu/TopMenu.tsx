@@ -114,8 +114,8 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
                       return (
                         <Link
                           key={key}
-                          href={menuItem.path}
-                          className={`menu-grid-item ${
+                          href={t(`topmenu.${menuItem.path}`)}
+                          className={`menu-grid-item font-main ${
                             router.pathname === menuItem.path
                               ? 'menu-grid-item-active'
                               : ''
@@ -156,9 +156,11 @@ const TopMenu = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
                       setactiveMenu(menuItem.index);
                       handleCloseMenu();
                     }}
-                    className='item'
+                    className='item font-main group'
                   >
-                    <span>{t(`${menuItem.name}`)}</span>
+                    <span className='!text-base group-hover:underline'>
+                      {t(`${menuItem.name}`)}
+                    </span>
                   </div>
                 );
               })}
