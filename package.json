@@ -20,6 +20,7 @@
     "clsx": "^2.0.0",
     "emailjs-com": "^3.2.0",
     "firebase": "^9.22.1",
+    "framer-motion": "^10.16.4",
     "google-map-react": "^2.2.1",
     "i18next": "^22.4.9",
     "masonic": "^3.7.0",

@@ -58,7 +58,7 @@ const FindingValue = () => {
           animateOut=''
           animateIn='animate__fadeIn'
         >
-          <div className='sm:absolute smm:aspect-square sm:p-8 md:py-20 md:px-10 sm:inset-0 sm:top-1/2 sm:-translate-y-1/2 sm:z-[2] grid w-full  gap-3 mx-auto sm:grid-cols-2 sm:grid-rows-2'>
+          <div className='sm:absolute sm:aspect-square sm:p-8 md:py-10 md:px-10 sm:inset-0 sm:top-1/2 sm:-translate-y-1/2 sm:z-[2] grid w-full  gap-3 mx-auto sm:grid-cols-2 sm:grid-rows-2'>
             {values.map((item, index: number) => {
               return (
                 <AnimationOnScroll

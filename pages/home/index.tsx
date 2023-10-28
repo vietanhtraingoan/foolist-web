@@ -16,6 +16,7 @@ import ResponsiveClient from '../../components/components/responsiveClient';
 import { ClientMocks } from '../../mocks/clientMocks';
 import { DEFAULT_LANG } from '../../utils/constants';
 import { IClient } from '../../utils/types/clientTypes';
+import AnimateOnScroll from '../../components/common/animate-on-scroll';
 
 const NewServiceSection = dynamic(
   () => import('../../components/blocks/new-service-section'),
@@ -36,10 +37,14 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
       <HeroSection classNamePrefix={classNamePrefix} />
       <AboutUs />
       <Section>
-        <Section.Title className='mb-12 text-center'>
-          {t('Section_label.product')}
-        </Section.Title>
-        <ProjectCarousel />
+        <AnimateOnScroll type='fadeIn'>
+          <Section.Title className='mb-12 text-center'>
+            {t('Section_label.product')}
+          </Section.Title>
+        </AnimateOnScroll>
+        <AnimateOnScroll type='fadeIn' delay={0.1}>
+          <ProjectCarousel />
+        </AnimateOnScroll>
       </Section>
       <NewServiceSection />
       <Section className={`${classNamePrefix}__responsive-client-container`}>
