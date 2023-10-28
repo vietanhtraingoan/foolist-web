@@ -11,6 +11,7 @@ import eyeOpen from '../../public/static/eyeOpen.png';
 import Image from 'next/image';
 import NormalCircleGroup from '../components/normalCircleGroup';
 import ParagraphResponsive from '../common/typography/paragraph-responsive';
+import AnimateOnScroll from '../common/animate-on-scroll';
 const classNamePrefix = 'about-page';
 
 const AboutSecondPoint = () => {
@@ -20,7 +21,7 @@ const AboutSecondPoint = () => {
     <Section
       className={`${classNamePrefix}__fourth-section max-md:overflow-hidden`}
     >
-      <AnimationOnScroll animateIn='animate__slideInUp' animateOnce={true}>
+      <AnimateOnScroll type='fadeInUp'>
         <div
           id='2'
           className={`flex items-center flex-col md:flex-row-reverse gap-12 w-full justify-between`}
@@ -57,14 +58,10 @@ const AboutSecondPoint = () => {
             </div>
           </div>
         </div>
-      </AnimationOnScroll>
+      </AnimateOnScroll>
       <div className=''>
         <div className='flex items-center gap-10 mt-8 max-lg:flex-col md:mt-10 lg:my-20'>
-          <AnimationOnScroll
-            className='lg:w-1/2'
-            animateIn='animate__slideInUp'
-            animateOnce={true}
-          >
+          <AnimateOnScroll className='lg:w-1/2' type='fadeInUp'>
             <ParagraphResponsive className='text-justify'>
               <GrayGradientTypography className='font-main'>
                 {t('About_content.paragraph-6')}
@@ -73,41 +70,32 @@ const AboutSecondPoint = () => {
                 {t('About_content.paragraph-7')}
               </GrayGradientTypography>
             </ParagraphResponsive>
-          </AnimationOnScroll>
-          <AnimationOnScroll
+          </AnimateOnScroll>
+          <AnimateOnScroll
             className='flex items-center justify-center flex-1 '
-            animateIn='animate__slideInUp'
-            animateOnce={true}
+            type='fadeInUp'
           >
             <div className='min-w-[250px] max-sm:w-[calc(100vw-30px)] md:w-[450px] lg:w-[500px] aspect-square mx-auto'>
               <NormalCircleGroup className='mx-auto' contentType='2' />
             </div>
-          </AnimationOnScroll>
+          </AnimateOnScroll>
         </div>
 
         <div className='flex items-center w-full max-sm:mt-0 max-md:mt-[120px] max-lg:flex-col-reverse'>
-          <AnimationOnScroll
-            className='flex-1'
-            animateIn='animate__slideInUp '
-            animateOnce={true}
-          >
+          <AnimateOnScroll className='flex-1' type='fadeInUp'>
             <div className=' relative flex-shrink- border-2 border-primary mx-auto rounded-full aspect-square max-md:mt-6 w-[200px] max-lg:mt-8 lg:max-w-[300px] overflow-hidden flex items-center justify-center'>
               <div className='bg-transparent flex-shrink-0 flex absolute inset-0 z-[2] items-center justify-center rounded-full aspect-square'>
                 <Image src={eyeGif} alt='eye' width={150} />
               </div>
             </div>
-          </AnimationOnScroll>
-          <AnimationOnScroll
-            className='flex-1'
-            animateIn='animate__slideInUp '
-            animateOnce={true}
-          >
+          </AnimateOnScroll>
+          <AnimateOnScroll className='flex-1' type='fadeInUp'>
             <ParagraphResponsive className='text-justify'>
               <GrayGradientTypography>
                 {t('About_content.paragraph-8')}
               </GrayGradientTypography>
             </ParagraphResponsive>
-          </AnimationOnScroll>
+          </AnimateOnScroll>
         </div>
       </div>
     </Section>

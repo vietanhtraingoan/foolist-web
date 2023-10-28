@@ -22,6 +22,7 @@ type MotionType =
 interface AnimateOnScrollProps extends BaseComponent {
   type: MotionType;
   delay?: number;
+  [key: string]: any;
 }
 
 const AnimateOnScroll = ({
@@ -29,6 +30,7 @@ const AnimateOnScroll = ({
   className,
   type,
   delay,
+  ...props
 }: AnimateOnScrollProps) => {
   const motions: Record<
     MotionType,
@@ -77,11 +79,11 @@ const AnimateOnScroll = ({
     },
     slideInUp: {
       initial: {
-        y: 100,
+        translateY: 100,
         opacity: 0,
       },
       whileInView: {
-        y: 0,
+        translateY: 0,
         opacity: 1,
       },
     },
@@ -217,12 +219,14 @@ const AnimateOnScroll = ({
   };
   return (
     <motion.div
+      className={className}
       initial={{
         ...motions[type]?.initial,
       }}
       transition={{ duration: 0.5, type: 'spring', delay: delay }}
       whileInView={motions[type]?.whileInView}
       viewport={{ once: true }}
+      {...props}
     >
       {children}
     </motion.div>

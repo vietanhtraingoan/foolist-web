@@ -5,6 +5,7 @@ import { GetStaticProps, InferGetStaticPropsType } from 'next/types';
 import Section from '../../common/section';
 import GrayGradientTypography from '../../common/typography/gray-gradient-typography';
 import CustomNavigationButton from '../customNavigationButton';
+import AnimateOnScroll from '../../common/animate-on-scroll';
 
 const classNamePrefix = 'connect-section';
 
@@ -18,48 +19,29 @@ const ConnectSection = (
   const { t } = useTranslation('common');
   const router = useRouter();
 
-  const serviceList = [
-    {
-      id: 1,
-      title: t('service.tvc'),
-      onClick: () => router.push(`/serviceDetail?id=1`),
-    },
-    {
-      id: 2,
-      title: t('service.product-design'),
-      onClick: () => router.push(`/serviceDetail?id=2`),
-    },
-    {
-      id: 3,
-      title: t('service.website-development'),
-      onClick: () => router.push(`/serviceDetail?id=3`),
-    },
-    {
-      id: 4,
-      title: t('service.mobile-app-development'),
-      onClick: () => router.push(`/serviceDetail?id=3`),
-    },
-    {
-      id: 5,
-      title: t('service.erp'),
-      onClick: () => router.push(`/serviceDetail?id=4`),
-    },
-  ];
-
   return (
     <Section className='!pb-0'>
       <div className='flex flex-wrap items-center justify-between w-full'>
         <div className={`text-2xl lg:text-4xl font-main font-medium `}>
-          <GrayGradientTypography>{t('connect-with')} </GrayGradientTypography>
-          <GrayGradientTypography className='block w-full text-4xl font-bold md:text-5xl max-md:mb-8 lg:text-7xl'>
-            Foolist Creative
-          </GrayGradientTypography>
+          <AnimateOnScroll type='fadeInUp'>
+            {' '}
+            <GrayGradientTypography>
+              {t('connect-with')}{' '}
+            </GrayGradientTypography>
+          </AnimateOnScroll>
+          <AnimateOnScroll type='fadeInUp' delay={0.1}>
+            <GrayGradientTypography className='block w-full text-4xl font-bold md:text-5xl max-md:mb-8 lg:text-7xl'>
+              Foolist Creative
+            </GrayGradientTypography>
+          </AnimateOnScroll>
         </div>
         <div className={`${classNamePrefix}__top-button`}>
-          <CustomNavigationButton
-            size='large'
-            onClick={() => router.push('/contact')}
-          />
+          <AnimateOnScroll type='fadeIn'>
+            <CustomNavigationButton
+              size='large'
+              onClick={() => router.push('/contact')}
+            />
+          </AnimateOnScroll>
         </div>
       </div>
     </Section>

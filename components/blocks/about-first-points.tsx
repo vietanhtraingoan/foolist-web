@@ -8,6 +8,7 @@ import { useTranslation } from 'react-i18next';
 import Divider from '../common/divider';
 import NormalCircleGroup from '../components/normalCircleGroup';
 import ParagraphResponsive from '../common/typography/paragraph-responsive';
+import AnimateOnScroll from '../common/animate-on-scroll';
 
 const AboutFirstPoints = () => {
   const isMobile = useMediaQuery({ query: '(max-width:768px)' });
@@ -15,30 +16,32 @@ const AboutFirstPoints = () => {
 
   return (
     <Section fluid className='w-full max-md:overflow-hidden'>
-      <AnimationOnScroll animateIn='animate__slideInUp' animateOnce={true}>
-        <div className={`container`}>
-          <div
-            id='1'
-            className={`text-2xl max-md:text-center md:!text-4xl lg:text-h2 font-bold font-heading`}
-          >
+      <div className={`container`}>
+        <div
+          id='1'
+          className={`text-2xl max-md:text-center md:!text-4xl lg:text-h2 font-bold font-heading`}
+        >
+          <AnimateOnScroll type='slideInLeft' delay={0.1}>
             <GrayGradientTypography className='block mb-4 font-heading'>
               {t('About_content.creative-thinking')}
             </GrayGradientTypography>
+          </AnimateOnScroll>
+          <AnimateOnScroll type='slideInLeft' delay={0.2}>
             <PinkGradientTypography
               className={`font-bold text-5xl md:text-6xl lg:text-8xl block w-full font-heading leading-[1.4] lg:!leading-[1.6]`}
             >
               {t('About_content.unique')}
             </PinkGradientTypography>
-          </div>
+          </AnimateOnScroll>
         </div>
-      </AnimationOnScroll>
-      <AnimationOnScroll animateIn='animate__slideInLeft' animateOnce={true}>
+      </div>
+      <AnimateOnScroll type='slideInLeft' delay={0.2}>
         <Divider
           className='max-md:!mt-6 mb-10 md:mb-20 max-lg:!mt-10'
           direction={isMobile ? 'center' : 'left'}
         />
-      </AnimationOnScroll>
-      <AnimationOnScroll animateIn='animate__slideInUp' animateOnce={true}>
+      </AnimateOnScroll>
+      <AnimateOnScroll type='slideInUp'>
         <div className='container mt-8 lg:mt-10'>
           <ParagraphResponsive className=' text-justify md:max-w-[80%] '>
             <GrayGradientTypography>
@@ -46,44 +49,34 @@ const AboutFirstPoints = () => {
             </GrayGradientTypography>
           </ParagraphResponsive>
         </div>
-      </AnimationOnScroll>
+      </AnimateOnScroll>
       <div className='container'>
         <div
           className={`flex items-center mt-8 flex-col lg:flex-row justify-end gap-12`}
         >
-          <AnimationOnScroll
-            className='flex-1'
-            animateIn='animate__slideInUp'
-            animateOnce={true}
-          >
+          <AnimateOnScroll className='flex-1' type='fadeInUp'>
             <div className='w-[300px] md:w-[450px] lg:w-[500px] aspect-square mx-auto flex justify-center'>
               <NormalCircleGroup contentType='1' />
             </div>
-          </AnimationOnScroll>
+          </AnimateOnScroll>
           <div className={`text-base md:text-2xl flex-1 w-full`}>
             <span>
-              <AnimationOnScroll
-                animateIn='animate__slideInUp'
-                animateOnce={true}
-              >
+              <AnimateOnScroll type='fadeInUp'>
                 <ParagraphResponsive className='text-justify'>
                   <GrayGradientTypography>
                     {' '}
                     {t('About_content.paragraph-4')}
                   </GrayGradientTypography>
                 </ParagraphResponsive>
-              </AnimationOnScroll>
+              </AnimateOnScroll>
               <br />
-              <AnimationOnScroll
-                animateIn='animate__slideInUp'
-                animateOnce={true}
-              >
+              <AnimateOnScroll type='fadeInUp'>
                 <ParagraphResponsive>
                   <GrayGradientTypography>
                     {t('About_content.paragraph-5')}
                   </GrayGradientTypography>
                 </ParagraphResponsive>
-              </AnimationOnScroll>
+              </AnimateOnScroll>
             </span>
           </div>
         </div>

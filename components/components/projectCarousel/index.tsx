@@ -15,6 +15,7 @@ import YoutubeIframe from '../../common/youtube-iframe';
 import ChevronLeft from '../../icons/chevron-left';
 import ChevronRight from '../../icons/chevron-right';
 import { getYoutubeEmbedUrl } from '../../../utils/commonFunctions';
+import AnimateOnScroll from '../../common/animate-on-scroll';
 
 const classNamePrefix = 'project-carousel';
 
@@ -71,29 +72,31 @@ const ProjectCarousel = () => {
       >
         {projectMocks?.map((proj, index) => (
           <SwiperSlide key={proj.id}>
-            <div
-              onClick={() => {
-                if (proj.isVideo) {
-                  setViewingProject(proj);
-                  setLoadingProject(true);
-                }
-              }}
-              className='relative group overflow-hidden w-full aspect-square before:absolute before:content-[""] before:inset-0 before:bg-transparent hover:before:bg-white/20 cursor-pointer'
-            >
-              <ImageNext
-                className='object-cover w-full h-full'
-                src={proj.largeImg.src}
-                alt='image-product'
-                // placeholderSrc={proj.largeImg.src}
-              />
-              {proj?.isVideo && (
-                <div className='absolute inset-0 flex items-center justify-center'>
-                  <div className='flex justify-center p-2 bg-white border rounded-full shadow-md cursor-pointer items-'>
-                    <PlayIcon width={50} className='fill-black' />
+            <AnimateOnScroll type='fadeInUp' delay={index / 10}>
+              <div
+                onClick={() => {
+                  if (proj.isVideo) {
+                    setViewingProject(proj);
+                    setLoadingProject(true);
+                  }
+                }}
+                className='relative group overflow-hidden w-full aspect-square before:absolute before:content-[""] before:inset-0 before:bg-transparent hover:before:bg-white/20 cursor-pointer'
+              >
+                <ImageNext
+                  className='object-cover w-full h-full'
+                  src={proj.largeImg.src}
+                  alt='image-product'
+                  // placeholderSrc={proj.largeImg.src}
+                />
+                {proj?.isVideo && (
+                  <div className='absolute inset-0 flex items-center justify-center'>
+                    <div className='flex justify-center p-2 bg-white border rounded-full shadow-md cursor-pointer items-'>
+                      <PlayIcon width={50} className='fill-black' />
+                    </div>
                   </div>
-                </div>
-              )}
-            </div>
+                )}
+              </div>
+            </AnimateOnScroll>
           </SwiperSlide>
         ))}
       </Swiper>

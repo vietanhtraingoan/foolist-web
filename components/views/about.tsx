@@ -17,6 +17,7 @@ import ParagraphResponsive from '../../components/common/typography/paragraph-re
 import ConnectSection from '../../components/components/connectSection';
 import NormalCircleGroup from '../../components/components/normalCircleGroup';
 import TextSlider from '../../components/components/textSlider';
+import AnimateOnScroll from '../common/animate-on-scroll';
 
 const classNamePrefix = 'about-page';
 
@@ -43,21 +44,23 @@ const ViewAboutUs = (
       <AboutSecondPoint />
       <TextSlider id='3' text={t('Brand-identity-language')} />
       <Section className='flex flex-col items-center overflow-x-hidden'>
-        <div className='max-sm:w-[300px] w-[450px] lg:w-[500px]  aspect-square flex justify-center'>
-          <NormalCircleGroup contentType='3' />
-        </div>
+        <AnimateOnScroll type='fadeInUp'>
+          <div className='max-sm:w-[300px] w-[450px] lg:w-[500px]  aspect-square flex justify-center'>
+            <NormalCircleGroup contentType='3' />
+          </div>
+        </AnimateOnScroll>
         <ParagraphResponsive className={`text-justify max-w-2xl`}>
-          <AnimationOnScroll animateIn='animate__slideInUp' animateOnce={true}>
+          <AnimateOnScroll type='fadeInUp'>
             <GrayGradientTypography>
               {t('About_content.paragraph-9')}
             </GrayGradientTypography>
-          </AnimationOnScroll>
+          </AnimateOnScroll>
           <br />
-          <AnimationOnScroll animateIn='animate__slideInUp' animateOnce={true}>
+          <AnimateOnScroll type='fadeInUp' delay={0.1}>
             <GrayGradientTypography>
               {t('About_content.paragraph-10')}
             </GrayGradientTypography>
-          </AnimationOnScroll>
+          </AnimateOnScroll>
         </ParagraphResponsive>
       </Section>
       <TextSlider text='FOOLIST CREATIVE' />
