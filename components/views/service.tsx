@@ -134,7 +134,7 @@ const ViewService = (
           direction='center'
           className='mx-auto max-w-[400px] !mt-0 !mb-10 lg:!mt-8 lg:!mb-20'
         />
-        <div className='grid w-full md:grid-cols-2 md:grid-rows-[300px_300px] gap-8'>
+        <div className='grid w-full md:grid-cols-2 md:grid-rows-[400px_400px] gap-8'>
           {services.map((item, index: number) => {
             return (
               <div
@@ -163,7 +163,7 @@ const ViewService = (
                     />
                   </div>
                   <div className='relative z-[1] flex flex-col justify-end h-full p-2 md:p-4'>
-                    <div className='flex flex-col p-3 md:p-6 rounded-xl h-fit bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-neutral-700 to-black'>
+                    <div className='flex flex-col p-3 md:p-6 rounded-xl h-fit bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-neutral-700 opacity-90 to-black'>
                       <h3
                         className={clsx(
                           'cursor-pointer bg-neu text-white font-heading',
