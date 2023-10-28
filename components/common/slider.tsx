@@ -1,13 +1,21 @@
 import React, { useRef } from 'react';
 import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';
 
-import { A11y, Navigation, Pagination, Scrollbar } from 'swiper/modules';
+import {
+  A11y,
+  Navigation,
+  Pagination,
+  Scrollbar,
+  Autoplay,
+} from 'swiper/modules';
 import ChevronRight from '../icons/chevron-right';
 import ChevronLeft from '../icons/chevron-left';
 import { BaseComponent } from '../../utils/types/clientTypes';
 import clsx from 'clsx';
 
-export interface SliderProps extends BaseComponent, SwiperProps {
+export interface SliderProps
+  extends Omit<BaseComponent, 'onClick'>,
+    SwiperProps {
   navigation?: boolean;
   pagination?: boolean;
   spaceBetween?: number;
@@ -61,7 +69,7 @@ const Slider = ({
           clickable: true,
         }}
         keyboard
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         {...swiperProps}
       >
         {React.Children?.map(

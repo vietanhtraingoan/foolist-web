@@ -78,7 +78,7 @@ const ProjectCarousel = () => {
                   setLoadingProject(true);
                 }
               }}
-              className='relative group overflow-hidden aspect-square before:absolute before:content-[""] before:inset-0 before:bg-transparent hover:before:bg-white/20 cursor-pointer'
+              className='relative group overflow-hidden w-full aspect-square before:absolute before:content-[""] before:inset-0 before:bg-transparent hover:before:bg-white/20 cursor-pointer'
             >
               <ImageNext
                 className='object-cover w-full h-full'

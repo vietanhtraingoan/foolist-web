@@ -7,6 +7,11 @@ import Divider from '../common/divider';
 import { useMediaQuery } from 'react-responsive';
 import { useTranslation } from 'react-i18next';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
+import PuzzleTopLeft from '../icons/puzzle-top-left';
+import PuzzleTopRight from '../icons/puzzle-top-right';
+import PuzzleBottomLeft from '../icons/puzzle-bottom-left';
+import PuzzleBottomRight from '../icons/puzzle-bottom-right';
+import BigPuzzle from '../icons/big-puzzle';
 
 const FindingValue = () => {
   const { t } = useTranslation('common');
@@ -46,49 +51,55 @@ const FindingValue = () => {
         </GrayGradientTypography>
         <Divider direction='left' />
       </h3>
-      <AnimationOnScroll animateOnce animateOut='' animateIn='animate__fadeIn'>
-        <div className='grid w-full max-w-3xl grid-cols-1 gap-3 mx-auto mt-20 md:grid-cols-2 md:grid-rows-2'>
-          {values.map((item, index: number) => {
-            return (
-              <AnimationOnScroll
-                animateOnce
-                animateIn='animate__slideInUp'
-                delay={index * 200}
-              >
-                <div
-                  key={item.title + index}
-                  className={clsx(
-                    'flex bg-[radial-gradient(ellipse_at_center_center,_var(--tw-gradient-stops))] from-neutral-950 to-neutral-black  md:aspect-square overflow-hidden relative flex-col px-8 py-8 text-left !transition-all border cursor-pointer shadow-2xl hover:[box-shadow:#f5a4c0_0px_13px_50px_-26px] bg-black-900/30 border-white/20 rounded-lg md:rounded-[50px]',
-                    {
-                      ' !rounded-br-xl !rounded-lr-xl !rounded-tr-xl !rounded-bl-xl hover:!-translate-y-4 hover:!-translate-x-4 hover:!rounded-br-xl hover:!rounded-lr-xl hover:!rounded-tr-xl hover:!rounded-bl-xl':
-                        index === 0 && !isMobile,
-                      ' !rounded-bl-xl !rounded-tl-xl !rounded-br-xl hover:!-translate-y-4 hover:!translate-x-4 ':
-                        index === 1 && !isMobile,
-                      ' !rounded-tr-xl !rounded-tl-xl !rounded-br-xl hover:!translate-y-4 hover:!-translate-x-4':
-                        index === 2 && !isMobile,
-                      ' !rounded-tl-xl !rounded-tr-xl !rounded-bl-xl hover:!translate-y-4 hover:!translate-x-4':
-                        index === 3 && !isMobile,
-                    }
-                  )}
-                  style={{
-                    backdropFilter: 'blur( 10px )',
-                    WebkitBackdropFilter: 'blur( 10px )',
-                  }}
+      <div className='relative flex items-center justify-center w-full max-w-3xl mx-auto mt-20 aspect-square'>
+        <BigPuzzle className='max-sm:hidden' />
+        <AnimationOnScroll
+          animateOnce
+          animateOut=''
+          animateIn='animate__fadeIn'
+        >
+          <div className='sm:absolute smm:aspect-square sm:p-8 md:py-20 md:px-10 sm:inset-0 sm:top-1/2 sm:-translate-y-1/2 sm:z-[2] grid w-full  gap-3 mx-auto sm:grid-cols-2 sm:grid-rows-2'>
+            {values.map((item, index: number) => {
+              return (
+                <AnimationOnScroll
+                  animateOnce
+                  className='relative group'
+                  animateIn='animate__slideInUp'
+                  delay={index * 200}
                 >
-                  <h3 className='mb-5 md:mb-8'>
-                    <GrayGradientTypography className='text-3xl font-bold text-white md:text-4xl lg:text-5xl font-heading'>
-                      {item.title}
-                    </GrayGradientTypography>
-                  </h3>
-                  <p className='text-sm md:text-base lg:text-xl text-white/80'>
-                    {item.description}
-                  </p>
-                </div>
-              </AnimationOnScroll>
-            );
-          })}
-        </div>
-      </AnimationOnScroll>
+                  <div className='relative w-full sm:aspect-square '>
+                    <div
+                      key={item.title + index}
+                      className={clsx(
+                        'flex relative max-sm:border max-sm:border-white/20 max-sm:rounded-2xl max-sm:bg-[radial-gradient(ellipse_at_center_center,_var(--tw-gradient-stops))] max-sm:from-neutral-900 max-sm:to-neutral-950 md:!bg-transparent h-full overflow-hidden  flex-col px-10 py-10 text-left !transition-all  cursor-pointer shadow-2xl bg-black-900/30 before:border-white/20 rounded-lg md:rounded-[50px]',
+                        {
+                          ' !rounded-br-xl !rounded-lr-xl !rounded-tr-xl !rounded-bl-xl  hover:!-translate-x-4 hover:!rounded-br-xl hover:!rounded-lr-xl hover:!rounded-tr-xl hover:!rounded-bl-xl':
+                            index === 0,
+                          ' !rounded-bl-xl sm:items-end sm:text-right !rounded-tl-xl !rounded-br-xl hover:!-translate-x-4 ':
+                            index === 1,
+                          ' !rounded-tr-xl sm:justify-end sm:items-start text-left !rounded-tl-xl !rounded-br-xl hover:!-translate-x-4 ':
+                            index === 2,
+                          ' !rounded-tl-xl !rounded-tr-xl !rounded-bl-xl sm:items-end justify-end sm:text-right hover:!-translate-x-4':
+                            index === 3,
+                        }
+                      )}
+                    >
+                      <h3 className='mb-5 md:mb-8'>
+                        <GrayGradientTypography className='whitespace-nowrap text-3xl !leading-[1.6] font-bold text-white md:text-4xl lg:text-4xl font-heading'>
+                          {item.title}
+                        </GrayGradientTypography>
+                      </h3>
+                      <p className='text-sm line-clamp-2 italic md:text-base lg:text-xl md:max-w-[80%] text-white/80'>
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                </AnimationOnScroll>
+              );
+            })}
+          </div>
+        </AnimationOnScroll>
+      </div>
     </Section>
   );
 };

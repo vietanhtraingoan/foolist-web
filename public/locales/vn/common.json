@@ -32,11 +32,11 @@
     },
     "second": {
       "title": "Sáng tạo",
-      "description": "không ngừng thả cái tôi vào vô hạn góc nhìn để chạm đến sự khác biệt duy nhất."
+      "description": "Không ngừng thả cái tôi vào vô hạn góc nhìn để chạm đến sự khác biệt duy nhất."
     },
     "third": {
       "title": "Phát triển",
-      "description": "là phải được cộng đồng công nhận"
+      "description": "Là phải được cộng đồng công nhận"
     }
   },
   "finding_values": {
@@ -112,19 +112,19 @@
   "capacity": {
     "first": {
       "title": "CHIẾN LƯỢC THƯƠNG HIỆU",
-      "slug": "dich-vu/chien-luoc-thuong-hieu",
+      "slug": "dich-vu?s=chien-luoc-thuong-hieu",
 
       "services": "Nghiên cứu thị trường,Xây dựng thương hiệu,Định vị thương hiệu,Phát triển thương hiệu"
     },
     "second": {
       "title": "SẢN XUẤT MEDIA",
-      "slug": "dich-vu/san-xuat-media",
+      "slug": "dich-vu?s=san-xuat-media",
 
       "services": "Chụp hình,Quay phim,Dựng video,Thiết kế hình ảnh,Thiết kế đồ họa,3D Design"
     },
     "third": {
       "title": "TRUYỀN THÔNG",
-      "slug": "dich-vu/truyen-thong",
+      "slug": "dich-vu?s=truyen-thong",
       "services": "Quảng cáo,PR,Marketing,Social media"
     }
   },

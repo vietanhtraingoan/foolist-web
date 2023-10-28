@@ -50,7 +50,7 @@ const AboutUs = () => {
                   <span className='block text-5xl font-medium text-white lg:text-7xl'>
                     {t('About_content.numbers.first')}
                   </span>
-                  <span className='block tracking-tight uppercase text-gray-500'>
+                  <span className='block tracking-tight text-gray-500 uppercase'>
                     {t('About_content.numbers.first_label')}
                   </span>
                 </AnimationOnScroll>
@@ -64,7 +64,7 @@ const AboutUs = () => {
                   <span className='block text-5xl font-medium text-white lg:text-7xl'>
                     {t('About_content.numbers.second')}
                   </span>
-                  <span className='block tracking-tight uppercase text-gray-500'>
+                  <span className='block tracking-tight text-gray-500 uppercase'>
                     {t('About_content.numbers.second_label')}
                   </span>
                 </AnimationOnScroll>
@@ -82,7 +82,7 @@ const AboutUs = () => {
                   <span className='block text-5xl font-medium text-white lg:text-7xl'>
                     {t('About_content.numbers.third')}
                   </span>
-                  <span className='block tracking-tight uppercase text-gray-500'>
+                  <span className='block tracking-tight text-gray-500 uppercase'>
                     {t('About_content.numbers.third_label')}
                   </span>
                 </AnimationOnScroll>
@@ -91,28 +91,23 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-      <div className='w-1/5 sm:w-2/5'>
+      <div className='flex-shrink-0 w-2/5 max-md:w-2/5 max-md:mt-7'>
         <AnimationOnScroll
+          className='animate__animated'
           animateOnce
-          animateIn='animate__fadeInRight'
+          animateIn=' animate__fadeInRight'
           delay={100}
         >
-          <BorderGradient
-            commonClassName='rounded-xl'
-            borderClassName='bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-neutral-700 to-neutral-950'
-            type='contain'
-          >
-            <div className='m-[1px]'>
-              <ImageNext
-                className='hidden w-full h-full overflow-hidden transform object- rounded-xl md:block '
-                src={aboutUsImage.src}
-                height={aboutUsImage.height}
-                width={aboutUsImage.width}
-                blurDataURL={aboutUsImage.blurDataURL}
-                alt=''
-              />
-            </div>
-          </BorderGradient>
+          <div className='m-[1px]'>
+            <ImageNext
+              className='block object-contain w-full h-full overflow-hidden transform rounded-xl'
+              src={aboutUsImage.src}
+              height={aboutUsImage.height}
+              width={aboutUsImage.width}
+              blurDataURL={aboutUsImage.blurDataURL}
+              alt=''
+            />
+          </div>
         </AnimationOnScroll>
       </div>
     </Section>

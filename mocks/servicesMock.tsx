@@ -40,6 +40,139 @@ import webDesign3 from '../public/static/webDesign3.png';
 
 export const services = [
   {
+    title: 'Sản xuất media',
+    titleEn: 'Media production',
+    description:
+      'Với đội ngủ trẻ trung, sáng tạo nhưng không kém phần tỉ mỉ, Foolist sẽ tạo ra những sản phẩm có tính thẩm mỹ cao, đánh thẳng vào tâm thức của công chúng cho những khách hàng và đối tác của mình',
+    descriptionEn:
+      'With a young, creative but no less meticulous team, Foolist will create highly aesthetic products, directly hitting the public consciousness for its customers and partners, through various methods. consciousness like',
+    slug: 'san-xuat-media',
+    enSlug: 'media-production',
+    image: imageDV5.src,
+    content: (
+      <>
+        <p>
+          Với đội ngủ trẻ trung, sáng tạo nhưng không kém phần tỉ mỉ, Foolist sẽ
+          tạo ra những sản phẩm có tính thẩm mỹ cao, đánh thẳng vào tâm thức của
+          công chúng cho những khách hàng và đối tác của mình, thông qua các
+          phương thức như:
+        </p>
+        <ul>
+          <li>
+            <p>Chụp hình</p>
+            <Image
+              height={imageDV6.height}
+              width={imageDV6.width}
+              blurDataURL={imageDV6.blurDataURL}
+              src={imageDV6.src}
+              alt='chup-hinh'
+            />
+          </li>
+          <li>
+            <p>Quay phim</p>
+            <Image
+              height={imageDV7.height}
+              width={imageDV7.width}
+              blurDataURL={imageDV7.blurDataURL}
+              src={imageDV7.src}
+              alt='Quay phim'
+            />
+          </li>
+          <li>
+            <p>Dựng video</p>
+          </li>
+          <li>
+            <p>Thiết kế hình ảnh</p>
+            <Image
+              src={imageDV8.src}
+              height={imageDV8.height}
+              width={imageDV8.width}
+              blurDataURL={imageDV8.blurDataURL}
+              alt='Thiết kế hình ảnh'
+            />
+          </li>
+          <li>
+            <p>Thiết kế đồ họa</p>
+            <Image
+              height={imageDV9.height}
+              width={imageDV9.width}
+              blurDataURL={imageDV9.blurDataURL}
+              src={imageDV9.src}
+              alt='Thiết kế đồ họa'
+            />
+          </li>
+          <li>
+            <p>3D Design</p>
+            <video autoPlay controls={false}>
+              <source src='/videos/DV10.webm'></source>
+            </video>
+          </li>
+        </ul>
+      </>
+    ),
+    contentEn: (
+      <>
+        <p>
+          With a young, creative but no less meticulous team, Foolist will
+          create highly aesthetic products, directly hitting the public
+          consciousness for its customers and partners, through various methods.
+          consciousness like:
+        </p>
+        <ul>
+          <li>
+            <p>Photography</p>
+            <Image
+              height={imageDV6.height}
+              width={imageDV6.width}
+              blurDataURL={imageDV6.blurDataURL}
+              src={imageDV6.src}
+              alt='Photography'
+            />
+          </li>
+          <li>
+            <p>Filming</p>
+            <Image
+              height={imageDV7.height}
+              width={imageDV7.width}
+              blurDataURL={imageDV7.blurDataURL}
+              src={imageDV7.src}
+              alt='Filming'
+            />
+          </li>
+          <li>
+            <p>Video editing</p>
+          </li>
+          <li>
+            <p>Image design</p>
+            <Image
+              src={imageDV8.src}
+              height={imageDV8.height}
+              width={imageDV8.width}
+              blurDataURL={imageDV8.blurDataURL}
+              alt='Image design'
+            />
+          </li>
+          <li>
+            <p>Graphic design</p>
+            <Image
+              height={imageDV9.height}
+              width={imageDV9.width}
+              blurDataURL={imageDV9.blurDataURL}
+              src={imageDV9.src}
+              alt='Graphic design'
+            />
+          </li>
+          <li>
+            <p>3D Design</p>
+            <video autoPlay controls={false}>
+              <source src='/videos/DV10.webm'></source>
+            </video>
+          </li>
+        </ul>
+      </>
+    ),
+  },
+  {
     title: 'Chiến lược thương hiệu',
     titleEn: 'Brand Strategy',
     description:
@@ -213,141 +346,9 @@ export const services = [
       </>
     ),
   },
+
   {
-    title: 'Sản xuất media',
-    titleEn: 'Media production',
-    description:
-      'Với đội ngủ trẻ trung, sáng tạo nhưng không kém phần tỉ mỉ, Foolist sẽ tạo ra những sản phẩm có tính thẩm mỹ cao, đánh thẳng vào tâm thức của công chúng cho những khách hàng và đối tác của mình',
-    descriptionEn:
-      'With a young, creative but no less meticulous team, Foolist will create highly aesthetic products, directly hitting the public consciousness for its customers and partners, through various methods. consciousness like',
-    slug: 'san-xuat-media',
-    enSlug: 'media-production',
-    image: imageDV5.src,
-    content: (
-      <>
-        <p>
-          Với đội ngủ trẻ trung, sáng tạo nhưng không kém phần tỉ mỉ, Foolist sẽ
-          tạo ra những sản phẩm có tính thẩm mỹ cao, đánh thẳng vào tâm thức của
-          công chúng cho những khách hàng và đối tác của mình, thông qua các
-          phương thức như:
-        </p>
-        <ul>
-          <li>
-            <p>Chụp hình</p>
-            <Image
-              height={imageDV6.height}
-              width={imageDV6.width}
-              blurDataURL={imageDV6.blurDataURL}
-              src={imageDV6.src}
-              alt='chup-hinh'
-            />
-          </li>
-          <li>
-            <p>Quay phim</p>
-            <Image
-              height={imageDV7.height}
-              width={imageDV7.width}
-              blurDataURL={imageDV7.blurDataURL}
-              src={imageDV7.src}
-              alt='Quay phim'
-            />
-          </li>
-          <li>
-            <p>Dựng video</p>
-          </li>
-          <li>
-            <p>Thiết kế hình ảnh</p>
-            <Image
-              src={imageDV8.src}
-              height={imageDV8.height}
-              width={imageDV8.width}
-              blurDataURL={imageDV8.blurDataURL}
-              alt='Thiết kế hình ảnh'
-            />
-          </li>
-          <li>
-            <p>Thiết kế đồ họa</p>
-            <Image
-              height={imageDV9.height}
-              width={imageDV9.width}
-              blurDataURL={imageDV9.blurDataURL}
-              src={imageDV9.src}
-              alt='Thiết kế đồ họa'
-            />
-          </li>
-          <li>
-            <p>3D Design</p>
-            <video autoPlay controls={false}>
-              <source src='/videos/DV10.webm'></source>
-            </video>
-          </li>
-        </ul>
-      </>
-    ),
-    contentEn: (
-      <>
-        <p>
-          With a young, creative but no less meticulous team, Foolist will
-          create highly aesthetic products, directly hitting the public
-          consciousness for its customers and partners, through various methods.
-          consciousness like:
-        </p>
-        <ul>
-          <li>
-            <p>Photography</p>
-            <Image
-              height={imageDV6.height}
-              width={imageDV6.width}
-              blurDataURL={imageDV6.blurDataURL}
-              src={imageDV6.src}
-              alt='Photography'
-            />
-          </li>
-          <li>
-            <p>Filming</p>
-            <Image
-              height={imageDV7.height}
-              width={imageDV7.width}
-              blurDataURL={imageDV7.blurDataURL}
-              src={imageDV7.src}
-              alt='Filming'
-            />
-          </li>
-          <li>
-            <p>Video editing</p>
-          </li>
-          <li>
-            <p>Image design</p>
-            <Image
-              src={imageDV8.src}
-              height={imageDV8.height}
-              width={imageDV8.width}
-              blurDataURL={imageDV8.blurDataURL}
-              alt='Image design'
-            />
-          </li>
-          <li>
-            <p>Graphic design</p>
-            <Image
-              height={imageDV9.height}
-              width={imageDV9.width}
-              blurDataURL={imageDV9.blurDataURL}
-              src={imageDV9.src}
-              alt='Graphic design'
-            />
-          </li>
-          <li>
-            <p>3D Design</p>
-            <video autoPlay controls={false}>
-              <source src='/videos/DV10.webm'></source>
-            </video>
-          </li>
-        </ul>
-      </>
-    ),
-  },
-  {
-    title: 'TRUYỀN THÔNG',
+    title: 'Truyền thông',
     titleEn: 'The media',
     description:
       'Foolist hiểu rõ truyền thông đóng vai trò sống còn trong quá trình xây dựng và phát triển thương hiệu của một doanh nghiệp. Vì vậy, Foolist đảm bảo sẽ thông qua hoạt động truyền thông đến các đối tượng khác nhau như công chúng, khách hàng tiềm năng, đối tác, đối thủ cạnh tranh,…',

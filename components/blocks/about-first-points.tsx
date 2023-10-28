@@ -34,13 +34,13 @@ const AboutFirstPoints = () => {
       </AnimationOnScroll>
       <AnimationOnScroll animateIn='animate__slideInLeft' animateOnce={true}>
         <Divider
-          className='max-md:!mt-6 max-lg:!mt-10'
+          className='max-md:!mt-6 mb-10 md:mb-20 max-lg:!mt-10'
           direction={isMobile ? 'center' : 'left'}
         />
       </AnimationOnScroll>
       <AnimationOnScroll animateIn='animate__slideInUp' animateOnce={true}>
         <div className='container mt-8 lg:mt-10'>
-          <ParagraphResponsive>
+          <ParagraphResponsive className=' text-justify md:max-w-[80%] '>
             <GrayGradientTypography>
               "{t('About_content.paragraph-3')}"
             </GrayGradientTypography>
@@ -66,7 +66,7 @@ const AboutFirstPoints = () => {
                 animateIn='animate__slideInUp'
                 animateOnce={true}
               >
-                <ParagraphResponsive>
+                <ParagraphResponsive className='text-justify'>
                   <GrayGradientTypography>
                     {' '}
                     {t('About_content.paragraph-4')}

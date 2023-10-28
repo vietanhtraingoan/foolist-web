@@ -28,15 +28,15 @@
     "title": "Core values",
     "first": {
       "title": "Companion",
-      "description": "must be on the same battle line, have the same goals, have the same ideals."
+      "description": "Must be on the same battle line, have the same goals, have the same ideals."
     },
     "second": {
       "title": "Creativity",
-      "description": "constantly drop one's self into infinite perspectives to reach a unique difference."
+      "description": "Constantly drop one's self into infinite perspectives to reach a unique difference."
     },
     "third": {
       "title": "Development",
-      "description": "must be recognized by the community."
+      "description": "Must be recognized by the community."
     }
   },
   "finding_values": {
@@ -111,17 +111,17 @@
   "capacity": {
     "first": {
       "title": "BRAND STRATEGY",
-      "slug": "services/brand-strategy",
-      "services": "Market research,Branding,Brand Positioning,Brand developping"
+      "slug": "services?=brand-strategy",
+      "services": "Market research,Branding,Brand Positioning,Brand developing"
     },
     "second": {
       "title": "MEDIA PRODUCTION",
-      "slug": "services/media-production",
+      "slug": "services?=media-production",
       "services": "Take a photo,Film,Video editing,Image design,Graphic design,3D Design"
     },
     "third": {
       "title": "THE MEDIA",
-      "slug": "services/the-media",
+      "slug": "services?=the-media",
       "services": "Advertisement,PR,Marketing,Social media"
     }
   },

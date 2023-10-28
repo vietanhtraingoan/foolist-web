@@ -51,9 +51,9 @@ const AboutSecondPoint = () => {
               <Image src={eyeGif} alt='' width={150} />
             </div>
             <div
-              className={`${classNamePrefix}__fourth-section-title-image max-md:max-w-[100px] flex-shrink-0`}
+              className={`${classNamePrefix}__eye-gif max-md:max-w-[100px] flex-shrink-0`}
             >
-              <Image src={eyeOpen} alt='' width={150} />
+              <Image src={eyeGif} alt='' width={150} />
             </div>
           </div>
         </div>
@@ -65,7 +65,7 @@ const AboutSecondPoint = () => {
             animateIn='animate__slideInUp'
             animateOnce={true}
           >
-            <ParagraphResponsive>
+            <ParagraphResponsive className='text-justify'>
               <GrayGradientTypography className='font-main'>
                 {t('About_content.paragraph-6')}
                 <br></br>
@@ -79,13 +79,13 @@ const AboutSecondPoint = () => {
             animateIn='animate__slideInUp'
             animateOnce={true}
           >
-            <div className='max-sm:w-[calc(100vw-30px)] md:w-[450px] lg:w-[500px] aspect-square mx-auto'>
+            <div className='min-w-[250px] max-sm:w-[calc(100vw-30px)] md:w-[450px] lg:w-[500px] aspect-square mx-auto'>
               <NormalCircleGroup className='mx-auto' contentType='2' />
             </div>
           </AnimationOnScroll>
         </div>
 
-        <div className='flex items-center w-full max-lg:flex-col-reverse'>
+        <div className='flex items-center w-full max-sm:mt-0 max-md:mt-[120px] max-lg:flex-col-reverse'>
           <AnimationOnScroll
             className='flex-1'
             animateIn='animate__slideInUp '
@@ -102,7 +102,7 @@ const AboutSecondPoint = () => {
             animateIn='animate__slideInUp '
             animateOnce={true}
           >
-            <ParagraphResponsive>
+            <ParagraphResponsive className='text-justify'>
               <GrayGradientTypography>
                 {t('About_content.paragraph-8')}
               </GrayGradientTypography>

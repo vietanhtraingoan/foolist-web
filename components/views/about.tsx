@@ -60,7 +60,7 @@ const ViewAboutUs = (
           </AnimationOnScroll>
         </ParagraphResponsive>
       </Section>
-      <TextSlider text='- FOOLIST - CREATIVE - MEDIA - TECHNOLOGY' />
+      <TextSlider text='FOOLIST CREATIVE' />
       <ConnectSection />
       <Divider direction='center' />
     </div>

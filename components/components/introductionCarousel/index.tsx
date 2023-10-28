@@ -12,6 +12,7 @@ const classNamePrefix = 'introduction-carousel';
 const IntroductionCarousel = ({ className }: BaseComponent) => {
   return (
     <Slider
+      autoplay
       className={clsx(
         className,
         'w-full max-w-[400px] lg:max-w-[480px] xl:max-w-[550px]'

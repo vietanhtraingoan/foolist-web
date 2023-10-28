@@ -20,31 +20,9 @@ type Props = {
   // Add custom props here
 };
 
-const classNamePrefix = 'service-page';
-
 const ServicesPage = (
   _props: InferGetStaticPropsType<typeof getStaticProps>
 ) => {
-  const router = useRouter();
-  const [viewingService, setViewingService] = useState<any | null>(null);
-  const { t } = useTranslation();
-  const getCurrentLocale = () => {
-    const currentLocale = (_props as any)?._nextI18Next?.initialLocale;
-    return currentLocale;
-  };
-  const isEnglish = getCurrentLocale() == 'en';
-  const handleChangeViewService = (service: any) => {
-    setViewingService(service);
-    // const currentLocale = (_props as any)?._nextI18Next?.initialLocale;
-    // const baseLocale = currentLocale == 'en' ? '/services' : 'dich-vu';
-    // router.push(baseLocale + '/' + service?.slug);
-  };
-
-  const handleResetViewingService = () => {
-    // const currentLocale = (_props as any)?._nextI18Next?.initialLocale;
-    // router.push(currentLocale == 'en' ? '/services' : 'dich-vu');
-    setViewingService(null);
-  };
   return <ViewService />;
 };
 
