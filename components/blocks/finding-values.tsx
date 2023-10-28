@@ -56,11 +56,14 @@ const FindingValue = () => {
         </GrayGradientTypography>
         <Divider direction='left' />
       </h3>
-      <div className='relative flex items-center justify-center w-full max-w-3xl mx-auto mt-20 aspect-square'>
-        <AnimateOnScroll type='fadeIn'>
-          <BigPuzzle className='max-sm:hidden max-md:w-[100%] max-md:mx-auto' />
+      <div className='relative flex items-center justify-center mx-auto mt-20 '>
+        <AnimateOnScroll
+          className='max-sm:hidden max-md:mx-auto '
+          type='fadeIn'
+        >
+          <BigPuzzle className='mx-auto min-w-[500px] w-[70vh] aspect-square' />
         </AnimateOnScroll>
-        <div className='sm:absolute sm:aspect-square sm:p-8 md:py-4 md:px-0 sm:inset-0 sm:top-1/2 sm:-translate-y-1/2 sm:z-[2] grid w-full  gap-3 mx-auto sm:grid-cols-2 sm:grid-rows-2'>
+        <div className='sm:absolute sm:aspect-square sm:p-8 md:py-4 md:px-0 sm:inset-0 sm:top-1/2 sm:-translate-y-1/2 sm:z-[2] grid w-[65vh] left-1/2 -translate-y-1/2 mx-auto min-w-[450px] gap-3 sm:grid-cols-2 sm:grid-rows-2'>
           {values.map((item, index: number) => {
             return (
               <AnimateOnScroll
@@ -86,11 +89,11 @@ const FindingValue = () => {
                   )}
                 >
                   <h3 className='mb-5 md:mb-8'>
-                    <GrayGradientTypography className='whitespace-nowrap text-3xl !leading-[1.6] font-bold text-white md:text-4xl lg:text-4xl font-heading'>
+                    <GrayGradientTypography className='whitespace-nowrap text-3xl !leading-[1.6] font-bold text-white md:text-3xl lg:text-4xl font-heading'>
                       {item.title}
                     </GrayGradientTypography>
                   </h3>
-                  <p className='text-sm line-clamp-2 italic md:text-base lg:text-xl md:max-w-[80%] text-white/80'>
+                  <p className='text-sm italic md:text-sm lg:text-base xl:text-lg md:max-w-[80%] text-white/80'>
                     {item.description}
                   </p>
                 </div>

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import { useMediaQuery } from 'react-responsive';
 import AnimateOnScroll from '../common/animate-on-scroll';
+import clsx from 'clsx';
 
 const NewServiceSection = () => {
   const isMobile = useMediaQuery({
@@ -54,7 +55,10 @@ const NewServiceSection = () => {
                     <div className='max-lg:flex max-lg:items-center max-lg:justify-between'>
                       <Link href={service.slug || '#'} className='group'>
                         <h3
-                          className='block pt-2 pb-2 text-3xl text-transparent uppercase transition duration-150 border-transparent xs:text-2xl lg:text-4xl xl:text-5xl border-b-3 group-hover:border-black'
+                          className={clsx(
+                            index == 0 && 'max-w-[70%]',
+                            'block pt-2 pb-2 text-3xl text-transparent uppercase transition duration-150 border-transparent xs:text-2xl lg:text-4xl xl:text-5xl border-b-3 group-hover:border-black'
+                          )}
                           style={{
                             background:
                               'linear-gradient(hsl(0 0% 90%), hsl(0 0% 40%))',

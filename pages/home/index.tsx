@@ -55,7 +55,7 @@ const HomePage = (_props: InferGetStaticPropsType<typeof getStaticProps>) => {
           {t('Section_label.client')}
         </Section.Title>
         {ClientMocks ? (
-          <div style={{ width: 1800 }}>
+          <div style={{ width: 1500 }}>
             <Marquee pauseOnHover>
               {ClientMocks?.map((c: IClient) => (
                 <ClientItem key={c.id} data={c} />
