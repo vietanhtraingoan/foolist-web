@@ -5,7 +5,7 @@ import imageDV4 from '../public/images/services/DV04.png';
 import imageDV5 from '../public/images/services/DV05.png';
 import imageDV7 from '../public/images/services/DV07.jpg';
 import imageDV8 from '../public/images/services/DV08.png';
-import imageDV9 from '../public/images/services/DV09.png';
+import imageDV9 from '../public/images/services/DV09.jpg';
 import imageDV1 from '../public/images/services/DV1.png';
 import imageDV11 from '../public/images/services/DV11.png';
 import imageDV12 from '../public/images/services/DV12.png';
