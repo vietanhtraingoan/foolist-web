@@ -63,7 +63,7 @@ const FindingValue = () => {
         >
           <BigPuzzle className='mx-auto min-w-[500px] w-[70vh] aspect-square' />
         </AnimateOnScroll>
-        <div className='sm:absolute sm:aspect-square sm:p-8 md:py-4 md:px-0 sm:inset-0 sm:top-1/2 sm:-translate-y-1/2 sm:z-[2] grid w-[65vh] left-1/2 -translate-y-1/2 mx-auto min-w-[450px] gap-3 sm:grid-cols-2 sm:grid-rows-2'>
+        <div className='sm:absolute sm:aspect-square sm:p-8 md:py-4 md:px-0 sm:inset-0 sm:top-1/2 sm:-translate-y-1/2 sm:z-[2] grid w-[65vh] left-1/2 -translate-y-1/2 mx-auto min-w-[467px] gap-3 sm:grid-cols-2 sm:grid-rows-2'>
           {values.map((item, index: number) => {
             return (
               <AnimateOnScroll
@@ -75,7 +75,7 @@ const FindingValue = () => {
                 <div
                   key={item.title + index}
                   className={clsx(
-                    'flex relative max-sm:border max-sm:border-white/20 max-sm:rounded-2xl max-sm:bg-[radial-gradient(ellipse_at_center_center,_var(--tw-gradient-stops))] max-sm:from-neutral-900 max-sm:to-neutral-950 md:!bg-transparent h-full overflow-hidden  flex-col px-8 py-8 text-left !transition-all  cursor-pointer shadow-2xl bg-black-900/30 before:border-white/20 rounded-lg md:rounded-[50px]',
+                    'flex relative max-sm:border max-sm:border-white/20 max-sm:rounded-2xl max-sm:bg-[radial-gradient(ellipse_at_center_center,_var(--tw-gradient-stops))] max-sm:from-neutral-900 max-sm:to-neutral-950 md:!bg-transparent h-full overflow-hidden  flex-col md:p-6 xl:p-8 text-left !transition-all  cursor-pointer shadow-2xl bg-black-900/30 before:border-white/20 rounded-lg md:rounded-[50px]',
                     {
                       ' !rounded-br-xl !rounded-lr-xl !rounded-tr-xl !rounded-bl-xl  hover:!-translate-x-4 hover:!rounded-br-xl hover:!rounded-lr-xl hover:!rounded-tr-xl hover:!rounded-bl-xl':
                         index === 0,
@@ -88,8 +88,8 @@ const FindingValue = () => {
                     }
                   )}
                 >
-                  <h3 className='mb-5 md:mb-8'>
-                    <GrayGradientTypography className='whitespace-nowrap text-3xl !leading-[1.6] font-bold text-white md:text-3xl lg:text-4xl font-heading'>
+                  <h3 className='mb-5 md:mb-4 xl:mb-8'>
+                    <GrayGradientTypography className='whitespace-nowrap text-3xl !leading-[1.6] font-bold text-white md:text-3xl lg:text-3xl xl:text-4xl font-heading'>
                       {item.title}
                     </GrayGradientTypography>
                   </h3>
