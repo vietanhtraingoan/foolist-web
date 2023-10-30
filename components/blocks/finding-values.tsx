@@ -1,18 +1,12 @@
-import React from 'react';
-import Section from '../common/section';
-import PinkGradientTypography from '../common/typography/pink-gradient-typography';
 import clsx from 'clsx';
-import GrayGradientTypography from '../common/typography/gray-gradient-typography';
-import Divider from '../common/divider';
-import { useMediaQuery } from 'react-responsive';
 import { useTranslation } from 'react-i18next';
-import { AnimationOnScroll } from 'react-animation-on-scroll';
-import PuzzleTopLeft from '../icons/puzzle-top-left';
-import PuzzleTopRight from '../icons/puzzle-top-right';
-import PuzzleBottomLeft from '../icons/puzzle-bottom-left';
-import PuzzleBottomRight from '../icons/puzzle-bottom-right';
-import BigPuzzle from '../icons/big-puzzle';
+import { useMediaQuery } from 'react-responsive';
 import AnimateOnScroll from '../common/animate-on-scroll';
+import Divider from '../common/divider';
+import Section from '../common/section';
+import GrayGradientTypography from '../common/typography/gray-gradient-typography';
+import PinkGradientTypography from '../common/typography/pink-gradient-typography';
+import BigPuzzle from '../icons/big-puzzle';
 
 const FindingValue = () => {
   const { t } = useTranslation('common');
@@ -58,42 +52,42 @@ const FindingValue = () => {
       </h3>
       <div className='relative flex items-center justify-center mx-auto mt-20 '>
         <AnimateOnScroll
-          className='max-sm:hidden max-md:mx-auto '
+          className='max-md:hidden max-md:mx-auto '
           type='fadeIn'
         >
-          <BigPuzzle className='mx-auto min-w-[500px] w-[70vh] aspect-square' />
+          <BigPuzzle className='mx-auto sm:min-w-[500px] md:w-[70vh] aspect-square' />
         </AnimateOnScroll>
-        <div className='sm:absolute sm:aspect-square sm:p-8 md:py-4 md:px-0 sm:inset-0 sm:top-1/2 sm:-translate-y-1/2 sm:z-[2] grid w-[65vh] left-1/2 -translate-y-1/2 mx-auto min-w-[467px] gap-3 sm:grid-cols-2 sm:grid-rows-2'>
+        <div className='md:absolute md:aspect-square md:p-8 md:py-4 md:px-0 md:inset-0 md:top-1/2 md:-translate-x-1/2  md:z-[2] grid md:w-[65vh] md:left-1/2 md:-translate-y-1/2 mx-auto max-w-[800px] md:min-w-[467px] gap-3 md:grid-cols-2 md:grid-rows-2'>
           {values.map((item, index: number) => {
             return (
               <AnimateOnScroll
                 type='fadeIn'
                 delay={index / 15}
-                className='relative w-full sm:aspect-square '
+                className='relative w-full md:aspect-square '
                 key={JSON.stringify(item) + index}
               >
                 <div
                   key={item.title + index}
                   className={clsx(
-                    'flex relative max-sm:border max-sm:border-white/20 max-sm:rounded-2xl max-sm:bg-[radial-gradient(ellipse_at_center_center,_var(--tw-gradient-stops))] max-sm:from-neutral-900 max-sm:to-neutral-950 md:!bg-transparent h-full overflow-hidden  flex-col md:p-6 xl:p-8 text-left !transition-all  cursor-pointer shadow-2xl bg-black-900/30 before:border-white/20 rounded-lg md:rounded-[50px]',
+                    'flex relative max-md:border max-md:border-white/20 max-md:rounded-2xl max-md:bg-[radial-gradient(ellipse_at_center_center,_var(--tw-gradient-stops))] max-md:from-neutral-900 max-md:to-neutral-950 md:!bg-transparent h-full overflow-hidden  flex-col p-6 xl:p-8 text-left !transition-all  cursor-pointer shadow-2xl bg-black-900/30 before:border-white/20 rounded-lg md:rounded-[50px]',
                     {
                       ' !rounded-br-xl !rounded-lr-xl !rounded-tr-xl !rounded-bl-xl  hover:!-translate-x-4 hover:!rounded-br-xl hover:!rounded-lr-xl hover:!rounded-tr-xl hover:!rounded-bl-xl':
                         index === 0,
-                      ' !rounded-bl-xl sm:items-end sm:text-right !rounded-tl-xl !rounded-br-xl hover:!-translate-x-4 ':
+                      ' !rounded-bl-xl md:items-end md:text-right !rounded-tl-xl !rounded-br-xl hover:!-translate-x-4 ':
                         index === 1,
-                      ' !rounded-tr-xl sm:justify-end sm:items-start text-left !rounded-tl-xl !rounded-br-xl hover:!-translate-x-4 ':
+                      ' !rounded-tr-xl md:justify-end md:items-start text-left !rounded-tl-xl !rounded-br-xl hover:!-translate-x-4 ':
                         index === 2,
-                      ' !rounded-tl-xl !rounded-tr-xl !rounded-bl-xl sm:items-end justify-end sm:text-right hover:!-translate-x-4':
+                      ' !rounded-tl-xl !rounded-tr-xl !rounded-bl-xl md:items-end justify-end md:text-right hover:!-translate-x-4':
                         index === 3,
                     }
                   )}
                 >
                   <h3 className='mb-5 md:mb-4 xl:mb-8'>
-                    <GrayGradientTypography className='whitespace-nowrap text-3xl !leading-[1.6] font-bold text-white md:text-3xl lg:text-3xl xl:text-4xl font-heading'>
+                    <GrayGradientTypography className='finding-values__title !leading-[1.6] font-semibold text-white font-heading'>
                       {item.title}
                     </GrayGradientTypography>
                   </h3>
-                  <p className='text-sm italic md:text-sm lg:text-base xl:text-lg md:max-w-[80%] text-white/80'>
+                  <p className='finding-values__description text-sm italic  lg:text-base xl:text-lg md:max-w-[95%] text-white/80'>
                     {item.description}
                   </p>
                 </div>

@@ -37,7 +37,7 @@ const Footer = () => {
             </div>
             <div className='w-full md:p-8 sm:w-1/2 lg:w-2/12'>
               <h3 className='mb-8 text-sm font-semibold leading-normal text-gray-400 uppercase tracking-px'>
-                {t(`About us`)}
+                {t(`Services`)}
               </h3>
               <ul>
                 <li className='mb-5'>

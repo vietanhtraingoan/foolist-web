@@ -1,3 +1,8 @@
+.finding-values__title {
+  font-size: clamp(1.7rem, calc(3vh + 1vw / 2), 2.5rem) !important;
+  white-space: nowrap;
+}
+
 .service-page {
   display: flex;
   flex-direction: column;

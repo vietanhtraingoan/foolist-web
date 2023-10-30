@@ -80,6 +80,9 @@ export const services = [
           </li>
           <li>
             <p>Dựng video</p>
+            <video autoPlay loop controls={false}>
+              <source src='/videos/edit-video.webm'></source>
+            </video>
           </li>
           <li>
             <p>Thiết kế hình ảnh</p>
@@ -103,7 +106,7 @@ export const services = [
           </li>
           <li>
             <p>3D Design</p>
-            <video autoPlay controls={false}>
+            <video autoPlay loop controls={false}>
               <source src='/videos/DV10.webm'></source>
             </video>
           </li>
@@ -141,6 +144,9 @@ export const services = [
           </li>
           <li>
             <p>Video editing</p>
+            <video autoPlay loop controls={false}>
+              <source src='/videos/edit-video.webm'></source>
+            </video>
           </li>
           <li>
             <p>Image design</p>
@@ -164,7 +170,7 @@ export const services = [
           </li>
           <li>
             <p>3D Design</p>
-            <video autoPlay controls={false}>
+            <video autoPlay controls={false} loop>
               <source src='/videos/DV10.webm'></source>
             </video>
           </li>
