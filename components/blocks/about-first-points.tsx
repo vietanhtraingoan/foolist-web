@@ -21,12 +21,12 @@ const AboutFirstPoints = () => {
           id='1'
           className={`text-2xl max-md:text-center md:!text-4xl lg:text-h2 font-bold font-heading`}
         >
-          <AnimateOnScroll type='slideInLeft' delay={0.1}>
+          <AnimateOnScroll type='slideInLeft' delay={0.2}>
             <GrayGradientTypography className='block mb-4 font-heading'>
               {t('About_content.creative-thinking')}
             </GrayGradientTypography>
           </AnimateOnScroll>
-          <AnimateOnScroll type='slideInLeft' delay={0.2}>
+          <AnimateOnScroll type='slideInLeft' delay={0.3}>
             <PinkGradientTypography
               className={`font-bold text-5xl md:text-6xl lg:text-8xl block w-full font-heading leading-[1.4] lg:!leading-[1.6]`}
             >
@@ -35,13 +35,13 @@ const AboutFirstPoints = () => {
           </AnimateOnScroll>
         </div>
       </div>
-      <AnimateOnScroll type='slideInLeft' delay={0.2}>
+      <AnimateOnScroll type='slideInLeft' delay={0.4}>
         <Divider
           className='max-md:!mt-6 mb-10 md:mb-20 max-lg:!mt-10'
           direction={isMobile ? 'center' : 'left'}
         />
       </AnimateOnScroll>
-      <AnimateOnScroll type='slideInUp'>
+      <AnimateOnScroll type='slideInUp' delay={0.5}>
         <div className='container mt-8 lg:mt-10'>
           <ParagraphResponsive className=' text-justify md:max-w-[80%] '>
             <GrayGradientTypography>
@@ -54,14 +54,14 @@ const AboutFirstPoints = () => {
         <div
           className={`flex items-center mt-8 flex-col lg:flex-row justify-end gap-12`}
         >
-          <AnimateOnScroll className='flex-1' type='fadeInUp'>
+          <AnimateOnScroll className='flex-1' type='fadeInUp' delay={0.6}>
             <div className='w-[300px] md:w-[450px] lg:w-[500px] aspect-square mx-auto flex justify-center'>
               <NormalCircleGroup contentType='1' />
             </div>
           </AnimateOnScroll>
           <div className={`text-base md:text-2xl flex-1 w-full`}>
             <span>
-              <AnimateOnScroll type='fadeInUp'>
+              <AnimateOnScroll type='fadeInUp' delay={0.6}>
                 <ParagraphResponsive className='text-justify'>
                   <GrayGradientTypography>
                     {' '}
@@ -70,7 +70,7 @@ const AboutFirstPoints = () => {
                 </ParagraphResponsive>
               </AnimateOnScroll>
               <br />
-              <AnimateOnScroll type='fadeInUp'>
+              <AnimateOnScroll type='fadeInUp' delay={0.6}>
                 <ParagraphResponsive>
                   <GrayGradientTypography>
                     {t('About_content.paragraph-5')}
