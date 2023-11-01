@@ -15,20 +15,20 @@ const FindingValue = () => {
   });
   const values = [
     {
-      title: t('finding_values.first.title'),
-      description: t('finding_values.first.description'),
-    },
-    {
       title: t('finding_values.second.title'),
       description: t('finding_values.second.description'),
     },
     {
-      title: t('finding_values.third.title'),
-      description: t('finding_values.third.description'),
+      title: t('finding_values.first.title'),
+      description: t('finding_values.first.description'),
     },
     {
       title: t('finding_values.forth.title'),
       description: t('finding_values.forth.description'),
+    },
+    {
+      title: t('finding_values.third.title'),
+      description: t('finding_values.third.description'),
     },
   ];
 
