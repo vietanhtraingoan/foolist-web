@@ -87,7 +87,7 @@ const FindingValue = () => {
                       {item.title}
                     </GrayGradientTypography>
                   </h3>
-                  <p className='finding-values__description text-sm italic  lg:text-base xl:text-lg md:max-w-[95%] text-white/80'>
+                  <p className='finding-values__description text-sm italic  lg:text-sm xl:text-lg md:max-w-[95%] text-white/80'>
                     {item.description}
                   </p>
                 </div>
