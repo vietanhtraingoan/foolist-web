@@ -15,7 +15,7 @@ const MenuContactSection = () => {
         </Link>
       </div>
       <div className='text-gray-400'>
-        64 Vo Thi Sau,Tan Dinh Ward,District 1,HCM, Viet Nam
+        64 Vo Thi Sau, Tan Dinh Ward, District 1, HCM, Viet Nam
       </div>
     </div>
   );

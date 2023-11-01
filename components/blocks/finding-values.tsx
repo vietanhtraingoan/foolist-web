@@ -55,9 +55,9 @@ const FindingValue = () => {
           className='max-md:hidden max-md:mx-auto '
           type='fadeIn'
         >
-          <BigPuzzle className='mx-auto sm:min-w-[500px] md:w-[70vh] aspect-square' />
+          <BigPuzzle className='mx-auto sm:min-w-[500px] md:w-[85vh] aspect-square' />
         </AnimateOnScroll>
-        <div className='md:absolute md:aspect-square md:p-8 md:py-4 md:px-0 md:inset-0 md:top-1/2  md:z-[2] grid md:w-[65vh] md:-translate-y-1/2 mx-auto max-w-[800px] md:min-w-[467px] gap-3 md:grid-cols-2 md:grid-rows-2'>
+        <div className='md:absolute md:aspect-square md:p-8 md:py-4 md:px-0 md:inset-0 md:top-1/2  md:z-[2] grid md:w-[75vh] md:-translate-y-1/2 mx-auto max-w-[800px] md:min-w-[467px] gap-3 md:grid-cols-2 md:grid-rows-2'>
           {values.map((item, index: number) => {
             return (
               <AnimateOnScroll

@@ -249,7 +249,6 @@ export const services = [
             <li>Định vị dựa vào mối quan hệ</li>
             <li>Định vị dựa vào mong ước</li> <li>Định vị dựa vào cảm xúc</li>
           </ul>
-          Những chiến lược trên sẽ thể hiện bằng hình ảnh
         </p>
         <ImageNext
           alt='Định vị thương hiệu'

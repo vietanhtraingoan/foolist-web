@@ -317,7 +317,7 @@ const ViewService = (
                     </h1>
                     {viewingService?.content &&
                     viewingService?.content !== '' ? (
-                      <div className='max-w-full mb-8 prose prose-h2:text-white prose-p:md:text-lg'>
+                      <div className='max-w-full mb-8 prose prose-h2:text-white prose-ul:md:text-lg prose-p:md:text-lg'>
                         {isEnglish
                           ? viewingService?.contentEn
                           : viewingService?.content}
