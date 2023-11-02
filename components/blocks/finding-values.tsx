@@ -57,7 +57,7 @@ const FindingValue = () => {
         >
           <BigPuzzle className='mx-auto sm:min-w-[500px] md:w-[85vh] aspect-square' />
         </AnimateOnScroll>
-        <div className='md:absolute md:aspect-square md:p-8 md:py-4 md:px-0 md:inset-0 md:top-1/2  md:z-[2] grid md:w-[75vh] md:-translate-y-1/2 mx-auto max-w-[800px] md:min-w-[467px] gap-3 md:grid-cols-2 md:grid-rows-2'>
+        <div className='md:absolute md:-translate-y-[calc(50%+5px)] md:aspect-square md:p-8 md:py-4 md:px-0 md:inset-0 md:top-1/2  md:z-[2] grid md:w-[75vh]  mx-auto max-w-[800px] md:min-w-[467px] gap-3 md:grid-cols-2 md:grid-rows-2'>
           {values.map((item, index: number) => {
             return (
               <AnimateOnScroll
@@ -71,13 +71,13 @@ const FindingValue = () => {
                   className={clsx(
                     'flex relative max-md:border max-md:border-white/20 max-md:rounded-2xl max-md:bg-[radial-gradient(ellipse_at_center_center,_var(--tw-gradient-stops))] max-md:from-neutral-900 max-md:to-neutral-950 md:!bg-transparent h-full overflow-hidden  flex-col p-6 xl:p-8 text-left !transition-all  cursor-pointer shadow-2xl bg-black-900/30 before:border-white/20 rounded-lg md:rounded-[50px]',
                     {
-                      ' !rounded-br-xl md:!pt-20 md:!pr-0 !rounded-lr-xl !rounded-tr-xl !rounded-bl-xl  hover:!-translate-x-4 hover:!rounded-br-xl hover:!rounded-lr-xl hover:!rounded-tr-xl hover:!rounded-bl-xl':
+                      ' !rounded-br-xl md:!pb-20 md:justify-center md:!pr-0 !rounded-lr-xl !rounded-tr-xl !rounded-bl-xl  hover:!-translate-x-4 hover:!rounded-br-xl hover:!rounded-lr-xl hover:!rounded-tr-xl hover:!rounded-bl-xl':
                         index === 0,
-                      ' !rounded-bl-xl md:!pt-20 md:!pl-0 md:items-end md:text-right !rounded-tl-xl !rounded-br-xl hover:!-translate-x-4 ':
+                      ' !rounded-bl-xl md:!pb-20 md:justify-center md:!pl-0 md:items-end md:text-right !rounded-tl-xl !rounded-br-xl hover:!-translate-x-4 ':
                         index === 1,
-                      ' !rounded-tr-xl md:!pb-24 md:!pr-0 md:justify-end md:items-start text-left !rounded-tl-xl !rounded-br-xl hover:!-translate-x-4 ':
+                      ' !rounded-tr-xl md:!pt-20 md:!pr-0 md:justify-center md:items-start text-left !rounded-tl-xl !rounded-br-xl hover:!-translate-x-4 ':
                         index === 2,
-                      ' !rounded-tl-xl md:!pb-24  md:!pl-0 !rounded-tr-xl !rounded-bl-xl md:items-end justify-end md:text-right hover:!-translate-x-4':
+                      ' !rounded-tl-xl md:!pt-20  md:!pl-0 !rounded-tr-xl md:justify-center !rounded-bl-xl md:items-end justify-end md:text-right hover:!-translate-x-4':
                         index === 3,
                     }
                   )}
