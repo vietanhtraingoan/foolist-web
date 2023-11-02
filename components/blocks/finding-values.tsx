@@ -15,16 +15,16 @@ const FindingValue = () => {
   });
   const values = [
     {
-      title: t('finding_values.forth.title'),
-      description: t('finding_values.forth.description'),
+      title: t('finding_values.second.title'),
+      description: t('finding_values.second.description'),
     },
     {
       title: t('finding_values.third.title'),
       description: t('finding_values.third.description'),
     },
     {
-      title: t('finding_values.second.title'),
-      description: t('finding_values.second.description'),
+      title: t('finding_values.forth.title'),
+      description: t('finding_values.forth.description'),
     },
     {
       title: t('finding_values.first.title'),
@@ -71,19 +71,19 @@ const FindingValue = () => {
                   className={clsx(
                     'flex relative max-md:border max-md:border-white/20 max-md:rounded-2xl max-md:bg-[radial-gradient(ellipse_at_center_center,_var(--tw-gradient-stops))] max-md:from-neutral-900 max-md:to-neutral-950 md:!bg-transparent h-full overflow-hidden  flex-col p-6 xl:p-8 text-left !transition-all  cursor-pointer shadow-2xl bg-black-900/30 before:border-white/20 rounded-lg md:rounded-[50px]',
                     {
-                      ' !rounded-br-xl md:!pr-0 !rounded-lr-xl !rounded-tr-xl !rounded-bl-xl  hover:!-translate-x-4 hover:!rounded-br-xl hover:!rounded-lr-xl hover:!rounded-tr-xl hover:!rounded-bl-xl':
+                      ' !rounded-br-xl md:!pt-6 md:!pr-0 !rounded-lr-xl !rounded-tr-xl !rounded-bl-xl  hover:!-translate-x-4 hover:!rounded-br-xl hover:!rounded-lr-xl hover:!rounded-tr-xl hover:!rounded-bl-xl':
                         index === 0,
-                      ' !rounded-bl-xl md:!pl-0 md:items-end md:text-right !rounded-tl-xl !rounded-br-xl hover:!-translate-x-4 ':
+                      ' !rounded-bl-xl md:!pt-6 md:!pl-0 md:items-end md:text-right !rounded-tl-xl !rounded-br-xl hover:!-translate-x-4 ':
                         index === 1,
-                      ' !rounded-tr-xl md:!pr-0 md:justify-end md:items-start text-left !rounded-tl-xl !rounded-br-xl hover:!-translate-x-4 ':
+                      ' !rounded-tr-xl md:!pb-10 md:!pr-0 md:justify-end md:items-start text-left !rounded-tl-xl !rounded-br-xl hover:!-translate-x-4 ':
                         index === 2,
-                      ' !rounded-tl-xl md:!pl-0 !rounded-tr-xl !rounded-bl-xl md:items-end justify-end md:text-right hover:!-translate-x-4':
+                      ' !rounded-tl-xl md:!pb-10  md:!pl-0 !rounded-tr-xl !rounded-bl-xl md:items-end justify-end md:text-right hover:!-translate-x-4':
                         index === 3,
                     }
                   )}
                 >
                   <h3 className='mb-5 md:mb-4 xl:mb-8'>
-                    <GrayGradientTypography className='finding-values__title !leading-[1.6] font-semibold text-white font-heading'>
+                    <GrayGradientTypography className='leading-none finding-values__title font-semibold text-white font-heading'>
                       {item.title}
                     </GrayGradientTypography>
                   </h3>
