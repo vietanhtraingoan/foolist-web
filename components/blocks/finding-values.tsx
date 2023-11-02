@@ -83,7 +83,7 @@ const FindingValue = () => {
                   )}
                 >
                   <h3 className='mb-5 md:mb-4 xl:mb-8'>
-                    <GrayGradientTypography className='leading-none finding-values__title font-semibold text-white font-heading'>
+                    <GrayGradientTypography className=' finding-values__title leading-[1.6] font-semibold text-white font-heading'>
                       {item.title}
                     </GrayGradientTypography>
                   </h3>
