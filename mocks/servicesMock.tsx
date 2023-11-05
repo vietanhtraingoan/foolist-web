@@ -43,7 +43,7 @@ export const services = [
     title: 'Sản xuất media',
     titleEn: 'Media production',
     description:
-      'Với đội ngủ trẻ trung, sáng tạo nhưng không kém phần tỉ mỉ, Foolist sẽ tạo ra những sản phẩm có tính thẩm mỹ cao, đánh thẳng vào tâm thức của công chúng cho những khách hàng và đối tác của mình',
+      'Với đội ngũ trẻ trung, sáng tạo nhưng không kém phần tỉ mỉ, Foolist sẽ tạo ra những sản phẩm có tính thẩm mỹ cao, đánh thẳng vào tâm thức của công chúng cho những khách hàng và đối tác của mình',
     descriptionEn:
       'With a young, creative but no less meticulous team, Foolist will create highly aesthetic products, directly hitting the public consciousness for its customers and partners, through various methods. consciousness like',
     slug: 'san-xuat-media',
@@ -52,7 +52,7 @@ export const services = [
     content: (
       <>
         <p>
-          Với đội ngủ trẻ trung, sáng tạo nhưng không kém phần tỉ mỉ, Foolist sẽ
+          Với đội ngũ trẻ trung, sáng tạo nhưng không kém phần tỉ mỉ, Foolist sẽ
           tạo ra những sản phẩm có tính thẩm mỹ cao, đánh thẳng vào tâm thức của
           công chúng cho những khách hàng và đối tác của mình, thông qua các
           phương thức như:

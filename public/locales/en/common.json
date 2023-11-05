@@ -40,28 +40,26 @@
     }
   },
   "finding_values": {
-    "title": {
-      "first": "We are looking for",
-      "second": "pieces based on 4 key factors"
-    },
+    "title": "Cultural Values",
     "first": {
       "title": "Honesty",
-      "description": "Put the truth in every breath."
+      "description": "Put the truth<br/> in every breath."
     },
     "second": {
       "title": "Responsibility",
-      "description": "Life and death in every step."
+      "description": "Life and death<br/> in every step."
     },
     "third": {
       "title": "Passion",
-      "description": "Constantly conquering aspirations every day."
+      "description": "Constantly conquering aspirations<br/> every day."
     },
     "forth": {
       "title": "Learning",
-      "description": "Break the barriers, constantly upgrade skills."
+      "description": "Break the barriers, constantly<br/> upgrade skills."
     }
   },
   "About_content": {
+    "home_descripion": "Foolist Creative carries the mission of \"Companion with a unique creative spirit to elevate the Vietnamese brand.\"",
     "numbers": {
       "first": "20+",
       "first_label": "Representative projects",
@@ -90,7 +88,7 @@
       }
     },
     "brand-name": "Foolist",
-    "paragraph-1": "Foolist Creative is an Agency operating in the field of Marketing with the mission of \"Accompanying, using a unique creative spirit to elevate Vietnamese brands\". Foolist has been incubated since the last months of 2022 and officially went into operation as a company from May 27, 2023.",
+    "paragraph-1": "Foolist is a marketing agency that was conceived in the final months of 2022 and officially commenced operations as a company on May 27, 2023. Born from high expectations and breakthrough energy, Foolist never stops acquiring knowledge in various areas, such as brand building, communication development, and media production, with the goal of becoming the top choice for clients by leading trends and shaping brands.",
     "paragraph-2": "Foolist has within us the expectation and energy to break through, so we are constantly acquiring knowledge about the following contents: branding, media development and media production,... To become the top choice of Clients with the ability to lead trends and shape brands.",
     "creative-thinking": "Creative Thinking",
     "unique": "Unique",

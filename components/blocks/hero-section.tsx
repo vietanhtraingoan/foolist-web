@@ -15,8 +15,8 @@ const HeroSection = ({
   const { t } = useTranslation('common');
 
   useEffect(() => {
-    setParagraph(t('About_content.paragraph-1'));
-  }, [t('About_content.paragraph-1')]);
+    setParagraph(t('About_content.home_descripion'));
+  }, [t('About_content.home_descripion')]);
 
   return (
     <Section id='first-section' className={``}>

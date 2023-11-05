@@ -7,6 +7,7 @@ import Section from '../common/section';
 import GrayGradientTypography from '../common/typography/gray-gradient-typography';
 import PinkGradientTypography from '../common/typography/pink-gradient-typography';
 import BigPuzzle from '../icons/big-puzzle';
+import Balancer from 'react-wrap-balancer';
 
 const FindingValue = () => {
   const { t } = useTranslation('common');
@@ -34,22 +35,18 @@ const FindingValue = () => {
 
   return (
     <Section>
-      <h3 className='max-w-5xl font-semibold leading-normal tracking-tight text-2xl md:!text-4xl lg:text-h2 font-main'>
-        <GrayGradientTypography className='inline-block'>
-          <AnimateOnScroll type='slideInLeft' delay={0.1}>
-            {t('finding_values.title.first')}{' '}
-            <PinkGradientTypography className='font-bold'>
-              Foolist
-            </PinkGradientTypography>{' '}
-          </AnimateOnScroll>
-          <AnimateOnScroll type='slideInLeft' delay={0.2}>
-            <GrayGradientTypography className='max-md:block max-md:w-full'>
-              {t('finding_values.title.second')}
-            </GrayGradientTypography>
-          </AnimateOnScroll>
-        </GrayGradientTypography>
-        <Divider direction='left' />
-      </h3>
+      <div className='max-w-3xl mx-auto text-center'>
+        <AnimateOnScroll type='fadeIn'>
+          <Section.Title className='md:mb-10 lg:mb-24 font-bold font-heading text-xl md:!text-4xl animate__animated animate__fadeIn lg:text-h2'>
+            <Balancer>
+              <GrayGradientTypography className='font-heading'>
+                {t('finding_values.title')}
+              </GrayGradientTypography>
+            </Balancer>
+            <Divider direction='center' className='mt-4 md:mt-6' />
+          </Section.Title>
+        </AnimateOnScroll>
+      </div>
       <div className='relative flex items-center justify-center mx-auto mt-20 '>
         <AnimateOnScroll
           className='max-md:hidden max-md:mx-auto '
@@ -57,7 +54,7 @@ const FindingValue = () => {
         >
           <BigPuzzle className='mx-auto sm:min-w-[500px] md:w-[85vh] aspect-square' />
         </AnimateOnScroll>
-        <div className='md:absolute md:-translate-y-[calc(50%+5px)] md:aspect-square md:p-8 md:py-4 md:px-0 md:inset-0 md:top-1/2  md:z-[2] grid md:w-[75vh]  mx-auto max-w-[800px] md:min-w-[467px] gap-3 md:grid-cols-2 md:grid-rows-2'>
+        <div className='md:absolute md:-translate-y-[calc(50%+5px)] max-md:w-full md:aspect-square md:p-8 md:py-4 md:px-0 md:inset-0 md:top-1/2  md:z-[2] grid md:w-[75vh]  mx-auto max-w-[800px] md:min-w-[467px] gap-3 md:grid-cols-2 md:grid-rows-2'>
           {values.map((item, index: number) => {
             return (
               <AnimateOnScroll
@@ -87,12 +84,14 @@ const FindingValue = () => {
                       {item.title}
                     </GrayGradientTypography>
                   </h3>
-                  <div
-                    className='finding-values__description whitespace-nowrap text-sm italic  lg:text-sm xl:text-lg md:max-w-[95%] text-white/80'
-                    dangerouslySetInnerHTML={{
-                      __html: item.description,
-                    }}
-                  ></div>
+                  <Balancer>
+                    <div
+                      className='finding-values__description whitespace-nowrap text-sm italic  lg:text-sm xl:text-lg md:max-w-[95%] text-white/80'
+                      dangerouslySetInnerHTML={{
+                        __html: item.description,
+                      }}
+                    ></div>
+                  </Balancer>
                 </div>
               </AnimateOnScroll>
             );

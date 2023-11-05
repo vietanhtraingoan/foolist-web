@@ -7,6 +7,7 @@ import Divider from '../common/divider';
 import aboutUsImage from '../../public/images/about.png';
 import BorderGradient from '../common/border-gradient';
 import AnimateOnScroll from '../common/animate-on-scroll';
+import Balancer from 'react-wrap-balancer';
 
 const AboutUs = () => {
   const { t } = useTranslation('common');
@@ -24,12 +25,14 @@ const AboutUs = () => {
           </AnimateOnScroll>
           <AnimateOnScroll delay={0.2} type='fadeInLeft'>
             <div className='max-lg:pr-10 '>
-              <p className='mb-4 text-lg leading-relaxed tracking-tight text-gray-400'>
-                {t('About_content.paragraph-1')}
-              </p>
-              <p className='mb-6 text-lg leading-relaxed tracking-tight text-gray-400'>
+              <Balancer>
+                <p className='mb-4 text-lg leading-relaxed tracking-tight text-gray-400'>
+                  {t('About_content.paragraph-1')}
+                </p>
+              </Balancer>
+              {/* <p className='mb-6 text-lg leading-relaxed tracking-tight text-gray-400'>
                 {t('About_content.paragraph-2')}
-              </p>
+              </p> */}
             </div>
           </AnimateOnScroll>
           <div className='mt-14'>

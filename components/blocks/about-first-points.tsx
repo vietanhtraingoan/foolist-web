@@ -9,6 +9,7 @@ import Divider from '../common/divider';
 import NormalCircleGroup from '../components/normalCircleGroup';
 import ParagraphResponsive from '../common/typography/paragraph-responsive';
 import AnimateOnScroll from '../common/animate-on-scroll';
+import Balancer from 'react-wrap-balancer';
 
 const AboutFirstPoints = () => {
   const isMobile = useMediaQuery({ query: '(max-width:768px)' });
@@ -43,9 +44,9 @@ const AboutFirstPoints = () => {
       </AnimateOnScroll>
       <AnimateOnScroll type='slideInUp' delay={0.5}>
         <div className='container mt-8 lg:mt-10'>
-          <ParagraphResponsive className=' text-justify md:max-w-[80%] '>
+          <ParagraphResponsive className='flex justify-center text-justify md:max-w-[80%] '>
             <GrayGradientTypography>
-              "{t('About_content.paragraph-3')}"
+              {t('About_content.paragraph-3')}
             </GrayGradientTypography>
           </ParagraphResponsive>
         </div>
@@ -62,16 +63,15 @@ const AboutFirstPoints = () => {
           <div className={`text-base md:text-2xl flex-1 w-full`}>
             <span>
               <AnimateOnScroll type='fadeInUp' delay={0.6}>
-                <ParagraphResponsive className='text-justify'>
+                <ParagraphResponsive className='flex justify-center text-justify'>
                   <GrayGradientTypography>
-                    {' '}
                     {t('About_content.paragraph-4')}
                   </GrayGradientTypography>
                 </ParagraphResponsive>
               </AnimateOnScroll>
               <br />
               <AnimateOnScroll type='fadeInUp' delay={0.6}>
-                <ParagraphResponsive>
+                <ParagraphResponsive className='text-justify'>
                   <GrayGradientTypography>
                     {t('About_content.paragraph-5')}
                   </GrayGradientTypography>

@@ -40,10 +40,7 @@
     }
   },
   "finding_values": {
-    "title": {
-      "first": "Chúng tôi tìm kiếm các mảnh ghép của",
-      "second": "dựa trên 4 yếu tố chính"
-    },
+    "title": "Giá trị Văn hóa",
     "first": {
       "title": "Trung thực",
       "description": "Đặt sự thật vào trong<br/> từng hơi thở."
@@ -62,6 +59,7 @@
     }
   },
   "About_content": {
+    "home_descripion": "Foolist Creative mang trong mình sứ mệnh “Đồng hành, dùng tinh thần sáng tạo độc nhất để nâng tầm thương hiệu Việt”.",
     "numbers": {
       "first": "20+",
       "first_label": "Dự án tiêu biểu",
@@ -91,7 +89,7 @@
       }
     },
     "brand-name": "Foolist",
-    "paragraph-1": "Foolist Creative là Agency hoạt động trong lĩnh vực Marketing với sứ mệnh “Đồng hành, dùng tinh thần sáng tạo độc nhất để nâng tầm thương hiệu Việt”. Foolist được ấp ủ từ những tháng cuối năm 2022 và chính thức đi vào hoạt động dưới hình thức công ty từ ngày 27/05/2023.",
+    "paragraph-1": "Foolist là Marketing Agengy được ấp ủ từ những tháng cuối năm 2022 và chính thức đi vào hoạt động dưới hình thức công ty từ ngày 27/05/2023. Thành hình từ sự kỳ vọng và năng lượng bứt phá, Foolist không 1 giây nào ngừng thu nạp kiến thức về các nội dung: Xây dựng thương hiệu, Phát triển truyền thông và Sản xuất media,... Để trở thành lựa chọn hàng đầu của Clients với khả năng đi đầu xu hướng và định hình thương hiệu.",
     "paragraph-2": "Foolist mang trong mình sự kỳ vọng và năng lượng bứt phá, vì thế chúng tôi luôn không ngừng nghỉ thu nạp kiến thức về các nội dung: xây dựng thương hiệu, phát triển truyền thông và sản xuất media,... Để trở thành lựa chọn hàng đầu của Clients với khả năng đi đầu xu hướng và định hình thương hiệu.",
     "creative-thinking": "Tư duy sáng tạo",
     "unique": "độc nhất",
